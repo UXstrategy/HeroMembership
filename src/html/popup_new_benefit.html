@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>히어로멤버십</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_new_benefit');">팝업열기</button>
+
+        <div class="popup popup_new_benefit active">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>신규 혜택이 도착했어요!</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('popup_new_benefit');">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <dl class="youutybe">
+                        <dt>유튜브 프리미엄이 무료!</dt>
+                        <dd>
+                            <p>앞으로 유튜브 프리미엄<br>1개월 이용권을 받을 수 있어요</p>
+                            <p class="txt">매월 S등급 이상 시 자동지급</p>
+                            <div class="btn_box"><button type="button">자세히 보기</button></div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

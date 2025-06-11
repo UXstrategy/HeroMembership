@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>히어로멤버십</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>히어로 멤버십</h1>
+            <div class="close"><button type="button">닫기</button></div>
+        </header>
+        <div class="swiper_unit level_swiper" data-loop="false" data-space="10">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide general">
+                    <!-- 거래금액 달성 시 문구를 사용할 경우 p.complete class 제거 -->
+                    <p class="noti fire">
+                        더 높은 등급의 리워드를 받아보세요!
+                        <button type="button" class="share">공유하기</button>
+                    </p>
+                    <div class="card">
+                        <p class="level">지난달 등급</p>
+                        <p class="tit">일반</p>
+                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                    </div>
+                </div>
+                <div class="swiper-slide a">
+                    <p class="noti complete">
+                        이번 달 거래금액이 <span>다음 달 등급</span> 결정!
+                        <button type="button" class="share">공유하기</button>
+                    </p>
+                    <div class="card">
+                        <p class="level">이번달 등급</p>
+                        <p class="tit">A <span>a Hero</span></p>
+                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                    </div>
+                </div>
+                <div class="swiper-slide s">
+                    <p class="noti last_month">
+                        이번 달 거래금액이 <span>다음 달 등급</span> 결정!
+                        <button type="button" class="share">공유하기</button>
+                    </p>
+                    <div class="card">
+                        <p class="level">이번달 등급</p>
+                        <p class="tit">S <span>Super Hero</span></p>
+                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                    </div>
+                </div>
+                <div class="swiper-slide ss">
+                    <p class="noti complete">
+                        이번 달 거래금액이 <span>다음 달 등급</span> 결정!
+                        <button type="button" class="share">공유하기</button>
+                    </p>
+                    <div class="card">
+                        <p class="level">이번달 등급</p>
+                        <p class="tit">SS <span>Double S Hero</span></p>
+                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                    </div>
+                </div>
+                <div class="swiper-slide sss">
+                    <p class="noti complete">
+                        이번 달 거래금액이 <span>다음 달 등급</span> 결정!
+                        <button type="button" class="share">공유하기</button>
+                    </p>
+                    <div class="card">
+                        <p class="level">이번달 등급</p>
+                        <p class="tit">SSS <span>Triple S Hero</span></p>
+                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                    </div>
+                </div>
+                <div class="swiper-slide l">
+                    <p class="noti complete">
+                        이번 달 거래금액이 <span>다음 달 등급</span> 결정!
+                        <button type="button" class="share">공유하기</button>
+                    </p>
+                    <div class="card">
+                        <p class="level">다음 등급</p>
+                        <p class="tit">L <span>Legendary Hero</span></p>
+                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <dl class="benefit_wrap">
+            <dt>등급 리워드 혜택</dt>
+            <dd>
+                <div class="no_benefit">지난달에는 받은 혜택이 없어요</div>
+            </dd>
+        </dl>
+
+        <dl class="benefit_wrap">
+            <dt>등급 리워드 혜택</dt>
+            <dd>
+                <div class="next_level">A등급이 되면 혜택을<br>받을 수 있어요!</div>
+            </dd>
+        </dl>
+
+        <dl class="benefit_wrap">
+            <dt>등급 리워드 혜택</dt>
+            <dd class="swiper_unit" data-space="12" data-loop="false">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <button type="button" class="coupon complete">
+                            <span><span class="tag">혜택</span></span>
+                            <span class="rewards">리워드</span>
+                            <span class="price">10,000원</span>
+                            <span class="noti">매월 신청 필수</span>
+                        </button>
+                    </li>
+                    <li class="swiper-slide">
+                        <button type="button" class="coupon ready">
+                            <span><span class="tag">혜택 1</span></span>
+                            <span class="rewards">리워드</span>
+                            <span class="price">500,000원</span>
+                            <span class="noti">매월 신청 필수</span>
+                        </button>
+                    </li>
+                    <li class="swiper-slide">
+                        <button type="button" class="coupon">
+                            <span><span class="tag">혜택 2</span></span>
+                            <span class="youtube">유튜브</span>
+                            <span class="price">1개월 이용권</span>
+                            <span class="noti">매월 쿠폰등록 필수</span>
+                        </button>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+
+        <div class="my_progress">
+            <p>다음 달에 받을 수 있는 <br>혜택 최대 <span>50</span>만원</p>
+            <dl class="deal">
+                <dt>이번 달 거래금액</dt>
+                <dd>300,000,000원</dd>
+            </dl>
+            <div class="bar"><span style="width: 25%;"></span></div>
+            <ul class="level_tit">
+                <li>일반</li>
+                <li>A</li>
+                <li>S</li>
+                <li>SS</li>
+                <li>SSS</li>
+                <li>L</li>
+            </ul>
+        </div>
+
+        <ol class="benefit_list">
+            <li class="spcial">
+                <p class="benefit">특별 혜택</p>
+                <div class="tooltip_wrap">
+                    <p class="text">
+                        해외주식 수익금액 상관없이
+                        <button type="button" class="tooltip" data-tooltip="tooltip2">툴팁</button>
+                        <span class="tooltip_box" data-tooltip="tooltip2"></span>
+                    </p>
+                </div>
+                <p class="tit">양도소득세 신고대행<br><span>무료로 진행해드려요</span></p>
+                <p class="txt">* 2025년 3월 A~L등급 히어로만 해당</p>
+                <p class="btn_box"><button type="button">무료신청하기</button></p>
+            </li>
+            <li class="up">
+                <p class="benefit">혜택 1</p>
+                <p class="text">해외주식 5천만원을 채우면</p>
+                <p class="tit">리워드 50만원을 받는<br><span>L등급으로 UP!</span></p>
+                <p class="more"><button type="button">등급별 혜택 안내</button></p>
+            </li>
+            <li class="more">
+                <p class="benefit">혜택2</p>
+                <p class="text">S등급 이상 히어로 고객님은,</p>
+                <p class="tit"><span>매월 T우주패스 X 유튜브 프리미엄</span><br><span>1개월 이용권</span>을 무료로 드려요!</p>
+                <p class="txt">* 통신사 상관없이 누구나 T우주앱에서 쿠폰 등록 사용가능</p>
+                <p class="more"><button type="button">자세히보기</button></p>
+                <p class="btn_box"><button type="button">쿠폰 보기</button></p>
+            </li>
+        </ol>
+
+        <dl class="btn_fixed">
+            <dt>이번달 받은 혜택</dt>
+            <dd><button type="button">22만원</button></dd>
+        </dl>
+    </div>
+
+    <!-- 등급별 혜택 안내 -->
+    <div class="popup popup_benefit none">
+        <div class="dim"></div>
+        <div class="popup_container">
+            <div class="pop_header">
+                <h1>등급별 혜택 안내</h1>
+                <div class="header_close"><button type="button" onclick="popup.close('popup_benefit');">닫기</button></div>
+            </div>
+            <div class="pop_body tab_wrapper">
+                <ul class="tab_menu">
+                    <li class="a">A</li>
+                    <li class="s">S</li>
+                    <li class="ss active my">SS</li>
+                    <li class="sss">SSS</li>
+                    <li class="l">L</li>
+                </ul>
+                <div class="tab_content a">
+                    <dl class="box">
+                        <dt><strong>A급 히어로</strong>a Hero</dt>
+                        <dd>
+                            <ul>
+                                <li><span class="tit">기준</span>해외주식 거래금액 5억원 이상</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <ul class="more">
+                        <li>다음 달 리워드 1만원</li>
+                    </ul>
+                </div>
+                <div class="tab_content s">
+                    <dl class="box">
+                        <dt><strong>S급 히어로</strong> Super Hero</dt>
+                        <dd>
+                            <ul>
+                                <li><span class="tit">기준</span>해외주식 거래금액 10억원 이상</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <ul class="more">
+                        <li>다음 날 리워드 2만원</li>
+                        <li>유튜브 프리미엄 1개월</li>
+                    </ul>
+                </div>
+                <div class="tab_content ss active">
+                    <dl class="box">
+                        <dt><strong>SS급 히어로</strong>Double Hero</dt>
+                        <dd>
+                            <ul>
+                                <li><span class="tit">기준</span>해외주식 거래금액 50억원 이상</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <ul class="more">
+                        <li>다음 날 리워드 10만원</li>
+                        <li>유튜브 프리미엄 1개월</li>
+                    </ul>
+                </div>
+                <div class="tab_content sss">
+                    <dl class="box">
+                        <dt><strong>SSS급 히어로</strong>Triple S Hero</dt>
+                        <dd>
+                            <ul>
+                                <li><span class="tit">기준</span>해외주식 거래금액 100억원 이상</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <ul class="more">
+                        <li>다음 날 리워드 20만원</li>
+                        <li>유튜브 프리미엄 1개월</li>
+                    </ul>
+                </div>
+                <div class="tab_content l">
+                    <dl class="box">
+                        <dt><strong>L급 히어로</strong>Lengendry Hero</dt>
+                        <dd>
+                            <ul>
+                                <li><span class="tit">기준</span>해외주식 거래금액 200억원 이상</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <ul class="more">
+                        <li>다음 날 리워드 50만원</li>
+                        <li>유튜브 프리미엄 1개월</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

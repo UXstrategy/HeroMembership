@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>히어로멤버십</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_coupon');">팝업열기</button>
+
+        <div class="popup popup_coupon active">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>쿠폰 번호 안내</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('popup_coupon');">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <ul class="list_dot">
+                        <li>지급된 이용권은 통신사 상관없이 누구나 T우주앱에서 등록 후 사용 가능합니다.</li>
+                        <li>매월 히어로등급 선정일에 쿠폰은 자동 지급됩니다.</li>
+                        <li>선정 당월 말일까지 지급된 T우주패스 with 유튜브 프리미엄 이용권 미 등록 시 쿠폰은 자동 소멸됩니다.</li>
+                        <li>단, 지급된 쿠폰을 T우주앱에 등록 시 쿠폰 유효기간은 1년입니다.</li>
+                        <li>본 이용권은 난수 번호 오류 등으로 하자가 있는 경우에만 교환 가능하며, 환불 대상이 아닙니다.</li>
+                    </ul>
+
+                    <p class="tit"><label for="">쿠폰번호</label></p>
+                    <div class="input_wrap">
+                        <input type="text" name="" id="" value="1234-ABCD-1234-EFGH">
+                        <button type="button">복사</button>
+                    </div>
+                    <ul class="list_dot">
+                        <li>쿠폰 등록 버튼 클릭시  T우주앱으로 이동됩니다.<br>(T우주앱 > 나의 구독 > 할인쿠폰·이용권함 > 쿠폰번호 입력 후, 등록)</li>
+                    </ul>
+
+                    <div class="btn_box">
+                        <button type="button" class="cancel">닫기</button>
+                        <button type="button">쿠폰 등록하러 가기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

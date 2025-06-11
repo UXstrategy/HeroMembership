@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>히어로멤버십</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_benefit');">팝업열기</button>
+
+        <div class="popup popup_benefit active">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>등급별 혜택 안내</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('popup_benefit');">닫기</button></div>
+                </div>
+                <div class="pop_body tab_wrapper">
+                    <ul class="tab_menu">
+                        <li class="a">A</li>
+                        <li class="s">S</li>
+                        <li class="ss active my">SS</li>
+                        <li class="sss">SSS</li>
+                        <li class="l">L</li>
+                    </ul>
+                    <div class="tab_content a">
+                        <dl class="box">
+                            <dt><strong>A급 히어로</strong>a Hero</dt>
+                            <dd>
+                                <ul>
+                                    <li><span class="tit">기준</span>해외주식 거래금액 5억원 이상</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <ul class="more">
+                            <li>다음 달 리워드 1만원</li>
+                        </ul>
+                    </div>
+                    <div class="tab_content s">
+                        <dl class="box">
+                            <dt><strong>S급 히어로</strong> Super Hero</dt>
+                            <dd>
+                                <ul>
+                                    <li><span class="tit">기준</span>해외주식 거래금액 10억원 이상</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <ul class="more">
+                            <li>다음 날 리워드 2만원</li>
+                            <li>유튜브 프리미엄 1개월</li>
+                        </ul>
+                    </div>
+                    <div class="tab_content ss active">
+                        <dl class="box">
+                            <dt><strong>SS급 히어로</strong>Double Hero</dt>
+                            <dd>
+                                <ul>
+                                    <li><span class="tit">기준</span>해외주식 거래금액 50억원 이상</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <ul class="more">
+                            <li>다음 날 리워드 10만원</li>
+                            <li>유튜브 프리미엄 1개월</li>
+                        </ul>
+                    </div>
+                    <div class="tab_content sss">
+                        <dl class="box">
+                            <dt><strong>SSS급 히어로</strong>Triple S Hero</dt>
+                            <dd>
+                                <ul>
+                                    <li><span class="tit">기준</span>해외주식 거래금액 100억원 이상</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <ul class="more">
+                            <li>다음 날 리워드 20만원</li>
+                            <li>유튜브 프리미엄 1개월</li>
+                        </ul>
+                    </div>
+                    <div class="tab_content l">
+                        <dl class="box">
+                            <dt><strong>L급 히어로</strong>Lengendry Hero</dt>
+                            <dd>
+                                <ul>
+                                    <li><span class="tit">기준</span>해외주식 거래금액 200억원 이상</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <ul class="more">
+                            <li>다음 날 리워드 50만원</li>
+                            <li>유튜브 프리미엄 1개월</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

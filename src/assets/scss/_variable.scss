@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+// 모드 별 색상
+// tt : 텍스트 , ln : 라인 , bg : 배경
+$colors:(
+    light: (
+        tt1 : #000000,
+        tt2 : #222222,
+        tt3 : #333333,
+        tt4 : #666666,
+        tt5 : #999999,
+        tt6 : #ffffff,
+        tt7 : #ffffff,
+        tt8 : #2d82fb,
+        tt9 : #212266,
+        tt10 : #666666,
+        tt11 : #ffffff,
+        tt12 : #e22d72,
+        ln1 : #333333,
+        ln2 : #999999,
+        ln3 : #eeeeee,
+        ln4 : #f2f2f2,
+        ln5 : #eae3db,
+        ln6 : #eadee1,
+        ln7 : #dee2ea,
+        ln8 : #dedeea,
+        ln9 : #e8e6df,
+        ln10 : #e5e3ec,
+        ln11 : #eeeeee,
+        bg1: #212266,
+        bg2: #D8F2FE,
+        bg3: #2D82FB,
+        bg4: #D1D7E8,
+        bg5: #F6F7F9,
+        bg6: #fbfbfb,
+        bg7: #ffffff,
+        bg8: #ffffff,
+        bg9: #f2fbe7,
+        bg10: #fff7ee,
+        bg11: #fff1f5,
+        bg12: #f1f6ff,
+        bg13: #f2f1ff,
+        bg14: #fdfaf3,
+        bg15: #212266,
+        bg16: #f2f6ff,
+        bg17: #dddddd,
+        bg18: #222222,
+        bg19: #333333,
+        bg20: #f5f5f5,
+        bg21: #e5e6e8,
+        level1: #71ab00,
+        level2: #ff700c,
+        level3: #ad0e53,
+        level4: #234299,
+        level5: #622cb4,
+        level6: #ffa600,
+    ),
+    dark: (
+        tt1 : #ffffff,
+        tt2 : #eeeeee,
+        tt3 : #cccccc,
+        tt4 : #666666,
+        tt5 : #999999,
+        tt6 : #121212,
+        tt7 : #ffffff,
+        tt8 : #2d82fb,
+        tt9 : #eeeeee,
+        tt10 : #cccccc,
+        tt11 : #cccccc,
+        tt12 : #dd5b5b,
+        ln1: #eeeeee,
+        ln2: #666666,
+        ln3: #333333,
+        ln4: #333333,
+        ln5: #443422,
+        ln6: #472c33,
+        ln7: #27324a,
+        ln8: #382650,
+        ln9: #3d3524,
+        ln10: #52585b,
+        ln11: #444444,
+        bg1: #eeeeee,
+        bg2: #0B336B,
+        bg3: #2D82FB,
+        bg4: #41485e,
+        bg5: #26282A,
+        bg6: #1b1b1b,
+        bg7: #121212,
+        bg8: #1f1f1f,
+        bg9: #1d2714,
+        bg10: #301e0a,
+        bg11: #33151d,
+        bg12: #101c37,
+        bg13: #230f3d,
+        bg14: #281f0c,
+        bg15: #222355,
+        bg16: #101d3a,
+        bg17: #444444,
+        bg18: #eeeeee,
+        bg19: #cccccc,
+        bg20: #222222,
+        bg21: #555555,
+        level1: #537d07,
+        level2: #c6580a,
+        level3: #911349,
+        level4: #213e8f,
+        level5: #5925aa,
+        level6: #b17503,
+        )
+    );
+
+@function func_color($key, $type: 'light'){
+    @each $name, $color in map-get($colors, $type){
+        @if($key == $name){
+            @return $color;
+        }
+    }
+}
+
+@mixin color($property,$color, $important: false){
+    #{$property}: func_color($color) #{if($important, '!important', '')};
+    @at-root body.dark & {
+        #{$property}: func_color($color, dark) #{if($important, '!important', '')};
+    }
+}
+
+@mixin bgImg($lightUrl,$darkUrl:null,$width:null,$height:null) {
+    background-image: url($lightUrl);
+    width: $width;
+    height: $height;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @at-root body.dark & {
+        background-image: url($darkUrl);
+    }
+}
