@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_announce');">팝업열기</button>
+
+        <div class="popup dialog popup_announce active">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>발송 안내</h1>
+                </div>
+                <div class="pop_body">
+                    <p>아래 계좌로 리워드가 입금됩니다.</p>
+                    <ul class="reward_detail">
+                        <li>    
+                            <p>
+                                <span class="tit">입금계좌</span>
+                                <span class="detail">5112-1234 [위탁종합]</span>
+                            </p>
+                            <p>
+                                <span class="tit">리워드금액</span>
+                                <span class="detail">200,000원</span>
+                            </p>
+                            <p>
+                                <span class="tit">입금금액</span>
+                                <span class="detail red">156,000원<span>(제세공과금 22%제외)</span></span>
+                            </p>
+                        </li>
+                        <li>    
+                            <p>
+                                <span class="tit">입금계좌</span>
+                                <span class="detail">5112-1234 [위탁종합]</span>
+                            </p>
+                            <p>
+                                <span class="tit">입금금액</span>
+                                <span class="detail red">156,000원</span>
+                            </p>
+                        </li>
+                    </ul>
+                    <ul class="list_dot">
+                        <li>지급내역은 거래내역에서 확인 가능합니다.</li>
+                    </ul>
+
+                    <div class="btn_box">
+                        <button type="button" class="btn_cancel" onclick="popup.open('popup_announce');">다시선택</button>
+                        <button type="button" class="btn_ok">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

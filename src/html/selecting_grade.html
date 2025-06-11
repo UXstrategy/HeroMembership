@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap notice">
+        <header>
+            <div class="close"><button type="button">닫기</button></div>
+        </header>
+        <div class="contents">
+            <h1>히어로 등급<br>선정 중입니다.</h1>
+            <p class="txt">빠르게 작업 중이니 조금만 기다려주세요.</p>
+            <p class="txt2">매월 첫 영업일 오후 4시 선정 완료</p>
+
+            <dl class="able">
+                <dt class="refresh_wrap">해외주식 거래금액 <button type="button" class="refresh">새로고침</button></dt>
+                <dd>100,000,000,000원</dd>
+            </dl>
+
+            <dl class="notice">
+                <dt>유의사항</dt>
+                <dd>
+                    <ul class="list_dot">
+                        <li>
+                            해외주식 거래금액 기준
+                            <ul class="list_num">
+                                <li>당월 1일 오전 8시 이전 조회 시<br>: 전월 ~ 당월 1일 오전 8시까지 거래한 금액 합산</li>
+                                <li>당월 1일 오전 8시 이후 조회 시<br>: 당월 1일 오전 8시 이후부터 ~ 첫 영업일 히어로등급 선정까지 거래한 금액 합산</li>
+                            </ul>
+                        </li>
+                        <li>본 화면에서 조회되는 해외주식 거래음식은 단순 참고용으로 정산환율에 따라 실제와 다소 차이가 발생할 수 있으니 유의하시기 바랍니다. 최종 등급은 익월 첫 영업일 오후 4시에 선정됩니다.</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        // 새로고침
+        var refreshCk = true;
+        $('.refresh').on('click',function(){
+            if(refreshCk){
+                refreshCk=false;
+                $(this).closest('.refresh_wrap').children('.refresh').addClass('active');
+                setTimeout(() => {
+                    refreshCk=true;
+                    $('.refresh').removeClass('active');  
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>

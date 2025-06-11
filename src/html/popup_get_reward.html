@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_get_reward');">팝업열기</button>
+
+        <div class="popup popup_get_reward dialog active">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_body">
+                    <p>리워드가 지급되었습니다.</p>
+                    <p>+20,000원</p>
+
+                    <div class="gift_box_wrap">
+                        <div class="gift_box"></div>
+
+                        <ul class="paper">
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn_close">
+                        <button type="button" onclick="popup.close('popup_get_reward');">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

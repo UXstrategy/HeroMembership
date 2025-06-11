@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>히어로멤버십</title>
+    <title>영웅클럽</title>
     <link rel="stylesheet" href="../assets/css/default.css">
     <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
 </head>
@@ -79,12 +79,12 @@
                     <p class="last">계정 연동이 완료되면 무료로 이용이 가능합니다!</p>
                 </li>
             </ol>
-            <div class="btn_box"><button type="button" onclick="popup.open('popup_coupon');">쿠폰보기</button></div>
+            <div class="btn_box"><button type="button" class="btn_ok" onclick="popup.open('popup_coupon');">쿠폰보기</button></div>
         </div>
     </div>
 
     <!-- 쿠폰번호안내 팝업 -->
-    <div class="popup popup_coupon none">
+    <div class="popup bottomsheet popup_coupon none">
         <div class="dim"></div>
         <div class="popup_container">
             <div class="pop_header">
@@ -100,9 +100,9 @@
                     <li>본 이용권은 난수 번호 오류 등으로 하자가 있는 경우에만 교환 가능하며, 환불 대상이 아닙니다.</li>
                 </ul>
 
-                <p class="tit"><label for="">쿠폰번호</label></p>
+                <p class="tit"><label for="coupon">쿠폰번호</label></p>
                 <div class="input_wrap">
-                    <input type="text" name="" id="" value="1234-ABCD-1234-EFGH">
+                    <input type="text" name="" id="coupon" value="1234-ABCD-1234-EFGH">
                     <button type="button">복사</button>
                 </div>
                 <ul class="list_dot">
@@ -110,8 +110,8 @@
                 </ul>
 
                 <div class="btn_box">
-                    <button type="button" class="cancel">닫기</button>
-                    <button type="button">쿠폰 등록하러 가기</button>
+                    <button type="button" class="btn_cancel" onclick="popup.close('popup_coupon');">닫기</button>
+                    <button type="button" class="btn_ok">쿠폰 등록하러 가기</button>
                 </div>
             </div>
         </div>
