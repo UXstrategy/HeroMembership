@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해외주식_히어로멤버쉽</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_card');">팝업열기</button>
+
+        <div class="popup bottomsheet popup_card active">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>신규 혜택이 추가되었어요!</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('popup_card');">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <div class="swiper_unit card_list" data-view="2" data-loop="false" data-space="20">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><img src="../assets/images/card1.png" alt=""></li>
+                            <li class="swiper-slide"><img src="../assets/images/card2.png" alt=""></li>
+                        </ul>
+                    </div>
+
+                    <div class="swiper_unit benefit_detail" data-loop="false" data-view="1">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                "최대 현금 70만원 + 상품권 40만원 + @"<br><br>
+                                히어로멤버쉽 고객에게만 제공되는 특별한 혜택
+                            </li>
+                            <li class="swiper-slide">
+                                자격을 갖춘 히어로만이 키움에서 가질 수 있는 혜택<br>
+                                최대 70만원의 카드연회비 전액 지원
+                            </li>
+                            <li class="swiper-slide">
+                                히어로의 도도한 품격 유지를 위한 다양한 카드 혜택<br><br>
+                                최대 40만원의 바우처 포함 카드 혜택 제공
+                            </li>
+                            <li class="swiper-slide">
+                                준비된 히어로에게 키움과 제휴사가 준비한 최대 110만원의 도도한 헤택을 만나보세요
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn_box"><button type="button">위로 올려보세요</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

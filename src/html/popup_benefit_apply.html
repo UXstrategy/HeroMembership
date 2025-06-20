@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_benefit_apply');">팝업열기</button>
+
+        <div class="popup dialog popup_benefit_apply active">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>신규 혜택 알림 신청</h1>
+                </div>
+                <div class="pop_body">
+                    <p>신규 혜택 오픈되면 <br>남겨주신 연락처로 문자를 보내드릴게요.</p>
+                    <div class="input_wrap">
+                        <label for="number">휴대폰 번호</label>
+                        <input type="text" name="" id="number" placeholder="'-' 없이 입력해주세요.">
+                    </div>
+                    <div class="btn_box two_btn">
+                        <button type="button" class="btn_cancel" onclick="popup.close('popup_benefit_apply');">취소</button>
+                        <button type="button" class="btn_ok">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>
