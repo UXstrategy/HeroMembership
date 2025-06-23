@@ -16,92 +16,81 @@
             <div class="close"><button type="button">닫기</button></div>
         </header>
         <!-- p.fire > 불 / p.complete > 체크뱃지 / p.cong > 폭죽 -->
-        <p class="main_noti cong">
-            지난달 해외주식 <span>거래금액 100억원</span> 달성!
+        <p class="main_noti complete">
+            이번 달 거래금액이 <span>다음 달 등급</span> 결정!
             <button type="button" class="share">공유하기</button>
         </p>
-        <div class="swiper_unit level_swiper" data-loop="false" data-space="10">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide general">
+        <div class="swiper_unit level_swiper" data-loop="false" data-space="10" data-initial="0">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide general">
                     <div class="card">
-                        <p class="level">지난달 등급</p>
+                        <p class="level">이번달 등급</p>
                         <p class="tit">일반</p>
                         <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                     </div>
-                </div>
-                <div class="swiper-slide a">
-                    <div class="card">
-                        <p class="level">이번달 등급</p>
-                        <p class="tit">A <span>a Hero</span></p>
-                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
-                    </div>
-                </div>
-                <div class="swiper-slide s">
-                    <div class="card">
-                        <p class="level">이번달 등급</p>
-                        <p class="tit">S <span>Super Hero</span></p>
-                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
-                    </div>
-                </div>
-                <div class="swiper-slide ss">
-                    <div class="card">
-                        <p class="level">이번달 등급</p>
-                        <p class="tit">SS <span>Double S Hero</span></p>
-                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
-                    </div>
-                </div>
-                <div class="swiper-slide sss">
-                    <div class="card">
-                        <p class="level">이번달 등급</p>
-                        <p class="tit">SSS <span>Triple S Hero</span></p>
-                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
-                    </div>
-                </div>
-                <div class="swiper-slide l">
+                </li>
+                <li class="swiper-slide a">
                     <div class="card">
                         <p class="level">다음 등급</p>
-                        <p class="tit">L <span>Legendary Hero</span></p>
+                        <p class="tit">A</p>
                         <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                     </div>
-                </div>
-            </div>
+                </li>
+                <li class="swiper-slide s">
+                    <div class="card">
+                        <p class="level">다음 등급</p>
+                        <p class="tit">S</p>
+                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                    </div>
+                </li>
+                <li class="swiper-slide ss my">
+                    <div class="card_wrapper">
+                        <div class="card">
+                            <p class="level">다음 등급</p>
+                            <p class="tit">SS</p>
+                            <div class="benefit_btn my_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                        </div>
+                        <div class="card back purple">
+                            <p class="name">히어로 멤버쉽 전용 신용카드 <span>프리미엄 B카드</span></p>
+                            <div class="apply_btn"><button type="button">혜택 상세 보고 신청하러가기</button></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="swiper-slide sss">
+                    <div class="card">
+                        <p class="level">다음 등급</p>
+                        <p class="tit">SSS</p>
+                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                    </div>
+                </li>
+                <li class="swiper-slide l">
+                    <div class="card">
+                        <p class="level">다음 등급</p>
+                        <p class="tit">L</p>
+                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <dl class="benefit_wrap">
             <dt>등급 리워드 혜택</dt>
-            <dd class="swiper_unit" data-space="12" data-loop="false">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide">
-                        <button type="button" class="coupon ready">
-                            <span><span class="tag">혜택 1</span></span>
-                            <span class="rewards">리워드</span>
-                            <span class="price">500,000원</span>
-                            <span class="noti">매월 신청 필수</span>
-                        </button>
-                    </li>
-                    <li class="swiper-slide">
-                        <button type="button" class="coupon">
-                            <span><span class="tag">혜택 2</span></span>
-                            <span class="youtube">유튜브</span>
-                            <span class="price">1개월 이용권</span>
-                            <span class="noti">매월 쿠폰등록 필수</span>
-                        </button>
-                    </li>
-                </ul>
+            <dd>
+                <div class="next_level">A등급이 되면 혜택을<br>받을 수 있어요!</div>
             </dd>
         </dl>
 
         <div class="my_progress">
-            <p>다음 달에 받을 수 있는 <br>혜택 최대 <span>50만원</span></p>
+            <p>다음 달에 받을 수 있는 <br>등급 리워드 혜택 최대 <span>50만원</span></p>
             <dl class="deal">
                 <dt class="tooltip_wrap">
                     이번 달 체결금액
-                    <button type="button" class="tooltip" data-tooltip="tooltip2">툴팁</button>
-                    <span class="tooltip_box" data-tooltip="tooltip2"></span>
+                    <button type="button" class="tooltip" data-tooltip="tooltip1">툴팁</button>
+                    <span class="tooltip_box" data-tooltip="tooltip1"></span>
                 </dt>
-                <dd>10,000,000,000원</dd>
+                <dd>300,000,000원</dd>
             </dl>
-            <div class="bar"><span style="width: 94%;"></span></div>
+            <div class="bar"><span style="width: 34%;"></span></div>
             <ul class="level_tit">
                 <li>일반</li>
                 <li>A</li>
@@ -113,6 +102,42 @@
         </div>
 
         <ol class="benefit_list">
+            <li class="premium">
+                <p class="benefit">혜택 1</p>
+                <p class="text">히어로 멤버쉽 고객들만을 위한</p>
+                <p class="tit">키움만의 프리미엄<br><span>신용카드가 출시돼요!</span></p>
+                <dl class="pre_benefit a">
+                    <dt><img src="../assets/images/tit_premium.png" alt="히어로 신한카드 최상위 히어로의 도도한 품격"></dt>
+                    <dd>
+                        <div class="swiper_unit premium_card" data-initial="0" data-loop="false" data-align="left">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide a" data-slide="a"><img src="../assets/images/card_a_3.png" alt=""></li>
+                                <li class="swiper-slide b" data-slide="b"><img src="../assets/images/card_b_3.png" alt=""></li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                        <div class="box a" data-box="a" style="display: none;">
+                            <p class="tit">최대 110만원의<br>파격적인 레전드급 혜택!</p>
+                            <ul class="detail">
+                                <li>카드 발급 시 <span>30만원</span></li>
+                                <li>체결금액 충족 시 <span>20만원 X 2번</span></li>
+                                <li>연 1회 <span>카드 바우처 40만원</span></li>
+                            </ul>
+                            <div class="btn_wrapper"><button type="button">도도한 헤택 안내 바로가기</button></div>
+                        </div>
+                        <div class="box b" data-box="b">
+                            <p class="tit">최대 50만원의<br>고품격의 히어로급 혜택!</p>
+                            <ul class="detail">
+                                <li>카드 발급 시 <span>10만원</span></li>
+                                <li>체결금액 충족 시 <span>10만원 X 2번</span></li>
+                                <li>연 1회 <span>카드 바우처 20만원</span></li>
+                            </ul>
+                            <div class="btn_wrapper"><button type="button">도도한 헤택 안내 바로가기</button></div>
+                        </div>
+                    </dd>
+                </dl>
+            </li>
             <li class="spcial">
                 <p class="benefit">특별 혜택</p>
                 <div class="tooltip_wrap">
@@ -127,29 +152,24 @@
                 <p class="btn_box"><button type="button">무료신청하기</button></p>
             </li>
             <li class="up">
-                <p class="benefit">혜택 1</p>
-                <p class="text">다음달 리워드 50만원을 받는</p>
-                <p class="tit">L등급으로 UP하려면<br><span>5,000만원이 부족해요</span></p>
+                <p class="benefit">혜택 2</p>
+                <p class="text">해외주식 5천만원을 채우면</p>
+                <p class="tit">리워드 50만원을 받는<br><span>L등급으로 UP!</span></p>
                 <p class="more"><button type="button">등급별 혜택 안내</button></p>
             </li>
             <li class="more">
-                <p class="benefit">혜택 2</p>
+                <p class="benefit">혜택 3</p>
                 <p class="text">S등급 이상 히어로 고객님은,</p>
                 <p class="tit"><span>매월 T우주패스 X 유튜브 프리미엄</span><br><span>1개월 이용권</span>을 무료로 드려요!</p>
                 <p class="txt">* 통신사 상관없이 누구나 T우주앱에서 쿠폰 등록 사용가능</p>
                 <p class="more"><button type="button">자세히보기</button></p>
                 <p class="btn_box"><button type="button">쿠폰 보기</button></p>
             </li>
-            <li class="coming">
-                <p class="benefit">오픈 예정 신규 혜택</p>
-                <p class="tit"><span>최대 110만원의 혜택을 품은</span></p>
-                <p class="text">키움만의 프리미엄 신용카드 오픈 예정!</p>
-            </li>
         </ol>
 
         <dl class="btn_fixed">
             <dt>이번달 받은 혜택</dt>
-            <dd><button type="button">50만원</button></dd>
+            <dd><button type="button">22만원</button></dd>
         </dl>
     </div>
 
@@ -253,9 +273,66 @@
     <script src="../assets/js/lib/swiper-bundle.min.js"></script>
     <script src="../assets/js/common.js"></script>
     <script>
-        $('.benefit_more dd').on('click', function(){
-            $(this).toggleClass('slide');
+        // $('.level_swiper .my .card_wrapper').on('click', function(){
+        //     $(this).toggleClass('reverse');
+        // });
+        // $('.level_swiper .my .front button').on('click', function(){
+        //     if($(this).closest('.card_wrapper').hasClass('reverse')){
+        //         $(this).closest('.card_wrapper').removeClass('reverse');
+        //         console.log('dddddddd');
+        //     } else {
+
+        //         console.log('zzzzzzzzzz');
+        //     }
+        // });
+    </script>
+    <script>
+        // tab
+        $('.tab_wrapper').each(function(){
+            $(".tab_head li").on("click", function() {
+                $(this).closest(".tab_wrapper").children(".tab_head").children('li').removeClass("active");
+                $(this).addClass('active');
+                $(this).closest(".tab_wrapper").children(".tab_content").hide();
+                $(this).closest(".tab_wrapper").children(".tab_content").eq($(this).index()).show();
+            });
         });
+
+        // 프리미엄 카드 회전
+        var timer = setInterval(function(){
+            $('.level_swiper .my .card_wrapper').toggleClass('reverse');
+        }, 3000);
+
+
+        // 프리미엄 카드 혜택
+        var swiper = new Swiper(".premium_card", {
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            on: {
+                slideChange: function(){
+                    updateSlideState();
+                }
+            },
+        });
+
+        function updateSlideState(){
+            var aActive = $('.premium_card .swiper-slide.a').hasClass('swiper-slide-active');
+            var bActive = $('.premium_card .swiper-slide.b').hasClass('swiper-slide-active');
+
+            if(aActive){
+                $('.pre_benefit').removeClass('b').addClass('a');
+                $('.pre_benefit .box.a').show();
+                $('.pre_benefit .box.b').hide();
+            } else if(bActive){
+                $('.pre_benefit').removeClass('a').addClass('b');
+                $('.pre_benefit .box.a').hide();
+                $('.pre_benefit .box.b').show();
+            }
+        }
+        updateSlideState();
     </script>
 </body>
 </html>
