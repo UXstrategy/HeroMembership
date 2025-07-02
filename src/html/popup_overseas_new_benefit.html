@@ -20,35 +20,51 @@
                     <h1>신규 혜택이 추가되었어요!</h1>
                     <div class="header_close"><button type="button" onclick="popup.close('popup_card');">닫기</button></div>
                 </div>
+                <div class="pop_card_inner"><img src="../assets/images/img_pop_new_benefit.png"></div>
                 <div class="pop_body">
-                    <div class="swiper_unit card_list" data-view="2" data-loop="false" data-space="20">
-                        <ul class="swiper-wrapper">
-                            <li class="swiper-slide"><img src="../assets/images/card1.png" alt=""></li>
-                            <li class="swiper-slide"><img src="../assets/images/card2.png" alt=""></li>
-                        </ul>
+                    <div class="benefit_detail_wrap">
+                        <div class="detail_slide swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="detail_info1">
+                                        <ul class="info_box">
+                                            <li>최대 현금<br>70만원</li>
+                                            <li>상품권<br>40만원</li>
+                                            <li>다양한<br>할인/적립</li>
+                                        </ul>
+                                        <p class="text_gradient">히어로멤버십 고객에게만<br>제공되는 특별한 헤택</p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="detail_info2">
+                                        <p class="t1">자격을 갖춘 히어로만이<br>키움에서 가질 수 있는 혜택</p>
+                                        <p class="t2">최대 70만원의<br>카드연회비 전액 지원</p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="detail_info2">
+                                        <p class="t1">히어로의 도도한 품격 유지를 위한<br>다양한 카드 혜택</p>
+                                        <p class="t2">최대 40만원의 바우처 포함<br>카드 혜택 제공</p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="detail_info4">
+                                        <p class="gray_box">현금도 바우처도 전부 드리는 도도한 헤택</p>
+                                        <p class="t1">준비된 히어로에게<br>키움과 신한카드가 준비한</p>
+                                        <p class="text_gradient">최대 110만원의<br>도도한 헤택을 만나보세요</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <div class="swiper_unit benefit_detail" data-loop="false" data-view="1">
-                        <ul class="swiper-wrapper">
-                            <li class="swiper-slide">
-                                "최대 현금 70만원 + 상품권 40만원 + @"<br><br>
-                                히어로멤버쉽 고객에게만 제공되는 특별한 혜택
-                            </li>
-                            <li class="swiper-slide">
-                                자격을 갖춘 히어로만이 키움에서 가질 수 있는 혜택<br>
-                                최대 70만원의 카드연회비 전액 지원
-                            </li>
-                            <li class="swiper-slide">
-                                히어로의 도도한 품격 유지를 위한 다양한 카드 혜택<br><br>
-                                최대 40만원의 바우처 포함 카드 혜택 제공
-                            </li>
-                            <li class="swiper-slide">
-                                준비된 히어로에게 키움과 제휴사가 준비한 최대 110만원의 도도한 헤택을 만나보세요
-                            </li>
-                        </ul>
+                </div>
+                <div class="pop_bottom_btn">
+                    <div class="arrow">
+                        <span></span>
+                        <span></span>
                     </div>
-
-                    <div class="btn_box"><button type="button">위로 올려보세요</button></div>
+                    <div class="slide_up">위로 올려보세요</div>
+                    <button type="button">혜택 자세히보기</button>
                 </div>
             </div>
         </div>
@@ -64,5 +80,31 @@
     <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
     <script src="../assets/js/lib/swiper-bundle.min.js"></script>
     <script src="../assets/js/common.js"></script>
+    <script>
+        const bottomBtn = $('.pop_bottom_btn'); 
+        const detail_slide = new Swiper('.detail_slide', {
+            loop: true,
+            direction: 'vertical',
+            on: {
+                realIndexChange: function(activeIndex){
+                    if ( detail_slide.realIndex != 0 ) {
+                        bottomBtn.find('.slide_up').hide();
+                        bottomBtn.find('button').show();
+                    } else {
+                        bottomBtn.find('.slide_up').show();
+                        bottomBtn.find('button').hide();
+                    }
+                    if ( detail_slide.realIndex == 3 ) {
+                        bottomBtn.find('.arrow').hide();
+                    } else {
+                        bottomBtn.find('.arrow').show();
+                    }
+                }
+            }
+        });
+        bottomBtn.find('.slide_up').on('click', function(){
+            detail_slide.slideToLoop(1, 300, false);
+        });
+    </script>
 </body>
 </html>

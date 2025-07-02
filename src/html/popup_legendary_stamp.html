@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해외주식_히어로멤버쉽</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_super_stamp');">팝업열기</button>
+
+        <div class="popup popup_super_stamp active">
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>스탬프를 다 찍으면<br>Legndary HERO카드<br>신청이 가능해요!</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('popup_super_stamp');">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <p class="stamp_date"><span>·</span> 해당 기간은 1일부터 말일까지에요</p>
+                    <div class="stamp_box">
+                        <div class="stamp_top">
+                            <p></p>
+                        </div>
+                        <ul>
+                            <!-- 조건 달성 시 'on' class 추가 -->
+                            <li class="on"><span class="stamp stamp20">20억</span></li>
+                            <li><span class="stamp stamp40">40억</span></li>
+                            <li><span class="stamp stamp60">60억</span></li>
+                        </ul>
+                        <ul>
+                            <li><span class="stamp stamp80">80억</span></li>
+                            <li>
+                                <div class="coin_area">
+                                    <div class="coin100">
+                                        <div class="front"></div>
+                                        <div class="back"></div>
+                                    </div>
+                                </div>
+                                <span class="stamp stamp100">100억</span>
+                                <span class="badge">L카드 신청</span><span class="badge complete">신청조건달성</span>
+                            </li>
+                        </ul>  
+                    </div>
+                    <div class="now_month_price">
+                        <dl>
+                            <dt>이번 달<br>해외누적체결금액</dt>
+                            <dd>1,500,000,000원</dd>
+                        </dl>
+                    </div>
+                    <div class="btm_btns">
+                        <button type="button">체결하러 가기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        const stampBox = $('.stamp_box');
+        const stampTop = stampBox.find('.stamp_top');
+        const stampTopText = stampTop.find('p');
+        const stampCount = stampBox.find('.on').length;
+
+        if ( stampCount == 0 ) {
+            stampTopText.text('시작이 반! 곧 스탬프 1개를 받을 수 있어요');
+        } else if ( stampCount == 1 ) {
+            stampTopText.text('벌써, 1개의 스탬프를 찍었어요');
+        } else if ( stampCount == 2 ) {
+            stampTopText.text('2개의 스탬프를 찍었어요');
+        } else if ( stampCount == 3 ) {
+            stampTopText.text('3개의 스탬프를 찍었어요');
+        } else if ( stampCount == 4 ) {
+            stampTopText.text('고지가 눈앞! 4개의 스탬프를 찍었어요');
+        } else if ( stampCount == 5 ) {
+            stampTopText.text('대단해요! 5개의 스탬프를 찍었어요');
+            $('.pop_header').find('h1').html('다음달 히어로등급 산정 후,<br>Legendary HERO카드 신청이<br>가능해요!');
+        }
+    </script>
+</body>
+</html>

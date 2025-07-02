@@ -142,8 +142,8 @@ body.dark {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #444;
-        opacity: .6;
+        background-color: #333;
+        opacity: .5;
         transition: all 0.5s ease-in-out;
     }
 
@@ -715,16 +715,721 @@ body.dark {
             }
         }
     }
-
     &.popup_card {
-        .card_list {
-            .swiper-slide {
-                width: 84rem !important;
+        .popup_container {
+            background: #121212;
+            .pop_header {
+                h1 {
+                    color: #eee;
+                    letter-spacing: -0.55rem;
+                }
+                .header_close {
+                    button {
+                        @include bgImg('../images/ic_close_dm.png', '../images/ic_close_dm.png');
+                    }
+                }
+            }
+            .pop_card_inner {
+                padding: 0 28rem;
+                height: 180rem;
+                img {
+                    width: 100%;
+                }
+            }
+            .pop_body {
+                .benefit_detail_wrap {
+                    height: 212rem;
+                    overflow: hidden;
+                    .detail_slide {
+                        height: 212rem;
+                        color: #fff;
+                    }
+                    .detail_info1 {
+                        padding: 11rem 28rem 0;
+                        text-align: center;
+                        .info_box {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 94rem;
+                            border-radius: 16rem;
+                            background: #26282a;
+                            gap: 46rem;
+                            li {
+                                position: relative;
+                                font-size: 16rem;
+                                color: #eee;
+                                line-height: 22rem;
+                                letter-spacing: -0.4rem;
+                                &:before {
+                                    display: block;
+                                    margin: -10rem 0 0 -33rem;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    width: 20rem;
+                                    height: 20rem;
+                                    @include bgImg('../images/ico_pop_benefit_plus.png', '../images/ico_pop_benefit_plus.png');
+                                    background-size: 100% auto;
+                                    content: '';
+                                }
+                                &:first-child:before {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .text_gradient {
+                            padding-top: 24rem;
+                            font-size: 16rem;
+                            font-weight: 600;
+                            letter-spacing: -0.25rem;
+                            line-height: 22rem;
+                            background: linear-gradient(to right, #ffec6e 0%, #ff78ea 100%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                    .detail_info2 {
+                        padding-top: 37rem;
+                        text-align: center;
+                        .t1 {
+                            font-size: 16rem;
+                            color: #ccc;
+                            line-height: 22rem;
+                            letter-spacing: -0.4rem;
+                        }
+                        .t2 {
+                            padding-top: 8rem;
+                            font-size: 20rem;
+                            color: #eee;
+                            font-weight: bold;
+                            line-height: 26rem;
+                            letter-spacing: -0.5rem;
+                        }
+                    }
+                    .detail_info4 {
+                        text-align: center;
+                        .gray_box {
+                            display: inline-block;
+                            margin-top: 19rem;
+                            padding: 11rem 20rem 10rem;
+                            font-size: 15rem;
+                            color: #eee;
+                            font-weight: 600;
+                            line-height: 22rem;
+                            letter-spacing: -0.38rem;
+                            border-radius: 21rem;
+                            background: #26282a;
+                        }
+                        .t1 {
+                            padding-top: 20rem;
+                            font-size: 20rem;
+                            color: #ccc;
+                            line-height: 26rem;
+                            letter-spacing: -0.5rem;
+                        }
+                        .text_gradient {
+                            padding-top: 9rem;
+                            font-size: 20rem;
+                            font-weight: bold;
+                            letter-spacing: -0.25rem;
+                            line-height: 26rem;
+                            background: linear-gradient(to right, #ffec6e 0%, #ff78ea 100%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+            }
+            .pop_bottom_btn {
+                padding: 20rem;
+                position: relative;
+                .arrow {
+                    position: absolute;
+                    top: -10rem;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transform: rotate(-180deg);
+                    span {
+                        display: block;
+                        width: 16rem;
+                        height: 16rem;
+                        border-bottom: 3px solid white;
+                        border-right: 3px solid white;
+                        transform: rotate(45deg);
+                        -webkit-transform: translateZ(0);
+                        margin: -10px;
+                        animation: arrowMove 2s ease infinite;
+                        &:nth-child(2) {
+                            animation-delay: -0.2s;
+                        }
+                    }
+                }
+                @keyframes arrowMove {
+                    0% {
+                        opacity: 0;
+                        transform: rotate(45deg) translate(-10px, -10px);
+                    }
+                    50% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 0;
+                        transform: rotate(45deg) translate(10px, 10px);
+                    }
+                }
+                .slide_up,
+                button {
+                    display: block;
+                    width: 100%;
+                    height: 56rem;
+                    line-height: 56rem;
+                    border-radius: 12rem;
+                    font-size: 18rem;
+                    color: #fff;
+                    font-weight: 600;
+                    text-align: center;
+                    background: linear-gradient(to right, #be8d21 0%, #a20092 100%);
+                }
+                button {
+                    display: none;
+                }
             }
         }
-        .benefit_detail {
-            padding: 0;
-            margin-top: 50rem;
+    }
+    /* black background 팝업 공통 */
+    &.popup_legendary_issuance,
+    &.popup_super_issuance,
+    &.popup_card_cancel {
+        .popup_container {
+            background: #121212;
+            .pop_header {
+                position: relative;
+                height: 117rem;
+                h1 {
+                    color: #eee;
+                    line-height: 30rem;
+                    letter-spacing: -0.55rem;
+                }
+                .header_close {
+                    position: absolute;
+                    top: 32rem;
+                    right: 20rem;
+                    button {
+                        @include bgImg('../images/ic_close_dm.png', '../images/ic_close_dm.png');
+                    }
+                }
+            }
+            .pop_body {
+                padding: 0 20rem;
+                .btm_btns {
+                    padding: 32rem 0 20rem;
+                    ul {
+                        li {
+                            padding-top: 12rem;
+                            &:first-child {
+                                padding-top: 0;
+                            }
+                            button {
+                                display: block;
+                                width: 100%;
+                                height: 45rem;
+                                font-size: 15rem;
+                                color: #ccc;
+                                font-weight: 600;
+                                text-align: center;
+                                line-height: 45rem;
+                                letter-spacing: -0.38rem;
+                                border-radius: 12rem;
+                                border: 1px solid #666;
+                                &:disabled {
+                                    color: #555;
+                                    border-color: #333;
+                                    background: #222;
+                                }
+                            }
+                            &.on {
+                                button {
+                                    color: #fff;
+                                    border: 0;
+                                    background: linear-gradient(to right, #be8d21 0%, #a20092 100%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.popup_legendary_issuance {
+        .popup_container {
+            .pop_body {
+                .graph_img {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .text_box {
+                    padding-top: 20rem;
+                    font-size: 14rem;
+                    color: #ccc;
+                    text-align: center;
+                    line-height: 20rem;
+                    letter-spacing: -0.35rem;
+                }
+            }
+        }
+    }
+    &.popup_super_issuance {
+        .popup_container {
+            .pop_body {
+                .text_box {
+                    padding-top: 20rem;
+                    font-size: 16rem;
+                    color: #ccc;
+                    text-align: center;
+                    line-height: 22rem;
+                    letter-spacing: -0.4rem;
+                    span {
+                        display: block;
+                        padding-top: 4rem;
+                        font-size: 13rem;
+                        color: #999;
+                        text-align: center;
+                        line-height: 20rem;
+                        letter-spacing: -0.33rem;
+                    }
+                }
+            }
+        }
+    }
+    &.popup_card_cancel {
+        .popup_container {
+            .pop_body {
+                .info_box {
+                    padding: 24rem 20rem;
+                    border-radius: 24rem;
+                    background: #25282a;
+                    .user_class {
+                        display: inline-block;
+                        padding: 0 8rem 1rem;
+                        font-size: 0;
+                        border-radius: 12rem;
+                        background: #230f3d;
+                        vertical-align: top;
+                        .ico {
+                            display: inline-block;
+                            margin-top: 4rem;
+                            width: 16rem;
+                            height: 16rem;
+                            @include bgImg('../images/ico_pop_user_sss.png', '../images/ico_pop_user_sss.png');
+                            vertical-align: top;
+                        }
+                        .txt {
+                            display: inline-block;
+                            padding-left: 4rem;
+                            font-size: 13rem;
+                            color: #bbabff;
+                            line-height: 25rem;
+                            letter-spacing: -0.33rem;
+                            vertical-align: top;
+                        }
+                    }
+                    .card_benefit {
+                        margin-top: 8rem;
+                        border-radius: 12rem;
+                        background: #121212;
+                        ul {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 62rem;
+                            li {
+                                padding: 16rem 0;
+                                position: relative;
+                                text-align: center;
+                                .t1 {
+                                    font-size: 13rem;
+                                    color: #ccc;
+                                    line-height: 18rem;
+                                    letter-spacing: -0.33rem;
+                                }
+                                .t2 {
+                                    padding-top: 4rem;
+                                    font-size: 15rem;
+                                    color: #eee;
+                                    font-weight: 600;
+                                    line-height: 18rem;
+                                    letter-spacing: -0.33rem;
+                                }
+                                &:last-child:before {
+                                    margin: -7rem 0 0 -43rem;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    width: 28rem;
+                                    height: 15rem;
+                                    @include bgImg('../images/ico_pop_class_arrow.png', '../images/ico_pop_class_arrow.png');
+                                    content: '';
+                                }
+                            }
+                        }
+                    }
+                    .benefit_bottom {
+                        padding: 19rem 0 0;
+                        font-size: 14rem;
+                        color: #ccc;
+                        line-height: 20rem;
+                        letter-spacing: -0.35rem;
+                        text-align: center;
+                        span {
+                            font-size: 14rem;
+                            color: #dbbd7a;
+                            line-height: 20rem;
+                            letter-spacing: -0.35rem;
+                        }
+                    }
+                }
+                .notice {
+                    padding-top: 12rem;
+                    li {
+                        margin-left: 9rem;
+                        padding-top: 8rem;
+                        font-size: 13rem;
+                        color: #999;
+                        line-height: 18rem;
+                        letter-spacing: -0.33rem;
+                        text-indent: -9rem;
+                        span {
+                            font-size: 24rem;
+                            vertical-align: top;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+    &.popup_super_stamp {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+        text-align: center;
+        background: rgba(51, 51, 51, 0.5);
+        &:before {
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            content: '';
+            vertical-align: middle;
+        }
+        .popup_container {
+            display: inline-block;
+            position: relative;
+            bottom: auto;
+            left: auto;
+            max-width: calc(100% - 40rem);
+            max-height: 90%;
+            border-radius: 24rem;
+            background: #121212;
+            transform: none;
+            vertical-align: middle;
+            .pop_header {
+                position: relative;
+                height: 123rem;
+                text-align: left;
+                align-items: end;
+                h1 {
+                    color: #eee;
+                    line-height: 30rem;
+                    letter-spacing: -0.55rem;
+                }
+                .header_close {
+                    position: absolute;
+                    top: 20rem;
+                    right: 20rem;
+                    button {
+                        @include bgImg('../images/ic_close_dm.png', '../images/ic_close_dm.png');
+                    }
+                }
+            }
+            .pop_body {
+                padding: 24rem 20rem 0;
+                .stamp_date {
+                    font-size: 13rem;
+                    color: #999;
+                    text-align: left;
+                    line-height: 18rem;
+                    letter-spacing: -0.33rem;
+                }
+                .stamp_box {
+                    margin-top: 12rem;
+                    .stamp_top {
+                        margin: 0 20rem 20rem;
+                        padding: 3rem 0 10rem;
+                        border-bottom: 1px solid #333;
+                        p {
+                            font-size: 14rem;
+                            color: #ccc;
+                            font-weight: 600;
+                            line-height: 22rem;
+                            letter-spacing: -0.35rem;
+                        }
+                    }
+                }
+                .now_month_price {
+                    padding: 16rem 0 20rem;
+                    dl {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        dt {
+                            font-size: 14rem;
+                            color: #ccc;
+                            text-align: left;
+                            line-height: 18rem;
+                            letter-spacing: -0.35rem;
+                        }
+                        dd {
+                            font-size: 18rem;
+                            color: #eee;
+                            font-weight: 700;
+                            text-align: left;
+                            line-height: 18rem;
+                            letter-spacing: -0.45rem;
+                        }
+                    }
+                }
+                .btm_btns {
+                    padding: 20rem 0;
+                    button {
+                        display: block;
+                        width: 100%;
+                        height: 56rem;
+                        font-size: 18rem;
+                        color: #fff;
+                        font-weight: 600;
+                        text-align: center;
+                        line-height: 56rem;
+                        letter-spacing: -0.45rem;
+                        border-radius: 12rem;
+                        background: linear-gradient(to right, #be8d21 0%, #a20092 100%);
+                        &:disabled {
+                            color: #555;
+                            border-color: #333;
+                            background: #222;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* stamp */
+    .stamp_box {
+        padding: 21rem 0;
+        text-align: center;
+        border-radius: 16rem;
+        background: #25282a;
+        ul {
+            display: flex;
+            margin: 3rem 0;
+            align-items: center;
+            justify-content: center;
+            gap: 6rem;
+            li {
+                position: relative;
+                .stamp {
+                    display: block;
+                    width: 76rem;
+                    height: 76rem;
+                    text-indent: -9999em;
+                    &.stamp20 {
+                        @include bgImg('../images/ico_stamp20_off.png', '../images/ico_stamp20_off.png');
+                    }
+                    &.stamp40 {
+                        @include bgImg('../images/ico_stamp40_off.png', '../images/ico_stamp40_off.png');
+                    }
+                    &.stamp60 {
+                        @include bgImg('../images/ico_stamp60_off.png', '../images/ico_stamp60_off.png');
+                    }
+                    &.stamp80 {
+                        @include bgImg('../images/ico_stamp80_off.png', '../images/ico_stamp80_off.png');
+                    }
+                    &.stamp100 {
+                        @include bgImg('../images/ico_stamp100_off.png', '../images/ico_stamp100_off.png');
+                    }
+                }
+                .badge {
+                    padding: 3rem 2rem 4rem;
+                    position: absolute;
+                    bottom: 0;
+                    left: 4rem;
+                    right: 4rem;
+                    font-size: 12rem;
+                    color: #fff;
+                    text-align: center;
+                    letter-spacing: -0.3rem;
+                    border-radius: 25rem;
+                    background-image: linear-gradient(115deg, #cf9820, #aa7301 64%);
+                    z-index: 5;
+                    &.complete {
+                        display: none;
+                        margin-left: -2rem;
+                        padding: 3rem 0 4rem;
+                        left: 0;
+                        right: 0;
+                        width: 81rem;
+                        background: #121212;
+                        z-index: 6;
+                    }
+                }
+                .coin_area {
+                    display: none;
+                    width: 76rem;
+                    height: 76rem;
+                    perspective: 1000px;
+                    .coin100 {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        transform-style: preserve-3d;
+                        animation: spinCoin 3s forwards;
+                        .front,
+                        .back {
+                            display: flex;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 76rem;
+                            height: 76rem;
+                            backface-visibility: hidden;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .front {
+                            @include bgImg('../images/ico_legendary100_front_on.png', '../images/ico_legendary100_front_on.png');
+                        } 
+                        .back {
+                            @include bgImg('../images/ico_legendary100_back_on.png', '../images/ico_legendary100_back_on.png');
+                            transform: rotateY(180deg);
+                        }
+                    }
+                    @keyframes spinCoin {
+                        /*
+                        0% {
+                            transform: rotateY(0deg);
+                        }
+                        10% {
+                            transform: rotateY(720deg);
+                        }
+                        30% {
+                            transform: rotateY(1440deg);
+                        }
+                        50% {
+                            transform: rotateY(1980deg);
+                        }
+                        70% {
+                            transform: rotateY(2340deg);
+                        }
+                        85% {
+                            transform: rotateY(2520deg);
+                        }
+                        95% {
+                            transform: rotateY(2610deg);
+                        }
+                            */
+                        100% {
+                            transform: rotateY(2160deg);
+                        }
+                    }
+                }
+                &.on {
+                    .stamp {
+                        &.stamp20 {
+                            @include bgImg('../images/ico_legendary20_on.png', '../images/ico_legendary20_on.png');
+                        }
+                        &.stamp40 {
+                            @include bgImg('../images/ico_legendary40_on.png', '../images/ico_legendary40_on.png');
+                        }
+                        &.stamp60 {
+                            @include bgImg('../images/ico_legendary60_on.png', '../images/ico_legendary60_on.png');
+                        }
+                        &.stamp80 {
+                            @include bgImg('../images/ico_legendary80_on.png', '../images/ico_legendary80_on.png');
+                        }
+                        &.stamp100 {
+                            display: none;
+                        }
+                    }
+                    .badge {
+                        display: none;
+                        &.complete {
+                            display: block;
+                        }
+                    }
+                    .coin_area {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &.super_stamp {
+            ul {
+                li {
+                    .stamp {
+                        &.stamp20 {
+                            @include bgImg('../images/ico_stamp2_off.png', '../images/ico_stamp2_off.png');
+                        }
+                        &.stamp40 {
+                            @include bgImg('../images/ico_stamp4_off.png', '../images/ico_stamp4_off.png');
+                        }
+                        &.stamp60 {
+                            @include bgImg('../images/ico_stamp6_off.png', '../images/ico_stamp6_off.png');
+                        }
+                        &.stamp80 {
+                            @include bgImg('../images/ico_stamp8_off.png', '../images/ico_stamp8_off.png');
+                        }
+                        &.stamp100 {
+                            @include bgImg('../images/ico_stamp10_off.png', '../images/ico_stamp10_off.png');
+                        }
+                    }
+                    .badge {
+                        background-image: linear-gradient(115deg, #d23e9c, #af1978 64%);
+                    }
+                    .coin_area {
+                        .coin100 {
+                            .front {
+                                @include bgImg('../images/ico_super10_front_on.png', '../images/ico_super10_front_on.png');
+                            } 
+                            .back {
+                                @include bgImg('../images/ico_super10_back_on.png', '../images/ico_super10_back_on.png');
+                            }
+                        }
+                    }
+                    &.on {
+                        .stamp {
+                            &.stamp20 {
+                                @include bgImg('../images/ico_super2_on.png', '../images/ico_super2_on.png');
+                            }
+                            &.stamp40 {
+                                @include bgImg('../images/ico_super4_on.png', '../images/ico_super4_on.png');
+                            }
+                            &.stamp60 {
+                                @include bgImg('../images/ico_super6_on.png', '../images/ico_super6_on.png');
+                            }
+                            &.stamp80 {
+                                @include bgImg('../images/ico_super8_on.png', '../images/ico_super8_on.png');
+                            }
+                            &.stamp100 {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -1335,40 +2040,62 @@ body.dark {
             &.premium {
                 padding-bottom: 0;
                 .premium_card {
+                    width: 90rem;
+                    height: 146rem;
+                    margin: 0 auto;
                     .swiper-slide {
-                        position: relative;
-                        width: 90rem;
-                        height: 146rem;
-                        &.swiper-slide-prev,
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        div {
+                            position: relative;
+                            overflow: hidden;
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                top: -100%;
+                                left: -100%; /* 시작 위치 */
+                                width: 200%; /* 빛이 지나갈 넓이 */
+                                height: 200%;
+                                background: linear-gradient(
+                                    to right,
+                                    rgba(255, 255, 255, 0) 0%,
+                                    rgba(255, 255, 255, 0.5) 50%,
+                                    rgba(255, 255, 255, 0) 100%
+                                );
+                                transform: rotate(45deg);
+                                opacity: 0;
+                            }
+                        }
+                        img {
+                            width: 100%;
+                        }
+                        &.swiper-slide-active {
+                            div {
+                                &:before {
+                                    animation: light-move 1.5s linear forwards; /* 애니메이션 적용 */
+                                }
+                            }
+                        }
                         &.swiper-slide-next {
-                            width: 70rem;
-                            height: auto;
                             img {
-                                width: 100%;
-                                height: auto;
+                                width: 70rem;
                             }
                         }
                         &.swiper-slide-prev {
-                            transform: rotate(-30deg) !important;
-                            left: 37rem;
-                            top: 23rem;
-                            z-index: -1;
+                            img {
+                                width: 70rem;
+                            }
                         }
-                        &.swiper-slide-next {
-                            transform: rotate(30deg) !important;
-                            right: 38rem;
-                            top: 23rem;
-                            z-index: -1;
-                        }
-                        img {
-                            position: relative;
-                            width: 100%;
-                            height: 100%;
-                            transition: transform .1s;
-                        }
-                        .swiper-slide-shadow-left,
-                        .swiper-slide-shadow-right {
-                            background-image: none !important;
+                        @keyframes light-move {
+                            0% {
+                                opacity: 1;
+                                transform: translate(-70%, -70%) rotate(45deg);
+                            }
+                            100% {
+                                opacity: 1;
+                                transform: translate(100%, 100%) rotate(45deg);
+                            }
                         }
                     }
                     .swiper-pagination {
@@ -1396,7 +2123,7 @@ body.dark {
                 height: 25rem;
                 margin-bottom: 12rem;
                 padding: 0 10rem;
-                line-height: 27rem;
+                line-height: 25rem;
                 border-radius: 12rem;
                 font-weight: 600;
                 font-size: 12rem;
@@ -1444,7 +2171,7 @@ body.dark {
                     @include color(color, tt3);
                     @include bgImg('../images/ic_arrow_right.png', '../images/ic_arrow_right_dm.png');
                     background-size: 9rem 9rem;
-                    background-position: top 2rem right;
+                    background-position: top 4rem right;
                 }
             }
             .txt {
@@ -1452,7 +2179,7 @@ body.dark {
                 font-size: 13rem;
                 letter-spacing: -.4rem;
                 @include color(color, tt4);
-                line-height: 20rem;
+                line-height: 18rem;
             }
             .btn_box {
                 position: absolute;
@@ -1472,7 +2199,6 @@ body.dark {
                     font-weight: 600;
                 }
             }
-
             .pre_benefit {
                 margin-top: 32rem;
                 padding: 40rem 20rem;
@@ -1480,6 +2206,7 @@ body.dark {
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
                 background-position: 0 0;
+                transition: background-image 0.3s ease;
                 &.a {
                     background-image: url('../images/bg_pre_a_2.png');
                 }
@@ -1508,7 +2235,7 @@ body.dark {
                             position: relative;
                             height: 45rem;
                             margin-top: 5rem;
-                            padding-left: 53rem;
+                            padding-left: 17rem;
                             border: 1rem solid rgba(238, 238, 238, 0.2);
                             border-radius: 8rem;
                             color: #eee;
@@ -1516,6 +2243,14 @@ body.dark {
                             line-height: 45rem;
                             letter-spacing: -.35rem;
                             box-sizing: border-box;
+                            .num {
+                                display: inline-block;
+                                margin:14rem 19rem 0 0;
+                                width: 15rem;
+                                height: 16rem;
+                                vertical-align: top;
+                                background-size: 15rem 16rem;
+                            }
                             span {
                                 color: inherit;
                                 font-size: inherit;
@@ -1564,6 +2299,15 @@ body.dark {
                                 background: linear-gradient(127deg, #72650d -12%, #171601 48%, #4c3507 113%);
                             }
                         }
+                        .num1 {
+                            @include bgImg('../images/ico_card_a_num1.png', '../images/ico_card_a_num1.png');
+                        }
+                        .num2 {
+                            @include bgImg('../images/ico_card_a_num2.png', '../images/ico_card_a_num2.png');
+                        }
+                        .num3 {
+                            @include bgImg('../images/ico_card_a_num3.png', '../images/ico_card_a_num3.png');
+                        }
                     }
                     &.b {
                         .tit {
@@ -1576,6 +2320,334 @@ body.dark {
                             li {
                                 background: linear-gradient(127deg, #720d68 -12%, #170115 48%, #4c0745 113%);
                             }
+                        }
+                        .num1 {
+                            @include bgImg('../images/ico_card_b_num1.png', '../images/ico_card_b_num1.png');
+                        }
+                        .num2 {
+                            @include bgImg('../images/ico_card_b_num2.png', '../images/ico_card_b_num2.png');
+                        }
+                        .num3 {
+                            @include bgImg('../images/ico_card_b_num3.png', '../images/ico_card_b_num3.png');
+                        }
+                    }
+                }
+            }
+            .my_hero_wrap {
+                margin-top: 32rem;
+                position: relative;
+                width: 100%;
+                min-height: 540rem;
+                @include bgImg('../images/bg_my_hero.png', '../images/bg_my_hero.png');
+                overflow: hidden;
+                .hero_top {
+                    display: flex;
+                    padding: 33rem 24rem 0;
+                    justify-content: space-between;
+                    align-items: center;
+                    .hero_title {
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+                        .title {
+                            font-size: 18rem;
+                            color: #fff;
+                            font-weight: 700;
+                        }
+                        .date {
+                            font-size: 13rem;
+                            color: #fff;
+                            font-weight: 700;
+                            &:before {
+                                padding: 0 2rem;
+                                content: '·';
+                            }
+                        }
+                    }
+                    .hero_count {
+                        font-size: 13rem;
+                        color: #fff;
+                        font-weight: 700;
+                        .now_count {
+                            margin-right: 2rem;
+                            color: #dbbd7a;
+                            font-weight: 700;
+                        }
+                        .total_count {
+                            font-weight: 400;
+                        }
+                    }  
+                }
+                .hero_path {
+                    margin-top: 3rem;
+                    position: relative;
+                    height: 408rem;
+                    font-size: 0;
+                    background-position: center 35rem;
+                    &.card_a.default {
+                        @include bgImg('../images/bg_a_route_default.png', '../images/bg_a_route_default.png');
+                    }
+                    &.card_a.half {
+                        @include bgImg('../images/bg_a_route_half.png', '../images/bg_a_route_half.png');
+                    }
+                    &.card_a.full {
+                        @include bgImg('../images/bg_a_route_full.png', '../images/bg_a_route_full.png');
+                    }
+                    &.card_b.default {
+                        @include bgImg('../images/bg_b_route_default.png', '../images/bg_b_route_default.png');
+                    }
+                    &.card_b.half {
+                        @include bgImg('../images/bg_b_route_half.png', '../images/bg_b_route_half.png');
+                    }
+                    &.card_b.full {
+                        @include bgImg('../images/bg_b_route_full.png', '../images/bg_b_route_full.png');
+                    }
+                    &.card_a {
+                        .type_card {
+                            .card_img {
+                                @include bgImg('../images/img_card_after_a.png', '../images/img_card_after_a.png');
+                            }
+                        }
+                        .type_btn {
+                            button {
+                                background: #dca121;
+                            }
+                        }
+                        .type_star.on {
+                            @include bgImg('../images/ico_star_a_on.png', '../images/ico_star_a_on.png');
+                        }
+                        .type_flower {
+                            .desc {
+                                span {
+                                    font-size: 12rem;
+                                    color: #dbbd7a;
+                                }
+                            }
+                        }
+                        .type_flower.on1 {
+                            @include bgImg('../images/ico_flower_a_on1.png', '../images/ico_flower_a_on1.png');
+                        }
+                        .type_flower.on2 {
+                            @include bgImg('../images/ico_flower_a_on2.png', '../images/ico_flower_a_on2.png');
+                        }
+                        .type_flower.on3 {
+                            @include bgImg('../images/ico_flower_a_on3.png', '../images/ico_flower_a_on3.png');
+                        }
+                        .type_flower.on4 {
+                            @include bgImg('../images/ico_flower_a_on4.png', '../images/ico_flower_a_on4.png');
+                        }
+                        .type_flower.on5 {
+                            @include bgImg('../images/ico_flower_a_on5.png', '../images/ico_flower_a_on5.png');
+                        }
+                    }
+                    &.card_b {
+                        .type_card {
+                            .card_img {
+                                @include bgImg('../images/img_card_after_b.png', '../images/img_card_after_b.png');
+                            }
+                        }
+                        .type_btn {
+                            button {
+                                background: #df3cc8;
+                            }
+                        }
+                        .type_star.on {
+                            @include bgImg('../images/ico_star_b_on.png', '../images/ico_star_b_on.png');
+                        }
+                        .type_flower {
+                            .desc {
+                                span {
+                                    font-size: 12rem;
+                                    color: #ef9be1;
+                                }
+                            }
+                        } 
+                        .type_flower.on1 {
+                            @include bgImg('../images/ico_flower_b_on1.png', '../images/ico_flower_b_on1.png');
+                        }
+                        .type_flower.on2 {
+                            @include bgImg('../images/ico_flower_b_on2.png', '../images/ico_flower_b_on2.png');
+                        }
+                        .type_flower.on3 {
+                            @include bgImg('../images/ico_flower_b_on3.png', '../images/ico_flower_b_on3.png');
+                        }
+                        .type_flower.on4 {
+                            @include bgImg('../images/ico_flower_b_on4.png', '../images/ico_flower_b_on4.png');
+                        }
+                        .type_flower.on5 {
+                            @include bgImg('../images/ico_flower_b_on5.png', '../images/ico_flower_b_on5.png');
+                        }
+                    }
+                    &
+                    .path_box {
+                        display: inline-block;
+                        position: relative;
+                        text-align: center;
+                        vertical-align: middle;
+                        .desc {
+                            padding-top: 8rem;
+                            font-size: 12rem;
+                            color: #fff;
+                            line-height: 14rem;
+                            opacity: 0.5;
+                        }
+                        &.type_card {
+                            width: 108rem;
+                            text-align: center;
+                            .card_img {
+                                width: 108rem;
+                                height: 108rem;
+                            }
+                            .desc {
+                                margin-top: -22rem;
+                                font-size: 13rem;
+                                line-height: 16rem;
+                                opacity: 1;
+                            }
+                        }
+                        &.type_btn {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            button {
+                                width: 84rem;
+                                height: 32rem;
+                                font-size: 13rem;
+                                color: #fff;
+                                font-weight: 700;
+                                line-height: 32rem;
+                                border-radius: 16rem;
+                                
+                                &:disabled {
+                                    color: rgba(255, 255, 255, 0.5);
+                                    background: #1f224d;
+                                }
+                            } 
+                            &.failed {
+                                button {
+                                    background: #626482;
+                                }
+                            }
+                            &.complete {
+                                button {
+                                    line-height: 30rem;
+                                    border: 1rem solid #fff;
+                                    background: #061231;
+                                }
+                                .desc {
+                                    opacity: 0.5;
+                                }
+                            }
+                            &.btn1 {
+                                top: 36rem;
+                                left: 90rem;
+                            }
+                            &.btn2 {
+                                top: 176rem;
+                                left: 90rem;
+                            }
+                            &.btn3 {
+                                top: 316rem;
+                                left: 188rem;
+                                .desc {
+                                    padding-top: 3rem;
+                                }
+                            }
+                        }
+                        &.type_star {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 40rem;
+                            height: 40rem;
+                            @include bgImg('../images/ico_star_off.png', '../images/ico_star_off.png');
+                            &.star1 {
+                                top: 33rem;
+                                left: 180rem;
+                            }
+                            &.star2 {
+                                top: 51rem;
+                                left: 222rem;
+                                transform: rotate(45deg);
+                            }
+                            &.star3 {
+                                top: 88rem;
+                                left: 243rem;
+                                transform: rotate(110deg);
+                            }
+                            &.star4 {
+                                top: 140rem;
+                                left: 232rem;
+                                transform: rotate(70deg);
+                            }
+                            &.star5 {
+                                top: 188rem;
+                                left: 46rem;
+                                transform: rotate(-45deg);
+                            }
+                            &.star6 {
+                                top: 222rem;
+                                left: 22rem;
+                                transform: rotate(75deg);
+                            }
+                            &.star7 {
+                                top: 275rem;
+                                left: 28rem;
+                                transform: rotate(20deg);
+                            }
+                            &.star8 {
+                                top: 306rem;
+                                left: 62rem;
+                                transform: rotate(-30deg);
+                            }
+                        }
+                        &.type_flower {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 80rem;
+                            height: 80rem;
+                            @include bgImg('../images/ico_flower_off.png', '../images/ico_flower_off.png');
+                            .desc {
+                                padding-top: 64rem;
+                                white-space: nowrap;
+                            }
+                            &.on {
+                                .desc {
+                                    opacity: 1;
+                                }
+                            }
+                            &.flower1 {
+                                top: 150rem;
+                                left: 170rem;
+                            }
+                            &.flower2 {
+                                top: 288rem;
+                                left: 92rem;
+                            }
+                        }
+                    }
+                }
+                .price_area {
+                    margin: 0 24rem;
+                    padding-top: 15rem;
+                    border-top: 1px solid rgba(255,255,255,0.3);
+                    dl {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        dt {
+                            font-size: 14rem;
+                            color: #ccc;
+                            letter-spacing: -0.35rem;
+                            line-height: 18rem;
+                        }
+                        dd {
+                            font-size: 14rem;
+                            color: #eee;
+                            font-weight: bold;
+                            letter-spacing: -0.35rem;
+                            line-height: 18rem;
                         }
                     }
                 }
@@ -1757,7 +2829,6 @@ body.dark {
             }
         }
     }
-
 
     &.benefit_info {
         header {
@@ -2785,6 +3856,1023 @@ body.dark {
         &.popup_get_reward {
             .popup_container {
                 background-color: transparent;
+            }
+        }
+    }
+}
+
+//도도한 혜택 안내
+.dodo_wrap {
+    position: relative;
+    min-height: 100vh;
+    background: #121212;
+    header {
+        h1 {
+            font-size: 22rem;
+            color: #ccc;
+            letter-spacing: -0.44rem;
+            line-height: 26rem;
+        }
+        .close {
+            button {
+                @include bgImg('../images/ic_close_dm.png', '../images/ic_close_dm.png');
+            }
+        }
+    }
+    .dodo_contents {
+        margin-top: 20rem;
+        position: relative;
+        height: calc(100vh - 96rem);
+        overflow: hidden;
+        z-index: 1;
+        animation: contentVisible 0.1s ease 2.5s forwards;
+        &.dodo_legendary {
+            .cont_top {
+                .top_img {
+                    @include bgImg('../images/img_dodo_card_legendary.png', '../images/img_dodo_card_legendary.png');
+                }
+            }
+            .item_legendary {
+                display: block;
+            }
+            .item_super {
+                display: none !important;
+            }
+        }
+        &.dodo_super {
+            .cont_top {
+                .top_img {
+                    @include bgImg('../images/img_dodo_card_super.png', '../images/img_dodo_card_super.png');
+                }
+            }
+            .item_legendary {
+                display: none !important;
+            }
+            .item_super {
+                display: block;
+            }
+        }
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: radial-gradient(circle,rgba(184, 151, 16, 0.7) 0%, rgba(184, 151, 16, 0) 38%);
+            filter: blur(50px);
+            z-index: -1;
+            content: '';
+            animation: bgOut 0.5s ease 2s forwards;
+        }
+        @keyframes contentVisible {
+            100% {
+                overflow: visible;
+                height: auto;
+            }
+        }
+        .cont_top {
+            padding-top: 40rem;
+            font-size: 0;
+            text-align: center;
+            .top_img {
+                display: inline-block;
+                width: 112rem;
+                height: 180rem;
+                vertical-align: middle;
+                transform: translate(80%, 70%);
+                animation: topMove1 1s ease 2s forwards;
+                img {
+                    width: 100%;
+                }
+            }
+            .top_text {
+                display: inline-block;
+                vertical-align: middle;
+                transform: translate(-33%, 518%);
+                animation: topMove2 1s ease 2s forwards;
+                .t1 {
+                    font-size: 16rem;
+                    color: #ccc;
+                    font-weight: 600;
+                    line-height: 24rem;
+                    letter-spacing: -0.4rem;
+                }
+                .t2 {
+                    padding-top: 4rem;
+                    font-size: 28rem;
+                    color: #eee;
+                    font-weight: 700;
+                    line-height: 24rem;
+                    letter-spacing: -0.7rem;
+                    animation: topMove3 0.3s linear 2.3s forwards;
+                }
+            }
+        }
+        @keyframes topMove1 {
+            100% {
+                width: 54rem;
+                height: 88rem;
+                transform: translate(0, 0);
+            }
+        }
+        @keyframes topMove2 {
+            100% {
+                padding-left: 28rem;
+                text-align: left;
+                transform: translate(0, 0);
+            }
+        }
+        @keyframes topMove3 {
+            100% {
+                font-size: 24rem;
+                text-align: left;
+                letter-spacing: -0.6rem;
+            }
+        }
+        @keyframes bgOut {
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+        .cont_detail {
+            padding: 30rem 20rem 156rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(2%);
+            animation: detailIn 0.3s ease 2.5s forwards;
+            .user_card_desc {
+                padding: 16rem 0;
+                font-size: 14rem;
+                text-align: center;
+                letter-spacing: -0.35rem;
+                border-radius: 22rem;
+                background: rgba(255, 255, 255, 0.12);
+                &.item_legendary {
+                    color: #ffe4a8;
+                }
+                &.item_super {
+                    color: #ffbaf1;
+                }
+            }
+            .chapter_area {
+                .section_badge {
+                    display: inline-block;
+                    padding: 4rem 11rem 6rem 10rem;
+                    font-size: 12rem;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 14rem;
+                    letter-spacing: -0.3rem;
+                    border-radius: 25rem;
+                    &.item_legendary {
+                        background: linear-gradient(107deg, #cf9820, #aa7301 61%);
+                    }
+                    &.item_super {
+                        background: linear-gradient(111deg, #d23e9c, #af1978 62%);
+                    }
+                }
+                .section_ltitle {
+                    padding-top: 16rem;
+                    font-size: 22rem;
+                    color: #eee;
+                    font-weight: 700;
+                    line-height: 30rem;
+                    letter-spacing: -0.55rem;
+                    span {
+                        font-size: 22rem;
+                        font-weight: 700;
+                        line-height: 30rem;
+                        letter-spacing: -0.55rem;
+                        &.item_legendary {
+                            display: inline-block;
+                            color: #dbbd7a;
+                        }
+                        &.item_super {
+                            display: inline-block;
+                            color: #ef9be1;
+                        }
+                    }
+                }
+                .section_mtitle {
+                    padding-top: 16rem;
+                    font-size: 18rem;
+                    color: #eee;
+                    font-weight: 600;
+                    line-height: 24rem;
+                    letter-spacing: -0.45rem;
+                    span {
+                        font-size: 18rem;
+                        font-weight: 600;
+                        line-height: 24rem;
+                        letter-spacing: -0.45rem;
+                        &.item_legendary {
+                            display: inline-block;
+                            color: #dbbd7a;
+                        }
+                        &.item_super {
+                            display: inline-block;
+                            color: #ef9be1;
+                        }
+                    }
+                }
+                .section_stitle {
+                    padding-top: 4rem;
+                    font-size: 16rem;
+                    color: #ccc;
+                    font-weight: 600;
+                    line-height: 20rem;
+                    letter-spacing: -0.4rem;
+                    span {
+                        font-size: 16rem;
+                        color: #ccc;
+                        font-weight: 600;
+                        line-height: 20rem;
+                        letter-spacing: -0.4rem;
+                        &.item_legendary {
+                            display: inline-block;
+                        }
+                        &.item_super {
+                            display: inline-block;
+                        }
+                    }
+                }
+                .cont_section {
+                    padding-top: 60rem;
+                    position: relative;
+                    .card_slide_box {
+                        padding-top: 40rem;
+                        .premium_card {
+                            width: 90rem;
+                            height: 146rem;
+                            margin: 0 auto;
+                            .swiper-slide {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                div {
+                                    position: relative;
+                                    overflow: hidden;
+                                    &:before {
+                                        content: "";
+                                        position: absolute;
+                                        top: -100%;
+                                        left: -100%; /* 시작 위치 */
+                                        width: 200%; /* 빛이 지나갈 넓이 */
+                                        height: 200%;
+                                        background: linear-gradient(
+                                            to right,
+                                            rgba(255, 255, 255, 0) 0%,
+                                            rgba(255, 255, 255, 0.5) 50%,
+                                            rgba(255, 255, 255, 0) 100%
+                                        );
+                                        transform: rotate(45deg);
+                                        opacity: 0;
+                                    }
+                                }
+                                img {
+                                    width: 100%;
+                                }
+                                &.swiper-slide-active {
+                                    div {
+                                        &:before {
+                                            animation: light-move 1.5s linear forwards; /* 애니메이션 적용 */
+                                        }
+                                    }
+                                }
+                                &.swiper-slide-next {
+                                    img {
+                                        width: 70rem;
+                                    }
+                                }
+                                &.swiper-slide-prev {
+                                    img {
+                                        width: 70rem;
+                                    }
+                                }
+                                @keyframes light-move {
+                                    0% {
+                                        opacity: 1;
+                                        transform: translate(-70%, -70%) rotate(45deg);
+                                    }
+                                    100% {
+                                        opacity: 1;
+                                        transform: translate(100%, 100%) rotate(45deg);
+                                    }
+                                }
+                            }
+                            .swiper-pagination {
+                                position: relative;
+                                bottom: -15rem;
+                                .swiper-pagination-bullet {
+                                    width: 6rem;
+                                    height: 6rem;
+                                    background-color: #fff;
+                                    opacity: 0.4;
+                                    &.swiper-pagination-bullet-active {
+                                        opacity: 1;
+                                    }
+                                }
+                            } 
+                        }
+                        .box {
+                            margin-top: 52rem;
+                            .btn_wrapper {
+                                button {
+                                    display: block;
+                                    padding: 13rem 0;
+                                    width: 100%;
+                                    font-size: 14rem;
+                                    color: #fff;
+                                    font-weight: 600;
+                                    line-height: 18rem;
+                                    letter-spacing: -0.35rem;
+                                    border-radius: 12rem;
+                                    border: 1px solid #eee;
+                                }
+                            }
+                        }
+                    }
+                    .card_issuance_standard {
+                        margin: 32rem 10rem 0;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .aplan_area {
+                        padding-top: 32rem;
+                        ul {
+                            display: flex;
+                            justify-content: space-between;
+                            gap: 4rem;
+                            li {
+                                position: relative;
+                                width: 104rem;
+                                min-height: 230rem;
+                                text-align: center;
+                                background: #26282a;
+                                &:before {
+                                    margin: -22rem 0 0 -14rem;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    width: 24rem;
+                                    height: 24rem;
+                                    @include bgImg('../images/ico_plus_black48x38.png', '../images/ico_plus_black48x38.png');
+                                    content: '';
+                                }
+                                &:first-child:before {
+                                    display: none;
+                                }
+                                &:first-child {
+                                    border-radius: 24rem 0 0 24rem;
+                                    .plan_price {
+                                        padding-top: 18rem;
+                                    }
+                                    .plan_mission {
+                                        padding-top: 21rem;
+                                    }
+                                }
+                                &:last-child {
+                                    border-radius: 0 24rem 24rem 0;
+                                }
+                                .ico {
+                                    display:inline-block;
+                                    margin-top: 16rem;
+                                    width: 60rem;
+                                    height: 60rem;
+                                }
+                                .plan_price {
+                                    padding-top: 8rem;
+                                    font-size: 16rem;
+                                    font-weight: 700;
+                                    line-height: 20rem;
+                                    letter-spacing: -0.4rem;
+                                    span {
+                                        font-size: 14rem;
+                                        line-height: 20rem;
+                                        letter-spacing: -0.35rem;
+                                    }
+                                }
+                                .plan_mission {
+                                    padding-top: 12rem;
+                                    font-size: 13rem;
+                                    color: #ccc;
+                                    line-height: 18rem;
+                                    letter-spacing: -0.33rem;
+                                }
+                            }
+                            &.item_legendary {
+                                li {
+                                    .ico {
+                                        &.ico_card {
+                                            @include bgImg('../images/ico_card_aplan_legendary.png', '../images/ico_card_aplan_legendary.png');
+                                        }
+                                        &.ico_star {
+                                            @include bgImg('../images/ico_star_aplan_legendary.png', '../images/ico_star_aplan_legendary.png');
+                                        }
+                                    }
+                                    .plan_price {
+                                        color: #dbbd7a;
+                                        span {
+                                            color: #dbbd7a;
+                                        }
+                                    }
+                                }
+                            }
+                            &.item_super {
+                                li {
+                                    .ico {
+                                        &.ico_card {
+                                            @include bgImg('../images/ico_card_aplan_super.png', '../images/ico_card_aplan_super.png');
+                                        }
+                                        &.ico_star {
+                                            @include bgImg('../images/ico_star_aplan_super.png', '../images/ico_star_aplan_super.png');
+                                        }
+                                    }
+                                    .plan_price {
+                                        color: #ef9be1;
+                                        span {
+                                            color: #ef9be1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .desc {
+                            margin-left: 14rem;
+                            padding-top: 16rem;
+                            font-size: 13rem;
+                            color: #999;
+                            line-height: 18rem;
+                            letter-spacing: -0.33rem;
+                            text-indent: -14rem;
+                        }
+                    }
+                    .benefit_area {
+                        margin-top: 12rem;
+                        padding: 24rem 0;
+                        border-radius: 24rem;
+                        background: #26282a;
+                        &:nth-of-type(1) {
+                            margin-top: 32rem;
+                            ul.column {
+                                li {
+                                    .t1 {
+                                        font-size: 13rem;
+                                        letter-spacing: -0.33rem;
+                                    }
+                                }
+                            }
+                        }
+                        .area_title {
+                            padding: 0 20rem;
+                            font-size: 18rem;
+                            color: #ccc;
+                            font-weight: 700;
+                            line-height: 16rem;
+                            letter-spacing: -0.45rem;
+                        }
+                        .area_desc {
+                            padding: 12rem 20rem 0;
+                            font-size: 14rem;
+                            color: #eee;
+                            line-height: 20rem;
+                            letter-spacing: -0.35rem;
+                            span {
+                                &.item_legendary {
+                                    display: inline-block;
+                                }
+                                &.item_super {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                        ul.column {
+                            display: flex;
+                            padding-top: 24rem;
+                            justify-content: center;
+                            gap: 56rem; 
+                            li {
+                                position: relative;
+                                width: 114rem;
+                                text-align: center;
+                                white-space: nowrap;
+                                &.or {
+                                    &:before {
+                                        margin: -18rem 0 0 11rem;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: -50%;
+                                        width: 36rem;
+                                        height: 36rem;
+                                        @include bgImg('../images/ico_or_black108_x108.png', '../images/ico_or_black108_x108.png');
+                                        content: '';
+                                    }
+                                }
+                                &.plus {
+                                    &:before {
+                                        margin: -18rem 0 0 11rem;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: -50%;
+                                        width: 36rem;
+                                        height: 36rem;
+                                        @include bgImg('../images/ico_plus_black108_x108.png', '../images/ico_plus_black108_x108.png');
+                                        content: '';
+                                    }
+                                }
+                                .ico {
+                                    display: inline-block;
+                                    width: 60rem;
+                                    height: 60rem;
+                                    margin-bottom: 8rem;
+                                }
+                                .t1 {
+                                    font-size: 14rem;
+                                    line-height: 20rem;
+                                    letter-spacing: -0.35rem;
+                                }
+                                .t2 {
+                                    padding-bottom: 4rem;
+                                    font-size: 13rem;
+                                    color: #ccc;
+                                    line-height: 18rem;
+                                    letter-spacing: -0.33rem;
+                                }
+                            }
+                            &.item_legendary {
+                                li {
+                                    .ico {
+                                        &.ico_giftcard {
+                                            @include bgImg('../images/ico_giftcard_120x120.png', '../images/ico_giftcard_120x120.png');
+                                        }
+                                        &.ico_point {
+                                            @include bgImg('../images/ico_point_120x120.png', '../images/ico_point_120x120.png');
+                                        }
+                                        &.ico_milege {
+                                            @include bgImg('../images/ico_milege_120x120.png', '../images/ico_milege_120x120.png');
+                                        }
+                                    }
+                                    .t1 {
+                                        color: #dbbd7a;
+                                    }
+                                }
+                            }
+                            &.item_super {
+                                li {
+                                    .ico {
+                                        &.ico_giftcard {
+                                            @include bgImg('../images/ico_giftcard_120x120_super.png', '../images/ico_giftcard_120x120_super.png');
+                                        }
+                                        &.ico_point {
+                                            @include bgImg('../images/ico_point_120x120_super.png', '../images/ico_point_120x120_super.png');
+                                        }
+                                        &.ico_milege {
+                                            @include bgImg('../images/ico_milege_120x120_super.png', '../images/ico_milege_120x120_super.png');
+                                        }
+                                    }
+                                    .t1 {
+                                        color: #ef9be1;
+                                    }
+                                }
+                            }
+                        }
+                        .benefit_list {
+                            margin: 0 20rem;
+                            padding: 0 0 32rem;
+                            ul {
+                                li {
+                                    margin-top: 32rem;
+                                    font-size: 0;
+                                    .ico {
+                                        display: inline-block;
+                                        margin-top: 9rem;
+                                        width: 28rem;
+                                        height: 28rem;
+                                        background-size: 28rem 28rem;
+                                        vertical-align: top;
+                                        &.ico1 {
+                                            @include bgImg('../images/ico_special_benefit1.png', '../images/ico_special_benefit1.png');
+                                        }
+                                        &.ico2 {
+                                            @include bgImg('../images/ico_special_benefit2.png', '../images/ico_special_benefit2.png');
+                                        }
+                                        &.ico3 {
+                                            margin-top: -2rem;
+                                            @include bgImg('../images/ico_special_benefit3.png', '../images/ico_special_benefit3.png');
+                                        }
+                                        &.ico4 {
+                                            margin-top: -2rem;
+                                            @include bgImg('../images/ico_special_benefit4.png', '../images/ico_special_benefit4.png');
+                                        }
+                                    }
+                                    .text_box {
+                                        display: inline-block;
+                                        margin-left: 20rem;
+                                        vertical-align: top;
+                                        .t1 {
+                                            font-size: 16rem;
+                                            color: #eee;
+                                            font-weight: 600;
+                                            line-height: 22rem;
+                                            letter-spacing: -0.4rem;
+                                        }
+                                        .t2 {
+                                            padding-top: 8rem;
+                                            font-size: 14rem;
+                                            color: #999;
+                                            line-height: 20rem;
+                                            letter-spacing: -0.35rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .notice {
+                            margin: 0 20rem;
+                            padding-top: 8rem;
+                            border-top: 1px solid #333;
+                            li {
+                                margin-left: 14rem;
+                                padding-top: 8rem;
+                                font-size: 13rem;
+                                color: #999;
+                                line-height: 18rem;
+                                letter-spacing: -0.33rem;
+                                text-indent: -14rem;
+                            }
+                        }    
+                    }
+                    .card_issuance_conditions {
+                        padding-top: 32rem;
+                        display: flex;
+                        justify-content: center;
+                        gap: 8rem;
+                        .box {
+                            padding: 24rem 0;
+                            width: 156rem;
+                            text-align: center;
+                            border-radius: 8rem;
+                            &.box_legendary {
+                                border: solid 1px rgba(238, 238, 238, 0.2);
+                                background: linear-gradient(157deg, #4d4322, #261f15 48%, #312309 100%);
+                                .card_class,
+                                .card_infotitle {
+                                    color: #dbbd7a;
+                                }
+                            }
+                            &.box_super {
+                                border: solid 1px rgba(238, 238, 238, 0.2);
+                                background-image: linear-gradient(157deg, #4a2248, #291026 48%, #330830 100%);
+                                .card_class,
+                                .card_infotitle {
+                                    color: #cf71bd;
+                                }
+                            }
+                            .card_name {
+                                font-size: 16rem;
+                                color: #fff;
+                                font-weight: 600;
+                                line-height: 20rem;
+                                letter-spacing: -0.4rem;
+                            }
+                            .card_thumb {
+                                display: inline-block;
+                                padding-top: 16rem;
+                                width: 55rem;
+                                box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.28);
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .card_class {
+                                padding-top: 24rem;
+                                font-size: 13rem;
+                                line-height: 20rem;
+                                letter-spacing: -0.33rem;
+                            }
+                            ul {
+                                display: inline-block;
+                                padding-top: 14rem;
+                                font-size: 0;
+                                li {
+                                    display: inline-block;
+                                    padding: 0 18rem;
+                                    text-align: center;
+                                    white-space: nowrap;
+                                    .ico {
+                                        display: inline-block;
+                                        width: 28rem;
+                                        height: 28rem;
+                                        vertical-align: top;
+                                        &.ico_sss {
+                                            @include bgImg('../images/ic_level_sss_s.png', '../images/ic_level_sss_s.png');
+                                        }
+                                        &.ico_l {
+                                            @include bgImg('../images/ic_level_l_s.png', '../images/ic_level_l_s.png');
+                                        }
+                                        &.ico_s {
+                                            @include bgImg('../images/ic_level_s_s.png', '../images/ic_level_s_s.png');
+                                        }
+                                        &.ico_ss {
+                                            @include bgImg('../images/ic_level_ss_s.png', '../images/ic_level_ss_s.png');
+                                        }
+                                    }
+                                    .txt {
+                                        display: block;
+                                        padding-top: 4rem;
+                                        font-size: 12rem;
+                                        color: #fff;
+                                        font-weight: 600;
+                                        line-height: 18rem;
+                                        vertical-align: top;
+                                    }
+                                }
+                            }
+                            .card_infotitle {
+                                padding-top: 22rem;
+                                font-size: 13rem;
+                                line-height: 20rem;
+                                letter-spacing: -0.33rem;
+                            }
+                            .card_info {
+                                padding-top: 8rem;
+                                font-size: 14rem;
+                                color: #eee;
+                                line-height: 20rem;
+                                letter-spacing: -0.35rem;
+                            }
+                        }
+                    }
+                    .plan_table_area {
+                        padding-top: 106rem;
+                        ul {
+                            display: table;
+                            width: 100%;
+                            table-layout: fixed;
+                            &:first-child {
+                                li {
+                                    padding: 24rem 0 12rem;
+                                    position: relative;
+                                    border: 0;
+                                    border-radius: 12rem 12rem 0 0;
+                                    .card_thumb {
+                                        margin-left: -28rem;
+                                        position: absolute;
+                                        top: -74rem;
+                                        left: 50%;
+                                        width: 55rem;
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                    .th {
+                                        .plan_title {
+                                            font-size: 18rem;
+                                            color: #fff;
+                                            font-weight: 600;
+                                            line-height: 20rem;
+                                            letter-spacing: -0.45rem;
+                                        }
+                                        .plan_cardname {
+                                            display: inline-block;
+                                            margin: 4rem 0 0;
+                                            padding: 3rem 8rem;
+                                            font-size: 13rem;
+                                            line-height: 20rem;
+                                            letter-spacing: -0.33rem;
+                                            border-radius: 4rem;
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(2) {
+                                li {
+                                    padding: 20rem 0;
+                                }
+                            }
+                            &:nth-child(3) {
+                                li {
+                                    padding: 20rem 0;
+                                }
+                            }
+                            &:nth-child(4) {
+                                li {
+                                    padding: 20rem 0;
+                                    border-bottom: 0;
+                                    border-radius: 0 0 12rem 12rem;
+                                }
+                            }
+                            li {
+                                display: table-cell;
+                                width: 33.33%;
+                                font-size: 18rem;
+                                color: #fff;
+                                font-weight: 600;
+                                text-align: center;
+                                line-height: 24rem;
+                                letter-spacing: -0.45rem;
+                                border-bottom: 1px dashed rgba(238, 238, 238, 0.5);
+                                box-sizing: border-box;
+                                vertical-align: middle;
+                                &.aplan {
+                                    background: #be8d21;
+                                }
+                                &.bplan {
+                                    background: #a22a76;
+                                }
+                                &.txt_left {
+                                    padding-left: 4rem;
+                                    font-size: 15rem;
+                                    color: #ccc;
+                                    font-weight: 600;
+                                    line-height: 20rem;
+                                    letter-spacing: -0.38rem;
+                                    text-align: left;
+                                    span {
+                                        font-size: 15rem;
+                                        color: #dbbd7a;
+                                        font-weight: 600;
+                                        line-height: 20rem;
+                                        letter-spacing: -0.38rem;
+                                    }
+                                }
+                                &.aplan1 {
+                                    .plan_cardname {
+                                        color: #ffe4a8;
+                                        background: #a67a18;
+                                    }
+                                }
+                                &.aplan2 {
+                                    background: rgba(190, 141, 33, 0.7);
+                                }
+                                &.aplan3 {
+                                    background: rgba(190, 141, 33, 0.6);
+                                }
+                                &.aplan4 {
+                                    background: rgba(190, 141, 33, 0.5);
+                                }
+                                &.bplan1 {
+                                    .plan_cardname {
+                                        color: #ffbaf1;
+                                        background: #922168;
+                                    }
+                                }
+                                &.bplan2 {
+                                    background: rgba(162, 42, 118, 0.7);
+                                }
+                                &.bplan3 {
+                                    background: rgba(162, 42, 118, 0.6);
+                                }
+                                &.bplan4 {
+                                    background: rgba(162, 42, 118, 0.5);
+                                }
+                                span {
+                                    font-size: 14rem;
+                                    color: #eee;
+                                    line-height: 22rem;
+                                    letter-spacing: -0.35rem;
+                                }
+                            }
+                        }
+                    }
+                    .notice {
+                        padding-top: 12rem;
+                        li {
+                            margin-left: 11rem;
+                            padding-top: 8rem;
+                            font-size: 13rem;
+                            color: #999;
+                            line-height: 18rem;
+                            letter-spacing: -0.33rem;
+                            text-indent: -11rem;
+                            .blit {
+                                font-size: 16rem;
+                                line-height: 16rem;
+                                vertical-align: top;
+                            }
+                        }
+                    }
+                    .message_area {
+                        padding: 32rem 4rem 0;
+                        .message {
+                            display: flex;
+                            padding-top: 40rem;
+                            gap: 4rem;
+                            flex-wrap: wrap;
+                            flex-basis: auto;
+                            &:first-child {
+                                padding-top: 0;
+                            }
+                            .user {
+                                display: block;
+                                width: 32rem;
+                                height: 32rem;
+                                &.user1 {
+                                    @include bgImg('../images/ico_user1.png', '../images/ico_user1.png');
+                                }
+                                &.user2 {
+                                    @include bgImg('../images/ico_user2.png', '../images/ico_user2.png');
+                                }
+                                &.user3 {
+                                    @include bgImg('../images/ico_user3.png', '../images/ico_user3.png');
+                                }
+                                &.user_kiwoom {
+                                    @include bgImg('../images/ico_kiwoom.png', '../images/ico_kiwoom.png');
+                                }
+                            }
+                            .msg_bubble {
+                                padding: 16rem 20rem;
+                                position: relative;
+                                width: calc(100% - 90rem);
+                                font-size: 14rem;
+                                line-height: 20rem;
+                                letter-spacing: -0.35rem;
+                                &:before {
+                                    position: absolute;
+                                    top: 0;
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    content: '';
+                                }
+                            }
+                            &.message_left {
+                                .msg_bubble {
+                                    margin: 9rem 0 0 14rem;
+                                    color: #eee;
+                                    border-radius: 0 20rem 20rem 20rem;
+                                    background: #26282a;
+                                    &:before {
+                                        left: -14rem;
+                                        border-width: 0 15rem 15rem 0;
+                                        border-color: transparent #26282a transparent transparent;
+                                    }
+                                }
+                            }
+                            &.message_right {
+                                flex-flow: row-reverse;
+                                .msg_bubble {
+                                    margin: 9rem 14rem 0 0;
+                                    color: #222;
+                                    border-radius: 20rem 0 20rem 20rem;
+                                    background: #f6f6f6;
+                                    &:before {
+                                        right: -14rem;
+                                        border-width: 15rem 15rem 0 0;
+                                        border-color: #f6f6f6 transparent transparent transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.chapter2_area {
+                    .chapter_title {
+                        padding-top: 60rem;
+                    }
+                    .section_badge {
+                        background: linear-gradient(291deg, #a20092, #be8d21);
+                    }
+                    .cont_section:nth-of-type(1) {
+                        padding-top: 40rem;
+                    }
+                }
+            }
+        }
+        @keyframes detailIn {
+            100% {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+        .fixed_bottom {
+            padding: 20rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #121212;
+            z-index: 10;
+            transform: translateY(100%);
+            animation: fixedBottom 0.3s ease 2.3s forwards;
+            button {
+                display: block;
+                width: 100%;
+                height: 56rem;
+                font-size: 18rem;
+                color: #fff;
+                font-weight: 600;
+                letter-spacing: -0.45rem;
+                border-radius: 12rem;
+                background-image: linear-gradient(280deg, #a20092, #be8d21);
+            }
+            @keyframes fixedBottom {
+                100% {
+                    transform: translateY(0);
+                }
             }
         }
     }

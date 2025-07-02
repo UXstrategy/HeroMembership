@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap dodo_wrap">
+        <header>
+            <h1>도도한 혜택 안내</h1>
+            <div class="close"><button type="button">닫기</button></div>
+        </header>
+        <div class="dodo_contents dodo_legendary">
+            <div class="cont_top">
+                <div class="top_img"></div>
+                <div class="top_text">
+                    <p class="t1">최상위 히어로의 도도한 품격</p>
+                    <p class="t2">히어로 신한카드</p>
+                </div>
+            </div>
+            <div class="cont_detail">
+                <div class="user_card_desc item_legendary">고객님은 Legendary HERO카드가 유리해요!</div>
+                <div class="user_card_desc item_super">고객님은 Super HERO카드로 발급 가능해요!</div>
+                <div class="chapter1_area chapter_area">
+                    <div class="cont_section">
+                        <p class="section_badge item_legendary">Legendary HERO카드</p>
+                        <p class="section_badge item_super">Super HERO카드</p>
+                        <h3 class="section_mtitle">키움에서 드리는 카드 페이백 리워드와<br>카드 헤택 포함 <span class="item_legendary">(최대 110만원)</span><span class="item_super">(최대 50만원)</span></h3>
+                        <div class="card_slide_box a">
+                            <div class="premium_card swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide a"><div><img src="../assets/images/card_a_3.png" alt=""></div></li>
+                                    <li class="swiper-slide b"><div><img src="../assets/images/card_b_3.png" alt=""></div></li>
+                                </ul>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="box a">
+                                <div class="btn_wrapper"><button type="button">카드 발급하고 70만원 받기</button></div>
+                            </div>
+                            <div class="box b" style="display:none;">
+                                <div class="btn_wrapper"><button type="button" onClick="popup.open('popup_legendary_issuance');">카드 발급하고 30만원 받기</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont_section">
+                        <p class="section_badge item_legendary">Legendary HERO카드 발급 기준</p>
+                        <p class="section_badge item_super">Super HERO카드 발급 기준</p>
+                        <h3 class="section_ltitle">히어로멤버십<br><span class="item_legendary">SSS등급 이상</span><span class="item_super">S등급 이상</span> 발급 가능</h3>
+                        <h4 class="section_stitle">지난 달 해외체결금액 <span class="item_legendary">100억</span><span class="item_super">10억</span> 이상 달성</h4>
+                        <div class="card_issuance_standard item_legendary">
+                            <img src="../assets/images/img_issuance_standard_legendary.png">
+                        </div>
+                        <div class="card_issuance_standard item_super">
+                            <img src="../assets/images/img_issuance_standard_super.png">
+                        </div>
+                    </div>
+                    <div class="cont_section">
+                        <p class="section_badge item_legendary">키움지원금 A플랜</p>
+                        <p class="section_badge item_super">키움지원금 B플랜</p>
+                        <h3 class="section_ltitle">발급 후, 1년간<br><span class="item_legendary">최대 현금 70만원</span><span class="item_super">최대 현금 30만원</span>의<br>지원금을 드려요</h3>
+                        <div class="aplan_area">
+                            <ul class="item_legendary">
+                                <li>
+                                    <p class="ico ico_card"></p>
+                                    <p class="plan_price">30만원</p>
+                                    <p class="plan_mission">카드<br>발급 시<br>1회 지급</p>
+                                </li>
+                                <li>
+                                    <p class="ico ico_star"></p>
+                                    <p class="plan_price">20만원<br><span>1차</span></p>
+                                    <p class="plan_mission">발급 후<br>6개월 간<br>해외체결금액<br>달성 시</p>
+                                </li>
+                                <li>
+                                    <p class="ico ico_star"></p>
+                                    <p class="plan_price">20만원<br><span>2차</span></p>
+                                    <p class="plan_mission">1차 이후<br>6개월 간<br>해외체결금액<br>달성 시</p>
+                                </li>
+                            </ul>
+                            <ul class="item_super">
+                                <li>
+                                    <p class="ico ico_card"></p>
+                                    <p class="plan_price">10만원</p>
+                                    <p class="plan_mission">카드<br>발급 시<br>1회 지급</p>
+                                </li>
+                                <li>
+                                    <p class="ico ico_star"></p>
+                                    <p class="plan_price">10만원<br><span>1차</span></p>
+                                    <p class="plan_mission">발급 후<br>6개월 간<br>해외체결금액<br>달성 시</p>
+                                </li>
+                                <li>
+                                    <p class="ico ico_star"></p>
+                                    <p class="plan_price">10만원<br><span>2차</span></p>
+                                    <p class="plan_mission">1차 이후<br>6개월 간<br>해외체결금액<br>달성 시</p>
+                                </li>
+                            </ul>
+                            <p class="desc">※ 각 차수 별 지정된 해외체결금액을 달성하지 못한 경우,<br>지원금은 지급되지 않을 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="cont_section">
+                        <p class="section_badge item_legendary">Legendary HERO카드 혜택</p>
+                        <p class="section_badge item_super">Super HERO카드 혜택</p>
+                        <h3 class="section_ltitle">추가로, <span class="item_legendary">최대 40만원</span><span class="item_super">최대 40만원</span><br>바우처가 포함된<br>다양한 카드 혜택까지</h3>
+                        <div class="benefit_area">
+                            <p class="area_title">바우처 지급</p>
+                            <p class="area_desc">· 연 1회, 둘 중 1가지 선택 <span class="item_legendary">(최대 40만원 제공)</span><span class="item_super">(최대 20만원 제공)</span></p>
+                            <ul class="column item_legendary">
+                                <li>
+                                    <p class="ico ico_giftcard"></p>
+                                    <p class="t1">신세계 상품권</p>
+                                </li>
+                                <li class="or">
+                                    <p class="ico ico_point"></p>
+                                    <p class="t1">마이 신한 포인트</p>
+                                </li>
+                            </ul>
+                            <ul class="column item_super">
+                                <li>
+                                    <p class="ico ico_giftcard"></p>
+                                    <p class="t1">신세계 상품권</p>
+                                </li>
+                                <li class="or">
+                                    <p class="ico ico_point"></p>
+                                    <p class="t1">마이 신한 포인트</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="benefit_area">
+                            <p class="area_title">대한항공 마일리지 적립</p>
+                            <ul class="column item_legendary">
+                                <li>
+                                    <p class="ico ico_milege"></p>
+                                    <p class="t2">국내 이용금액<br>1,500원 당</p>
+                                    <p class="t1">1마일리지 적립</p>
+                                </li>
+                                <li class="plus">
+                                    <p class="ico ico_milege"></p>
+                                    <p class="t2">해외 이용금액<br>1,500원 당</p>
+                                    <p class="t1">1마일리지 추가 적립</p>
+                                </li>
+                            </ul>
+                            <ul class="column item_super">
+                                <li>
+                                    <p class="ico ico_milege"></p>
+                                    <p class="t2">국내 이용금액<br>1,500원 당</p>
+                                    <p class="t1">1마일리지 적립</p>
+                                </li>
+                                <li class="plus">
+                                    <p class="ico ico_milege"></p>
+                                    <p class="t2">해외 이용금액<br>1,500원 당</p>
+                                    <p class="t1">1마일리지 추가 적립</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="benefit_area">
+                            <p class="area_title">Special한 카드 혜택</p>
+                            <div class="benefit_list">
+                                <ul>
+                                    <li>
+                                        <p class="ico ico1"></p>
+                                        <div class="text_box">
+                                            <p class="t1">마스터카드 World<br>프리미엄 등급 혜택 제공</p>
+                                            <p class="t2">국내 특급호텔 할인, 무료 발레파킹 및<br>전세계 호텔 예약 특전 등<br>(상세 혜택 마스터카드 홈페이지 참고)</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="ico ico2"></p>
+                                        <div class="text_box">
+                                            <p class="t1">전세계 공항 라운지 무료 이용<br>(최대 연 20회)</p>
+                                            <p class="t2">THE LOUNGE 앱을 통한 전세계 라운지<br>이용 혜택</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="ico ico3"></p>
+                                        <div class="text_box">
+                                            <p class="t1">마티나 골드 라운지 무료 이용</p>
+                                            <p class="t2">인천국제공항 제 2여객 터미널 프리미엄<br>라운지 이용 혜택</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="ico ico4"></p>
+                                        <div class="text_box">
+                                            <p class="t1">카드 이용처 별 다양한 할인 혜택</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="notice">
+                                <ul>
+                                    <li>※ 카드사 제공혜택은 신청한 카드플랜에 따라 다소 상이할 수 있습니다.</li>
+                                    <li>※ 카드사 제공 상세 혜택은 카드 신청 시, 반드시 확인하시기 바랍니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chapter2_area chapter_area">
+                    <h3 class="chapter_title section_ltitle">히어로 카드 지원 조건</h3>
+                    <div class="cont_section">
+                        <p class="section_badge">발급조건</p>
+                        <h3 class="section_mtitle">히어로멤버십 등급에 따라 히어로 카드 중<br>선택해서 지원받을 수 있어요!</h3>
+                        <div class="card_issuance_conditions">
+                            <div class="box box_legendary">
+                                <p class="card_name">히어로 L카드</p>
+                                <P class="card_thumb"><img src="../assets/images/card_a_3.png"></p>
+                                <p class="card_class">히어로멤버십 등급</p>
+                                <ul>
+                                    <li><span class="ico ico_sss"></span><span class="txt">SSS</span></li>
+                                    <li><span class="ico ico_l"></span><span class="txt">L</span></li>
+                                </ul>
+                                <p class="card_infotitle">전월실적</p>
+                                <p class="card_info">해외주식체결<br>100억 이상</p>
+                            </div>
+                            <div class="box box_super">
+                                <p class="card_name">히어로 S카드</p>
+                                <p class="card_thumb"><img src="../assets/images/card_b_3.png"></p>
+                                <p class="card_class">히어로멤버십 등급</p>
+                                <ul>
+                                    <li><span class="ico ico_s"></span><span class="txt">S</span></li>
+                                    <li><span class="ico ico_ss"></span><span class="txt">SS</span></li>
+                                </ul>
+                                <p class="card_infotitle">전월실적</p>
+                                <p class="card_info">해외주식체결<br>10억 이상</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont_section">
+                        <p class="section_badge">키움지원금 플랜</p>
+                        <h3 class="section_mtitle">카드 발급 월부터 1년간<br>해외주식체결금액에 따라 순차적으로<br>지원해드려요.</h3>
+                        <div class="plan_table_area">
+                            <ul>
+                                <li></li>
+                                <li class="aplan aplan1">
+                                    <span class="card_thumb"><img src="../assets/images/card_a_3.png"></span>
+                                    <div class="th">
+                                        <p class="plan_title">A플랜</p>
+                                        <p class="plan_cardname">히어로 L카드</p>
+                                    </div>
+                                </li>
+                                <li class="bplan bplan1">
+                                    <span class="card_thumb"><img src="../assets/images/card_b_3.png"></span>
+                                    <div class="th">
+                                        <p class="plan_title">B플랜</p>
+                                        <p class="plan_cardname">히어로 S카드</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="txt_left">카드<br>발급 시</li>
+                                <li class="aplan aplan2 txt_center">현금<br>30만원</li>
+                                <li class="bplan bplan2 txt_center">현금<br>10만원</li>
+                            </ul>
+                            <ul>
+                                <li class="txt_left"><span>1차</span><br>체결금액<br>달성 시<br>7개월 차</li>
+                                <li class="aplan aplan3 txt_center">현금<br>20만원<br><span>(300억 달성)</span></li>
+                                <li class="bplan bplan3 txt_center">현금<br>10만원<br><span>(30억 달성)</span></li>
+                            </ul>
+                            <ul>
+                                <li class="txt_left"><span>2차</span><br>체결금액<br>달성 시<br>13개월 차</li>
+                                <li class="aplan aplan4 txt_center">현금<br>20만원<br><span>(300억 달성)</span></li>
+                                <li class="bplan bplan4 txt_center">현금<br>10만원<br><span>(30억 달성)</span></li>
+                            </ul>
+                        </div>
+                        <ul class="notice">
+                            <li><span class="blit">·</span> 키움지원금은 지급조건을 충족하고 신청가능시점에 직접 신청해주셔야 지급됩니다.</li>
+                            <li><span class="blit">·</span> 카드사에서는 제공하는 카드혜택과는 별도로 키움에서 지급하는 지원금 플랜입니다.</li>
+                        </ul>
+                    </div>
+                    <div class="cont_section">
+                        <p class="section_badge">키움지원금 Q&A</p>
+                        <div class="message_area">
+                            <div class="message message_left">
+                                <span class="user user1"></span>
+                                <div class="msg_bubble">
+                                    히어로멤버십 SS등급 고객입니다.<br>
+                                    Super HERO카드로 발급 후,<br>
+                                    Legendary HERO카드로 교체가 가능한가요?
+                                </div>
+                            </div>
+                            <div class="message message_right">
+                                <span class="user user_kiwoom"></span>
+                                <div class="msg_bubble">
+                                    Legendary HERO카드의 발급조건인 전월 100억 이상을 달성한 후,<br>
+                                    카드교체는 기존 카드 해지 후 신규 발급<br>절차로 가능해요.
+                                </div>
+                            </div>
+                            <div class="message message_left">
+                                <span class="user user2"></span>
+                                <div class="msg_bubble">
+                                    Super HERO카드 해지 후, Legendary HERO카드로 발급하면 지원금은 어떻게 지급되나요?
+                                </div>
+                            </div>
+                            <div class="message message_right">
+                                <span class="user user_kiwoom"></span>
+                                <div class="msg_bubble">
+                                    Legendary HERO카드 발급 시 30만원,
+                                    발급 월 포함 6개월간 해외주식체결금액 300억을 달성 시 20만원,<br>
+                                    발급 7개월 차부터 이후 6개월간 300억을 달성하면 20만원을<br>
+                                    총 3회 최대 70만원이 지급됩니다.
+                                </div>
+                            </div>
+                            <div class="message message_left">
+                                <span class="user user3"></span>
+                                <div class="msg_bubble">
+                                    Super HERO카드와 Legendary HERO카드를 전부 발급하면 지원금은 어떻게 지급되나요?
+                                </div>
+                            </div>
+                            <div class="message message_right">
+                                <span class="user user_kiwoom"></span>
+                                <div class="msg_bubble">
+                                    2종의 카드를 전부 보유하고 있는 경우, Legendary HERO카드의 체결금액을 달성하면 히어로 A플랜 지원금만 받을 수 있고, Super HERO카드의
+                                    체결금액만을 달성한 경우는 지원금을 받을 수 없습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed_bottom">
+                <button type="button">카드 신청하기</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup bottomsheet popup_legendary_issuance none">
+        <div class="dim"></div>
+        <div class="popup_container">
+            <div class="pop_header">
+                <h1>Legendary HERO카드가<br>더 좋은 혜택을 제공해요!</h1>
+                <div class="header_close"><button type="button" onclick="popup.close('popup_legendary_issuance');">닫기</button></div>
+            </div>
+            <div class="pop_body">
+                <div class="graph_img"><img src="../assets/images/img_popup_card_issuance.png"></div>
+                <div class="text_box">
+                    Legendary HERO카드의 조건을 달성해도<br>
+                    발급하신 카드가 Super HERO카드면<br>
+                    지원금은 연 최대 30만원만 지급됩니다.
+                </div>
+                <div class="btm_btns">
+                    <ul>
+                        <li class="on"><button type="button">Legendary HERO카드 발급하러 가기</button></li>
+                        <li><button type="button">Super HERO카드 발급하러 가기</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        // 프리미엄 카드 혜택
+        var swiper = new Swiper(".premium_card", {
+            effect: "cards",
+            grabCursor: true,
+            cardsEffect: {
+                perSlideOffset: 12,
+                perSlideRotate: 30,
+                slideShadows : false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            on: {
+                slideChange: function(){
+                    let cardHasClass = $('.card_slide_box');
+                    let dodoContents = $('.dodo_contents');              
+                    if ( cardHasClass.hasClass('a') ) {
+                        cardHasClass.removeClass('a').addClass('b');
+                        $('.card_slide_box .box.a').hide();
+                        $('.card_slide_box .box.b').fadeIn(500);
+                        dodoContents.removeClass('dodo_legendary').addClass('dodo_super');
+                    } else {
+                        cardHasClass.removeClass('b').addClass('a');
+                        $('.card_slide_box .box.a').fadeIn(500);
+                        $('.card_slide_box .box.b').hide();
+                        dodoContents.removeClass('dodo_super').addClass('dodo_legendary');
+                    }
+                }
+            },
+        });
+    </script>
+</body>
+</html>
