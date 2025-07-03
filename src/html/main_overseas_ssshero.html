@@ -20,45 +20,41 @@
             지난달 해외주식 거래금액 5억원 달성!
             <button type="button" class="share">공유하기</button>
         </p>
-        <div class="swiper_unit level_swiper" data-loop="false" data-space="10" data-initial="1">
+        <div class="swiper_unit level_swiper" data-loop="false" data-space="10" data-initial="4">
             <ul class="swiper-wrapper">
                 <li class="swiper-slide general">
                     <div class="card">
-                        <p class="level">이번달 등급</p>
+                        <p class="level">지난 등급</p>
                         <p class="tit">일반</p>
                         <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                     </div>
                 </li>
                 <li class="swiper-slide a">
                     <div class="card">
-                        <p class="level">다음 등급</p>
+                        <p class="level">지난 등급</p>
                         <p class="tit">A<span>a Hero</span></p>
                         <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                     </div>
                 </li>
                 <li class="swiper-slide s">
                     <div class="card">
-                        <p class="level">다음 등급</p>
+                        <p class="level">지난 등급</p>
                         <p class="tit">S<span>Super Hero</span></p>
                         <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                     </div>
                 </li>
-                <li class="swiper-slide ss my">
+                <li class="swiper-slide ss">
                     <div class="card_wrapper">
                         <div class="card">
-                            <p class="level">다음 등급</p>
+                            <p class="level">지난달 등급</p>
                             <p class="tit">SS<span>Double S Hero</span></p>
                             <div class="benefit_btn my_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
-                        </div>
-                        <div class="card back purple">
-                            <p class="name">히어로 멤버쉽 전용 신용카드 <span>프리미엄 B카드</span></p>
-                            <div class="apply_btn"><button type="button">혜택 상세 보고 신청하러가기</button></div>
                         </div>
                     </div>
                 </li>
                 <li class="swiper-slide sss">
                     <div class="card">
-                        <p class="level">다음 등급</p>
+                        <p class="level">이번달 등급</p>
                         <p class="tit">SSS<span>Triple S Hero</span></p>
                         <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                     </div>
@@ -73,27 +69,85 @@
             </ul>
         </div>
 
-        <dl class="benefit_wrap">
-            <dt>등급 리워드 혜택</dt>
-            <dd class="swiper_unit" data-space="12" data-loop="false">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide">
-                        <button type="button" class="coupon ready"><!-- 지금완료 경우 ready 삭제, complete 추가 -->
-                            <span class="tag">혜택</span>
-                            <span class="rewards">리워드</span>
-                            <span class="price">10,000원</span>
-                            <span class="noti">매월 신청 필수</span>
-                        </button>
-                    </li>
-                </ul>
-                
-            </dd>
-            <!-- 지급될 혜택이 없는 경우 노출
-            <dd>
-                <div class="next_level">모든 혜택이<br>지금되었어요!</div>
-            </dd>
-            -->
-        </dl>
+        <div class="tab_wrapper">
+            <ul class="tab_head">
+                <li class="active">등급 리워드 혜택</li>
+                <li>카드 혜택</li>
+            </ul>
+            <div class="tab_content benefit_wrap">
+                <div class="swiper_unit" data-space="12" data-loop="false">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <button type="button" class="coupon ready"><!-- 지금완료 경우 ready 삭제, complete 추가 -->
+                                <span><span class="tag">혜택 1</span></span>
+                                <span class="rewards">리워드</span>
+                                <span class="price">200,000원</span>
+                                <span class="noti">매월 신청 필수</span>
+                            </button>
+                        </li>
+                        <li class="swiper-slide">
+                            <button type="button" class="coupon">
+                                <span><span class="tag">혜택 2</span></span>
+                                <span class="youtube">유튜브</span>
+                                <span class="price">1개월 이용권</span>
+                                <span class="noti">매월 쿠폰등록 필수</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab_content" style="display: none;">
+                <!-- legendary hero 카드 발급 전 
+                <div class="hero_benefit_box legendary sleep">
+                    <p class="left_txt">Legendary HERO<br>카드 발급하면<br>혜택이 열려요!</p>
+                    <div class="btn"><button type="button">자세히보기</button></div>
+                </div>
+                -->
+                <!-- legendary hero 카드 발급 후 -->
+                <div class="hero_benefit_box legendary ready">
+                    <p class="left_txt">Legendary HERO<br>카드 발급 리워드<br>30만원 도착!</p>
+                    <div class="btn"><button type="button">지급 대기</button></div>
+                </div>
+                <!-- legendary hero 첫번째 별 완성 전 
+                <div class="hero_benefit_box legendary open first">
+                    <p class="left_txt">첫번째 별을<br>완성하기 위한<br>별을 모으는<br>중이에요</p>
+                    <div class="state">
+                        <p class="star"></p>
+                        <p class="date">25.10까지<span>누적 300억 달성</span></p>
+                    </div>
+                </div> 
+                -->
+                <!-- legendary hero 첫번째 별 완성 후 
+                <div class="hero_benefit_box legendary open first complete">
+                    <p class="left_txt">대단해요!<br>첫번째 별을<br>완성했어요</p>
+                    <div class="state">
+                        <p class="star"></p>
+                        <p class="date">25.10까지<span>누적 30억 달성</span></p>
+                    </div>
+                    <div class="btn"><button type="button">혜택받기</button></div>
+                </div> 
+                -->
+                <!-- legendary hero 첫번째 별 완성 전  
+                <div class="hero_benefit_box legendary open second">
+                    <p class="left_txt">두번째 별을<br>완성하기 위한<br>별을 모으는<br>중이에요</p>
+                    <div class="state">
+                        <p class="star"></p>
+                        <p class="date">26.04까지<span>누적 600억 달성</span></p>
+                    </div>
+                </div> 
+                -->
+                <!-- legendary hero 첫번째 별 완성 후 
+                <div class="hero_benefit_box legendary open second complete">
+                    <p class="left_txt">최고에요!<br>두번째 별을<br>완성했어요</p>
+                    <div class="state">
+                        <p class="star"></p>
+                        <p class="date">26.04까지<span>누적 600억 달성</span></p>
+                    </div>
+                    <div class="btn"><button type="button">혜택받기</button></div>
+                </div> 
+                -->
+            </div>
+        </div>
 
         <div class="my_progress">
             <p>다음 달에 받을 수 있는 <br>등급 리워드 혜택 최대 <span>50만원</span></p>
@@ -103,9 +157,9 @@
                     <button type="button" class="tooltip" data-tooltip="tooltip1">툴팁</button>
                     <span class="tooltip_box" data-tooltip="tooltip1"></span>
                 </dt>
-                <dd>300,000,000원</dd>
+                <dd>10,000,000,000원</dd>
             </dl>
-            <div class="bar"><span style="width: 34%;"></span></div>
+            <div class="bar"><span style="width: 48%;"></span></div>
             <ul class="level_tit">
                 <li>일반</li>
                 <li>A</li>
@@ -119,7 +173,7 @@
         <ol class="benefit_list">
             <li class="premium">
                 <!-- 카드 발급 전 -->
-                <div class="card_issuance card_issuance_before" >
+                <div class="card_issuance card_issuance_before">
                     <p class="benefit">혜택 1</p>
                     <p class="text">히어로 멤버쉽 고객들만을 위한</p>
                     <p class="tit">키움만의 프리미엄<br><span>신용카드가 출시돼요!</span></p>
@@ -169,7 +223,7 @@
                             </ul>
                             <p class="hero_count"><span class="now_count">2</span>/<span class="total_count">10</span></p>
                         </div>
-                        <div class="hero_path card_a default">
+                        <div class="hero_path card_a default"><!-- 'card_b' : super hero, 'card_a' : legendary hero -->
                             <div class="path_box type_card complete">
                                 <p class="card_img"></p>
                                 <p class="desc">25.05<br>L카드 발급</p>
@@ -179,10 +233,10 @@
                                 <p class="desc">발급 시<br>1번만 지급</p>
                             </div>
                             <div class="path_box type_star star1 on"></div> <!-- 별 활성화 : on class추가 -->
-                            <div class="path_box type_star star2"></div>
-                            <div class="path_box type_star star3"></div>
-                            <div class="path_box type_star star4"></div>
-                            <div class="path_box type_flower flower1"> <!-- 꽃잎 활성화 : 'on on1' ~ 'on on5' class추가 -->
+                            <div class="path_box type_star star2 on"></div>
+                            <div class="path_box type_star star3 on"></div>
+                            <div class="path_box type_star star4 on"></div>
+                            <div class="path_box type_flower flower1 on on2"> <!-- 꽃잎 활성화 : 'on on1' ~ 'on on5' class추가 -->
                                 <p class="desc">25.10까지<br><span>누적 30억 실패</span></p>
                             </div>
                             <div class="path_box type_btn btn2">
