@@ -17,85 +17,128 @@
             <div class="dim"></div>
             <div class="popup_container">
                 <div class="pop_header">
-                    <h1>등급별 혜택 안내</h1>
+                    <div class="tooltip_box">
+                        <h1>히어로멤버쉽 혜택 안내</h1>
+                        <div><button type="button">유의사항</button></div>
+                    </div>
                     <div class="header_close"><button type="button" onclick="popup.close('popup_benefit');">닫기</button></div>
                 </div>
-                <div class="pop_body tab_wrapper">
-                    <ul class="tab_menu">
-                        <li class="a">A</li>
-                        <li class="s">S</li>
-                        <li class="ss active my">SS</li>
-                        <li class="sss">SSS</li>
-                        <li class="l">L</li>
-                    </ul>
-                    <div class="tab_content a">
-                        <dl class="box">
-                            <dt><strong>A급 히어로</strong>a Hero</dt>
-                            <dd>
-                                <ul>
-                                    <li><span class="tit">기준</span>해외주식 거래금액 5억원 이상</li>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <ul class="more">
-                            <li>다음 달 리워드 1만원</li>
+                <div class="pop_body">
+                    <div class="tab_wrapper">
+                        <ul class="tab_list toggle_menu">
+                            <li class="active">등급별 헤택</li>
+                            <li>카드 혜택</li>
                         </ul>
-                    </div>
-                    <div class="tab_content s">
-                        <dl class="box">
-                            <dt><strong>S급 히어로</strong> Super Hero</dt>
-                            <dd>
-                                <ul>
-                                    <li><span class="tit">기준</span>해외주식 거래금액 10억원 이상</li>
+                        <div class="tab_content">
+                            <div class="tab_wrapper tab_deth">
+                                <ul class="tab_list">
+                                    <li class="a">A</li>
+                                    <li class="s">S</li>
+                                    <li class="ss active my">SS</li>
+                                    <li class="sss">SSS</li>
+                                    <li class="l">L</li>
                                 </ul>
-                            </dd>
-                        </dl>
-                        <ul class="more">
-                            <li>다음 날 리워드 2만원</li>
-                            <li>유튜브 프리미엄 1개월</li>
-                        </ul>
-                    </div>
-                    <div class="tab_content ss active">
-                        <dl class="box">
-                            <dt><strong>SS급 히어로</strong>Double Hero</dt>
-                            <dd>
-                                <ul>
-                                    <li><span class="tit">기준</span>해외주식 거래금액 50억원 이상</li>
+                                <div class="tab_content a" style="display: none;">
+                                    <dl class="box">
+                                        <dt><strong>A급 히어로</strong>a Hero</dt>
+                                        <dd>
+                                            <ul>
+                                                <li><span class="tit">기준</span>해외주식 거래금액 5억원 이상</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <ul class="more">
+                                        <li>리워드 1만원</li>
+                                    </ul>
+                                </div>
+                                <div class="tab_content s" style="display: none;">
+                                    <dl class="box">
+                                        <dt><strong>S급 히어로</strong> Super Hero</dt>
+                                        <dd>
+                                            <ul>
+                                                <li><span class="tit">기준</span>해외주식 거래금액 10억원 이상</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <ul class="more">
+                                        <li>리워드 2만원</li>
+                                        <li>유튜브 프리미엄 1개월</li>
+                                    </ul>
+                                </div>
+                                <div class="tab_content ss active">
+                                    <dl class="box">
+                                        <dt><strong>SS급 히어로</strong>Double Hero</dt>
+                                        <dd>
+                                            <ul>
+                                                <li><span class="tit">기준</span>해외주식 거래금액 50억원 이상</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <ul class="more">
+                                        <li>리워드 10만원</li>
+                                        <li>유튜브 프리미엄 1개월</li>
+                                    </ul>
+                                </div>
+                                <div class="tab_content sss" style="display: none;">
+                                    <dl class="box">
+                                        <dt><strong>SSS급 히어로</strong>Triple S Hero</dt>
+                                        <dd>
+                                            <ul>
+                                                <li><span class="tit">기준</span>해외주식 거래금액 100억원 이상</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <ul class="more">
+                                        <li>리워드 20만원</li>
+                                        <li>유튜브 프리미엄 1개월</li>
+                                    </ul>
+                                </div>
+                                <div class="tab_content l" style="display: none;">
+                                    <dl class="box">
+                                        <dt><strong>L급 히어로</strong>Lengendry Hero</dt>
+                                        <dd>
+                                            <ul>
+                                                <li><span class="tit">기준</span>해외주식 거래금액 200억원 이상</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <ul class="more">
+                                        <li>리워드 50만원</li>
+                                        <li>유튜브 프리미엄 1개월</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_content pre_benefit" style="display: none;">
+                            <div class="swiper-container mini_card">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide a"><img src="../assets/images/card_a_3.png" alt=""></li>
+                                    <li class="swiper-slide b"><img src="../assets/images/card_b_3.png" alt=""></li>
                                 </ul>
-                            </dd>
-                        </dl>
-                        <ul class="more">
-                            <li>다음 날 리워드 10만원</li>
-                            <li>유튜브 프리미엄 1개월</li>
-                        </ul>
-                    </div>
-                    <div class="tab_content sss">
-                        <dl class="box">
-                            <dt><strong>SSS급 히어로</strong>Triple S Hero</dt>
-                            <dd>
-                                <ul>
-                                    <li><span class="tit">기준</span>해외주식 거래금액 100억원 이상</li>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <ul class="more">
-                            <li>다음 날 리워드 20만원</li>
-                            <li>유튜브 프리미엄 1개월</li>
-                        </ul>
-                    </div>
-                    <div class="tab_content l">
-                        <dl class="box">
-                            <dt><strong>L급 히어로</strong>Lengendry Hero</dt>
-                            <dd>
-                                <ul>
-                                    <li><span class="tit">기준</span>해외주식 거래금액 200억원 이상</li>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <ul class="more">
-                            <li>다음 날 리워드 50만원</li>
-                            <li>유튜브 프리미엄 1개월</li>
-                        </ul>
+                                <div class="swiper-pagination-mini"></div>
+                            </div>
+                            <dl class="benefit a">
+                                <dt>최대 110만원의 <img src="../assets/images/tit_benefit.png" alt="고품격의 히어로급 혜택"></dt>
+                                <dd>
+                                    <ul class="detail">
+                                        <li><span class="num num1"></span>카드 <br>발급 시 <span>30만원</span></li>
+                                        <li><span class="num num2"></span>체결금액 <br>유지 시 <span>20만원 X 2번</span></li>
+                                        <li><span class="num num3"></span>연 1회 <br>카드 바우처<span>40만원</span></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl class="benefit b" style="display: none;">
+                                <dt>최대 50만원의 <img src="../assets/images/tit_benefit.png" alt="고품격의 히어로급 혜택"></dt>
+                                <dd>
+                                    <ul class="detail">
+                                        <li><span class="num num1"></span>카드 <br>발급 시 <span>10만원</span></li>
+                                        <li><span class="num num2"></span>체결금액 <br>유지 시 <span>10만원 X 2번</span></li>
+                                        <li><span class="num num3"></span>연 1회 <br>카드 바우처<span>20만원</span></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <div class="btn_wrapper"><button type="button">도도한 헤택 안내 바로가기</button></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,5 +155,51 @@
     <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
     <script src="../assets/js/lib/swiper-bundle.min.js"></script>
     <script src="../assets/js/common.js"></script>
+    <script>
+        $('.tab_wrapper').each(function(){
+            $(".tab_list li").on("click", function() {
+                $(this).closest(".tab_wrapper").children(".tab_list").children('li').removeClass("active");
+                $(this).addClass('active');
+                $(this).closest(".tab_wrapper").children(".tab_content").hide();
+                $(this).closest(".tab_wrapper").children(".tab_content").eq($(this).index()).show();
+                if ( $('.tab_list').find('li').eq(1).hasClass('active') ) {
+                    mini_card();
+                }
+            });
+        });
+
+        // 카드 혜택
+        function mini_card(){
+            var heroSwiper = new Swiper(".mini_card", {
+                effect: "cards",
+                grabCursor: true,
+                cardsEffect: {
+                    perSlideOffset: 12,
+                    perSlideRotate: 30,
+                    slideShadows : false,
+                },
+                pagination: {
+                    el: ".swiper-pagination-mini",
+                },
+                on: {
+                    transitionEnd: function(){
+                        console.log(heroSwiper.realIndex);
+                        // let cardHasClass = $('.pre_benefit');              
+                        // if ( cardHasClass.hasClass('b') ) {
+                        //     cardHasClass.removeClass('b').addClass('a');
+                        //     $('.pre_benefit .benefit.a').show();
+                        //     $('.pre_benefit .benefit.b').hide();
+                        // } else {
+                        //     cardHasClass.removeClass('a').addClass('b');
+                        //     $('.pre_benefit .benefit.a').hide();
+                        //     $('.pre_benefit .benefit.b').show();
+                        // }
+                    }
+                },
+            });
+            heroSwiper.update();
+        }
+    </script>
+    </script>
 </body>
 </html>

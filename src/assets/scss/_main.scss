@@ -148,244 +148,423 @@ body.dark {
     }
 
     &.popup_benefit {
-        .pop_body {
-            padding: 24rem 30rem 40rem;
-            .tab_menu {
+        .pop_header {
+            .tooltip_box {
                 display: flex;
-                justify-content: space-around;
-                align-items: flex-end;
-                gap: 2rem;
-                height: 128rem;
-                margin-bottom: 16rem;
-                li {
-                    position: relative;
+                align-items: center;
+                height: 84rem;
+                gap: 8rem;
+                button {
+                    display: block;
+                    width: 18rem;
+                    height: 18rem;
+                    font-size: 0;
+                    line-height: 0;
+                    text-indent: -9999rem;
+                    @include bgImg('../images/ico_tooltip_12.png', '../images/ico_tooltip_12_dm.png');
+                    background-size: 18rem 18rem;
+                }
+            }
+        }
+        .pop_body {
+            height: 480rem;
+            padding: 0 20rem 20rem;
+            box-sizing: border-box;
+            .tab_wrapper {
+                padding: 0;
+                margin-top: 0;
+                .toggle_menu {
                     display: flex;
-                    align-items: flex-end;
-                    justify-content: center;
-                    width: 60rem;
-                    margin: 0 4rem;
-                    padding-bottom: 8rem;
-                    border-radius: 12rem 12rem 0 0;
-                    @include color(background-color, bg5);
-                    box-sizing: border-box;
-                    font-weight: 600;
-                    font-size: 12rem;
-                    @include color(color, tt5);
-                    &.active {
-                        @include color(color, tt7);
-                    }
-                    &.my {
-                        &:before,
-                        &:after {
-                            position: absolute;
-                            display: block;
-                            left: 50%;
-                            transform: translateX(-50%);
-                        }
-                        &:before {
-                            content: '이번달\00000a나의 등급';
-                            width: 60rem;
-                            top: -48rem;
-                            padding: 6rem 0 4rem;
-                            @include color(color, tt6);
-                            font-size: 12rem;
-                            text-align: center;
-                            line-height: 15rem;
-                            border-radius: 6rem;
-                            @include color(background-color, bg1);
-                            white-space: pre;
-                            font-weight: normal;
-                        }
-                        &:after {
-                            content: '';
-                            top: -10rem;
-                            width: 0;
-                            height: 0;
-                            border-top: 6rem solid;
-                            @include color(border-color, bg1);
-                            border-left: 6rem solid transparent !important;
-                            border-right: 6rem solid transparent !important;
-                            border-bottom: 6rem solid transparent !important;
-                        }
-                        background-position: center bottom 27rem;
-                        background-repeat: no-repeat;
-                        background-size: 28rem 28rem;
+                    padding: 4rem;
+                    margin-bottom: 30rem;
+                    @include color(background-color, bg26);
+                    border-radius: 24rem;
+                    li {
+                        width: 50%;
+                        height: 40rem;
+                        border-radius: 20rem;
+                        font-weight: 600;
+                        font-size: 15rem;
+                        line-height: 40rem;
+                        @include color(color, tt14);
+                        text-align: center;
                         &.active {
-                            &.a {
-                                background-image: url('../images/ic_level_a_s.png');
+                            @include color(background-color, bg27);
+                            @include color(color, tt3);
+                        }
+                    }
+                }
+                .tab_content {
+                    position: relative;
+                    margin: 0;
+                }
+                .mini_card {
+                    position: absolute;
+                    top: 34rem;
+                    right: 40rem;
+                    width: 48rem;
+                    height: 80rem;
+                    .swiper-slide {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+                        &.swiper-slide-next {
+                            img {
+                                width: 34rem;
                             }
-                            &.s {
-                                background-image: url('../images/ic_level_s_s.png');
+                        }
+                        &.swiper-slide-prev {
+                            img {
+                                width: 34rem;
                             }
-                            &.ss {
-                                background-image: url('../images/ic_level_ss_s.png');
+                        }
+                    }
+                    .swiper-pagination-mini {
+                        bottom: -20rem;
+                        left: auto;
+                        right: 10rem;
+                        .swiper-pagination-bullet {
+                            width: 6rem;
+                            height: 6rem;
+                            background-color: #fff;
+                            opacity: .4;
+                        }
+                        .swiper-pagination-bullet-active {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .benefit {
+                    padding: 20rem;
+                    border: 1rem solid rgba(#eee, .2);
+                    border-radius: 16rem;
+                    dt {
+                        padding-bottom: 35rem;
+                        color: #eee;
+                        font-size: 16rem;
+                        font-weight: 600;
+                        line-height: 24rem;
+                        letter-spacing: -.4rem;
+                        img {
+                            display: block;
+                            width: 141rem;
+                            margin-top: 8rem;
+                        }
+                    }
+                    &.a {
+                        background: linear-gradient(137deg, #4d4322, #261f15 48%, #312309 99%);
+                        dt {
+                            border-bottom: 1rem solid #4b422c;
+                        }
+                        .detail {
+                            li {
+                                &:nth-child(1) {background-image: url('../images/ic_card_a01.png');}
+                                &:nth-child(2) {background-image: url('../images/ic_card_a02.png');}
+                                &:nth-child(3) {background-image: url('../images/ic_card_a03.png');}
+                                span {
+                                    color: #dbbd7a;
+                                }
                             }
-                            &.sss {
-                                background-image: url('../images/ic_level_sss_s.png');
+                        }
+                    }
+                    &.b {
+                        background: linear-gradient(137deg, #4a2248, #291026 48%, #330830 99%);
+                        dt {
+                            border-bottom: 1rem solid #583955;
+                        }
+                        .detail {
+                            li {
+                                &:nth-child(1) {background-image: url('../images/ic_card_b01.png');}
+                                &:nth-child(2) {background-image: url('../images/ic_card_b02.png');}
+                                &:nth-child(3) {background-image: url('../images/ic_card_b03.png');}
                             }
-                            &.l {
-                                background-image: url('../images/ic_level_l_s.png');
+                            span {
+                                color: #ef9be1;
+                            }
+                        }
+                    }
+                    .detail {
+                        display: flex;
+                        justify-content: space-around;
+                        margin-top: 23rem;
+                        li {
+                            padding-top: 60rem;
+                            color: #eee;
+                            font-size: 13rem;
+                            line-height: 18rem;
+                            letter-spacing: -.33rem;
+                            text-align: center;
+                            background-repeat: no-repeat;
+                            background-position: center top;
+                            background-size: 48rem 48rem;
+                            span {
+                                display: block;
+                                margin-top: 4rem;
+                                font-size: 15rem;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                .btn_wrapper {
+                    margin-top: 15rem;
+                    button {
+                        display: block;
+                        width: 100%;
+                        height: 56rem;
+                        @include color(background-color, bg15);
+                        border-radius: 16rem;
+                        text-align: center;
+                        line-height: 56rem;
+                        font-size: 18rem;
+                        font-weight: 600;
+                        @include color(color, tt11);
+                    }
+                }
+            }
+            .tab_deth {
+                .tab_list {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: flex-end;
+                    gap: 2rem;
+                    height: 128rem;
+                    margin-bottom: 16rem;
+                    li {
+                        position: relative;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: center;
+                        width: 60rem;
+                        margin: 0 4rem;
+                        padding-bottom: 8rem;
+                        border-radius: 12rem 12rem 0 0;
+                        @include color(background-color, bg5);
+                        box-sizing: border-box;
+                        font-weight: 600;
+                        font-size: 12rem;
+                        @include color(color, tt5);
+                        &.active {
+                            @include color(color, tt7);
+                        }
+                        &.my {
+                            &:before,
+                            &:after {
+                                position: absolute;
+                                display: block;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                            &:before {
+                                content: '이번달\00000a나의 등급';
+                                width: 60rem;
+                                top: -48rem;
+                                padding: 6rem 0 4rem;
+                                @include color(color, tt6);
+                                font-size: 12rem;
+                                text-align: center;
+                                line-height: 15rem;
+                                border-radius: 6rem;
+                                @include color(background-color, bg1);
+                                white-space: pre;
+                                font-weight: normal;
+                            }
+                            &:after {
+                                content: '';
+                                top: -10rem;
+                                width: 0;
+                                height: 0;
+                                border-top: 6rem solid;
+                                @include color(border-color, bg1);
+                                border-left: 6rem solid transparent !important;
+                                border-right: 6rem solid transparent !important;
+                                border-bottom: 6rem solid transparent !important;
+                            }
+                            background-position: center bottom 27rem;
+                            background-repeat: no-repeat;
+                            background-size: 28rem 28rem;
+                            &.active {
+                                &.a {
+                                    background-image: url('../images/ic_level_a_s.png');
+                                }
+                                &.s {
+                                    background-image: url('../images/ic_level_s_s.png');
+                                }
+                                &.ss {
+                                    background-image: url('../images/ic_level_ss_s.png');
+                                }
+                                &.sss {
+                                    background-image: url('../images/ic_level_sss_s.png');
+                                }
+                                &.l {
+                                    background-image: url('../images/ic_level_l_s.png');
+                                }
+                            }
+                        }
+                        &.a {
+                            height: 68rem;
+                            &.active {
+                                @include color(background-color, level2);
+                            }
+                        }
+                        &.s {
+                            height: 80rem;
+                            &.active {
+                                @include color(background-color, level3);
+                            }
+                        }
+                        &.ss {
+                            height: 92rem;
+                            &.active {
+                                @include color(background-color, level4);
+                            }
+                        }
+                        &.sss {
+                            height: 104rem;
+                            &.active {
+                                @include color(background-color, level5);
+                            }
+                        }
+                        &.l {
+                            height: 116rem;
+                            &.active {
+                                @include color(background-color, level6);
+                            }
+                        }
+                    }
+                }
+                .tab_content {
+                    display: none;
+                    &.active {
+                        display: block;
+                    }
+                    .box {
+                        padding: 20rem;
+                        border-radius: 16rem;
+                        dt {
+                            padding: 10rem 0 23rem 76rem;
+                            margin-bottom: 20rem;
+                            @include color(color, tt10);
+                            font-size: 13rem;
+                            background-repeat: no-repeat;
+                            background-position: 0 0;
+                            background-size: 68rem 68rem;
+                            border-bottom: 1rem solid;
+                            strong {
+                                display: block;
+                                padding-bottom: 4rem;
+                                @include color(color, tt2);
+                                font-size: 18rem;
+                                font-weight: bold;
+                            }
+                        }
+                        dd {
+                            li {
+                                display: flex;
+                                justify-content: space-between;
+                                font-size: 14rem;
+                                @include color(color, tt3);
+                                span {
+                                    @include color(color, tt10);
+                                }
+                                & + li {
+                                    margin-top: 6rem;
+                                }
+                            }
+                        }
+                    }
+                    .more {
+                        display: flex;
+                        margin-top: 10rem;
+                        border: 1rem solid;
+                        @include color(border-color, ln11);
+                        border-radius: 12rem;
+                        @include color(background-color, bg5);
+                        li {
+                            position: relative;
+                            width: 50%;
+                            padding: 56rem 0 14rem;
+                            @include color(color, tt3);
+                            font-size: 13rem;
+                            text-align: center;
+                            background-size: 62rem 40rem;
+                            background-position: center top 10rem;
+                            background-repeat: no-repeat;
+                            &:last-child {
+                                background-image: url('../images/img_reward_youtube_popup.png');
+                                &::before {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    width: 1rem;
+                                    height: 40rem;
+                                    top: 50%; 
+                                    transform: translateY(-50%);
+                                    left: 0;
+                                    @include color(background-color, bg17);
+                                }
+                            }
+                            &:first-child {
+                                background-image: url('../images/img_reward_money_con.png');
                             }
                         }
                     }
                     &.a {
-                        height: 68rem;
-                        &.active {
-                            @include color(background-color, level2);
+                        .box {
+                            @include color(background-color, bg10);
+                            dt {
+                                @include color(border-color, ln5);
+                                background-image: url('../images/ic_level_a_m.png');
+                            }
+                        }
+                        .more {
+                            li {
+                                width: 100%;
+                                &::before {
+                                    display: none;
+                                }
+                            }
                         }
                     }
                     &.s {
-                        height: 80rem;
-                        &.active {
-                            @include color(background-color, level3);
+                        .box {
+                            @include color(background-color, bg11);
+                            dt {
+                                @include color(border-color, ln6);
+                                background-image: url('../images/ic_level_s_m.png');
+                            }
                         }
                     }
                     &.ss {
-                        height: 92rem;
-                        &.active {
-                            @include color(background-color, level4);
+                        .box {
+                            @include color(background-color, bg12);
+                            dt {
+                                @include color(border-color, ln7);
+                                background-image: url('../images/ic_level_ss_m.png');
+                            }
                         }
                     }
                     &.sss {
-                        height: 104rem;
-                        &.active {
-                            @include color(background-color, level5);
+                        .box {
+                            @include color(background-color, bg13);
+                            dt {
+                                @include color(border-color, ln8);
+                                background-image: url('../images/ic_level_sss_m.png');
+                            }
                         }
                     }
                     &.l {
-                        height: 116rem;
-                        &.active {
-                            @include color(background-color, level6);
-                        }
-                    }
-                }
-            }
-            .tab_content {
-                display: none;
-                &.active {
-                    display: block;
-                }
-                .box {
-                    padding: 20rem;
-                    border-radius: 16rem;
-                    dt {
-                        padding: 10rem 0 23rem 76rem;
-                        margin-bottom: 20rem;
-                        @include color(color, tt10);
-                        font-size: 13rem;
-                        background-repeat: no-repeat;
-                        background-position: 0 0;
-                        background-size: 68rem 68rem;
-                        border-bottom: 1rem solid;
-                        strong {
-                            display: block;
-                            padding-bottom: 4rem;
-                            @include color(color, tt2);
-                            font-size: 18rem;
-                            font-weight: bold;
-                        }
-                    }
-                    dd {
-                        li {
-                            display: flex;
-                            justify-content: space-between;
-                            font-size: 14rem;
-                            @include color(color, tt3);
-                            span {
-                                @include color(color, tt10);
+                        .box {
+                            @include color(background-color, bg14);
+                            dt {
+                                @include color(border-color, ln9);
+                                background-image: url('../images/ic_level_l_m.png');
                             }
-                            & + li {
-                                margin-top: 6rem;
-                            }
-                        }
-                    }
-                }
-                .more {
-                    display: flex;
-                    margin-top: 10rem;
-                    border: 1rem solid;
-                    @include color(border-color, ln11);
-                    border-radius: 12rem;
-                    @include color(background-color, bg5);
-                    li {
-                        position: relative;
-                        width: 50%;
-                        padding: 56rem 0 14rem;
-                        @include color(color, tt3);
-                        font-size: 13rem;
-                        text-align: center;
-                        background-size: 62rem 40rem;
-                        background-position: center top 10rem;
-                        background-repeat: no-repeat;
-                        &:last-child {
-                            background-image: url('../images/img_reward_youtube_popup.png');
-                            &::before {
-                                content: '';
-                                display: block;
-                                position: absolute;
-                                width: 1rem;
-                                height: 40rem;
-                                top: 50%; 
-                                transform: translateY(-50%);
-                                left: 0;
-                                @include color(background-color, bg17);
-                            }
-                        }
-                        &:first-child {
-                            background-image: url('../images/img_reward_money.png');
-                        }
-                    }
-                }
-                &.a {
-                    .box {
-                        @include color(background-color, bg10);
-                        dt {
-                            @include color(border-color, ln5);
-                            background-image: url('../images/ic_level_a_m.png');
-                        }
-                    }
-                    .more {
-                        li {
-                            width: 100%;
-                            &::before {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-                &.s {
-                    .box {
-                        @include color(background-color, bg11);
-                        dt {
-                            @include color(border-color, ln6);
-                            background-image: url('../images/ic_level_s_m.png');
-                        }
-                    }
-                }
-                &.ss {
-                    .box {
-                        @include color(background-color, bg12);
-                        dt {
-                            @include color(border-color, ln7);
-                            background-image: url('../images/ic_level_ss_m.png');
-                        }
-                    }
-                }
-                &.sss {
-                    .box {
-                        @include color(background-color, bg13);
-                        dt {
-                            @include color(border-color, ln8);
-                            background-image: url('../images/ic_level_sss_m.png');
-                        }
-                    }
-                }
-                &.l {
-                    .box {
-                        @include color(background-color, bg14);
-                        dt {
-                            @include color(border-color, ln9);
-                            background-image: url('../images/ic_level_l_m.png');
                         }
                     }
                 }
@@ -2983,52 +3162,44 @@ body.dark {
             }
         }
         .info {
-            width: 304rem;
-            margin: 42rem auto 0;
+            padding: 0 20rem;
+            margin: 42rem 20rem 120rem;
             border: 1rem solid;
             @include color(border-color, ln3);
             border-radius: 12rem;
             @include color(background-color, bg5);
-            &.none {
-                li:last-child {
-                    &::before {
-                        display: none;
-                    }
-                }
-            }
             li {
                 position: relative;
                 display: flex;
                 align-items: center;
                 gap: 10rem;
                 height: 70rem;
-                padding: 0 20rem;
                 @include color(color, tt3);
                 font-size: 14rem;
                 line-height: 20rem;
                 letter-spacing: -.3rem;
                 background-repeat: no-repeat;
-                background-position: center right 10rem;
+                background-position: center right;
                 background-size: 62rem 40rem;
+                border-bottom: 1rem solid;
+                @include color(border-color, bg17);
                 strong {
+                    display: block;
+                    width: 70rem;
                     font-weight: 600;
                 }
                 &:last-child {
-                    background-image: url('../images/img_reward_youtube_dm.png');
-                    background-position: center right;
-                    &::before {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        left: 20rem;
-                        top: 0;
-                        width: calc(100% - 40rem);
-                        height: 1rem;
-                        @include color(background-color, bg17);
-                    }
+                    border-bottom: 0 none;
                 }
-                &:first-child {
+                &.money {
                     background-image: url('../images/img_reward_money.png');
+                }
+                &.youtube {
+                    background-image: url('../images/img_reward_youtube_dm.png');
+                }
+                &.card {
+                    @include bgImg('../images/img_reward_card.png', '../images/img_reward_card_dm.png');
+                    background-size: 62rem 40rem;
                 }
             }
             &.general {
@@ -3053,7 +3224,7 @@ body.dark {
     }
 
     .benefit_detail {
-        padding: 0 20rem;
+        padding: 20rem 20rem 0;
         .s_membership {
             padding: 40rem 0 183rem;
             border-radius: 24rem;
@@ -3559,7 +3730,7 @@ body.dark {
 
     &.tally {
         .contents {
-            padding: 0 20rem 20rem;
+            padding: 20rem;
             p {
                 @include color(color, tt10);
                 font-size: 14rem;
