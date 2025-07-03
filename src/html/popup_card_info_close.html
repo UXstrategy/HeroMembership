@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_card_info_close');">팝업열기</button>
+
+        <div class="popup dialog popup_card_info_close active">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>더 이상, 카드 발급 가능 안내를 보지 않을게요</h1>
+                </div>
+                <div class="pop_body">
+                    <p>도도한 혜택 안내 화면에서도 발급 신청이 가능해요.</p>
+                    
+                    <ul class="list_dot">
+                        <li>* 히어로멤버십 메인 &gt; 도도한 혜택 안내</li>
+                    </ul>
+
+                    <div class="btn_box">
+                        <button type="button" class="btn_cancel" onclick="popup.open('popup_card_info_close');">취소</button>
+                        <button type="button" class="btn_ok">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

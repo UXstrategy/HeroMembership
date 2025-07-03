@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_new_agree')">팝업열기</button>
+
+        <div class="popup bottomsheet popup_new_agree active">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>신규 혜택 알림 신청 동의</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('popup_new_agree');">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <dl class="agree_wrap">
+                        <dt>신규 혜택 알림을 받으려면<br>개인정보 수집 및 이용동의가 필요해요.</dt>
+                        <dd>
+                            <ul class="agree_list">
+                                <li class="chk_box custom_chk icon_arrow">
+                                    <input type="checkbox" id="chk_1">
+                                    <label for="chk_1"> 개인신용정보 수집 및 이용 동의서</label>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <div class="btn_wrap"><button type="button" class="button">네, 동의할게요</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+
+    <!-- Script -->
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+
+</html>

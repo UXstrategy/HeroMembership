@@ -163,57 +163,39 @@
                 $(this).closest(".tab_wrapper").children(".tab_content").hide();
                 $(this).closest(".tab_wrapper").children(".tab_content").eq($(this).index()).show();
                 if ( $('.tab_list').find('li').eq(1).hasClass('active') ) {
-                    mini_card();
+                    heroSwiper.update();
                 }
             });
         });
 
         // 카드 혜택
-        function mini_card(){
-            var heroSwiper = new Swiper(".mini_card", {
-                effect: "cards",
-                grabCursor: true,
-                cardsEffect: {
-                    perSlideOffset: 12,
-                    perSlideRotate: 30,
-                    slideShadows : false,
+        var heroSwiper = new Swiper(".mini_card", {
+            effect: "cards",
+            grabCursor: true,
+            cardsEffect: {
+                perSlideOffset: 12,
+                perSlideRotate: 30,
+                slideShadows : false,
+            },
+            pagination: {
+                el: ".swiper-pagination-mini",
+            },
+            on: {
+                transitionEnd: function(){
+                    let cardHasClass = $('.pre_benefit');              
+                    
+                    if ( cardHasClass.hasClass('b') ) {
+                        cardHasClass.removeClass('b').addClass('a');
+                        $('.pre_benefit .benefit.a').show();
+                        $('.pre_benefit .benefit.b').hide();
+                    } else {
+                        cardHasClass.removeClass('a').addClass('b');
+                        $('.pre_benefit .benefit.a').hide();
+                        $('.pre_benefit .benefit.b').show();
+                    }
                 },
-                pagination: {
-                    el: ".swiper-pagination-mini",
-                },
-                on: {
-                    transitionEnd: function(){
-                        console.log(heroSwiper.realIndex);
-                        let cardHasClass = $('.pre_benefit');              
-                        console.log(cardHasClass);
-
-                        if ( heroSwiper.realIndex === 0 ) {
-                            cardHasClass.removeClass('b').addClass('a');
-                            $('.pre_benefit .benefit.a').show();
-                            $('.pre_benefit .benefit.b').hide();
-                        } else if ( heroSwiper.realIndex === 1 ) {
-                            cardHasClass.removeClass('a').addClass('b');
-                            $('.pre_benefit .benefit.a').hide();
-                            $('.pre_benefit .benefit.b').show();
-                        }
-
-
-
-                        // let cardHasClass = $('.pre_benefit');              
-                        // if ( cardHasClass.hasClass('b') ) {
-                        //     cardHasClass.removeClass('b').addClass('a');
-                        //     $('.pre_benefit .benefit.a').show();
-                        //     $('.pre_benefit .benefit.b').hide();
-                        // } else {
-                        //     cardHasClass.removeClass('a').addClass('b');
-                        //     $('.pre_benefit .benefit.a').hide();
-                        //     $('.pre_benefit .benefit.b').show();
-                        // }
-                    },
-                },
-            });
-            //heroSwiper.update();
-        }
+            },
+        }); 
     </script>
     </script>
 </body>
