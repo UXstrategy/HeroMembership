@@ -201,7 +201,7 @@ body.dark {
                 .mini_card {
                     position: absolute;
                     top: 34rem;
-                    right: 40rem;
+                    right: 47rem;
                     width: 48rem;
                     height: 80rem;
                     .swiper-slide {
@@ -225,9 +225,11 @@ body.dark {
                         }
                     }
                     .swiper-pagination-mini {
+                        padding-top: 5rem;
                         bottom: -20rem;
                         left: auto;
                         right: 10rem;
+                        text-align: center;
                         .swiper-pagination-bullet {
                             width: 6rem;
                             height: 6rem;

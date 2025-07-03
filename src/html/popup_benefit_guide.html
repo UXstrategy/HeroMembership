@@ -184,6 +184,21 @@
                 on: {
                     transitionEnd: function(){
                         console.log(heroSwiper.realIndex);
+                        let cardHasClass = $('.pre_benefit');              
+                        console.log(cardHasClass);
+
+                        if ( heroSwiper.realIndex === 0 ) {
+                            cardHasClass.removeClass('b').addClass('a');
+                            $('.pre_benefit .benefit.a').show();
+                            $('.pre_benefit .benefit.b').hide();
+                        } else if ( heroSwiper.realIndex === 1 ) {
+                            cardHasClass.removeClass('a').addClass('b');
+                            $('.pre_benefit .benefit.a').hide();
+                            $('.pre_benefit .benefit.b').show();
+                        }
+
+
+
                         // let cardHasClass = $('.pre_benefit');              
                         // if ( cardHasClass.hasClass('b') ) {
                         //     cardHasClass.removeClass('b').addClass('a');
@@ -194,10 +209,10 @@
                         //     $('.pre_benefit .benefit.a').hide();
                         //     $('.pre_benefit .benefit.b').show();
                         // }
-                    }
+                    },
                 },
             });
-            heroSwiper.update();
+            //heroSwiper.update();
         }
     </script>
     </script>
