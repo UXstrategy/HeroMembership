@@ -181,7 +181,7 @@
                 el: ".swiper-pagination-mini",
             },
             on: {
-                transitionEnd: function(){
+                slideChange: function(){
                     let cardHasClass = $('.pre_benefit');              
                     
                     if ( cardHasClass.hasClass('b') ) {
