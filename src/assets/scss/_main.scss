@@ -1857,6 +1857,326 @@ body.dark {
             }
         }
     }
+
+    .my_hero_wrap {
+        margin-top: 32rem;
+        position: relative;
+        width: 100%;
+        min-height: 540rem;
+        @include bgImg('../images/bg_my_hero.png', '../images/bg_my_hero.png');
+        overflow: hidden;
+        .hero_top {
+            display: flex;
+            padding: 33rem 24rem 0;
+            justify-content: space-between;
+            align-items: center;
+            .hero_title {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                .title {
+                    font-size: 18rem;
+                    color: #fff;
+                    font-weight: 700;
+                }
+                .date {
+                    font-size: 13rem;
+                    color: #fff;
+                    font-weight: 700;
+                    &:before {
+                        padding: 0 2rem;
+                        content: '·';
+                    }
+                }
+            }
+            .hero_count {
+                font-size: 13rem;
+                color: #fff;
+                font-weight: 700;
+                .now_count {
+                    margin-right: 2rem;
+                    color: #dbbd7a;
+                    font-weight: 700;
+                }
+                .total_count {
+                    font-weight: 400;
+                }
+            }  
+        }
+        .hero_path {
+            margin-top: 3rem;
+            position: relative;
+            height: 408rem;
+            font-size: 0;
+            background-position: center 35rem;
+            &.card_a.default {
+                @include bgImg('../images/bg_a_route_default.png', '../images/bg_a_route_default.png');
+            }
+            &.card_a.half {
+                @include bgImg('../images/bg_a_route_half.png', '../images/bg_a_route_half.png');
+            }
+            &.card_a.full {
+                @include bgImg('../images/bg_a_route_full.png', '../images/bg_a_route_full.png');
+            }
+            &.card_b.default {
+                @include bgImg('../images/bg_b_route_default.png', '../images/bg_b_route_default.png');
+            }
+            &.card_b.half {
+                @include bgImg('../images/bg_b_route_half.png', '../images/bg_b_route_half.png');
+            }
+            &.card_b.full {
+                @include bgImg('../images/bg_b_route_full.png', '../images/bg_b_route_full.png');
+            }
+            &.card_a {
+                .type_card {
+                    .card_img {
+                        @include bgImg('../images/img_card_after_a.png', '../images/img_card_after_a.png');
+                    }
+                }
+                .type_btn {
+                    button {
+                        background: #dca121;
+                    }
+                }
+                .type_star.on {
+                    @include bgImg('../images/ico_star_a_on.png', '../images/ico_star_a_on.png');
+                }
+                .type_flower {
+                    .desc {
+                        span {
+                            font-size: 12rem;
+                            color: #dbbd7a;
+                        }
+                    }
+                }
+                .type_flower.on1 {
+                    @include bgImg('../images/ico_flower_a_on1.png', '../images/ico_flower_a_on1.png');
+                }
+                .type_flower.on2 {
+                    @include bgImg('../images/ico_flower_a_on2.png', '../images/ico_flower_a_on2.png');
+                }
+                .type_flower.on3 {
+                    @include bgImg('../images/ico_flower_a_on3.png', '../images/ico_flower_a_on3.png');
+                }
+                .type_flower.on4 {
+                    @include bgImg('../images/ico_flower_a_on4.png', '../images/ico_flower_a_on4.png');
+                }
+                .type_flower.on5 {
+                    @include bgImg('../images/ico_flower_a_on5.png', '../images/ico_flower_a_on5.png');
+                }
+            }
+            &.card_b {
+                .type_card {
+                    .card_img {
+                        @include bgImg('../images/img_card_after_b.png', '../images/img_card_after_b.png');
+                    }
+                }
+                .type_btn {
+                    button {
+                        background: #df3cc8;
+                    }
+                }
+                .type_star.on {
+                    @include bgImg('../images/ico_star_b_on.png', '../images/ico_star_b_on.png');
+                }
+                .type_flower {
+                    .desc {
+                        span {
+                            font-size: 12rem;
+                            color: #ef9be1;
+                        }
+                    }
+                } 
+                .type_flower.on1 {
+                    @include bgImg('../images/ico_flower_b_on1.png', '../images/ico_flower_b_on1.png');
+                }
+                .type_flower.on2 {
+                    @include bgImg('../images/ico_flower_b_on2.png', '../images/ico_flower_b_on2.png');
+                }
+                .type_flower.on3 {
+                    @include bgImg('../images/ico_flower_b_on3.png', '../images/ico_flower_b_on3.png');
+                }
+                .type_flower.on4 {
+                    @include bgImg('../images/ico_flower_b_on4.png', '../images/ico_flower_b_on4.png');
+                }
+                .type_flower.on5 {
+                    @include bgImg('../images/ico_flower_b_on5.png', '../images/ico_flower_b_on5.png');
+                }
+            }
+            &
+            .path_box {
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                vertical-align: middle;
+                .desc {
+                    padding-top: 8rem;
+                    font-size: 12rem;
+                    color: #fff;
+                    line-height: 14rem;
+                    opacity: 0.5;
+                }
+                &.type_card {
+                    width: 108rem;
+                    text-align: center;
+                    .card_img {
+                        width: 108rem;
+                        height: 108rem;
+                    }
+                    .desc {
+                        margin-top: -22rem;
+                        font-size: 13rem;
+                        line-height: 16rem;
+                        opacity: 1;
+                    }
+                }
+                &.type_btn {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    button {
+                        width: 84rem;
+                        height: 32rem;
+                        font-size: 13rem;
+                        color: #fff;
+                        font-weight: 700;
+                        line-height: 32rem;
+                        border-radius: 16rem;
+                        
+                        &:disabled {
+                            color: rgba(255, 255, 255, 0.5);
+                            background: #1f224d;
+                        }
+                    } 
+                    &.failed {
+                        button {
+                            background: #626482;
+                        }
+                    }
+                    &.complete {
+                        button {
+                            line-height: 30rem;
+                            border: 1rem solid #fff;
+                            background: #061231;
+                        }
+                        .desc {
+                            opacity: 0.5;
+                        }
+                    }
+                    &.btn1 {
+                        top: 36rem;
+                        left: 90rem;
+                    }
+                    &.btn2 {
+                        top: 176rem;
+                        left: 90rem;
+                    }
+                    &.btn3 {
+                        top: 316rem;
+                        left: 188rem;
+                        .desc {
+                            padding-top: 3rem;
+                        }
+                    }
+                }
+                &.type_star {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 40rem;
+                    height: 40rem;
+                    @include bgImg('../images/ico_star_off.png', '../images/ico_star_off.png');
+                    &.star1 {
+                        top: 33rem;
+                        left: 180rem;
+                    }
+                    &.star2 {
+                        top: 51rem;
+                        left: 222rem;
+                        transform: rotate(45deg);
+                    }
+                    &.star3 {
+                        top: 88rem;
+                        left: 243rem;
+                        transform: rotate(110deg);
+                    }
+                    &.star4 {
+                        top: 140rem;
+                        left: 232rem;
+                        transform: rotate(70deg);
+                    }
+                    &.star5 {
+                        top: 188rem;
+                        left: 46rem;
+                        transform: rotate(-45deg);
+                    }
+                    &.star6 {
+                        top: 222rem;
+                        left: 22rem;
+                        transform: rotate(75deg);
+                    }
+                    &.star7 {
+                        top: 275rem;
+                        left: 28rem;
+                        transform: rotate(20deg);
+                    }
+                    &.star8 {
+                        top: 306rem;
+                        left: 62rem;
+                        transform: rotate(-30deg);
+                    }
+                }
+                &.type_flower {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 80rem;
+                    height: 80rem;
+                    @include bgImg('../images/ico_flower_off.png', '../images/ico_flower_off.png');
+                    .desc {
+                        padding-top: 64rem;
+                        white-space: nowrap;
+                    }
+                    &.on {
+                        .desc {
+                            opacity: 1;
+                        }
+                    }
+                    &.flower1 {
+                        top: 150rem;
+                        left: 170rem;
+                    }
+                    &.flower2 {
+                        top: 288rem;
+                        left: 92rem;
+                    }
+                }
+            }
+        }
+        .price_area {
+            margin: 0 24rem;
+            padding-top: 15rem;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            dl {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                dt {
+                    font-size: 14rem;
+                    color: #ccc;
+                    letter-spacing: -0.35rem;
+                    line-height: 18rem;
+                }
+                dd {
+                    font-size: 14rem;
+                    color: #eee;
+                    font-weight: bold;
+                    letter-spacing: -0.35rem;
+                    line-height: 18rem;
+                }
+            }
+        }
+    }
     
     .main_noti {
         position: relative;
@@ -3653,7 +3973,7 @@ body.dark {
 
     &.get_benefit {
         .contents {
-            padding: 0 20rem;
+            padding: 20rem;
         }
         .this_month {
             font-size: 20rem;
@@ -3667,72 +3987,100 @@ body.dark {
                 color: #2d82fb;
             }
         }
-        .refresh {
-            display: inline-block;
-            vertical-align: top;
-            margin-top: 3rem;
-            width: 19rem;
-            height: 19rem;
-            font-size: 0;
-            line-height: 0;
-            text-indent: -9999rem;
-            background: url('../images/ic_refresh.png') no-repeat center center / 19rem 19rem;
-            &.active {
-                animation: refresh .5s 0s ease 1 backwards;
-            }
-            @keyframes refresh {
-                0% {
-                    transform: rotate(0deg);
-                }
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-        }
         .get_benefit {
             margin-top: 20rem;
-            padding: 20rem 18rem;
+            padding: 20rem;
             border-radius: 16rem;
             border: 1rem solid;
             @include color(border-color, ln3);
-            li {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 14rem;
-                .tit {
-                    padding-left: 28rem;
-                    background-size: 20rem 20rem;
-                    background-position: left center;
-                    background-repeat: no-repeat;
-                    background-image: url('../images/ic_benefit_reward.png');
-                    font-size: 14rem;
-                    line-height: 20rem;
-                    @include color(color, tt3);
-                    &.youtube {
-                        background-image: url('../images/ic_benefit_youtube.png');
+            &.level {
+                dt {background-image: url(../images/ic_benefit_reward.png);}
+            }
+            &.card {
+                dt {background-image: url(../images/ic_benefit_card.png);}
+            }
+            dt {
+                padding-left: 26rem;
+                font-weight: 600;
+                font-size: 16rem;
+                line-height: 23rem;
+                @include color(color, tt2);
+                background-repeat: no-repeat;
+                background-position: center left;
+                background-size: 20rem 20rem;
+            }
+            dd {
+                margin-top: 18rem;
+                padding-top: 18rem;
+                border-top: 1rem solid;
+                @include color(border-color, ln3);
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 10rem;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    .cate {
+                        font-size: 14rem;
+                        line-height: 23rem;
+                        letter-spacing: -.35rem;
+                        @include color(color, tt10);
+                    }
+                    .badge {
+                        padding: 0 6rem;
+                        border-radius: 4rem;
+                        @include color(background-color, bg16);
+                        font-size: 13rem;
+                        line-height: 23rem;
+                        @include color(color, tt8);
+                        letter-spacing: -.33rem;
+                    }
+                    .price {
+                        padding-left: 8rem;
+                        font-weight: bold;
+                        font-size: 16rem;
+                        line-height: 23rem;
+                        letter-spacing: -.4rem;
+                        @include color(color, tt2);
                     }
                 }
-                strong {
-                    @include color(color, tt2);
-                    font-size: 16rem;
-                    text-align: right;
-                    line-height: 20rem;
-                    font-weight: bold;
-                    span {
-                        font-weight: inherit;
-                        font-size: inherit;
-                        line-height: inherit;
-                        color: inherit;
-                    }
-                }
-                &:first-child {
-                    margin-top: 0;
+            }
+        }
+        .more_benefit {
+            margin-top: 20rem;
+            button {
+                display: block;
+                width: 100%;
+                height: 70rem;
+                padding: 0 0 0 74rem;
+                border-radius: 16rem;
+                font-weight: 600;
+                line-height: 20rem;
+                letter-spacing: -.35rem;
+                background: url(../images/ic_benefit_card2.png) no-repeat left 20rem center / 38rem 38rem, url('../images/ic_arrow_right_gray.png') no-repeat right 20rem center / 6rem 12rem;
+                @include color(color, tt3);
+                @include color(background-color, bg11);
+                text-align: left;
+                box-sizing: border-box;
+                span {
+                    @include color(color, tt20);
+                    font-size: inherit;
+                    line-height: inherit;
+                    font-weight: inherit;
                 }
             }
         }
         .chart_wrap {
             position: relative;
-            margin-top: 20rem;
+            margin-top: 48rem;
+            .tit {
+                font-weight: bold;
+                line-height: 22rem;
+                font-size: 18rem;
+                letter-spacing: -.36rem;
+                @include color(color, tt2);
+            }
             .chart {
                 display: flex;
                 align-items: flex-end;
@@ -3749,52 +4097,24 @@ body.dark {
                     border-radius: 4rem 4rem 0 0;
                     &.recently {
                         @include color(background-color, bg3);
-                        .month {
+                        span {
                             @include color(color, tt3);
                         }
                     }
-                    .month {
+                    div {
                         display: block;
                         position: absolute;
-                        bottom: - 22rem;
+                        bottom: -38rem;
                         left: 50%;
                         transform: translateX(-50%);
-                        width: calc(100% + 20rem);
-                        font-size: 12rem;
-                        text-align: center;
-                        letter-spacing: -.33rem;
-                        color: #999;
-                    }
-                    .this {
-                        display: block;
-                        position: absolute;
-                        left: 50%; 
-                        transform: translateX(-50%);
-                        top: -40rem;
-                        width: calc(100% + 32rem);
-                        height: 28rem;
-                        text-align: center;
-                        @include color(background-color, bg1);
-                        border-radius: 10rem;
-                        font-size: 12rem;
-                        line-height: 30rem;
-                        @include color(color, tt6);
-                        letter-spacing: -.24rem;
-                        &::after {
-                            content: '';
+                        width: calc(100% + 23rem);
+                        span {
                             display: block;
-                            position: absolute;
-                            width: 0;
-                            height: 0;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            bottom: -7rem;
-                            border-style: solid;
-                            border-width: 10rem 5rem 0 5rem;
-                            @include color(border-color, bg1);
-                            border-left-color: transparent;
-                            border-bottom-color: transparent;
-                            border-right-color: transparent;
+                            font-size: 12rem;
+                            line-height: 16rem;
+                            text-align: center;
+                            letter-spacing: -.33rem;
+                            color: #999;
                         }
                     }
                 }
@@ -3824,44 +4144,128 @@ body.dark {
                 }
             }
         }
+        .benefint_tit {
+            margin-bottom: 24rem;
+            @include color(color, tt2);
+            font-size: 18rem;
+            line-height: 22rem;
+            letter-spacing: -.36rem;
+            font-weight: bold;
+        }
+        .issuance_box {
+            position: relative;
+            .dim {
+                z-index: 1;
+                position: absolute;
+                left: 8rem;
+                top: 0;
+                right: 8rem;
+                display: flex;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                border-radius: 24rem;
+                background-color: rgba(#061231, .7);
+                strong {
+                    display: block;
+                    margin-bottom: 8rem;
+                    font-weight: bold;
+                    font-size: 20rem;
+                    line-height: 26rem;
+                    color: #eee;
+                    letter-spacing: -.5rem;
+                    span {
+                        font-weight: inherit;
+                        font-size: inherit;
+                        line-height: inherit;
+                        &.a {
+                            color: #dbbd7a;
+                        }
+                        &.b {
+                            color: #ef9be1;
+                        }
+                    }
+                }
+                span {
+                    font-size: 16rem;
+                    line-height: 22rem;
+                    color: #ccc;
+                    letter-spacing: -.4rem;
+                }
+                .border {
+                    display: block;
+                    width: 240rem;
+                    height: 45rem;
+                    margin: 20rem auto;
+                    border: 1rem solid #eee;
+                    box-sizing: border-box;
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 15rem;
+                    line-height: 45rem;
+                    letter-spacing: -.38rem;
+                    color: #eee;
+                    border-radius: 12rem;
+                }
+                .check {
+                    padding-left: 22rem;
+                    color: #ccc;
+                    font-size: 14rem;
+                    line-height: 24rem;
+                    letter-spacing: -.35rem;
+                    background: url('../images/ic_check_line.png') no-repeat center left / 16rem 16rem;
+                }
+            }
+            .card_issuance_after {
+                margin : 0 8rem;
+            }
+        }
         .detail {
             margin: 40rem 0;
             dt {
+                margin-bottom: 24rem;
                 @include color(color, tt2);
                 font-size: 18rem;
                 line-height: 22rem;
                 letter-spacing: -.36rem;
                 font-weight: bold;
-                .refresh {
-                    margin-top: 0;
-                    margin-bottom: 2rem;
-                }
             }
             li {
-                display: flex;
-                justify-content: space-between;
-                padding: 20rem 0;
+                margin-top: 20rem;
+                padding-bottom: 20rem;
                 border-bottom: 1rem solid;
                 @include color(border-color, ln3);
+                &:first-child {
+                    margin-top: 0;
+                }
                 p {
                     display: flex;
                 }
                 .date {
-                    font-size: 13rem;
+                    margin-bottom: 15rem;
+                    font-size: 14rem;
                     line-height: 20rem;
                     color: #999;
                 }
-                .category {
-                    margin-left: 20rem;
-                    span {
-                        display: block;
-                        margin-top: 12rem;
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 12rem;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+                div {
+                    margin-top: 12rem;
+                    .category {
                         @include color(color, tt2);
                         font-size: 14rem;
                         line-height: 20rem;
-                        &:first-child {
-                            margin-top: 0;
-                        }
+                    }
+                    &:first-child {
+                        margin-top: 0;
                     }
                 }
                 .benefit {
@@ -3884,6 +4288,42 @@ body.dark {
                     @include bgImg('../images/ic_arrow_down.png', '../images/ic_arrow_down_dm.png');
                     background-position: center right;
                     background-size: 12rem 12rem;
+                }
+            }
+        }
+        .apply_list {
+            margin-top: 48rem;
+            dt {
+                margin-bottom: 24rem;
+                @include color(color, tt2);
+                font-size: 18rem;
+                line-height: 22rem;
+                letter-spacing: -.36rem;
+                font-weight: bold;
+            }
+            ul {
+                padding: 24rem 20rem;
+                border-radius: 16rem;
+                @include color(background-color, bg5);
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 12rem;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    span {
+                        font-size: 14rem;
+                        line-height: 20rem;
+                        letter-spacing: -.35rem;
+                        @include color(color, tt21);
+                    }
+                    .or {
+                        font-size: 14rem;
+                        line-height: 20rem;
+                        @include color(color, tt21);
+                        font-weight: bold;
+                    }
                 }
             }
         }

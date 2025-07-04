@@ -18,17 +18,45 @@
         <div class="contents">
             <p class="this_month refresh_wrap">
                 이번 달<br><span></span> 혜택을 받았어요
-                <button type="button" class="refresh">새로고침</button>
             </p>
-            <ul class="get_benefit">
-                <li>
-                    <span class="tit">등급 리워드</span>
-                    <strong>+<span class="reward"></span>원</strong>
-                </li>
-                <li><span class="tit youtube">유튜브 프리미엄 1개월 무료</span></li>
-            </ul>
+
+            <dl class="get_benefit level">
+                <dt>등급 리워드</dt>
+                <dd>
+                    <div>
+                        <p class="cate">현금지급</p>
+                        <p>
+                            <span class="badge">지급대기</span>
+                            <span class="price">+500,000원</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="cate">유튜브 프리미엄 1개월 이용권</p>
+                    </div>
+                </dd>
+            </dl>
+
+            <dl class="get_benefit card">
+                <dt>카드 지원금</dt>
+                <dd>
+                    <div>
+                        <p class="cate">현금지급</p>
+                        <p>
+                            <span class="badge">지급대기</span>
+                            <span class="price">+300,000원</span>
+                        </p>
+                    </div>
+                </dd>
+            </dl>
+
+            <div class="more_benefit">
+                <button type="button">
+                    카드 발급 시 <span>최대 70만원</span>의<br>혜택을 더 받을 수 있어요
+                </button>
+            </div>
 
             <div class="chart_wrap">
+                <p class="tit">6개월 누적 지급 금액</p>
                 <ul class="chart"></ul>
             </div>
 
@@ -38,68 +66,144 @@
             </p>
 
             <dl class="detail">
-                <dt class="refresh_wrap">혜택 내역 <button type="button" class="refresh">새로고침</button></dt>
+                <dt class="refresh_wrap">건 별 혜택 상세 내역</dt>
                 <dd>
                     <ul>
                         <li>
-                            <p>
-                                <span class="date">24.09.01</span>
-                                <span class="category">
-                                    <span>L등급 리워드</span>
-                                    <span>유튜브 프리미엄 1개월 무료</span>
-                                </span>
-                            </p>
-                            <p class="benefit">+500,000원</p>
+                            <p class="date">24.09.01</p>
+                            <div>
+                                <span class="category">L등급 리워드</span>
+                                <span class="benefit">+500,000원</span>
+                            </div>
+                            <div>
+                                <span class="category">히어로카드 연회비 리워드(2회차)</span>
+                                <span class="benefit">+200,000원</span>
+                            </div>
+                            <div>
+                                <span class="category">유튜브 프리미엄 1개월 이용권 무료</span>
+                            </div>
                         </li>
                         <li>
-                            <p>
-                                <span class="date">24.07.01</span>
-                                <span class="category">
-                                    <span>A등급 리워드</span>
-                                </span>
-                            </p>
-                            <p class="benefit">+20,000원</p>
+                            <p class="date">24.09.01</p>
+                            <div>
+                                <span class="category">L등급 리워드</span>
+                                <span class="benefit">+500,000원</span>
+                            </div>
+                            <div>
+                                <span class="category">히어로카드 연회비 리워드(2회차)</span>
+                                <span class="benefit">+200,000원</span>
+                            </div>
+                            <div>
+                                <span class="category">유튜브 프리미엄 1개월 이용권 무료</span>
+                            </div>
                         </li>
                         <li>
-                            <p>
-                                <span class="date">24.09.01</span>
-                                <span class="category">
-                                    <span>L등급 리워드</span>
-                                    <span>유튜브 프리미엄 1개월 무료</span>
-                                </span>
-                            </p>
-                            <p class="benefit">+500,000원</p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="date">24.07.01</span>
-                                <span class="category">
-                                    <span>A등급 리워드</span>
-                                </span>
-                            </p>
-                            <p class="benefit">+20,000원</p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="date">24.09.01</span>
-                                <span class="category">
-                                    <span>L등급 리워드</span>
-                                    <span>유튜브 프리미엄 1개월 무료</span>
-                                </span>
-                            </p>
-                            <p class="benefit">+500,000원</p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="date">24.07.01</span>
-                                <span class="category">
-                                    <span>A등급 리워드</span>
-                                </span>
-                            </p>
-                            <p class="benefit">+20,000원</p>
+                            <p class="date">24.09.01</p>
+                            <div>
+                                <span class="category">L등급 리워드</span>
+                                <span class="benefit">+500,000원</span>
+                            </div>
+                            <div>
+                                <span class="category">히어로카드 연회비 리워드(2회차)</span>
+                                <span class="benefit">+200,000원</span>
+                            </div>
+                            <div>
+                                <span class="category">유튜브 프리미엄 1개월 이용권 무료</span>
+                            </div>
                         </li>
                     </ul>
                     <div class="btn_box"><button type="button" class="readmore">더보기</button></div>
+                </dd>
+            </dl>
+
+            <p class="benefint_tit">카드 혜택을 받기 위한 실적</p>
+            <div class="issuance_box">
+                <!-- 카드 혜택 받기 전 -->
+                <div class="card_issuance card_issuance_before">
+                    <div class="dim">
+                        <strong>고객님은<br><span class="a">Legendary HERO카드</span>가<br>발급 가능해요</strong>
+                        <span>발급받으면 헤택이 열려요!</span>
+                        <button type="button" class="border">혜택 상세보고 신청하러 가기</button>
+                        <button type="button" class="check">더 이상 보지 않기</button>
+                    </div>
+                </div>
+                <!-- 카드 혜택 받기 후 -->
+                <div class="card_issuance card_issuance_after">
+                    <div class="my_hero_wrap">
+                        <div class="hero_top">
+                            <ul class="hero_title">
+                                <li class="title">내 히어로 별자리</li>
+                                <li class="date">25.05</li>
+                            </ul>
+                            <p class="hero_count"><span class="now_count">2</span>/<span class="total_count">10</span></p>
+                        </div>
+                        <div class="hero_path card_a default"><!-- 'card_b' : super hero, 'card_a' : legendary hero -->
+                            <div class="path_box type_card complete">
+                                <p class="card_img"></p>
+                                <p class="desc">25.05<br>L카드 발급</p>
+                            </div>
+                            <div class="path_box type_btn btn1 complete"> <!-- class 추가 : 받을 수 없을때 button 내 disabled, 실패 failed, 받기 완료 complete -->
+                                <button type="button">받기 완료</button>
+                                <p class="desc">발급 시<br>1번만 지급</p>
+                            </div>
+                            <div class="path_box type_star star1 on"></div> <!-- 별 활성화 : on class추가 -->
+                            <div class="path_box type_star star2 on"></div>
+                            <div class="path_box type_star star3 on"></div>
+                            <div class="path_box type_star star4 on"></div>
+                            <div class="path_box type_flower flower1 on on2"> <!-- 꽃잎 활성화 : 'on on1' ~ 'on on5' class추가 -->
+                                <p class="desc">25.10까지<br><span>누적 30억 실패</span></p>
+                            </div>
+                            <div class="path_box type_btn btn2 failed">
+                                <button type="button">받기 실패</button>
+                                <p class="desc">25.11<br>지급 불가</p>
+                            </div>
+                            <div class="path_box type_star star5 on"></div>
+                            <div class="path_box type_star star6 on"></div>
+                            <div class="path_box type_star star7 on"></div>
+                            <div class="path_box type_star star8 on"></div>
+                            <div class="path_box type_flower flower2 on on5">
+                                <p class="desc">26.04까지<br><span>누적 60억 달성</span></p>
+                            </div>
+                            <div class="path_box type_btn btn3">
+                                <button type="button" disabled>20만원 받기</button>
+                                <p class="desc">26.05<br>지급 예정</p>
+                            </div>
+                        </div>
+                        <div class="price_area">
+                            <dl>
+                                <dt>실적산정대상<br>해외누적체결금액</dt>
+                                <dd>13,000,000,000원</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <dl class="apply_list">
+                <dt>혜택 신청 정보 내역</dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <span class="category">지난 달 리워드 신청여부</span>
+                            <span class="or">Y</span>
+                        </li>
+                        <li>
+                            <span class="category">이번 달 리워드 신청여부</span>
+                            <span class="or">N</span>
+                        </li>
+                        <li>
+                            <span class="category">히어로 제휴카드 보유여부</span>
+                            <span class="or">N</span>
+                        </li>
+                        <li>
+                            <span class="category">히어로 제휴카드 지원 단계</span>
+                            <span class="or">N</span>
+                        </li>
+                        <li>
+                            <span class="category">히어로 제휴카드 지원금 신청 여부</span>
+                            <span class="or">N</span>
+                        </li>
+                    </ul>
                 </dd>
             </dl>
         </div>
@@ -116,24 +220,11 @@
     <script src="../assets/js/lib/swiper-bundle.min.js"></script>
     <script src="../assets/js/common.js"></script>
     <script type="text/javascript">
-        
-        // 새로고침
-        var refreshCk = true;
-        $('.refresh').on('click',function(){
-            if(refreshCk){
-                refreshCk=false;
-                $(this).closest('.refresh_wrap').children('.refresh').addClass('active');
-                setTimeout(() => {
-                    refreshCk=true;
-                    $('.refresh').removeClass('active');  
-                }, 1000);
-            }
-        });
 
         // 리스트 더보기
         const readMoreButton = $('.readmore'),
             detailList = $('.detail li'),
-            numShow = 3,
+            numShow = 2, // 리스트 디폴트로 보여줄 갯수
             numInList = detailList.length;
 
         detailList.hide();
@@ -150,35 +241,35 @@
         });
         
         // 월 평균 수익률 차트
-        let reward = ["30,000", "50,000", "200,000", "500,000", "500,000", "500,000"];
+        let reward = ["300,000", "500,000", "500,000", "500,000", "1,000,000", "1,000,000"];
         let month = ["5월", "6월", "7월", "8월", "9월", "이번달"];
         let total = 0;
-        let maxVaule = 500000;
+        let maxVaule = 1000000; // 맥시멈 백만원
 
         // reward 총 더한 값
         reward.forEach(function(r){
-            total += parseInt(r.replace(/,/g, ''), 10); // r = reward의 배열을 하나씩 가라키는 변수
+            total += parseInt(r.replace(/,/g, ''), 10);
         });
-        $('.total_benefit span').text(total.toLocaleString()); // total 값을 숫자로 변환
-
-
-        // 마지막 리워드 금액 노출
-        let recently = reward[reward.length -1];
-        $('.get_benefit .reward').text(recently);
-        
-        for (let i = 0; i < reward.length; i++){
-            let value = parseInt(reward[i].replace(/,/g, ''), 10);
-            let height = (value / maxVaule) * 100;
-            let monthName = month[i];
-            $('.chart').append('<li style="height:' + height + '%;"><span class="month">' + monthName + '</span></li>');
-        };
-        $('.chart li').last().addClass('recently');
+        $('.total_benefit span').text(total.toLocaleString());
 
         // 이번 달 혜택 말풍선
         let lastValue = reward[reward.length -1];
         let won = parseInt(lastValue.replace(/,/g, '')) / 10000;
-        $('.chart .recently').append('<span class="this">' + won + '만원</span>');
-        $('.this_month span').text(won + '만원');
+        // $('.chart .recently').append('<span class="this">' + won + '만원</span>');
+        $('.this_month span').text('총 ' + lastValue + '원'); // 상단의 총 얼마 혜택
+
+        // 마지막 리워드 금액 노출
+        // let recently = reward[reward.length -1];
+        $('.get_benefit .reward').text(lastValue);
+        
+        for (let i = 0; i < reward.length; i++){
+            let value = parseInt(reward[i].replace(/,/g, ''), 10);
+            let height = (value / maxVaule) * 100; // 최대 100을 기준으로 금액만큼 그래피 높이
+            let monthName = month[i];
+            let wonValue = (value / 10000) + '만원';
+            $('.chart').append('<li style="height:' + height + '%;"><div><span class="month">' + monthName + '</span><span class="price">' + wonValue + '</span></div></li>');
+        };
+        $('.chart li').last().addClass('recently');
     </script>
 </body>
 </html>
