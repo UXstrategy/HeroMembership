@@ -2760,10 +2760,15 @@ body.dark {
                     width: 90rem;
                     height: 146rem;
                     margin: 0 auto;
+                    .swiper-wrapper {
+                        transform-style: preserve-3d;
+                    }
                     .swiper-slide {
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        backface-visibility: hidden;
+                        transform: translate3d(0, 0, 0);
                         div {
                             position: relative;
                             overflow: hidden;
