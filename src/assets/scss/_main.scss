@@ -902,32 +902,11 @@ body.dark {
                     font-size: 26rem;
                 }
             }
-            .gift_box {
-                position: relative;
-                width: 207rem;
-                height: 198rem;
-                &:before,
-                &:after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background-repeat: no-repeat;
-                    background-position: 0 0;
-                    background-size: 100% 100%;
-                }
-                &:before {
-                    width: 126rem;
-                    height: 85rem;
-                    bottom: 0;
-                    background-image: url('../images/img_reward_box.png');
-                }
-                &:after {
-                    width: 75rem;
-                    height: 86rem;
-                    bottom: 40rem;
-                    background-image: url('../images/img_reward_cover.png');
+            .img_box {
+                width: 200rem;
+                margin-top: 30rem;
+                img {
+                    width: 100%;
                 }
             }
             .btn_close {
@@ -1604,14 +1583,16 @@ body.dark {
                     }
                 }
                 .badge {
-                    padding: 3rem 2rem 4rem;
+                    padding: 0 2rem;
                     position: absolute;
                     bottom: 0;
                     left: 4rem;
                     right: 4rem;
+                    height: 19rem;
                     font-size: 12rem;
                     color: #fff;
                     text-align: center;
+                    line-height: 19rem;
                     letter-spacing: -0.3rem;
                     border-radius: 25rem;
                     background-image: linear-gradient(115deg, #cf9820, #aa7301 64%);
@@ -1619,7 +1600,6 @@ body.dark {
                     &.complete {
                         display: none;
                         margin-left: -2rem;
-                        padding: 3rem 0 4rem;
                         left: 0;
                         right: 0;
                         width: 81rem;
@@ -2939,6 +2919,7 @@ body.dark {
                 margin-top: 32rem;
                 padding: 40rem 20rem;
                 border-radius: 24rem;
+                background-color: #000;
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
                 background-position: 0 0;
@@ -3698,9 +3679,14 @@ body.dark {
         }
         .btn_box {
             position: fixed;
-            width: calc(100% - 40rem);
-            left: 20rem;
-            bottom: 20rem;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 20rem;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 2%, rgba(255, 255, 255, 0.44) 4%, rgba(255, 255, 255, 0.6) 7%, rgba(255, 255, 255, 0.86) 15%, #fff);
+            button {
+                width: 100%;
+            }
         }
     }
 
@@ -4692,6 +4678,11 @@ body.dark {
                         }
                     }
                 }
+            }
+        }
+        &.benefit_info {
+            .btn_box {
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 2%, rgba(255, 255, 255, 0.44) 4%, rgba(255, 255, 255, 0.6) 7%, rgba(255, 255, 255, 0.86) 15%, #fff);
             }
         }
 
