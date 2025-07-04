@@ -52,11 +52,20 @@
                         </div>
                     </div>
                 </li>
-                <li class="swiper-slide sss">
-                    <div class="card">
-                        <p class="level">이번달 등급</p>
-                        <p class="tit">SSS<span>Triple S Hero</span></p>
-                        <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                <!-- 이번달 해당 등급이 S 이상일 경우 'my' class 추가 -->
+                <li class="swiper-slide sss my">
+                    <!-- 이번달 해당 등급이 S 이상일 경우 'card_wrapper 태그 추가' class 추가 -->    
+                    <div class="card_wrapper">
+                        <div class="card">
+                            <p class="level">이번달 등급</p>
+                            <p class="tit">SSS<span>Triple S Hero</span></p>
+                            <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
+                        </div>
+                        <!-- 이번달 해당 등급이 SSS ~ L 경우 'card back yellow 섹션 내용 추가' class 추가 -->    
+                        <div class="card back yellow">
+                            <p class="name">히어로 멤버쉽 전용 신용카드 <span>Legendary HERO카드</span></p>
+                            <div class="apply_btn"><button type="button">혜택 상세 보고 신청하러가기</button></div>
+                        </div>
                     </div>
                 </li>
                 <li class="swiper-slide l">
