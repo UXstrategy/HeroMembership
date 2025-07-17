@@ -278,3 +278,11 @@ $(".tab_menu li").on("click", function () {
   $(this).parents(".tab_wrapper").find(".tab_content").removeClass('active');
   $(this).parents(".tab_wrapper").find(".tab_content").eq($(this).index()).addClass('active');
 });
+
+//토스트 팝업
+function toast_popup(el) {
+      $('.'+el).removeClass('none').addClass('active');
+      setTimeout(function(){
+          $('.'+el).removeClass('active').addClass('none');    
+      },1500); //시간설정
+  }

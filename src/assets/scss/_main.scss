@@ -40,7 +40,7 @@ body.dark {
 /* 팝업 */
 .popup_open {
     display: block;
-    width: 100rem;
+    padding: 0 21rem;
     height: 48rem;
     border-radius: 8rem;
     color: #fff;
@@ -53,13 +53,11 @@ body.dark {
     position: relative;
     z-index: 100;
     &.none { display: none; }
-    &.bottomsheet {
-        &.active {
-            display: block;
-            & > .popup_container {
-                z-index: 99;
-                transform: translateY(0);
-            }
+    &.active {
+        display: block;
+        & > .popup_container {
+            z-index: 99;
+            transform: translateY(0);
         }
     }
     &.dialog {
@@ -78,6 +76,59 @@ body.dark {
             border-radius: 24rem;
             opacity: 0;
             transition: opacity 0.5s ease;
+            .pop_header {
+                padding-top: 32rem;
+                height: auto;
+                h1 {
+                    line-height: 26rem;
+                }
+            }
+            .pop_body {
+                padding: 24rem 20rem 20rem;
+                p {
+                    font-size: 17rem;
+                    line-height: 22rem;
+                    @include color(color, tt3);
+                    letter-spacing: -0.43rem;
+                    &.notitle {
+                        padding-top: 8rem;
+                    }
+                }
+                
+                .list_dot {
+                    margin-top: 6rem;
+                    li {
+                        position: relative;
+                        font-size: 13rem;
+                        line-height: 18rem;
+                        @include color(color, tt14);
+                    }
+                }
+                .btn_box {
+                    display: flex;
+                    gap: 8rem;
+                    margin-top: 40rem;
+                    button {
+                        display: block;
+                        height: 56rem;
+                        border-radius: 16rem;
+                        font-size: 16rem;
+                        text-align: center;
+                        font-weight: 600;
+                    }
+                    .btn_cancel {
+                        width: 92rem;
+                    }
+                    .btn_ok {
+                        width: calc(100% - 100rem);
+                    }
+                    &.w100 {
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -833,56 +884,6 @@ body.dark {
         }
     }
 
-    &.popup_card_info_close {
-        .pop_header {
-            height: 93rem;
-            align-items: end;
-            h1 {
-                line-height: 30rem;
-                letter-spacing: -0.55rem;
-                word-break: keep-all;
-            }
-        }
-        .pop_body {
-            padding: 24rem 20rem 20rem;
-            p {
-                font-size: 17rem;
-                line-height: 22rem;
-                @include color(color, tt3);
-                letter-spacing: -0.43rem;
-            }
-            
-            .list_dot {
-                margin-top: 6rem;
-                li {
-                    position: relative;
-                    font-size: 13rem;
-                    line-height: 18rem;
-                    @include color(color, tt14);
-                }
-            }
-            .btn_box {
-                display: flex;
-                gap: 8rem;
-                margin-top: 40rem;
-                button {
-                    display: block;
-                    height: 56rem;
-                    border-radius: 16rem;
-                    font-size: 16rem;
-                    text-align: center;
-                    font-weight: 600;
-                }
-                .btn_cancel {
-                    width: 92rem;
-                }
-                .btn_ok {
-                    width: calc(100% - 100rem);;
-                }
-            }
-        }
-    }
-
     &.popup_get_reward {
         .popup_container {
             background-color: transparent;
@@ -994,6 +995,37 @@ body.dark {
                                 }
                             }
                         }
+                        .chk_all {
+                            padding: 15rem;
+                            border-bottom: 1px solid;
+                            @include color(border-color, ln12);
+                            .input_wrap {
+                                position: relative;
+                                padding-left: 32rem;
+                                input {
+                                    width: 24rem;
+                                    height: 24rem;
+                                    position: absolute;
+                                    display: block;
+                                    left: 0;
+                                    top: 0;
+                                    margin: 0;
+                                    appearance: none;
+                                    clip: auto;
+                                    border: none;
+                                    background: url('../images/ic_check.png') no-repeat 0 0 / 24rem 24rem;
+                                    &:checked {
+                                        background-image: url('../images/ic_checked.png');
+                                    }
+                                }
+                                span {
+                                    font-size: 16rem;
+                                    line-height: 24rem;
+                                    font-weight: 600;
+                                    @include color(color, tt3);
+                                }
+                            }
+                        }
                     }
                 }
                 .btn_wrap {
@@ -1029,6 +1061,277 @@ body.dark {
                     position: absolute;
                     top: 34rem;
                     right: 20rem;
+                }
+            }
+        }
+    }
+
+    &.popup_agree,
+    &.popup_membership_note {
+        transform: translateY(105%);
+        transition: transform 0.5s ease;
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        overflow: scroll;
+        @include color(background-color, bg7);
+        &.active {
+            transform: translateY(0);
+        }
+        .con {
+            height: calc(100% - 76rem);
+            overflow-y: auto;
+            header {
+                position: relative;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                height: auto;
+                padding: 50rem 20rem 0;
+                @include color(background-color, bg7);
+                box-sizing: border-box;
+                h1 {
+                    font-size: 22rem;
+                    line-height: 30rem;
+                    letter-spacing: -0.5rem;
+                }
+                .popup_header_close {
+                    display: block;
+                    position: absolute;
+                    top: 13rem;
+                    right: 20rem;
+                    font-size: 0;
+                    text-indent: -9999em;
+                    @include bgImg('../images/ic_close.png', '../images/ic_close_dm.png', 24rem, 24rem);
+                }
+            }
+            .pop_body {
+                padding: 24rem 20rem 48rem;
+                h3 {
+                    padding-top: 32rem;
+                    font-size: 16rem;
+                    @include color(color, tt3);
+                    font-weight: 700;
+                    line-height: 24rem;
+                    letter-spacing: -0.8rem;
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                }
+                .txt {
+                    padding-top: 16rem;
+                    font-size: 13rem;
+                    @include color(color, tt10);
+                    font-weight: 600;
+                    line-height: 20rem;
+                    letter-spacing: -0.52rem;
+                    word-break: keep-all;
+                    &.pd_none {
+                        padding: 0;
+                    }
+                }
+                .tbl_collect {
+                    margin-top: 12rem;
+                    width: 100%;
+                    .txt_center {
+                        text-align: center;
+                    }
+                    th {
+                        padding: 12rem;
+                        font-size: 13rem;
+                        @include color(color, tt3);
+                        font-weight: 600;
+                        text-align: left;
+                        line-height: 18rem;
+                        letter-spacing: -0.26rem;
+                        vertical-align: middle;
+                        border-radius: 0.6rem;
+                        border: 2rem solid;
+                        @include color(border-color, ln14);
+                        @include color(background-color, bg20);
+                    }
+                    td {
+                        padding: 12rem;
+                        font-size: 13rem;
+                        @include color(color, tt10);
+                        font-weight: 600;
+                        line-height: 18rem;
+                        letter-spacing: -0.33rem;
+                        vertical-align: middle;
+                        span {
+                            display: block;
+                            font-size: 13rem;
+                            @include color(color, tt10);
+                            font-weight: 600;
+                            line-height: 18rem;
+                            letter-spacing: -0.33rem;
+                            &.tit {
+                                font-weight: 700;
+                                @include color(color, tt18);
+                            }
+                            &.noti {
+                                margin-top: 4rem;
+                                @include color(color, tt18);
+                            }
+                            &.desc {
+                                margin-top: 8rem;
+                            }
+                        }
+                        em {
+                            font-style: inherit;
+                            font-size: inherit;
+                            @include color(background-color, bg20);
+                        }
+                    }
+                }
+                .txt_list {
+                    padding-top: 16rem;
+                    &.pd_none {
+                        padding-top: 0;
+                    }
+                    > ul {
+                        > li {
+                            margin-top: 12rem;
+                            padding-left: 11rem;
+                            position: relative;
+                            font-size: 14rem;
+                            @include color (color, tt3);
+                            line-height: 20rem;
+                            letter-spacing: -0.35rem;
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                            &:before {
+                                position: absolute;
+                                top: 8rem;
+                                left: 0;
+                                width: 3rem;
+                                height: 3rem;
+                                border-radius: 25rem;
+                                @include color (background-color, bg18);
+                                content: '';
+                            }
+                            p {
+                                margin-left: 9rem;
+                                padding-top: 6rem;
+                                text-indent: -9rem;
+                                span {
+                                    display: block;
+                                    margin-top: 6rem;
+                                    margin-left: 9rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn_box {
+            padding: 0 20rem 20rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            @include color(background-color, bg7);
+            button {
+                width: 100%;
+                height: 56rem;
+                font-size: 18rem;
+                @include color(color, tt11);
+                font-weight: 600;
+                text-align: center;
+                border: 0;
+                border-radius: 16rem;
+                @include color(background-color, bg15);
+                &.agree_prev {
+                    @include color(color, tt22);
+                    border: 1px solid;
+                    @include color(border-color, ln15);
+                    background: none !important;
+                }
+            }
+            &.w50 {
+                font-size: 0;
+                button {
+                    display: inline-block;
+                    width: calc(50% - 4rem);
+                    box-sizing: border-box;
+                    &:first-child {
+                        margin-right: 4rem;
+                    }
+                    &:last-child {
+                        margin-left: 4rem;
+                    }
+                }
+            }
+        }
+    }
+    &.popup_agree {
+        z-index: 102;
+    }
+
+    &.popup_standard_info {
+        .popup_container {
+            .pop_body {
+                .txt_list {
+                    padding: 0 20rem 20rem;
+                    > ul {
+                        > li {
+                            margin-top: 12rem;
+                            padding-left: 11rem;
+                            position: relative;
+                            font-size: 14rem;
+                            @include color (color, tt2);
+                            line-height: 20rem;
+                            letter-spacing: -0.35rem;
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                            &:before {
+                                position: absolute;
+                                top: 8rem;
+                                left: 0;
+                                width: 3rem;
+                                height: 3rem;
+                                border-radius: 25rem;
+                                @include color (background-color, bg18);
+                                content: '';
+                            }
+                            > ul {
+                                > li {
+                                    margin: 6rem 0 0 10rem;
+                                    position: relative;
+                                    font-size: 14rem;
+                                    @include color (color, tt3);
+                                    line-height: 20rem;
+                                    letter-spacing: -0.35rem;
+                                    text-indent: -10rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn_wrap {
+                    padding: 20rem;
+                    .button {
+                        width: 100%;
+                        height: 56rem;
+                        @include color(background-color, bg15);
+                        border: 0;
+                        border-radius: 16rem;
+                        text-align: center;
+                        font-weight: 600;
+                        font-size: 18rem;
+                        @include color(color, tt11);
+                        &:disabled {
+                            @include color(background-color, bg28);
+                            @include color(color, tt19);
+                        }
+                    }
                 }
             }
         }
@@ -1755,6 +2058,34 @@ body.dark {
     }
 }
 
+.toast_popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 40rem);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 40%);
+    transition: all 0.3s ease;
+    .toast_inner {
+        padding: 13rem 13rem 14rem;
+        font-size: 14rem;
+        @include color(color, tt6);
+        font-weight: 600;
+        text-align: center;
+        line-height: 19rem;
+        border-radius: 8rem;
+        @include color(background-color, bg29);
+    }
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
 // 버튼 공통 가이드
 .btn_box {
     button {
@@ -1815,10 +2146,11 @@ body.dark {
         position: relative;
         padding: 50rem 20rem 0; 
         h1 {
-            font-weight: bold;
-            font-size: 20rem;
+            font-size: 22rem;
             line-height: 26rem;
             @include color(color, tt3);
+            font-weight: bold;
+            letter-spacing: -0.55rem;
         }
         .close {
             position: absolute;
@@ -4019,6 +4351,7 @@ body.dark {
                         @include color(color, tt10);
                     }
                     .badge {
+                        display: inline-block;
                         padding: 0 6rem;
                         border-radius: 4rem;
                         @include color(background-color, bg16);
@@ -4216,60 +4549,71 @@ body.dark {
         .detail {
             margin: 40rem 0;
             dt {
-                margin-bottom: 24rem;
                 @include color(color, tt2);
                 font-size: 18rem;
                 line-height: 22rem;
                 letter-spacing: -.36rem;
                 font-weight: bold;
-            }
-            li {
-                margin-top: 20rem;
-                padding-bottom: 20rem;
-                border-bottom: 1rem solid;
-                @include color(border-color, ln3);
-                &:first-child {
-                    margin-top: 0;
-                }
-                p {
+                .title_box {
                     display: flex;
-                }
-                .date {
-                    margin-bottom: 15rem;
-                    font-size: 14rem;
-                    line-height: 20rem;
-                    color: #999;
-                }
-                div {
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 12rem;
-                    &:first-child {
-                        margin-top: 0;
-                    }
-                }
-                div {
-                    margin-top: 12rem;
-                    .category {
+                    justify-content: start;
+                    align-items: center;
+                    .title {
+                        font-size: 18rem;
                         @include color(color, tt2);
-                        font-size: 14rem;
-                        line-height: 20rem;
+                        font-weight: bold;
+                        line-height: 22rem;
+                        letter-spacing: -.36rem;
                     }
-                    &:first-child {
-                        margin-top: 0;
+                    .btn_refresh {
+                        margin-left: 4rem;
+                        @include bgImg('../images/ic_refresh.png', '../images/ic_refresh.png', 18rem, 18rem);
                     }
                 }
-                .benefit {
-                    font-size: 14rem;
-                    line-height: 20rem;
-                    font-weight: bold;
-                    @include color(color, tt2);
+                .desc {
+                    padding-top: 10rem;
+                    font-size: 13rem;
+                    @include color(color, tt10);
+                    letter-spacing: -0.33rem;
+                }
+            }
+            dd {
+                padding-top: 13rem;
+                li {
+                    display: flex;
+                    padding: 20rem 0;
+                    border-bottom: 1rem solid;
+                    @include color(border-color, ln3);
+                    gap: 12rem;
+                    align-items: center;
+                    .date {
+                        font-size: 14rem;
+                        color: #999;
+                        letter-spacing: -0.35rem;
+                    }
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex: auto;
+                        gap: 12rem;
+                        .category {
+                            font-size: 14rem;
+                            @include color(color, tt2);
+                            flex: 1;
+                        }
+                        .benefit {
+                            font-size: 14rem;
+                            font-weight: bold;
+                            @include color(color, tt2);
+                        }
+                    }
                 }
             }
             .btn_box {
                 text-align: center;
                 .readmore {
-                    display: inline-block;
+                    display: none;
                     width: auto;
                     padding-right: 18rem;
                     text-align: center;
@@ -4322,38 +4666,41 @@ body.dark {
 
     &.tally {
         .contents {
-            padding: 20rem;
+            padding: 12rem 20rem 112rem;
             p {
-                @include color(color, tt10);
                 font-size: 14rem;
+                @include color(color, tt10);
                 line-height: 20rem;
+                letter-spacing: -0.35rem;
             }
             dl {
                 dt {
-                    margin: 30rem 0 6rem;
+                    margin: 40rem 0 10rem;
                     @include color(color, tt2);
-                    font-size: 16rem;
+                    font-size: 18rem;
                     font-weight: bold;
+                    letter-spacing: -0.45rem
                 }
                 dd {
                     @include color(color, tt2);
                     font-size: 14rem;
                     line-height: 20rem;
-
-                    span {
-                        display: block;
-                        margin-top: 16rem;
+                    letter-spacing: -0.35rem;
+                    .box {
+                        margin-top: 20rem;
+                        padding: 20rem;
                         font-size: 14rem;
+                        @include color(color, tt2);
                         line-height: 20rem;
-                        @include color (color, tt13);
-                        span {
-                            margin-bottom: 4rem;
-                            line-height: 1;
-                            font-weight: 500;
-                        }
+                        letter-spacing: -0.35rem;
+                        border-radius: 16rem;
+                        @include color(background-color, bg22);
+                    }
+                    span {
                         &.dot {
+                            display: block;
+                            margin-top: 8rem;
                             position: relative;
-                            margin-top: 6rem;
                             padding-left: 10rem;
                             font-size: 12rem;
                             line-height: 18rem;
@@ -4377,9 +4724,49 @@ body.dark {
                     }
                 }
             }
+            .txt_list {
+                padding-top: 40rem;
+                li {
+                    margin-top: 12rem;
+                    padding-left: 11rem;
+                    position: relative;
+                    font-size: 14rem;
+                    @include color (color, tt2);
+                    line-height: 20rem;
+                    letter-spacing: -0.35rem;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    &:before {
+                        position: absolute;
+                        top: 8rem;
+                        left: 0;
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 25rem;
+                        @include color (background-color, bg18);
+                        content: '';
+                    }
+                }
+                .desc {
+                    margin: 13rem 0 0 12rem;
+                    font-size: 12rem;
+                    @include color (color, tt15);
+                    line-height: 18rem;
+                    letter-spacing: -0.3rem;
+                    text-indent: -13rem;
+                }
+            }
+            .thanks {
+                padding-top: 40rem;
+                font-size: 14rem;
+                @include color (color, tt14);
+                line-height: 20rem;
+                letter-spacing: -0.35rem;
+            }
             .input_wrap {
                 position: relative;
-                margin-top: 48rem;
+                margin-top: 40rem;
                 padding-left: 32rem;
                 input {
                     width: 24rem;
@@ -4404,7 +4791,23 @@ body.dark {
                 }
             }
             .btn_box {
-                margin-top: 36rem;
+                padding: 0 20rem 20rem;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                @include color(background-color, bg7);
+                button {
+                    width: 100%;
+                    height: 56rem;
+                    font-size: 18rem;
+                    @include color(color, tt11);
+                    font-weight: 600;
+                    text-align: center;
+                    border: 0;
+                    border-radius: 16rem;
+                    @include color(background-color, bg15);
+                }
             }
         }
     }

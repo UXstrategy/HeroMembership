@@ -66,7 +66,13 @@
             </p>
 
             <dl class="detail">
-                <dt class="refresh_wrap">건 별 혜택 상세 내역</dt>
+                <dt class="refresh_wrap">
+                    <div class="title_box">
+                        <p class="title">혜택 내역</p>
+                        <p class="btn_refresh"></p>
+                    </div>
+                    <p class="desc">* 제세공과금 22% 포함한 리워드 금액</p>
+                </dt>
                 <dd>
                     <ul>
                         <li>
@@ -75,40 +81,38 @@
                                 <span class="category">L등급 리워드</span>
                                 <span class="benefit">+500,000원</span>
                             </div>
+                        </li>
+                        <li>
+                            <p class="date">24.09.01</p>
                             <div>
-                                <span class="category">히어로카드 연회비 리워드(2회차)</span>
+                                <span class="category">히어로카드 리워드(2차)</span>
                                 <span class="benefit">+200,000원</span>
-                            </div>
-                            <div>
-                                <span class="category">유튜브 프리미엄 1개월 이용권 무료</span>
                             </div>
                         </li>
                         <li>
                             <p class="date">24.09.01</p>
                             <div>
-                                <span class="category">L등급 리워드</span>
-                                <span class="benefit">+500,000원</span>
-                            </div>
-                            <div>
-                                <span class="category">히어로카드 연회비 리워드(2회차)</span>
-                                <span class="benefit">+200,000원</span>
-                            </div>
-                            <div>
-                                <span class="category">유튜브 프리미엄 1개월 이용권 무료</span>
+                                <span class="category">유튜브프리미엄 1개월 이용권 무료 혜택</span>
                             </div>
                         </li>
                         <li>
-                            <p class="date">24.09.01</p>
+                            <p class="date">24.05.03</p>
                             <div>
-                                <span class="category">L등급 리워드</span>
-                                <span class="benefit">+500,000원</span>
-                            </div>
-                            <div>
-                                <span class="category">히어로카드 연회비 리워드(2회차)</span>
+                                <span class="category">SSS등급 리워드</span>
                                 <span class="benefit">+200,000원</span>
                             </div>
+                        </li>
+                        <li>
+                            <p class="date">24.05.03</p>
                             <div>
-                                <span class="category">유튜브 프리미엄 1개월 이용권 무료</span>
+                                <span class="category">히어로카드 리워드(1차)</span>
+                                <span class="benefit">+200,000원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="date">24.05.03</p>
+                            <div>
+                                <span class="category">유튜브프리미엄 1개월 이용권 무료 혜택</span>
                             </div>
                         </li>
                     </ul>
@@ -224,11 +228,15 @@
         // 리스트 더보기
         const readMoreButton = $('.readmore'),
             detailList = $('.detail li'),
-            numShow = 2, // 리스트 디폴트로 보여줄 갯수
+            numShow = 20, // 리스트 디폴트로 보여줄 갯수
             numInList = detailList.length;
 
         detailList.hide();
         detailList.slice(0, numShow).show();
+
+        if ( detailList.filter(':hidden').length > 0 ) {
+            readMoreButton.show();
+        }
 
         readMoreButton.on('click',function(){
             var showing = detailList.filter(':visible').length;

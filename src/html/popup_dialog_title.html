@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('dialog_common');">팝업열기</button>
+
+        <div class="popup dialog dialog_common active">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>알림</h1>
+                </div>
+                <div class="pop_body">
+                    <p class="notitle">좌측 하단 변경사항 체크박스 체크 후<br>확인버튼을 클릭해주세요.</p>
+                    <div class="btn_box w100">
+                        <button type="button" class="btn_ok" onClick="popup.close('dialog_common');">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

@@ -25,6 +25,12 @@
                     <dl class="agree_wrap">
                         <dt>히어로멤버십 혜택 지급을 위해<br>개인정보 수집·이용 동의 및 유의사항을<br>확인해주세요.</dt>
                         <dd>
+                            <div class="chk_all">
+                                <div class="input_wrap chk_box custom_chk">
+                                    <input type="checkbox" id="chk_all">
+                                    <label for="chk_all"><span>전체동의</span></label>
+                                </div>
+                            </div>
                             <ul class="agree_list">
                                 <li class="chk_box custom_chk icon_arrow">
                                     <input type="checkbox" id="chk_1">
@@ -41,7 +47,133 @@
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- 개인신용정보 수집·이용 필수 동의서 -->
+        <div class="popup popup_agree none">
+            <div class="con">
+                <header class="pop_header">
+                    <h1>개인신용정보 수집·이용<br>필수 동의</h1>
+                    <button type="button" class="sub-close popup_header_close">팝업 닫기</button>
+                </header>
+                <div class="pop_body">
+                    <div class="pop_content">
+                        <h3>[히어로멤버십 서비스용]</h3>
+                        <p class="txt">(주)키움증권과의 (금융)거래와 관련하여 (주)키움증권이 본인 개인(신용)정보를 수집·이용하는 경우에는 「신용 정보의 이용 및 보호에 관한 법률」, 「개인정보보호법」 등 관계 법령에 따라 본인의 동의가 필요합니다.</p>
+                        <h3>수집·이용에 관한 사항</h3>
+                        <table class="tbl_collect">
+                            <colgroup>
+                                <col width="30%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>수집·이용<br>목적</th>
+                                    <td>히어로멤버십 혜택에 관한 안내사항 전달<br>히어로멤버십 혜택 지급 및 운영<br>통계 및 분석/고객 서비스 품질 향상</td>
+                                </tr>
+                                <tr>
+                                    <th>수집·이용<br>기간</th>
+                                    <td>
+                                        <span class="tit">(금융)거래 종료일로부터 5년</span>
+                                        <span class="noti">위 보유 기간에서의 (금융)거래 종료일이란 '고객이 보유하고 있는 계좌의 해지 및 모든 상품의 계약 해지가 이루어지는 시점'을 말합니다.</span>
+                                        <span class="desc">(단, 관련 법령에 따라 보존할 필요가 있는 경우는 해당 보존기간을 따름)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>거부 권리<br>및 불이익</th>
+                                    <td>귀하는 아래 개인신용정보 수집·이용에 대해 거부하실 수 있습니다. 다만 수집·이용에 관한 동의는 &apos;히어로멤버십&apos; <em>서비스 제공</em>을 위한 필수적 사항이므로 동의 거부 시 히어로멤버십 서비스 이용에 제한을 받을 수 있습니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>수집·이용 항목</h3>
+                        <table class="tbl_collect">
+                            <colgroup>
+                                <col width="30%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="txt_center">개인(신용)정보</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>일반개인<br>정보</th>
+                                    <td>성명, 고객번호, 휴대전화번호</td>
+                                </tr>
+                                <tr>
+                                    <th>신용거래<br>정보</th>
+                                    <td>계좌번호, 계좌 잔고내역, 거래내역</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btn_box">
+                    <button type="button" class="button agree_btn">다음 (1/2)</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 히어로멤버십 유의사항 -->
+        <div class="popup popup_membership_note none">
+            <div class="con">
+                <header class="pop_header">
+                    <h1>히어로멤버십 유의사항</h1>
+                    <button type="button" class="sub-close popup_header_close">팝업 닫기</button>
+                </header>
+                <div class="pop_body">
+                    <div class="pop_content">
+                        <p class="txt pd_none">(주)키움증권에서 제공하는 히어로멤버십 서비스와 혜택 제공에 대한 유의사항을 확인하고 동의합니다.</p>
+                        <h3>히어로멤버십 유의사항</h3>
+                        <div class="txt_list">
+                            <ul>
+                                <li>본 서비스는 해외주식 거래 가능 계좌를 보유한 고객에 한하여 제공됩니다.</li>
+                                <li>본 서비스는 별도의 가입을 필요로 하지 않으나, 반드시 필수 동의서 확인 후 매월 별도의 혜택 신청을 완료 하셔야 혜택을 지급받으실 수 있습니다.</li>
+                                <li>본 서비스의 제공되는 혜택은 이월 되지 않으며, 과거의 거래 실적을 소급하여 적용하는 것이 불가합니다.</li>
+                                <li>일부 혜택의 경우 고객의 보유 계좌 상태 또는 신용 점수 등 별도의 기준에 따라 당사가 아닌 외부 요인으로 인해 혜택 제공이 거부될 수 있습니다.</li>
+                                <li>본 서비스는 사전 고지 없이 종료될 수 있으며, 이에 따라 추가적인 혜택의 지급이 중단될 수 있습니다.<br>(단, 기 선정 고객 제외)</li>
+                                <li>본 서비스에서 제시하는 약정(거래금액), 등급산정기준, 리워드, 부가 혜택 등 다양한 서비스 요소들은 운영상 이유로 고객 공지 후 매월 변경될 수 있습니다.</li>
+                                <li>본 서비스의 고객 등급 산정은 매월 이루어지며, 당월 해외주식 매수금액, 매도금액을 합산한 약정을 기반으로 익월 첫 영업일에 선정됩니다.</li>
+                                <li>
+                                    매월 해외주식 체결금액을 원화로 합산한 금액입니다.(해외주식 체결금액 * 통화별 체결일 최초고시환율)<br>단, 무료수수료(0%) 혜택이 적용된 해외주식 체결 금액은 합산 금액에서 제외됩니다.
+                                    <p>- 공정거래질서 저해행위 및 이상 거래 징후가 예상되는 아래 종목의 거래금액은 해외주식 히어로멤버십 등급 산정 시 포함되지 않습니다.<br><span>[거래금액 제외 종목 티커]</span>BIL, BILS, BILZ, BOND, BOXX, BSV, CLIP, GBIL, GSY, IBTF, IBTG, ICSH, IEI, IGSB, JPST, MINT,OBIL, PULS, SGOV, SHV, SHY, SHYG, SPTS, SPT, STIP, TBIL, TBLL, TFLO, TIP, TUA, ULST, USFR, VGIT, VGLT, VGSH, VUSB, XBIL</p>
+                                </li>
+                                <li>인당 1회 200만원, 기간 내 연간(회계연도) 누적한도 1,000만원까지 수령 가능합니다.</li>
+                                <li>고객 등급은 선정 시점으로부터 해당월 말일까지 유효하며, 별도의 유지기간이 없습니다.</li>
+                                <li>본 서비스에서 제공되는 혜택은 고객 등급별로 상이하며, 전월 실적에 따라 등급이 결정된 당월에만 혜택이 제공됩니다. (국내 기준 당월 첫 선정일 - 당월 말일 23:29까지 리워드 받기 가능)</li>
+                                <li>본 서비스에서 제공되는 혜택은 타인에게 양도 및 대리 수령이 불가능합니다.</li>
+                                <li>본 서비스에서 제공되는 혜택은 당사 사정에 따라 별도 고지없이 등가의 혜택으로 대체 될 수 있습니다.</li>
+                                <li>당월 제공되는 현금성 혜택의 총 합계가 5만원 초과 시 제세공과금 22%를 제외한 나머지 금액이 입금됩니다.</li>
+                                <li>임직원, 법인, 재외국인, 외국인은 본 서비스 대상 고객에서 제외됩니다.</li>
+                            </ul>
+                        </div>
+                        <h3>히어로멤버십 거래 유의사항</h3>
+                        <div class="txt_list">
+                            <ul>
+                                <li>본 이벤트는 서비스 안내 등 광고이며, 투자권유 및 추천이 아닙니다.</li>
+                                <li>투자자는 금융투자상품 및 서비스 등에 대하여 키움증권으로부터 충분한 설명을 받을 권리가 있으며, 투자 전 상품 설명서 및 약관을 반드시 읽어보시기 바랍니다.</li>
+                                <li>해외주식 및 ETF 거래는 자산가격 및 환율변동 등에 따라 원금손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</li>
+                                <li>이 금융상품은 예금자보호법에 따라 보호되지 않습니다.</li>
+                                <li>레버리지 상품은 투자원금 손실이 크게 발생할 수 있으며, 레버리지 상품(2배, 인버스, 인버스2배 등)의 기간 수익률은 추종하는 기초자산(지수)의 일간 수익률과 차이가 발생할 수 있습니다.</li>
+                                <li>미국주식수수료 [온라인 : 0.25%, 오프라인 : 0.50%]이며, 매도시 0.00278%의 제비용(최소비용 $0.01), 일본주식수수료 [온라인 : 0.23%, 오프라인 : 0.30%], 홍콩주식수수료 [온라인 : 0.30%, 오프라인 : 0.50%], 인지세매수/매도시각 0.10% 별도 부과 중국주식수수료 [온라인 : 0.30%, 오프라인 : 0.50%], 인지세매도시 0.05%(A주) 0.2%(B주)가 별도 부과됩니다.</li>
+                                <li>실시간환전가능시간(영업일 기준)<br>주간환전 : 09:00~16:30, 야간환전 : 16:30~익일 02:00<br>(환전 불가시간 : 23:50~익일 00:10)</li>
+                                <li>야간 실시간환전대상통화 :<br>USD/HKD/JPY/EUR/GBP/AUD/CAD/CHF/SGD</li>
+                                <li>외환시장 상황에 따라 고시환율간 스프레드 및 환전수수료가 변동될 수 있습니다.</li>
+                                <li>국가별 제세금은 각국가상황에 따라 수시 변동 가능합니다.</li>
+                                <li>국가별 세금 및 기타수수료에 관련된 자세한 사항은 당사 홈페이지를 참고하시기 바랍니다.</li>
+                                <li>원활한 경품 지급 및 금융사기 예방을 위하여 고객정보는 반드시 최신정보로 관리하시기 바랍니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_box w50">
+                    <button type="button" class="button agree_prev">이전 (1/2)</button>
+                    <button type="button" class="button agree_btn">동의완료</button>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- //wrap -->
 
     <!-- 컬러 테스트를 위한 임시사용 -->
     <ul class="thema_infor pageIn">
@@ -54,6 +186,68 @@
     <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
     <script src="../assets/js/lib/swiper-bundle.min.js"></script>
     <script src="../assets/js/common.js"></script>
+    <script>
+        $('#chk_all').on('click', function(){
+            if($('#chk_all').is(':checked')){
+                $('#chk_all').prop('checked', false);
+                popup.open('popup_agree');
+            } 
+            $('.popup_agree .popup_content').scrollTop(0);
+        });
+
+        $('#chk_1').on('click', function(){
+            if($('#chk_1').is(':checked')){
+                $('#chk_1').prop('checked', false);
+                popup.open('popup_agree');
+            }
+            $('.popup_agree .popup_content').scrollTop(0);
+        });
+
+        $('#chk_2').on('click', function(){
+            if($('#chk_2').is(':checked')){
+                $('#chk_2').prop('checked', false);
+                popup.open('popup_membership_note');
+            }
+            $('.popup_membership_note .popup_content').scrollTop(0);
+        });
+
+        $('.popup_agree').find('.agree_btn').on('click', function(){
+            $('#chk_1').prop('checked', true);
+            popup.open('popup_membership_note');
+            popup.close('popup_agree');
+            chkAll();
+        });
+
+        $('.popup_membership_note').find('.agree_btn').on('click', function(){
+            $('#chk_2').prop('checked', true);
+            popup.close('popup_membership_note');
+            chkAll();
+        });
+
+        $('.popup_membership_note').find('.agree_prev').on('click', function(){
+            popup.open('popup_agree');
+            popup.close('popup_membership_note');
+            chkAll();
+        });
+
+        $('.agree_wrap').find('input').on('change', function(){
+            chkAll();
+            if ( $('#chk_all').prop('checked') == true ) {
+                $('#chk_all').prop('checked', false);
+                $('#chk_1').prop('checked', false);
+                $('#chk_2').prop('checked', false);
+            }
+        });
+
+        function chkAll() {
+            if ( $('#chk_1').prop('checked') == true && $('#chk_2').prop('checked') == true ) {
+                $('#chk_all').prop('checked', true);
+            } else {
+                console.log(222);
+                $('#chk_all').prop('checked', false);
+            }
+        }
+    </script>
 </body>
 
 </html>

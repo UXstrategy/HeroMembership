@@ -37,7 +37,79 @@
                 </div>
             </div>
         </div>
+
+        <!-- 개인신용정보 수집·이용 필수 동의서 -->
+        <div class="popup popup_agree none">
+            <div class="con">
+                <header class="pop_header">
+                    <h1>개인신용정보 수집·이용<br>필수 동의</h1>
+                    <button type="button" class="sub-close popup_header_close">팝업 닫기</button>
+                </header>
+                <div class="pop_body">
+                    <div class="pop_content">
+                        <h3>[히어로멤버십 서비스용]</h3>
+                        <p class="txt">(주)키움증권과의 (금융)거래와 관련하여 (주)키움증권이 본인 개인(신용)정보를 수집·이용하는 경우에는 「신용 정보의 이용 및 보호에 관한 법률」, 「개인정보보호법」 등 관계 법령에 따라 본인의 동의가 필요합니다.</p>
+                        <h3>수집·이용에 관한 사항</h3>
+                        <table class="tbl_collect">
+                            <colgroup>
+                                <col width="30%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>수집·이용<br>목적</th>
+                                    <td>히어로멤버십 혜택에 관한 안내사항 전달<br>히어로멤버십 혜택 지급 및 운영<br>통계 및 분석/고객 서비스 품질 향상</td>
+                                </tr>
+                                <tr>
+                                    <th>수집·이용<br>기간</th>
+                                    <td>
+                                        <span class="tit">(금융)거래 종료일로부터 5년</span>
+                                        <span class="noti">위 보유 기간에서의 (금융)거래 종료일이란 '고객이 보유하고 있는 계좌의 해지 및 모든 상품의 계약 해지가 이루어지는 시점'을 말합니다.</span>
+                                        <span class="desc">(단, 관련 법령에 따라 보존할 필요가 있는 경우는 해당 보존기간을 따름)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>거부 권리<br>및 불이익</th>
+                                    <td>귀하는 아래 개인신용정보 수집·이용에 대해 거부하실 수 있습니다. 다만 수집·이용에 관한 동의는 &apos;히어로멤버십&apos; <em>서비스 제공</em>을 위한 필수적 사항이므로 동의 거부 시 히어로멤버십 서비스 이용에 제한을 받을 수 있습니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>수집·이용 항목</h3>
+                        <table class="tbl_collect">
+                            <colgroup>
+                                <col width="30%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="txt_center">개인(신용)정보</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>일반개인<br>정보</th>
+                                    <td>성명, 고객번호, 휴대전화번호</td>
+                                </tr>
+                                <tr>
+                                    <th>신용거래<br>정보</th>
+                                    <td>계좌번호, 계좌 잔고내역, 거래내역</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btn_box">
+                    <button type="button" class="button agree_btn">동의</button>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="toast_popup toast_agree_complete none">
+        <div class="toast_inner">
+            신규 혜택 알림 신청이 완료되었습니다.
+        </div>
+    </div> 
 
     <!-- 컬러 테스트를 위한 임시사용 -->
     <ul class="thema_infor pageIn">
@@ -50,6 +122,35 @@
     <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
     <script src="../assets/js/lib/swiper-bundle.min.js"></script>
     <script src="../assets/js/common.js"></script>
+    <script>
+        // 개인신용정보 수집·이용 필수 동의서 클릭 시 팝업 생성
+        $('#chk_1').on('click', function() {
+            if($('#chk_1').is(':checked')){
+                popup.open('popup_agree');
+                $('#chk_1').prop('checked', false);
+            }
+            $('.popup_agree .popup_container').scrollTop(0);
+        });
+
+        // 개인신용정보 수집·이용 필수 동의서 팝업 닫기버튼
+        $('.popup_agree .popup_header_close').click(function() {
+            popup.close('popup_agree');
+        });
+
+        // 개인신용정보 수집·이용 필수 동의서 팝업 동의버튼
+        $('.popup_agree .agree_btn').click(function() {
+            $('#chk_1').prop('checked', true);
+            popup.close('popup_agree');
+        });
+
+        //토스트 팝업
+        $('.btn_wrap').find('button').on('click', function(){
+            if($('#chk_1').is(':checked')){
+                popup.close('popup_new_agree');
+                toast_popup('toast_agree_complete');
+            }
+        });
+    </script>
 </body>
 
 </html>
