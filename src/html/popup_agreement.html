@@ -192,7 +192,6 @@
                 $('#chk_all').prop('checked', false);
                 popup.open('popup_agree');
             } 
-            $('.popup_agree .popup_content').scrollTop(0);
         });
 
         $('#chk_1').on('click', function(){
@@ -200,7 +199,7 @@
                 $('#chk_1').prop('checked', false);
                 popup.open('popup_agree');
             }
-            $('.popup_agree .popup_content').scrollTop(0);
+            $('.popup_agree .con').scrollTop(0);
         });
 
         $('#chk_2').on('click', function(){
@@ -208,7 +207,7 @@
                 $('#chk_2').prop('checked', false);
                 popup.open('popup_membership_note');
             }
-            $('.popup_membership_note .popup_content').scrollTop(0);
+            $('.popup_membership_note .con').scrollTop(0);
         });
 
         $('.popup_agree').find('.agree_btn').on('click', function(){
@@ -216,6 +215,7 @@
             popup.open('popup_membership_note');
             popup.close('popup_agree');
             chkAll();
+            $('.popup_membership_note .con').scrollTop(0);
         });
 
         $('.popup_membership_note').find('.agree_btn').on('click', function(){
@@ -243,9 +243,10 @@
             if ( $('#chk_1').prop('checked') == true && $('#chk_2').prop('checked') == true ) {
                 $('#chk_all').prop('checked', true);
             } else {
-                console.log(222);
                 $('#chk_all').prop('checked', false);
             }
+            $('.popup_agree .con').scrollTop(0);
+            $('.popup_membership_note .con').scrollTop(0);
         }
     </script>
 </body>
