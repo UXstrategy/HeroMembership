@@ -739,6 +739,9 @@ body.dark {
             }
             .chk_list {
                 margin-top: 20rem;
+                height: 245rem;
+                overflow: hidden;
+                overflow-y: auto;
                 li {
                     position: relative;
                     height: 72rem;
