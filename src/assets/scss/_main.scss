@@ -2496,7 +2496,7 @@ body.dark {
     .main_noti {
         position: relative;
         width: 304rem;
-        margin: 20rem auto 28rem;
+        margin: 0 auto 70rem;
         padding-right: 24rem;
         text-align: center;
         border-radius: 16rem;
@@ -2552,8 +2552,7 @@ body.dark {
         }
     }
     .level_swiper {
-        margin-bottom: 24rem;
-        padding-top: 42rem;
+        margin: 20rem 0 24rem;
         overflow: hidden;
         .swiper-slide {
             position: relative;
