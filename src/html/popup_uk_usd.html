@@ -6,8 +6,8 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영웅클럽</title>
-    <link rel="stylesheet" href="../assets/css/default.css">
-    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/hc/default.css">
+    <link rel="stylesheet" href="../assets/css/hc/swiper-bundle.min.css">
 </head>
 <body>
     <div class="wrap tally">
@@ -36,19 +36,7 @@
             <div class="pop_body">
                 <p class="notitle">좌측 하단 변경사항 체크박스 체크 후<br>확인버튼을 클릭해주세요.</p>
                 <div class="btn_box w100">
-                    <button type="button" class="btn_ok" onClick="popup.close('dialog_agree_check');">확인</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="popup dialog dialog_agree_complete none">
-        <div class="dim"></div>
-        <div class="popup_container">
-            <div class="pop_body">
-                <p class="notitle">해외주식 히어로멤버십 거래금액 집계<br>기준 변경사항을 확인하였습니다.</p>
-                <div class="btn_box w100">
-                    <button type="button" class="btn_ok" onClick="popup.close('dialog_agree_complete');">확인</button>
+                    <button type="button" class="btn_ok">확인</button>
                 </div>
             </div>
         </div>
@@ -61,17 +49,8 @@
     </ul>
     <!-- // 컬러 테스트를 위한 임시사용 -->
     
-    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
-    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
-    <script src="../assets/js/common.js"></script>
-    <script>
-        $('.tally').find('.btn_ok').on('click', function(){
-            if ( $('.input_wrap').find('#chk').is(':checked') ) {
-                popup.open('dialog_agree_complete');
-            } else {
-                popup.open('dialog_agree_check');
-            }
-        });
-    </script>
+    <script src="../assets/js/hc/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/hc/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/hc/common.js"></script>
 </body>
 </html>

@@ -6,8 +6,68 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영웅클럽</title>
-    <link rel="stylesheet" href="../assets/css/default.css">
-    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/hc/default.css">
+    <link rel="stylesheet" href="../assets/css/hc/swiper-bundle.min.css">
+    <style>
+        /*
+          .progress-ring {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: conic-gradient(
+        #00f 0%,
+        #0ff 30%,
+        lightgray 30%,
+        lightgray 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .inner-circle {
+      width: 96px;
+      height: 96px;
+      background-color: white;
+      border-radius: 50%;
+    }
+      */
+       .progress-ring {
+      width: 150px;
+      height: 150px;
+    }
+    svg {
+      transform: rotate(-90deg);
+    }
+    .bg,
+    .progress {
+      fill: none;
+      stroke-width: 12;
+    }
+    .bg {
+      stroke: #e0e0e0;
+    }
+    .progress {
+      stroke: url(#grad);
+      stroke-linecap: round;
+      stroke-dasharray: 339.292;
+      stroke-dashoffset: 339.292;
+      transition: stroke-dashoffset 1s ease-out;
+    }
+    .center-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .wrapper {
+      position: relative;
+      width: 150px;
+      height: 150px;
+    }
+    </style>
 </head>
 <body>
     <div class="wrap main">
@@ -164,11 +224,26 @@
                 </dd>
             </dl>
         </div>
+        <!--
+        <div class="progress-ring">
+    <div class="inner-circle"></div>
+  </div>-->      
+
+  <div class="wrapper">
+  <svg class="progress-ring" width="150" height="150" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="grad" gradientUnits="userSpaceOnUse" cx="5" cy="5" r="4">
+        <stop offset="0%" stop-color="#fff9e1"/>
+        <stop offset="100%" stop-color="#e6ae52"/>
+      </linearGradient>
+    </defs>
+    <circle class="bg" cx="60" cy="60" r="54"/>
+    <circle class="progress" cx="60" cy="60" r="54"/>
+  </svg>
+  <div class="center-text" id="percent-text">0%</div>
+</div>
+
     </div>
-
-
-
-
 
     <!-- 개인정보수집 및 이용제공동의 X 고객 -->
     <div class="popup bottomsheet popup_monnth1 none">
@@ -345,9 +420,9 @@
     </ul>
     <!-- // 컬러 테스트를 위한 임시사용 -->
     
-    <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
-    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
-    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/hc/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/hc/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/hc/common.js"></script>
     <script>
 
         // 아코디언
@@ -362,6 +437,22 @@
         });
 
         // 플로팅 메뉴
+
+
+
+         const percent = 90; // 
+  const progressCircle = document.querySelector('.progress');
+  const percentText = document.getElementById('percent-text');
+
+  const radius = 54;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (circumference * percent / 100);
+
+  // animation tick
+  setTimeout(() => {
+    progressCircle.style.strokeDashoffset = offset;
+    percentText.textContent = percent + '%';
+  }, 100); // 약간의 지연으로 부드럽게 보이게
         
     </script>
 </body>
