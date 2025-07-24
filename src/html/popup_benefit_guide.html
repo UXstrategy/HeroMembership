@@ -31,14 +31,14 @@
                         </ul>
                         <div class="tab_content">
                             <div class="tab_wrapper tab_deth">
-                                <ul class="tab_list">
+                                <ul class="tab_list"><!-- 현재 등급 클래스 = 'my' 추가 -->
                                     <li class="a">A</li>
                                     <li class="s">S</li>
-                                    <li class="ss active my">SS</li>
+                                    <li class="ss my">SS</li>
                                     <li class="sss">SSS</li>
                                     <li class="l">L</li>
                                 </ul>
-                                <div class="tab_content a" style="display: none;">
+                                <div class="tab_content a">
                                     <dl class="box">
                                         <dt><strong>A급 히어로</strong>a Hero</dt>
                                         <dd>
@@ -51,7 +51,7 @@
                                         <li>리워드 1만원</li>
                                     </ul>
                                 </div>
-                                <div class="tab_content s" style="display: none;">
+                                <div class="tab_content s">
                                     <dl class="box">
                                         <dt><strong>S급 히어로</strong> Super Hero</dt>
                                         <dd>
@@ -65,7 +65,7 @@
                                         <li>유튜브 프리미엄 1개월</li>
                                     </ul>
                                 </div>
-                                <div class="tab_content ss active">
+                                <div class="tab_content ss">
                                     <dl class="box">
                                         <dt><strong>SS급 히어로</strong>Double Hero</dt>
                                         <dd>
@@ -79,7 +79,7 @@
                                         <li>유튜브 프리미엄 1개월</li>
                                     </ul>
                                 </div>
-                                <div class="tab_content sss" style="display: none;">
+                                <div class="tab_content sss">
                                     <dl class="box">
                                         <dt><strong>SSS급 히어로</strong>Triple S Hero</dt>
                                         <dd>
@@ -93,7 +93,7 @@
                                         <li>유튜브 프리미엄 1개월</li>
                                     </ul>
                                 </div>
-                                <div class="tab_content l" style="display: none;">
+                                <div class="tab_content l">
                                     <dl class="box">
                                         <dt><strong>L급 히어로</strong>Lengendry Hero</dt>
                                         <dd>
@@ -156,6 +156,9 @@
     <script src="../assets/js/hc/lib/swiper-bundle.min.js"></script>
     <script src="../assets/js/hc/common.js"></script>
     <script>
+        let tab_deth = $('.tab_deth');
+        let tab_list = tab_deth.find('.tab_list');
+
         $('.tab_wrapper').each(function(){
             $(".tab_list li").on("click", function() {
                 $(this).closest(".tab_wrapper").children(".tab_list").children('li').removeClass("active");
@@ -167,6 +170,15 @@
                 }
             });
         });
+
+        //이번달 등급이 없을 때
+        if ( tab_list.find('li').hasClass('my') == false ) {
+            tab_list.find('li').eq(0).trigger('click');
+        } else {
+            tab_list.find('li').eq(tab_list.find('.my').index()).trigger('click');
+        }
+
+       
 
         // 카드 혜택
         var heroSwiper = new Swiper(".mini_card", {

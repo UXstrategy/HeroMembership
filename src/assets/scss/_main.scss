@@ -218,7 +218,7 @@ body.dark {
             }
         }
         .pop_body {
-            height: 480rem;
+            height: 506rem;
             padding: 0 20rem 20rem;
             box-sizing: border-box;
             .tab_wrapper {
@@ -381,12 +381,13 @@ body.dark {
                 }
             }
             .tab_deth {
+                margin-top: 68rem;
                 .tab_list {
                     display: flex;
                     justify-content: space-around;
                     align-items: flex-end;
                     gap: 2rem;
-                    height: 128rem;
+                    height: 116rem;
                     margin-bottom: 16rem;
                     li {
                         position: relative;
@@ -406,6 +407,7 @@ body.dark {
                             @include color(color, tt7);
                         }
                         &.my {
+                            @include color(color, tt7);
                             &:before,
                             &:after {
                                 position: absolute;
@@ -441,22 +443,25 @@ body.dark {
                             background-position: center bottom 27rem;
                             background-repeat: no-repeat;
                             background-size: 28rem 28rem;
-                            &.active {
-                                &.a {
-                                    background-image: url('../../images/hc/ic_level_a_s.png');
-                                }
-                                &.s {
-                                    background-image: url('../../images/hc/ic_level_s_s.png');
-                                }
-                                &.ss {
-                                    background-image: url('../../images/hc/ic_level_ss_s.png');
-                                }
-                                &.sss {
-                                    background-image: url('../../images/hc/ic_level_sss_s.png');
-                                }
-                                &.l {
-                                    background-image: url('../../images/hc/ic_level_l_s.png');
-                                }
+                            &.a {
+                                @include color(background-color, level2);
+                                background-image: url('../../images/hc/ic_level_a_s.png');
+                            }
+                            &.s {
+                                @include color(background-color, level3);
+                                background-image: url('../../images/hc/ic_level_s_s.png');
+                            }
+                            &.ss {
+                                @include color(background-color, level4);
+                                background-image: url('../../images/hc/ic_level_ss_s.png');
+                            }
+                            &.sss {
+                                @include color(background-color, level5);
+                                background-image: url('../../images/hc/ic_level_sss_s.png');
+                            }
+                            &.l {
+                                @include color(background-color, level6);
+                                background-image: url('../../images/hc/ic_level_l_s.png');
                             }
                         }
                         &.a {
