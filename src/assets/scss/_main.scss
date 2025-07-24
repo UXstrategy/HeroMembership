@@ -227,7 +227,7 @@ body.dark {
                 .toggle_menu {
                     display: flex;
                     padding: 4rem;
-                    margin-bottom: 30rem;
+                    margin-bottom: 16rem;
                     @include color(background-color, bg26);
                     border-radius: 24rem;
                     li {
@@ -293,7 +293,7 @@ body.dark {
                     }
                 }
                 .benefit {
-                    padding: 20rem;
+                    padding: 32rem 20rem 30rem 20rem;
                     border: 1rem solid rgba(#eee, .2);
                     border-radius: 16rem;
                     dt {
@@ -365,7 +365,7 @@ body.dark {
                     }
                 }
                 .btn_wrapper {
-                    margin-top: 15rem;
+                    margin-top: 28rem;
                     button {
                         display: block;
                         width: 100%;
