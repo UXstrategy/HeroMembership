@@ -45,12 +45,12 @@ function css() {
       includePaths: "./node_modules",
     }))
     .on("error", sass.logError)
-    .pipe(gulp.dest("./src/assets/css/"))
+    .pipe(gulp.dest("./src/assets/css/hc"))
     .pipe(browsersync.stream());
 }
 
 function js() {
-  return gulp.src("./src/assets/js/*.js")
+  return gulp.src("./src/assets/js/hc/*.js")
     .pipe(babel())
     .pipe(browsersync.stream());
 }
@@ -58,7 +58,7 @@ function js() {
 // Watch files
 function watchFiles() {
 	gulp.watch(["./src/assets/scss/*.scss"], css);
-	gulp.watch("./src/assets/js/*.js", js);
+	gulp.watch("./src/assets/js/hc/*.js", js);
   gulp.watch(["./src/*.html"], browserSyncReload);
 }
 
