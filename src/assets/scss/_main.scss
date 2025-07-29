@@ -2624,7 +2624,8 @@ body.dark {
                 }
                 .level {
                     display: inline-block;
-                    width: 72rem;
+                    padding: 0 10rem;
+                    min-width: 62rem;
                     height: 25rem;
                     margin: 0 auto;
                     line-height: 25rem;

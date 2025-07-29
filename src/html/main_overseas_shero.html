@@ -18,13 +18,17 @@
         <!-- p.fire > 불 / p.complete > 체크뱃지 / p.cong > 폭죽 -->
         <div class="swiper_unit level_swiper" data-loop="false" data-space="10" data-initial="2">
             <ul class="swiper-wrapper">
+                <!----------------------
+                비쥬얼 영역 등급은 지난달, 이번달, 다음달 3개로만 구성
+                현재는 확인용으로 6개 등급 모두 표시.
+                ------------------------>
                 <li class="swiper-slide general">
                     <p class="main_noti cong">
                         지난 달 해외주식 <span>체결금액 100억원</span> 달성!
                         <button type="button" class="share">공유하기</button>
                     </p>
                     <div class="card">
-                        <p class="level">이번달 등급</p>
+                        <p class="level">지난달 등급</p>
                         <p class="tit">일반</p>
                         <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                     </div>
@@ -35,7 +39,7 @@
                         <button type="button" class="share">공유하기</button>
                     </p>
                     <div class="card">
-                        <p class="level">다음 등급</p>
+                        <p class="level">지난달 등급</p>
                         <p class="tit">A<span>a Hero</span></p>
                         <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                     </div>
@@ -49,7 +53,7 @@
                     <!-- 이번달 해당 등급이 S 이상일 경우 'card_wrapper 태그 추가' class 추가 -->    
                     <div class="card_wrapper">
                         <div class="card">
-                            <p class="level">다음 등급</p>
+                            <p class="level">이번달 등급</p>
                             <p class="tit">S<span>Super Hero</span></p>
                             <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                         </div>
@@ -67,7 +71,7 @@
                     </p>
                     <div class="card_wrapper">
                         <div class="card">
-                            <p class="level">다음 등급</p>
+                            <p class="level">다음달 예상 등급</p>
                             <p class="tit">SS<span>Double S Hero</span></p>
                             <div class="benefit_btn my_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                         </div>
@@ -79,7 +83,7 @@
                         <button type="button" class="share">공유하기</button>
                     </p>
                     <div class="card">
-                        <p class="level">다음 등급</p>
+                        <p class="level">다음달 예상 등급</p>
                         <p class="tit">SSS<span>Triple S Hero</span></p>
                         <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                     </div>
@@ -90,7 +94,7 @@
                         <button type="button" class="share">공유하기</button>
                     </p>
                     <div class="card">
-                        <p class="level">다음 등급</p>
+                        <p class="level">다음달 예상 등급</p>
                         <p class="tit">L<span>Legendary Hero</span></p>
                         <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                     </div>
