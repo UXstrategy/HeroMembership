@@ -642,7 +642,7 @@ body.dark {
                 text-align: center;
                 @include color(color, tt12);
                 font-size: 18rem;
-                line-height: 26rem;
+                line-height: 24rem;
                 font-weight: bold;
             }
             p {
@@ -652,11 +652,15 @@ body.dark {
                 line-height: 20rem;
                 &.txt {
                     margin-top: 9rem;
+                    padding-bottom: 10rem;
                     @include color(color, tt5);
                 }
             }
             .btn_box {
                 padding: 20rem;
+                button {
+                    font-weight: 600;;
+                }
             }
         }
     }
@@ -1350,7 +1354,7 @@ body.dark {
             background: #121212;
             .pop_header {
                 h1 {
-                    color: #eee;
+                    color: #ccc;
                     letter-spacing: -0.55rem;
                 }
                 .header_close {
@@ -1360,126 +1364,113 @@ body.dark {
                 }
             }
             .pop_card_inner {
-                padding: 0 28rem;
-                height: 180rem;
-                img {
-                    width: 100%;
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30rem;
+                    li {
+                        padding-top: 20rem;
+                        position: relative;
+                        .thumb {
+                            position: relative;
+                            width: 87rem;
+                            overflow: hidden;
+                            img {
+                                width: 100%;
+                            }
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                top: -100%;
+                                left: -100%;
+                                /* 시작 위치 */
+                                width: 200%;
+                                /* 빛이 지나갈 넓이 */
+                                height: 200%;
+                                background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+                                transform: rotate(45deg);
+                                opacity: 0;
+                                z-index: 2;
+                                animation: light-move 1.5s linear forwards; 
+                            }
+                            
+                        }
+                        @keyframes light-move {
+                            0% {
+                                opacity: 1;
+                                transform: translate(-70%, -70%) rotate(45deg);
+                            }
+                            100% {
+                                opacity: 1;
+                                transform: translate(100%, 100%) rotate(45deg);
+                            }
+                        }
+                        &.bg_l {
+                            &:before {
+                                position: absolute;
+                                top: 0;
+                                right: 33%;
+                                width: 100%;
+                                height: 100%;
+                                filter: blur(20px);
+                                background: radial-gradient(circle, rgba(184, 151, 16, 0.5) 0%, rgba(184, 151, 16, 0) 70%);
+                                content: '';
+                            }
+                        }
+                        &.bg_s {
+                            &:before {
+                                position: absolute;
+                                top: 20%;
+                                left: 33%;
+                                width: 100%;
+                                height: 100%;
+                                filter: blur(20px);
+                                background: radial-gradient(circle, rgba(187, 40, 162, 0.5) 0%, rgba(184, 151, 16, 0) 70%);
+                                content: '';
+                            }
+                        }
+                        &:last-child {
+                            .thumb {
+                                &:before {
+                                    animation-delay: 0.3s;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .pop_body {
                 .benefit_detail_wrap {
-                    height: 212rem;
-                    overflow: hidden;
-                    .detail_slide {
-                        height: 212rem;
-                        color: #fff;
-                    }
-                    .detail_info1 {
-                        padding: 11rem 28rem 0;
+                    padding-top: 34rem;
+                    .t1 {
+                        font-size: 16rem;
+                        color: #ccc;
                         text-align: center;
-                        .info_box {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            height: 94rem;
-                            border-radius: 16rem;
-                            background: #26282a;
-                            gap: 46rem;
-                            li {
-                                position: relative;
-                                font-size: 16rem;
-                                color: #eee;
-                                line-height: 22rem;
-                                letter-spacing: -0.4rem;
-                                &:before {
-                                    display: block;
-                                    margin: -10rem 0 0 -33rem;
-                                    position: absolute;
-                                    top: 50%;
-                                    left: 0;
-                                    width: 20rem;
-                                    height: 20rem;
-                                    @include bgImg('../../images/hc/ico_pop_benefit_plus.png', '../../images/hc/ico_pop_benefit_plus.png');
-                                    background-size: 100% auto;
-                                    content: '';
-                                }
-                                &:first-child:before {
-                                    display: none;
-                                }
-                            }
-                        }
-                        .text_gradient {
-                            padding-top: 24rem;
-                            font-size: 16rem;
-                            font-weight: 600;
-                            letter-spacing: -0.25rem;
-                            line-height: 22rem;
-                            background: linear-gradient(to right, #ffec6e 0%, #ff78ea 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                        }
+                        line-height: 22rem;
+                        letter-spacing: -0.4rem;
                     }
-                    .detail_info2 {
-                        padding-top: 37rem;
+                    .text_gradient {
+                        padding-top: 16rem;
+                        font-size: 20rem;
+                        font-weight: 700;
                         text-align: center;
-                        .t1 {
-                            font-size: 16rem;
-                            color: #ccc;
-                            line-height: 22rem;
-                            letter-spacing: -0.4rem;
-                        }
-                        .t2 {
-                            padding-top: 8rem;
-                            font-size: 20rem;
-                            color: #eee;
-                            font-weight: bold;
-                            line-height: 26rem;
-                            letter-spacing: -0.5rem;
-                        }
-                    }
-                    .detail_info4 {
-                        text-align: center;
-                        .gray_box {
-                            display: inline-block;
-                            margin-top: 19rem;
-                            padding: 11rem 20rem 10rem;
-                            font-size: 15rem;
-                            color: #eee;
-                            font-weight: 600;
-                            line-height: 22rem;
-                            letter-spacing: -0.38rem;
-                            border-radius: 21rem;
-                            background: #26282a;
-                        }
-                        .t1 {
-                            padding-top: 20rem;
-                            font-size: 20rem;
-                            color: #ccc;
-                            line-height: 26rem;
-                            letter-spacing: -0.5rem;
-                        }
-                        .text_gradient {
-                            padding-top: 9rem;
-                            font-size: 20rem;
-                            font-weight: bold;
-                            letter-spacing: -0.25rem;
-                            line-height: 26rem;
-                            background: linear-gradient(to right, #ffec6e 0%, #ff78ea 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                        }
+                        letter-spacing: -0.35rem;
+                        line-height: 24rem;
+                        background: linear-gradient(to right, #ffec6e 0%, #ff78ea 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
                     }
                 }
             }
             .pop_bottom_btn {
-                padding: 20rem;
+                padding: 70rem 20rem 20rem;
                 position: relative;
                 .arrow {
                     position: absolute;
-                    top: -10rem;
+                    top: 25rem;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    transform: rotate(-180deg);
                     span {
                         display: block;
                         width: 16rem;
@@ -1508,7 +1499,6 @@ body.dark {
                         transform: rotate(45deg) translate(10px, 10px);
                     }
                 }
-                .slide_up,
                 button {
                     display: block;
                     width: 100%;
@@ -1520,9 +1510,6 @@ body.dark {
                     font-weight: 600;
                     text-align: center;
                     background: linear-gradient(to right, #be8d21 0%, #a20092 100%);
-                }
-                button {
-                    display: none;
                 }
             }
         }
@@ -2140,10 +2127,6 @@ body.dark {
             }
         }
     }
-    .tab_content,
-    .tab_content.benefit_wrap {
-        margin: 0 8rem;
-    }
 }
 
 .wrap {
@@ -2174,6 +2157,59 @@ body.dark {
                 line-height: 0;
                 text-indent: -9999px;
                 @include bgImg('../../images/hc/ic_close.png', '../../images/hc/ic_close_dm.png');
+            }
+        }
+    }
+
+    .main_benefit_tab {
+        margin: 24rem 28rem 0;
+        padding: 0;
+        border-radius: 24rem;
+        @include color(background-color, bg5);
+        .tab_top {
+            display: flex;
+            padding: 32rem 24rem 0;
+            justify-content: space-between;
+            h3 {
+                font-size: 20rem;
+                @include color(color, tt2);
+                font-weight: 700;
+                line-height: 30rem;
+                letter-spacing: -0.5rem;
+            }
+            .tab_head {
+                margin-bottom: 0;
+                padding: 3rem;
+                border-radius: 15rem;
+                @include color(background-color, bg30);
+                li {
+                    width: 47rem;
+                    height: 24rem;
+                    font-size: 12rem;
+                    line-height: 24rem;
+                    border-radius: 12rem;
+                    &.active {
+                        @include color(color, tt3);
+                        @include color(background-color, bg31);
+                    }
+                }
+            }
+        }
+        .next_level {
+            padding: 24rem 0 32rem;
+            p {
+                width: 240rem;
+                height: 132rem;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12rem;
+                font-size: 16rem;
+                line-height: 22rem;
+                @include color(background-color, bg7);
+                @include color(color, tt3);
+                text-align: center;
             }
         }
     }
@@ -2840,19 +2876,22 @@ body.dark {
             @include bgImg('../../images/hc/bg_legendary_ready.png', '../../images/hc/bg_legendary_ready_dark.png');
         }
         &.open {
-            padding: 28rem 32rem 32rem 24rem !important;
+            margin: 21rem 20rem 0;
+            padding: 32rem 19rem 20rem 23rem !important;
             background-color: none;
             background-size: contain !important;
             background-position: center top;
             @include bgImg('../../images/hc/bg_benefit_open.png', '../../images/hc/bg_benefit_open.png');
             .left_txt {
-                padding-top: 4rem;
+                font-size: 16rem;
                 color: #fff;
+                line-height: 22rem;
+                letter-spacing: -0.4rem;
             }
             .state {
                 position: absolute;
-                top: 28rem;
-                right: 32rem;
+                top: 16rem;
+                right: 19rem;
                 .star {
                     display: block;
                     margin: 0 auto;
@@ -2924,13 +2963,14 @@ body.dark {
         }
         .left_txt {
             display: block;
-            font-weight: bold;
-            font-size: 20rem;
-            line-height: 26rem;
+            font-weight: 600;
+            font-size: 18rem;
+            line-height: 24rem;
+            letter-spacing: -0.45rem;
             @include color(color, tt2);
         }
         .btn {
-            padding-top: 16rem;
+            padding-top: 20rem;
             button {
                 position: relative;
                 display: inline-block;
@@ -3096,20 +3136,25 @@ body.dark {
             &.premium {
                 padding-bottom: 0;
                 .premium_card {
-                    width: 90rem;
-                    height: 146rem;
+                    width: 109rem;
+                    height: 184rem;
                     margin: 0 auto;
                     .swiper-wrapper {
                         transform-style: preserve-3d;
                     }
                     .swiper-slide {
                         display: flex;
+                        text-align: center;
                         align-items: center;
                         justify-content: center;
                         backface-visibility: hidden;
                         transform: translate3d(0, 0, 0);
+                        flex-wrap: wrap;
+                        flex-direction: column;
                         div {
                             position: relative;
+                            width: 90rem;
+                            height: 143rem;
                             overflow: hidden;
                             &:before {
                                 content: "";
@@ -3128,6 +3173,22 @@ body.dark {
                                 opacity: 0;
                             }
                         }
+                        .annual_fee {
+                            display: none;
+                            margin-top: 16rem;
+                            width: 107rem;
+                            height: 23rem;
+                            font-size: 12rem;
+                            color: #ccc;
+                            font-weight: 600;
+                            text-align: center;
+                            line-height: 23rem;
+                            border-radius: 4rem;
+                            border: 1rem solid #707070;
+                            &::before {
+                                display: none;
+                            }
+                        }
                         img {
                             width: 100%;
                         }
@@ -3137,15 +3198,20 @@ body.dark {
                                     animation: light-move 1.5s linear forwards; /* 애니메이션 적용 */
                                 }
                             }
+                            .annual_fee {
+                                display: block;
+                            }
                         }
                         &.swiper-slide-next {
+                            margin-top: -15rem;
                             img {
-                                width: 70rem;
+                                width: 75rem;
                             }
                         }
                         &.swiper-slide-prev {
+                            margin-top: -15rem;
                             img {
-                                width: 70rem;
+                                width: 75rem;
                             }
                         }
                         @keyframes light-move {
@@ -3182,7 +3248,7 @@ body.dark {
             .benefit {
                 display: inline-block;
                 height: 25rem;
-                margin-bottom: 12rem;
+                margin-bottom: 16rem;
                 padding: 0 10rem;
                 line-height: 25rem;
                 border-radius: 12rem;
@@ -3192,6 +3258,7 @@ body.dark {
                 @include color(background-color, bg1);
             }
             .tit {
+                padding-top: 4rem;
                 position: relative;
                 font-weight: bold;
                 font-size: 22rem;
@@ -3213,6 +3280,11 @@ body.dark {
                         height: 8px;
                         @include color(background-color, bg2);
                         z-index: -1;
+                    }
+                    em {
+                        font-size: inherit;
+                        font-style: normal;
+                        font-weight: bold;
                     }
                 }
             }
@@ -3236,10 +3308,57 @@ body.dark {
             }
             .txt {
                 margin-top: 12rem;
+                position: relative;
                 font-size: 13rem;
                 letter-spacing: -.4rem;
                 @include color(color, tt16);
                 line-height: 18rem;
+                .btn_reward_tooltip {
+                    display: inline-block;
+                    margin-top: 3rem;
+                    width: 14rem;
+                    height: 14rem;
+                    @include bgImg('../../images/hc/ico_tooltip.png', '../../images/hc/ico_tooltip.png');
+                    vertical-align: top;
+                }
+                .detail_tooltip_area {
+                    display: none;
+                    padding: 16rem;
+                    position: absolute;
+                    top: 40rem;
+                    right: 0;
+                    width: 100%;
+                    border: 1px solid #ddd;
+                    border-radius: 8rem;
+                    background: #fff;
+                    box-sizing: border-box;
+                    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+                    z-index: 10;
+                    .tooltip_title {
+                        font-size: 15rem;
+                        color: #333;
+                        font-weight: 600;
+                        line-height: 20rem;
+                        letter-spacing: -.38rem;
+                    }
+                    .tooltip_txt {
+                        padding-top: 8rem;
+                        font-size: 14rem;
+                        color: #999;
+                        font-weight: 400;
+                        line-height: 18rem;
+                        letter-spacing: -.35rem;
+                    }
+                    .btn_tooltip_close {
+                        position: absolute;
+                        top: 19rem;
+                        right: 14rem;
+                        width: 11rem;
+                        height: 10rem;
+                        background: url(../../images/hc/ico_tooltip_close_gray.png);
+                        background-size: 11rem auto;
+                    }
+                }
             }
             .btn_box {
                 position: absolute;
@@ -3261,7 +3380,7 @@ body.dark {
             }
             .pre_benefit {
                 margin-top: 32rem;
-                padding: 40rem 20rem;
+                padding: 40rem 20rem 28rem;
                 border-radius: 24rem;
                 background-color: #000;
                 background-repeat: no-repeat;
@@ -3270,16 +3389,29 @@ body.dark {
                 transition: background-image 0.3s ease;
                 &.a {
                     background-image: url('../../images/hc/bg_benefit_legendary.png');
+                    .card_iss_title {
+                        .title_a {
+                            display: block;
+                        }
+                    }
                 }
                 &.b {
                     background-image: url('../../images/hc/bg_benefit_super.png');
+                    .card_iss_title {
+                        .title_b {
+                            display: block;
+                        }
+                    }
                 }
-                dt {
-                    margin-bottom: 30rem;
-                    img {
-                        display: block;
-                        width: 174rem;
-                        margin: 0 auto;
+                .card_iss_title {
+                    margin-bottom: 42rem;
+                    p {
+                        display: none;
+                        img {
+                            display: block;
+                            width: 232rem;
+                            margin: 0 auto;
+                        }
                     }
                 }
                 .box {
@@ -3296,19 +3428,20 @@ body.dark {
                             position: relative;
                             height: 45rem;
                             margin-top: 5rem;
-                            padding-left: 17rem;
+                            padding-left: 13rem;
                             border: 1rem solid rgba(238, 238, 238, 0.2);
                             border-radius: 8rem;
                             color: #eee;
-                            font-size: 14rem;
-                            line-height: 45rem;
+                            font-size: 13rem;
+                            line-height: 43rem;
                             letter-spacing: -.35rem;
                             box-sizing: border-box;
                             .num {
                                 display: inline-block;
-                                margin:14rem 19rem 0 0;
+                                margin:14rem 10rem 0 0;
                                 width: 15rem;
                                 height: 16rem;
+                                font-size: 14rem;
                                 vertical-align: top;
                                 background-size: 15rem 16rem;
                             }
@@ -3322,28 +3455,98 @@ body.dark {
                             &:first-child {
                                 margin-top: 0;
                             }
+                            .btn_detail_tooltip {
+                                display: inline-block;
+                                margin: 17rem 0 0 4rem;
+                                width: 12rem;
+                                height: 12rem;
+                                background: url('../../images/hc/ico_detail_tooltip.png') 0 0 no-repeat;
+                                background-size: 12rem auto;
+                                vertical-align: top;
+                            }
+                            .detail_tooltip_area {
+                                display: none;
+                                padding: 16rem;
+                                position: absolute;
+                                top: 40rem;
+                                right: 0;
+                                width: 100%;
+                                border: 1px solid #333;
+                                border-radius: 8rem;
+                                background: #121212;
+                                box-sizing: border-box;
+                                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+                                z-index: 10;
+                                .tooltip_title {
+                                    font-size: 15rem;
+                                    color: #ccc;
+                                    font-weight: 600;
+                                    line-height: 20rem;
+                                    letter-spacing: -.38rem;
+                                }
+                                .tooltip_txt {
+                                    padding-top: 8rem;
+                                    font-size: 14rem;
+                                    color: #999;
+                                    font-weight: 400;
+                                    line-height: 18rem;
+                                    letter-spacing: -.35rem;
+                                }
+                                .btn_tooltip_close {
+                                    position: absolute;
+                                    top: 19rem;
+                                    right: 14rem;
+                                    width: 11rem;
+                                    height: 10rem;
+                                    background: url(../../images/hc/ico_tooltip_close_gray.png);
+                                    background-size: 11rem auto;
+                                }
+                            }
+                        }
+                    }
+                    .detail_desc {
+                        padding-top: 42rem;
+                        font-size: 18rem;
+                        color: #eee;
+                        font-weight: 700;
+                        text-align: center;
+                        line-height: 24rem;
+                        letter-spacing: -0.45rem;
+                    }
+                    .arrow {
+                        margin: 0 auto;
+                        padding-top: 26rem;
+                        position: relative;
+                        width: 20rem;
+                        span {
+                            display: block;
+                            width: 20rem;
+                            height: 20rem;
+                            border-bottom: 4px solid white;
+                            border-right: 4px solid white;
+                            transform: rotate(45deg);
+                            -webkit-transform: translateZ(0);
+                            margin: -10px;
+                            animation: arrowMove 2s ease infinite;
+                            &:nth-child(2) {
+                                animation-delay: -0.2s;
+                            }
                         }
                     }
                     .btn_wrapper {
-                        margin-top: 35rem;
+                        margin-top: 46rem;
                         text-align: center;
                         button {
-                            position: relative;
-                            color: #ccc;
-                            font-weight: 600;
+                            display: block;
+                            width: 100%;
+                            height: 45rem;
+                            line-height: 45rem;
+                            border-radius: 12rem;
                             font-size: 14rem;
-                            line-height: 20rem;
-                            letter-spacing: -.35rem;
-                            &::after {
-                                content: '';
-                                display: inline-block;
-                                position: relative;
-                                width: 20rem;
-                                height: 20rem;
-                                top: 5rem;
-                                margin-left: 10rem;
-                                background: url('../../images/hc/ico_go.png') no-repeat 0 0 / 20rem 20rem;
-                            }
+                            color: #fff;
+                            font-weight: 600;
+                            text-align: center;
+                            background: linear-gradient(to right, #be8d21 0%, #a20092 100%);
                         }
                     }
 
@@ -3561,9 +3764,57 @@ body.dark {
                             }
                             .desc {
                                 margin-top: -22rem;
+                                position: relative;
                                 font-size: 13rem;
                                 line-height: 16rem;
                                 opacity: 1;
+                                .btn_card_tooltip {
+                                    display: inline-block;
+                                    margin-top: 3rem;
+                                    width: 12rem;
+                                    height: 12rem;
+                                    @include bgImg('../../images/hc/ico_detail_tooltip.png', '../../images/hc/ico_detail_tooltip.png');
+                                    vertical-align: top;
+                                }
+                                .detail_tooltip_area {
+                                    display: none;
+                                    padding: 16rem;
+                                    position: absolute;
+                                    top: 50rem;
+                                    left: 14rem;
+                                    width: 250%;
+                                    text-align: left;
+                                    border: 1px solid #333;
+                                    border-radius: 8rem;
+                                    background: #121212;
+                                    box-sizing: border-box;
+                                    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+                                    z-index: 10;
+                                    .tooltip_title {
+                                        font-size: 15rem;
+                                        color: #ccc;
+                                        font-weight: 600;
+                                        line-height: 20rem;
+                                        letter-spacing: -.38rem;
+                                    }
+                                    .tooltip_txt {
+                                        padding-top: 8rem;
+                                        font-size: 14rem;
+                                        color: #999;
+                                        font-weight: 400;
+                                        line-height: 18rem;
+                                        letter-spacing: -.35rem;
+                                    }
+                                    .btn_tooltip_close {
+                                        position: absolute;
+                                        top: 19rem;
+                                        right: 14rem;
+                                        width: 11rem;
+                                        height: 10rem;
+                                        background: url(../../images/hc/ico_tooltip_close_gray.png);
+                                        background-size: 11rem auto;
+                                    }
+                                }
                             }
                         }
                         &.type_btn {
@@ -3716,10 +3967,8 @@ body.dark {
         }
     }
     .benefit_wrap {
-        @include color(background-color, bg5);
-        padding: 32rem 0;
-        margin: 0 28rem;
-        border-radius: 24rem;
+        padding: 24rem 0 32rem;
+        margin: 0;
         dt {
             padding: 0 24rem;
             margin-bottom: 24rem;
@@ -3749,20 +3998,6 @@ body.dark {
             background-size: 44rem 44rem;
             background-position: top 28rem center;
             box-sizing: border-box;
-        }
-        .next_level {
-            width: 240rem;
-            height: 132rem;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12rem;
-            font-size: 16rem;
-            line-height: 22rem;
-            @include color(background-color, bg7);
-            @include color(color, tt3);
-            text-align: center;
         }
         .coupon {
             display: flex;
@@ -3911,7 +4146,7 @@ body.dark {
             @include color(background-color, bg6);
             text-align: center;
             border-radius: 16rem;
-            @include color(color, tt3);
+            @include color(color, tt10);
             font-size: 13rem;
             line-height: 32rem;
             &::before {
@@ -4006,6 +4241,10 @@ body.dark {
                 &.card {
                     @include bgImg('../../images/hc/img_reward_card.png', '../../images/hc/img_reward_card_dm.png');
                     background-size: 62rem 40rem;
+                    &.card_s {
+                        @include bgImg('../../images/hc/img_reward_card_s.png', '../../images/hc/img_reward_card_s_dm.png');
+                        background-size: 62rem 40rem;
+                    }
                 }
             }
             &.general {
@@ -4027,7 +4266,6 @@ body.dark {
             right: 0;
             bottom: 0;
             padding: 20rem;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 2%, rgba(255, 255, 255, 0.44) 4%, rgba(255, 255, 255, 0.6) 7%, rgba(255, 255, 255, 0.86) 15%, #fff);
             button {
                 width: 100%;
             }
@@ -4374,6 +4612,12 @@ body.dark {
                         line-height: 23rem;
                         letter-spacing: -.4rem;
                         @include color(color, tt2);
+                        &.price_reward {
+                            padding-right: 18rem;
+                            @include bgImg('../../images/hc/ic_arrow_right_thin.png', '../../images/hc/ic_arrow_right_thin_dm.png');
+                            background-position: 100% 55%;
+                            background-size: 14rem 14rem;
+                        }
                     }
                 }
             }
@@ -5095,12 +5339,6 @@ body.dark {
                 }
             }
         }
-        &.benefit_info {
-            .btn_box {
-                background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 2%, rgba(255, 255, 255, 0.44) 4%, rgba(255, 255, 255, 0.6) 7%, rgba(255, 255, 255, 0.86) 15%, #fff);
-            }
-        }
-
         .btn_fixed {
             box-shadow: 0 -4rem 12rem 0 rgba(255, 255, 255, 0.1);
         }
@@ -5321,7 +5559,7 @@ body.dark {
                     }
                 }
                 .section_mtitle {
-                    padding-top: 16rem;
+                    padding-top: 20rem;
                     font-size: 18rem;
                     color: #eee;
                     font-weight: 600;
@@ -5651,14 +5889,46 @@ body.dark {
                                 }
                             }
                         }
-                        .desc {
-                            margin-left: 14rem;
-                            padding-top: 16rem;
-                            font-size: 13rem;
-                            color: #999;
-                            line-height: 18rem;
-                            letter-spacing: -0.33rem;
-                            text-indent: -14rem;
+                        .notice {
+                            padding-top: 21rem;
+                            .noti_title {
+                                font-size: 13rem;
+                                color: #ccc;
+                                line-height: 18rem;
+                                letter-spacing: -0.33rem;
+                            }
+                            ul {
+                                display: block;
+                                padding-top: 3rem;
+                                li {
+                                    margin: 0;
+                                    padding: 7rem 0 0 9rem;
+                                    position: relative;
+                                    width: 100%;
+                                    min-height: auto;
+                                    font-size: 13rem;
+                                    color: #999;
+                                    text-align: left;
+                                    text-indent: 0;
+                                    line-height: 18rem;
+                                    letter-spacing: -0.33rem;
+                                    border-radius: 0;
+                                    background: none;
+                                    &:before {
+                                        margin: 0;
+                                        position: absolute;
+                                        top: 14rem;
+                                        left: 0;
+                                        width: 3rem;
+                                        height: 3rem;
+                                        background: #999;
+                                        border-radius: 25rem;
+                                    }
+                                    &:first-child:before {
+                                        display: block;
+                                    }
+                                }
+                            }
                         }
                     }
                     .benefit_area {
@@ -5686,11 +5956,13 @@ body.dark {
                             letter-spacing: -0.45rem;
                         }
                         .area_desc {
-                            padding: 12rem 20rem 0;
+                            margin: 24rem 20rem 0;
+                            padding-top: 17rem;
                             font-size: 14rem;
                             color: #eee;
                             line-height: 20rem;
                             letter-spacing: -0.35rem;
+                            border-top: 1px solid #333;
                             span {
                                 &.item_legendary {
                                     display: inline-block;
@@ -5698,6 +5970,13 @@ body.dark {
                                 &.item_super {
                                     display: inline-block;
                                 }
+                            }
+                            p {
+                                padding-top: 5rem;
+                                font-size: 13rem;
+                                color: #999;
+                                line-height: 18rem;
+                                letter-spacing: -0.33rem;
                             }
                         }
                         ul.column {
@@ -5817,6 +6096,10 @@ body.dark {
                                         &.ico4 {
                                             margin-top: -2rem;
                                             @include bgImg('../../images/hc/ico_special_benefit4.png', '../../images/hc/ico_special_benefit4.png');
+                                        }
+                                        &.ico5 {
+                                            margin-top: -2rem;
+                                            @include bgImg('../../images/hc/ico_special_benefit5.png', '../../images/hc/ico_special_benefit5.png');
                                         }
                                     }
                                     .text_box {
