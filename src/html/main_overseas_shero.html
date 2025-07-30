@@ -136,12 +136,12 @@
                 <!-- super hero 카드 발급 전 -->
                 <div class="hero_benefit_box super sleep">
                     <p class="left_txt">Super HERO 카드<br>발급하면<br>혜택이 열려요!</p>
-                    <div class="btn"><button type="button">자세히보기</button></div>
+                    <div class="btn"><button type="button" onClick="benefitTarget();">자세히보기</button></div>
                 </div>
                 <!-- super hero 카드 발급 후
                 <div class="hero_benefit_box super ready">
                     <p class="left_txt">Super HERO 카드<br>발급 리워드<br>10만원 도착!</p>
-                    <div class="btn"><button type="button">지급 대기</button></div>
+                    <div class="btn"><button type="button">리워드 받기</button></div>
                 </div>
                 -->
                 <!-- super hero 첫번째 별 완성 전 
@@ -160,7 +160,8 @@
                         <p class="star"></p>
                         <p class="date">25.10까지<span>누적 30억 달성</span></p>
                     </div>
-                    <div class="btn"><button type="button">혜택받기</button></div>
+                    <div class="btn"><button type="button" onClick="benefitTarget();">자세히보기</button></div>
+                    <div class="btn"><button type="button">리워드 받기</button></div>
                 </div> 
                 -->
                 <!-- super hero 첫번째 별 완성 전 
@@ -179,6 +180,7 @@
                         <p class="star"></p>
                         <p class="date">26.04까지<span>누적 60억 달성</span></p>
                     </div>
+                    <div class="btn"><button type="button" onClick="benefitTarget();">자세히보기</button></div>
                     <div class="btn"><button type="button">리워드 받기</button></div>
                 </div> 
                 -->
@@ -473,6 +475,11 @@
         $('.btn_tooltip_close').on('click', function(){
             $(this).parent().hide();
         });
+
+        function benefitTarget() {
+            let target = $('.benefit_list').offset().top;
+            $('html, body').animate({scrollTop: target - 20}, 300);
+        }
     </script>
 </body>
 </html>
