@@ -3241,6 +3241,84 @@ body.dark {
                     }
                 }
             }
+            &.coming_soon {
+                padding-bottom: 0;
+                .tit {
+                    padding-top: 0;
+                }
+                .text {
+                    padding-top: 5rem;
+                }
+                .pre_benefit {
+                    &.c {
+                        padding: 60rem 0 40rem;
+                    }
+                    .card_iss_title {
+                        margin-bottom: 8rem;
+                    }
+                    dd {
+                        .coming_soon_card {
+                            margin: 0 auto;
+                            padding-top: 32rem;
+                            position: relative;
+                            width: 240rem;
+                            height: 180rem;
+                            @include bgImg('../../images/hc/bg_cmoning_card.png', '../../images/hc/bg_cmoning_card.png');
+                            .card_area {
+                                margin: 0 auto;
+                                position: relative;
+                                width: 94rem;
+                                overflow: hidden;
+                                img {
+                                    width: 100%;
+                                }
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    top: -100%;
+                                    left: -100%;
+                                    /* 시작 위치 */
+                                    width: 200%;
+                                    /* 빛이 지나갈 넓이 */
+                                    height: 200%;
+                                    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+                                    transform: rotate(45deg);
+                                    opacity: 0;
+                                    z-index: 2;
+                                    animation: light-move 1.5s linear forwards; 
+                                }
+                            }
+                        }
+                        @keyframes light-move {
+                            0% {
+                                opacity: 1;
+                                transform: translate(-70%, -70%) rotate(45deg);
+                            }
+                            100% {
+                                opacity: 1;
+                                transform: translate(100%, 100%) rotate(45deg);
+                            }
+                        }
+                        .img_txt {
+                            text-align: center;
+                            img {
+                                width: 148rem;
+                            }
+                        }
+                        .btn_coming_soon {
+                            padding-top: 39rem;
+                            text-align: center;
+                            button {
+                                width: 224rem;
+                                height: 45rem;
+                                font-size: 0;
+                                text-indent: -9999em;
+                                @include bgImg('../../images/hc/btn_coming_soon.png', '../../images/hc/btn_coming_soon.png');
+                            }
+                        }
+                    }
+                }
+            }
             &.coming {
                 .text {
                     margin-top: 5rem;
@@ -3401,6 +3479,17 @@ body.dark {
                     .card_iss_title {
                         .title_b {
                             display: block;
+                        }
+                    }
+                }
+                &.c {
+                    background-image: url('../../images/hc/bg_coming_soon.png');
+                    .card_iss_title {
+                        .title_c {
+                            display: block;
+                            img {
+                                width: 240rem;
+                            }
                         }
                     }
                 }
