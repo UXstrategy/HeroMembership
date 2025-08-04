@@ -113,8 +113,49 @@
                                 <span class="category">유튜브프리미엄 1개월 이용권 무료 혜택</span>
                             </div>
                         </li>
+                        <li>
+                            <p class="date">24.09.01</p>
+                            <div>
+                                <span class="category">L등급 리워드</span>
+                                <span class="benefit">+500,000원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="date">24.09.01</p>
+                            <div>
+                                <span class="category">히어로카드 리워드(2차)</span>
+                                <span class="benefit">+200,000원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="date">24.09.01</p>
+                            <div>
+                                <span class="category">유튜브프리미엄 1개월 이용권 무료 혜택</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="date">24.05.03</p>
+                            <div>
+                                <span class="category">SSS등급 리워드</span>
+                                <span class="benefit">+200,000원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="date">24.05.03</p>
+                            <div>
+                                <span class="category">히어로카드 리워드(1차)</span>
+                                <span class="benefit">+200,000원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="date">24.05.03</p>
+                            <div>
+                                <span class="category">유튜브프리미엄 1개월 이용권 무료 혜택</span>
+                            </div>
+                        </li>
                     </ul>
-                    <div class="btn_box"><button type="button" class="readmore">더보기</button></div>
+                    <!-- 20건 이상일 경우 더보기 노출 -->
+                    <div class="btn_box"><button type="button" class="readmore">더보기 <span></span></button></div>
                 </dd>
             </dl>
 
@@ -226,12 +267,13 @@
         // 리스트 더보기
         const readMoreButton = $('.readmore'),
             detailList = $('.detail li'),
-            numShow = 20, // 리스트 디폴트로 보여줄 갯수
+            numShow = 6, // 확인용, 실제 = 20개 이상
             numInList = detailList.length;
-
+        
         detailList.hide();
         detailList.slice(0, numShow).show();
 
+        
         if ( detailList.filter(':hidden').length > 0 ) {
             readMoreButton.show();
         }
@@ -240,7 +282,6 @@
             var showing = detailList.filter(':visible').length;
             detailList.slice(showing - 1, showing + numShow).fadeIn();
             var nowShowing = detailList.filter(':visible').length;
-            console.log(nowShowing, numInList);
             if (nowShowing >= numInList) {
                 readMoreButton.hide();
             }

@@ -1625,6 +1625,9 @@ body.dark {
     &.popup_card_cancel {
         .popup_container {
             .pop_body {
+                padding-bottom: 154rem;
+                height: 280rem;
+                overflow-y: auto;
                 .info_box {
                     padding: 24rem 20rem;
                     border-radius: 24rem;
@@ -1724,7 +1727,14 @@ body.dark {
                             vertical-align: top;
                         }
                     }
-                } 
+                }
+                .btm_btns {
+                    position: fixed;
+                    bottom: 0;
+                    left: 20rem;
+                    right: 20rem;
+                    background: #121212;
+                }
             }
         }
     }
@@ -2112,6 +2122,7 @@ body.dark {
         &.btn_ok {
             @include color(background-color, bg15);
             @include color(color, tt11);
+            font-weight: 600;
         }
         &.btn_cancel {
             @include color(background-color, bg21);
@@ -2646,12 +2657,13 @@ body.dark {
                     min-width: 62rem;
                     height: 25rem;
                     margin: 0 auto;
-                    line-height: 26rem;
+                    line-height: 27rem;
                     letter-spacing: -0.3rem;
                     text-align: center;
                     border-radius: 25rem;
                     font-size: 12rem;
                     color: #fff;
+                    font-weight: 600;
                 }
                 .tit {
                     position: relative;
@@ -3412,12 +3424,13 @@ body.dark {
                 }
             }
             .txt {
-                margin-top: 12rem;
+                margin: 12rem 0 0 9rem;
                 position: relative;
                 font-size: 13rem;
                 letter-spacing: -.4rem;
                 @include color(color, tt16);
                 line-height: 18rem;
+                text-indent: -9rem;
                 .btn_reward_tooltip {
                     display: inline-block;
                     margin-top: 1rem;
@@ -4392,7 +4405,7 @@ body.dark {
     }
 
     .benefit_detail {
-        padding: 20rem 20rem 0;
+        padding: 20rem 20rem 136rem;
         .s_membership {
             padding: 40rem 0 183rem;
             border-radius: 24rem;
@@ -4654,8 +4667,12 @@ body.dark {
             }
         }
         .btn_box {
-            margin-top: 40rem;
-            padding: 20rem 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0 20rem 20rem;
+            @include color(background-color, bg7);
         }
     }
 
@@ -4921,7 +4938,7 @@ body.dark {
             }
         }
         .detail {
-            margin: 40rem 0;
+            margin: 48rem 0;
             dt {
                 @include color(color, tt2);
                 font-size: 18rem;
@@ -4986,18 +5003,24 @@ body.dark {
                 }
             }
             .btn_box {
+                padding-top: 23rem;
                 text-align: center;
                 .readmore {
-                    display: none;
-                    width: auto;
-                    padding-right: 18rem;
+                    height: 18rem;
                     text-align: center;
                     font-size: 13rem;
                     line-height: 18rem;
                     @include color(color, tt10);
-                    @include bgImg('../../images/hc/ic_arrow_down.png', '../../images/hc/ic_arrow_down_dm.png');
-                    background-position: center right;
-                    background-size: 12rem 12rem;
+                    span {
+                        display: inline-block;
+                        margin: 2rem 0 0 3rem;
+                        width: 12rem;
+                        height: 12rem;
+                        vertical-align: top;
+                        @include bgImg('../../images/hc/ic_arrow_down.png', '../../images/hc/ic_arrow_down_dm.png');
+                        background-position: center right;
+                        background-size: 12rem 12rem;
+                    }
                 }
             }
         }
@@ -5551,7 +5574,7 @@ body.dark {
                 height: 180rem;
                 vertical-align: middle;
                 transform: translate(80%, 70%);
-                animation: topMove1 1s ease 2s forwards;
+                animation: topMove1 0.5s ease 2s forwards;
                 img {
                     width: 100%;
                 }
@@ -5561,7 +5584,7 @@ body.dark {
                 padding-top: 7rem;
                 vertical-align: middle;
                 transform: translate(-33%, 410%);
-                animation: topMove2 1s ease 2s forwards;
+                animation: topMove2 0.5s ease 2s forwards;
                 .t1 {
                     font-size: 16rem;
                     color: #ccc;
@@ -5586,7 +5609,7 @@ body.dark {
                 filter: blur(20px);
                 z-index: -1;
                 content: '';
-                animation: bgOut 1s ease 2s forwards;
+                animation: bgOut 0.5s ease 2s forwards;
             }
         }
         @keyframes topMove1 {
@@ -5765,7 +5788,7 @@ body.dark {
                                         z-index: -1;
                                         .bubble {
                                             display: inline-block;
-                                            padding: 7rem 7rem 9rem 5rem;
+                                            padding: 9rem 9rem 8rem 7rem;
                                             position: relative;
                                             font-size: 12rem;
                                             letter-spacing: -0.24rem;
