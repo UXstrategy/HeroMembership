@@ -236,7 +236,7 @@ body.dark {
                         border-radius: 20rem;
                         font-weight: 600;
                         font-size: 15rem;
-                        line-height: 40rem;
+                        line-height: 41rem;
                         @include color(color, tt14);
                         text-align: center;
                         &.active {
@@ -716,6 +716,7 @@ body.dark {
                     width: calc(100% - 72rem);
                     height: 42rem;
                     border: 0;
+                    border-radius: 0;
                     border-bottom: 1rem solid;
                     @include color(border-color, ln2);
                     @include color(background-color, bg20);
@@ -732,6 +733,7 @@ body.dark {
                     font-size: 13rem;
                     font-weight: 600;
                     @include color(color, tt3);
+                    line-height: 42rem;
                 }
             }
         }
@@ -762,7 +764,7 @@ body.dark {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
-                        width: 100%;
+                        width: calc(100% - 2rem);
                         height: 100%;
                         padding: 0 20rem;
                         border-radius: 16rem;
@@ -805,7 +807,7 @@ body.dark {
 
     &.popup_announce {
         .pop_body {
-            padding: 0 20rem 20rem;
+            padding: 32rem 20rem 20rem !important;
             p {
                 font-size: 14rem;
                 line-height: 20rem;
@@ -854,7 +856,7 @@ body.dark {
                 }
             }
             .list_dot {
-                margin-top: 18rem;
+                margin-top: 18rem !important;
                 li {
                     position: relative;
                     padding-left: 9rem;
@@ -973,7 +975,7 @@ body.dark {
                             }
                         }
                         .agree_list {
-                            padding: 20rem;
+                            padding: 24rem 20rem 22rem;
                             .custom_chk {
                                 position: relative;
                                 padding: 0 15rem 0 21rem;
@@ -1755,24 +1757,36 @@ body.dark {
             transform: none;
             vertical-align: middle;
             overflow-y: auto;
+            .header_close {
+                position: sticky;
+                top: 10rem;
+                left: calc(100% - 50rem);
+                width: 46rem;
+                height: 46rem;
+                text-align: center;
+                background: #121212;
+                button {
+                    margin-top: 10rem;
+                    width: 24rem;
+                    height: 24rem;
+                    font-size: 0;
+                    line-height: 0;
+                    text-indent: -9999px;
+                    @include bgImg('../../images/hc/ic_close_dm.png', '../../images/hc/ic_close_dm.png');
+                    background-size: 100% 100%;
+                }
+            }
             .pop_header {
+                margin-top: -14rem;
                 position: relative;
-                height: 123rem;
+                height: 91rem;
                 text-align: left;
-                align-items: end;
                 h1 {
                     color: #eee;
                     line-height: 30rem;
                     letter-spacing: -0.55rem;
                 }
-                .header_close {
-                    position: absolute;
-                    top: 20rem;
-                    right: 20rem;
-                    button {
-                        @include bgImg('../../images/hc/ic_close_dm.png', '../../images/hc/ic_close_dm.png');
-                    }
-                }
+                
             }
             .pop_body {
                 padding: 24rem 20rem 0;
@@ -1820,26 +1834,30 @@ body.dark {
                             letter-spacing: -0.45rem;
                         }
                     }
-                }
-                .btm_btns {
-                    padding: 20rem 0;
-                    button {
-                        display: block;
-                        width: 100%;
-                        height: 56rem;
-                        font-size: 18rem;
-                        color: #fff;
-                        font-weight: 600;
-                        text-align: center;
-                        line-height: 56rem;
-                        letter-spacing: -0.45rem;
-                        border-radius: 12rem;
-                        background: linear-gradient(to right, #be8d21 0%, #a20092 100%);
-                        &:disabled {
-                            color: #555;
-                            border-color: #333;
-                            background: #222;
-                        }
+                } 
+            }
+            .btm_btns {
+                position: sticky;
+                bottom: 0;
+                padding: 20rem;
+                background: #121212;
+                z-index: 10;
+                button {
+                    display: block;
+                    width: 100%;
+                    height: 56rem;
+                    font-size: 18rem;
+                    color: #fff;
+                    font-weight: 600;
+                    text-align: center;
+                    line-height: 56rem;
+                    letter-spacing: -0.45rem;
+                    border-radius: 12rem;
+                    background: linear-gradient(to right, #be8d21 0%, #a20092 100%);
+                    &:disabled {
+                        color: #555;
+                        border-color: #333;
+                        background: #222;
                     }
                 }
             }
@@ -2186,7 +2204,7 @@ body.dark {
                     width: 47rem;
                     height: 24rem;
                     font-size: 12rem;
-                    line-height: 24rem;
+                    line-height: 25rem;
                     border-radius: 12rem;
                     &.active {
                         @include color(color, tt3);
@@ -2580,7 +2598,7 @@ body.dark {
         }
         .share {
             position: absolute;
-            display: block;
+            display: none;
             right: 0;
             top: 50%;
             transform: translateY(-50%);
@@ -2852,6 +2870,13 @@ body.dark {
                     }
                 }
             }
+            &.swiper-slide-active {
+                .main_noti {
+                    button {
+                        display: block;
+                    }
+                }
+            }
         }
     }
     .hero_benefit_box {
@@ -3025,7 +3050,7 @@ body.dark {
                     display: inline-block;
                     width: 12rem;
                     height: 12rem;
-                    top: -4rem;
+                    top: -5rem;
                     margin-left: 1rem;
                     font-size: 0;
                     line-height: 0;
@@ -3110,7 +3135,7 @@ body.dark {
                         .tooltip {
                             position: relative;
                             display: inline-block;
-                            top: 4rem;
+                            top: 3rem;
                             vertical-align: top;
                             width: 14rem;
                             height: 14rem;
@@ -3118,6 +3143,7 @@ body.dark {
                             line-height: 0;
                             text-indent: -9999rem;
                             @include bgImg('../../images/hc/ico_tooltip.png', '../../images/hc/ico_tooltip_dm.png');
+                            background-size: 100%;
                         }
                     }
                 }
@@ -3183,7 +3209,7 @@ body.dark {
                             color: #ccc;
                             font-weight: 600;
                             text-align: center;
-                            line-height: 23rem;
+                            line-height: 24rem;
                             border-radius: 4rem;
                             border: 1rem solid #707070;
                             &::before {
@@ -3329,7 +3355,7 @@ body.dark {
                 height: 25rem;
                 margin-bottom: 16rem;
                 padding: 0 10rem;
-                line-height: 25rem;
+                line-height: 27rem;
                 border-radius: 12rem;
                 font-weight: 600;
                 font-size: 12rem;
@@ -3354,7 +3380,7 @@ body.dark {
                         display: block;
                         position: absolute;
                         left: 0;
-                        bottom: 0;
+                        bottom: 1rem;
                         width: 100%;
                         height: 8px;
                         @include color(background-color, bg2);
@@ -3382,7 +3408,7 @@ body.dark {
                     @include color(color, tt3);
                     @include bgImg('../../images/hc/ic_arrow_right.png', '../../images/hc/ic_arrow_right_dm.png');
                     background-size: 9rem 9rem;
-                    background-position: top 4rem right;
+                    background-position: right 2rem;
                 }
             }
             .txt {
@@ -3394,10 +3420,11 @@ body.dark {
                 line-height: 18rem;
                 .btn_reward_tooltip {
                     display: inline-block;
-                    margin-top: 3rem;
+                    margin-top: 1rem;
                     width: 14rem;
                     height: 14rem;
                     @include bgImg('../../images/hc/ico_tooltip.png', '../../images/hc/ico_tooltip.png');
+                    background-size: 100%;
                     vertical-align: top;
                 }
                 .detail_tooltip_area {
@@ -3523,12 +3550,12 @@ body.dark {
                             border-radius: 8rem;
                             color: #eee;
                             font-size: 13rem;
-                            line-height: 43rem;
+                            line-height: 45rem;
                             letter-spacing: -.35rem;
                             box-sizing: border-box;
                             .num {
                                 display: inline-block;
-                                margin:14rem 10rem 0 0;
+                                margin: 13rem 10rem 0 0;
                                 width: 15rem;
                                 height: 16rem;
                                 font-size: 14rem;
@@ -3547,7 +3574,7 @@ body.dark {
                             }
                             .btn_detail_tooltip {
                                 display: inline-block;
-                                margin: 17rem 0 0 4rem;
+                                margin: 15rem 0 0 4rem;
                                 width: 12rem;
                                 height: 12rem;
                                 background: url('../../images/hc/ico_detail_tooltip.png') 0 0 no-repeat;
@@ -3860,7 +3887,7 @@ body.dark {
                                 opacity: 1;
                                 .btn_card_tooltip {
                                     display: inline-block;
-                                    margin-top: 3rem;
+                                    margin-top: 1rem;
                                     width: 12rem;
                                     height: 12rem;
                                     @include bgImg('../../images/hc/ico_detail_tooltip.png', '../../images/hc/ico_detail_tooltip.png');
@@ -3917,7 +3944,7 @@ body.dark {
                                 font-size: 13rem;
                                 color: #fff;
                                 font-weight: 700;
-                                line-height: 32rem;
+                                line-height: 33rem;
                                 border-radius: 16rem;
                                 
                                 &:disabled {
@@ -3932,7 +3959,7 @@ body.dark {
                             }
                             &.complete {
                                 button {
-                                    line-height: 30rem;
+                                    line-height: 31rem;
                                     border: 1rem solid #fff;
                                     background: #061231;
                                 }
@@ -4171,8 +4198,8 @@ body.dark {
         box-sizing: border-box;
         @include color(background-color, bg8);
         dt {
-            padding-left: 32rem;
-            background: url('../../images/hc/ic_coin.png') no-repeat left center;
+            padding: 2rem 0 0 32rem;
+            background: url('../../images/hc/ic_coin.png') no-repeat left top;
             background-size: 24rem 24rem;
             @include color(color, tt3);
             line-height: 24rem;
@@ -4180,7 +4207,7 @@ body.dark {
             font-weight: 600;
         }
         button {
-            padding-right: 20rem;
+            padding: 4rem 20rem 0 0;
             @include color(color, tt3);
             font-weight: bold;
             font-size: 22rem;
@@ -4219,7 +4246,7 @@ body.dark {
     &.benefit_info {
         header {
             padding-bottom: 0;
-            margin-bottom: 9rem;
+            margin-bottom: 12rem;
             h1 {
                 padding-top: 36rem;
                 text-align: center;
@@ -4233,22 +4260,23 @@ body.dark {
             position: relative;
             width: 304rem;
             margin: 0 auto;
+            padding: 5rem 0 3rem;
             @include color(background-color, bg6);
             text-align: center;
             border-radius: 16rem;
             @include color(color, tt10);
             font-size: 13rem;
-            line-height: 32rem;
+            line-height: 24rem;
             &::before {
                 content: '';
                 position: relative;
                 display: inline-block;
                 vertical-align: top;
-                top: 6rem;
                 margin-right: 6rem;
                 width: 20rem;
                 height: 20rem;
-                background: url('../../images/hc/ic_swiper_noti.png') no-repeat 0 0 / 20rem 20rem;
+                background: url('../../images/hc/ic_swiper_noti.png') no-repeat 0 0;
+                background-size: 20rem 20rem;
             }
             span {
                 padding-top: 2rem;
@@ -4294,7 +4322,7 @@ body.dark {
         }
         .info {
             padding: 0 20rem;
-            margin: 42rem 20rem 120rem;
+            margin: 24rem 20rem 120rem;
             border: 1rem solid;
             @include color(border-color, ln3);
             border-radius: 12rem;
@@ -4304,7 +4332,7 @@ body.dark {
                 display: flex;
                 align-items: center;
                 gap: 10rem;
-                height: 70rem;
+                height: 69rem;
                 @include color(color, tt3);
                 font-size: 14rem;
                 line-height: 20rem;
@@ -4355,7 +4383,8 @@ body.dark {
             left: 0;
             right: 0;
             bottom: 0;
-            padding: 20rem;
+            padding: 0 20rem 20rem;
+            @include color(background-color, bg7);
             button {
                 width: 100%;
             }
@@ -4409,14 +4438,15 @@ body.dark {
             line-height: 18rem;
             letter-spacing: -.33rem;
             &::before {
+                margin: 2rem 6rem 0 0;
                 content: '';
                 position: relative;
                 display: inline-block;
                 width: 12rem;
                 height: 12rem;
-                margin-right: 6rem;
                 background: url('../../images/hc/ic_notice.png') no-repeat center center;
                 background-size: 12rem 12rem;
+                vertical-align: top;
             }
         }
         h2 {
@@ -4446,7 +4476,7 @@ body.dark {
                         width: 100%;
                         height: 8rem;
                         left: 0;
-                        bottom: 0;
+                        bottom: 1rem;
                         z-index: -1;
                     }
                 }
@@ -4631,13 +4661,14 @@ body.dark {
 
     &.get_benefit {
         .contents {
-            padding: 20rem;
+            padding: 32rem 20rem 20rem;
         }
         .this_month {
             font-size: 20rem;
             font-weight: bold;
             line-height: 28rem;
             @include color(color, tt2);
+            letter-spacing: -0.4rem;
             span {
                 font-weight: inherit;
                 font-size: inherit;
@@ -4650,11 +4681,12 @@ body.dark {
             padding: 20rem;
             border-radius: 16rem;
             border: 1rem solid;
-            @include color(border-color, ln3);
+            @include color(border-color, ln16);
             &.level {
                 dt {background-image: url(../../images/hc/ic_benefit_reward.png);}
             }
             &.card {
+                margin-top: 10rem;
                 dt {background-image: url(../../images/hc/ic_benefit_card.png);}
             }
             dt {
@@ -4664,7 +4696,7 @@ body.dark {
                 line-height: 23rem;
                 @include color(color, tt2);
                 background-repeat: no-repeat;
-                background-position: center left;
+                background-position: 0 0;
                 background-size: 20rem 20rem;
             }
             dd {
@@ -4704,8 +4736,9 @@ body.dark {
                         @include color(color, tt2);
                         &.price_reward {
                             padding-right: 18rem;
+                            font-size: 15rem;
                             @include bgImg('../../images/hc/ic_arrow_right_thin.png', '../../images/hc/ic_arrow_right_thin_dm.png');
-                            background-position: 100% 55%;
+                            background-position: 100% 2rem;
                             background-size: 14rem 14rem;
                         }
                     }
@@ -4907,8 +4940,9 @@ body.dark {
                         letter-spacing: -.36rem;
                     }
                     .btn_refresh {
-                        margin-left: 4rem;
+                        margin: -3rem 0 0 4rem;
                         @include bgImg('../../images/hc/ic_refresh.png', '../../images/hc/ic_refresh.png', 18rem, 18rem);
+                        vertical-align: top;
                     }
                 }
                 .desc {
@@ -5201,7 +5235,7 @@ body.dark {
                         text-indent: -9999rem;
                         width: 15rem;
                         height: 15rem;
-                        margin-left: 6rem;
+                        margin: -1rem 0 0 3rem;
                         @include bgImg('../../images/hc/ic_refresh2.png', '../../images/hc/ic_refresh2_dm.png');
                         background-size: 15rem 15rem;
                         &.active {
@@ -5524,15 +5558,13 @@ body.dark {
             }
             .top_text {
                 display: inline-block;
+                padding-top: 7rem;
                 vertical-align: middle;
                 transform: translate(-33%, 410%);
                 animation: topMove2 1s ease 2s forwards;
                 .t1 {
                     font-size: 16rem;
                     color: #ccc;
-                    font-weight: 600;
-                    line-height: 24rem;
-                    letter-spacing: -0.4rem;
                 }
                 .t2 {
                     padding-top: 4rem;
@@ -5541,7 +5573,7 @@ body.dark {
                     font-weight: 700;
                     line-height: 40rem;
                     letter-spacing: -0.7rem;
-                    animation: topMove3 0.3s linear 2.3s forwards;
+                    //animation: topMove3 0.3s linear 2.3s forwards;
                 }
             }
             &:after {
@@ -5566,7 +5598,7 @@ body.dark {
         }
         @keyframes topMove2 {
             100% {
-                padding-left: 28rem;
+                padding: 0 0 0 28rem;
                 text-align: left;
                 transform: translate(0, 0);
             }
@@ -5596,7 +5628,7 @@ body.dark {
             transform: translateY(2%);
             animation: detailIn 0.3s ease 2.5s forwards;
             .user_card_desc {
-                padding: 16rem 0;
+                padding: 17rem 0 15rem;
                 font-size: 14rem;
                 text-align: center;
                 letter-spacing: -0.35rem;
@@ -5612,7 +5644,7 @@ body.dark {
             .chapter_area {
                 .section_badge {
                     display: inline-block;
-                    padding: 4rem 11rem 6rem 10rem;
+                    padding: 6rem 11rem 5rem 10rem;
                     font-size: 12rem;
                     color: #fff;
                     text-align: center;
@@ -6168,7 +6200,7 @@ body.dark {
                                     font-size: 0;
                                     .ico {
                                         display: inline-block;
-                                        margin-top: 9rem;
+                                        margin-top: 7rem;
                                         width: 28rem;
                                         height: 28rem;
                                         background-size: 28rem 28rem;
@@ -6180,15 +6212,15 @@ body.dark {
                                             @include bgImg('../../images/hc/ico_special_benefit2.png', '../../images/hc/ico_special_benefit2.png');
                                         }
                                         &.ico3 {
-                                            margin-top: -2rem;
+                                            margin-top: -3rem;
                                             @include bgImg('../../images/hc/ico_special_benefit3.png', '../../images/hc/ico_special_benefit3.png');
                                         }
                                         &.ico4 {
-                                            margin-top: -2rem;
+                                            margin-top: -4rem;
                                             @include bgImg('../../images/hc/ico_special_benefit4.png', '../../images/hc/ico_special_benefit4.png');
                                         }
                                         &.ico5 {
-                                            margin-top: -2rem;
+                                            margin-top: -4rem;
                                             @include bgImg('../../images/hc/ico_special_benefit5.png', '../../images/hc/ico_special_benefit5.png');
                                         }
                                     }
@@ -6264,11 +6296,22 @@ body.dark {
                             }
                             .card_thumb {
                                 display: inline-block;
-                                padding-top: 16rem;
+                                margin-top: 16rem;
+                                position: relative;
                                 width: 55rem;
-                                box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.28);
+                                height: 88rem;
                                 img {
                                     width: 100%;
+                                }
+                                &:after {
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    content: '';
+                                    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.28);
                                 }
                             }
                             .card_class {
