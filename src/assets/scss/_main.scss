@@ -1766,40 +1766,37 @@ body.dark {
             background: #121212;
             transform: none;
             vertical-align: middle;
-            overflow-y: auto;
-            .header_close {
-                position: sticky;
-                top: 10rem;
-                left: calc(100% - 50rem);
-                width: 46rem;
-                height: 46rem;
-                text-align: center;
-                background: #121212;
-                button {
-                    margin-top: 10rem;
-                    width: 24rem;
-                    height: 24rem;
-                    font-size: 0;
-                    line-height: 0;
-                    text-indent: -9999px;
-                    @include bgImg('../../images/hc/ic_close_dm.png', '../../images/hc/ic_close_dm.png');
-                    background-size: 100% 100%;
-                }
-            }
             .pop_header {
-                margin-top: -14rem;
                 position: relative;
-                height: 91rem;
+                height: 123rem;
                 text-align: left;
+                align-items: end;
                 h1 {
                     color: #eee;
                     line-height: 30rem;
                     letter-spacing: -0.55rem;
                 }
-                
+                .header_close {
+                    position: absolute;
+                    top: 20rem;
+                    right: 20rem;
+                    text-align: center;
+                    background: #121212;
+                    button {
+                        width: 24rem;
+                        height: 24rem;
+                        font-size: 0;
+                        line-height: 0;
+                        text-indent: -9999px;
+                        @include bgImg('../../images/hc/ic_close_dm.png', '../../images/hc/ic_close_dm.png');
+                        background-size: 100% 100%;
+                    }
+                }
             }
             .pop_body {
                 padding: 24rem 20rem 0;
+                height: 310rem;
+                overflow-y: auto;
                 .stamp_date {
                     font-size: 13rem;
                     color: #999;
@@ -3446,7 +3443,8 @@ body.dark {
                     position: absolute;
                     top: 40rem;
                     right: 0;
-                    width: 100%;
+                    width: calc(100% + 10rem);
+                    text-indent: 0;
                     border: 1px solid #ddd;
                     border-radius: 8rem;
                     background: #fff;
@@ -5524,7 +5522,7 @@ body.dark {
         height: calc(100vh - 96rem);
         overflow: hidden;
         z-index: 1;
-        animation: contentVisible 0.1s ease 2.5s forwards;
+        animation: contentVisible 0.1s ease 1s forwards;
         &.dodo_legendary {
             .cont_top {
                 .top_img {
@@ -5574,7 +5572,7 @@ body.dark {
                 height: 180rem;
                 vertical-align: middle;
                 transform: translate(80%, 70%);
-                animation: topMove1 0.5s ease 2s forwards;
+                animation: topMove1 0.3s ease 1s forwards;
                 img {
                     width: 100%;
                 }
@@ -5584,7 +5582,7 @@ body.dark {
                 padding-top: 7rem;
                 vertical-align: middle;
                 transform: translate(-33%, 410%);
-                animation: topMove2 0.5s ease 2s forwards;
+                animation: topMove2 0.3s ease 1s forwards;
                 .t1 {
                     font-size: 16rem;
                     color: #ccc;
@@ -5609,7 +5607,7 @@ body.dark {
                 filter: blur(20px);
                 z-index: -1;
                 content: '';
-                animation: bgOut 0.5s ease 2s forwards;
+                animation: bgOut 0.3s ease 1s forwards;
             }
         }
         @keyframes topMove1 {
@@ -5640,7 +5638,7 @@ body.dark {
                 left: 23rem;
                 width: 110rem;
                 height: 120rem;
-                opacity: 0.5;
+                opacity: 0.8;
             }
         }
         
@@ -5649,7 +5647,7 @@ body.dark {
             opacity: 0;
             visibility: hidden;
             transform: translateY(2%);
-            animation: detailIn 0.3s ease 2.5s forwards;
+            animation: detailIn 0.3s ease 1s forwards;
             .user_card_desc {
                 padding: 17rem 0 15rem;
                 font-size: 14rem;
