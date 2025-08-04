@@ -2646,7 +2646,7 @@ body.dark {
                     min-width: 62rem;
                     height: 25rem;
                     margin: 0 auto;
-                    line-height: 25rem;
+                    line-height: 26rem;
                     letter-spacing: -0.3rem;
                     text-align: center;
                     border-radius: 25rem;
@@ -2670,7 +2670,7 @@ body.dark {
                         display: block;
                         font-size: 14rem;
                         @include color(color, tt10);
-                        font-weight: 300;
+                        font-weight: 400;
                         line-height: 29rem;
                     }
                 }
