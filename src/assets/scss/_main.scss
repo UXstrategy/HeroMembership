@@ -198,6 +198,154 @@ body.dark {
         transition: all 0.5s ease-in-out;
     }
 
+    &.popup_tally {
+        .contents {
+            padding: 12rem 20rem 48rem;
+            p {
+                font-size: 14rem;
+                @include color(color, tt10);
+                line-height: 20rem;
+                letter-spacing: -0.35rem;
+            }
+            dl {
+                dt {
+                    margin: 40rem 0 10rem;
+                    @include color(color, tt2);
+                    font-size: 18rem;
+                    font-weight: bold;
+                    letter-spacing: -0.45rem
+                }
+                dd {
+                    @include color(color, tt2);
+                    font-size: 14rem;
+                    line-height: 20rem;
+                    letter-spacing: -0.35rem;
+                    .box {
+                        margin-top: 20rem;
+                        padding: 20rem;
+                        font-size: 14rem;
+                        @include color(color, tt2);
+                        line-height: 20rem;
+                        letter-spacing: -0.35rem;
+                        border-radius: 16rem;
+                        @include color(background-color, bg22);
+                    }
+                    span {
+                        &.dot {
+                            display: block;
+                            margin-top: 8rem;
+                            position: relative;
+                            padding-left: 10rem;
+                            font-size: 12rem;
+                            line-height: 18rem;
+                            letter-spacing: -.3rem;
+                            @include color (color, tt13);
+                            &::before {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                width: 4rem;
+                                height: 4rem;
+                                left: 0;
+                                top: 7rem;
+                                border-radius: 50%;
+                                background-color: #bbb;
+                                opacity: .4;
+                                font-size: 12px;
+                                line-height: 18rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .txt_list {
+                padding-top: 40rem;
+                li {
+                    margin-top: 12rem;
+                    padding-left: 11rem;
+                    position: relative;
+                    font-size: 14rem;
+                    @include color (color, tt2);
+                    line-height: 20rem;
+                    letter-spacing: -0.35rem;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    &:before {
+                        position: absolute;
+                        top: 8rem;
+                        left: 0;
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 25rem;
+                        @include color (background-color, bg18);
+                        content: '';
+                    }
+                }
+                .desc {
+                    margin: 13rem 0 0 12rem;
+                    font-size: 12rem;
+                    @include color (color, tt15);
+                    line-height: 18rem;
+                    letter-spacing: -0.3rem;
+                    text-indent: -13rem;
+                }
+            }
+            .thanks {
+                padding-top: 40rem;
+                font-size: 14rem;
+                @include color (color, tt14);
+                line-height: 20rem;
+                letter-spacing: -0.35rem;
+            }
+            .input_wrap {
+                position: relative;
+                margin-top: 40rem;
+                padding-left: 32rem;
+                input {
+                    width: 24rem;
+                    height: 24rem;
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    top: 0;
+                    margin: 0;
+                    appearance: none;
+                    border: none;
+                    background: url('../../images/hc/ic_check.png') no-repeat 0 0 / 24rem 24rem;
+                    &:checked {
+                        background-image: url('../../images/hc/ic_checked.png');
+                    }
+                }
+                label {
+                    font-size: 16rem;
+                    line-height: 24rem;
+                    font-weight: bold;
+                    @include color(color, tt2);
+                }
+            }
+            .btn_box {
+                padding: 0 20rem 20rem;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                @include color(background-color, bg7);
+                button {
+                    width: 100%;
+                    height: 56rem;
+                    font-size: 18rem;
+                    @include color(color, tt11);
+                    font-weight: 600;
+                    text-align: center;
+                    border: 0;
+                    border-radius: 16rem;
+                    @include color(background-color, bg15);
+                }
+            }
+        }
+    }
+
     &.popup_benefit {
         .pop_header {
             .tooltip_box {
@@ -1081,7 +1229,8 @@ body.dark {
     }
 
     &.popup_agree,
-    &.popup_membership_note {
+    &.popup_membership_note,
+    &.popup_tally {
         transform: translateY(105%);
         transition: transform 0.5s ease;
         z-index: 100;
@@ -5060,153 +5209,7 @@ body.dark {
         }
     }
 
-    &.tally {
-        .contents {
-            padding: 12rem 20rem 112rem;
-            p {
-                font-size: 14rem;
-                @include color(color, tt10);
-                line-height: 20rem;
-                letter-spacing: -0.35rem;
-            }
-            dl {
-                dt {
-                    margin: 40rem 0 10rem;
-                    @include color(color, tt2);
-                    font-size: 18rem;
-                    font-weight: bold;
-                    letter-spacing: -0.45rem
-                }
-                dd {
-                    @include color(color, tt2);
-                    font-size: 14rem;
-                    line-height: 20rem;
-                    letter-spacing: -0.35rem;
-                    .box {
-                        margin-top: 20rem;
-                        padding: 20rem;
-                        font-size: 14rem;
-                        @include color(color, tt2);
-                        line-height: 20rem;
-                        letter-spacing: -0.35rem;
-                        border-radius: 16rem;
-                        @include color(background-color, bg22);
-                    }
-                    span {
-                        &.dot {
-                            display: block;
-                            margin-top: 8rem;
-                            position: relative;
-                            padding-left: 10rem;
-                            font-size: 12rem;
-                            line-height: 18rem;
-                            letter-spacing: -.3rem;
-                            @include color (color, tt13);
-                            &::before {
-                                content: '';
-                                display: block;
-                                position: absolute;
-                                width: 4rem;
-                                height: 4rem;
-                                left: 0;
-                                top: 7rem;
-                                border-radius: 50%;
-                                background-color: #bbb;
-                                opacity: .4;
-                                font-size: 12px;
-                                line-height: 18rem;
-                            }
-                        }
-                    }
-                }
-            }
-            .txt_list {
-                padding-top: 40rem;
-                li {
-                    margin-top: 12rem;
-                    padding-left: 11rem;
-                    position: relative;
-                    font-size: 14rem;
-                    @include color (color, tt2);
-                    line-height: 20rem;
-                    letter-spacing: -0.35rem;
-                    &:first-child {
-                        margin-top: 0;
-                    }
-                    &:before {
-                        position: absolute;
-                        top: 8rem;
-                        left: 0;
-                        width: 3rem;
-                        height: 3rem;
-                        border-radius: 25rem;
-                        @include color (background-color, bg18);
-                        content: '';
-                    }
-                }
-                .desc {
-                    margin: 13rem 0 0 12rem;
-                    font-size: 12rem;
-                    @include color (color, tt15);
-                    line-height: 18rem;
-                    letter-spacing: -0.3rem;
-                    text-indent: -13rem;
-                }
-            }
-            .thanks {
-                padding-top: 40rem;
-                font-size: 14rem;
-                @include color (color, tt14);
-                line-height: 20rem;
-                letter-spacing: -0.35rem;
-            }
-            .input_wrap {
-                position: relative;
-                margin-top: 40rem;
-                padding-left: 32rem;
-                input {
-                    width: 24rem;
-                    height: 24rem;
-                    position: absolute;
-                    display: block;
-                    left: 0;
-                    top: 0;
-                    margin: 0;
-                    appearance: none;
-                    border: none;
-                    background: url('../../images/hc/ic_check.png') no-repeat 0 0 / 24rem 24rem;
-                    &:checked {
-                        background-image: url('../../images/hc/ic_checked.png');
-                    }
-                }
-                label {
-                    font-size: 16rem;
-                    line-height: 24rem;
-                    font-weight: bold;
-                    @include color(color, tt2);
-                }
-            }
-            .btn_box {
-                padding: 0 20rem 20rem;
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                @include color(background-color, bg7);
-                button {
-                    width: 100%;
-                    height: 56rem;
-                    font-size: 18rem;
-                    @include color(color, tt11);
-                    font-weight: 600;
-                    text-align: center;
-                    border: 0;
-                    border-radius: 16rem;
-                    @include color(background-color, bg15);
-                }
-            }
-        }
-    }
+    
 
     &.notice {
         .contents {

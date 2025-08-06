@@ -10,52 +10,57 @@
     <link rel="stylesheet" href="../assets/css/hc/swiper-bundle.min.css">
 </head>
 <body>
-    <div class="wrap tally">
-        <header>
-            <h1>해외주식 히어로멤버십<br>거래금액 집계 기준 변경 안내</h1>
-            <div class="close"><button type="button">닫기</button></div>
-        </header>
-        <div class="contents">
-            <p>키움증권을 이용해 주시는 고객 여러분께<br>진심으로 감사드립니다. 해외주식 히어로멤버십<br>거래금액 집계 기준이 변경되어 사전 안내드립니다.</p>
-            <dl>
-                <dt>변경사항</dt>
-                <dd>
-                    공정거래 질서 저해 행위 및 이상 거래 징후가 예상된<br>종목은 히어로멤버십 등급 산정 시 제외<br>(누적거래금액 불포함)
-                    <div class="box">[리워드 거래금액 제외 종목 티커]<br>BIL, BILS, BILZ, BOND, BOXX, BSV, CLIP, GBIL, GSY, IBTF, IBTG, ICSH, IEI, IGSB, JPST, MINT, OBIL, PULS, SGOV, SHV, SHY, SHYG, SPTS, SPT, STIP, TBIL, TBLL, TFLO, TIP, TUA, ULST, USFR, VGIT, VGLT, VGSH, VUSB, XBIL</div>
-                </dd>
-                <dt>적용일</dt>
-                <dd>
-                    2025년 4월 1일 프리장 거래 금액부터 적용
-                    <span class="dot">리워드 거래금액 제외 종목은 25년 5월 해외주식 히어로멤버십<br>등급 선정 시 포함되지 않습니다.</span>
-                </dd>
-            </dl>
-            <div class="input_wrap">
-                <input type="checkbox" name="" id="chk">
-                <label for="chk">위 변경 사항을 확인하였습니다.</label>
-            </div>
-            <div class="btn_box"><button type="button" class="btn_ok">확인</button></div>
-        </div>
-    </div>
-
-    <div class="popup dialog dialog_agree_check none">
-        <div class="dim"></div>
-        <div class="popup_container">
-            <div class="pop_body">
-                <p class="notitle">좌측 하단 변경사항 체크박스 체크 후<br>확인버튼을 클릭해주세요.</p>
-                <div class="btn_box w100">
-                    <button type="button" class="btn_ok" onClick="popup.close('dialog_agree_check');">확인</button>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_tally')">팝업열기</button>
+        <div class="popup tally popup_tally active">
+            <div class="con">
+                <header>
+                    <h1>해외주식 히어로멤버십<br>거래금액 집계 기준 변경 안내</h1>
+                    <div class="close"><button type="button" onClick="popup.close('popup_tally')">닫기</button></div>
+                </header>
+                <div class="contents">
+                    <p>키움증권을 이용해 주시는 고객 여러분께<br>진심으로 감사드립니다. 해외주식 히어로멤버십<br>거래금액 집계 기준이 변경되어 사전 안내드립니다.</p>
+                    <dl>
+                        <dt>변경사항</dt>
+                        <dd>
+                            공정거래 질서 저해 행위 및 이상 거래 징후가 예상된<br>종목은 히어로멤버십 등급 산정 시 제외<br>(누적거래금액 불포함)
+                            <div class="box">[리워드 거래금액 제외 종목 티커]<br>BIL, BILS, BILZ, BOND, BOXX, BSV, CLIP, GBIL, GSY, IBTF, IBTG, ICSH, IEI, IGSB, JPST, MINT, OBIL, PULS, SGOV, SHV, SHY, SHYG, SPTS, SPT, STIP, TBIL, TBLL, TFLO, TIP, TUA, ULST, USFR, VGIT, VGLT, VGSH, VUSB, XBIL</div>
+                        </dd>
+                        <dt>적용일</dt>
+                        <dd>
+                            2025년 4월 1일 프리장 거래 금액부터 적용
+                            <span class="dot">리워드 거래금액 제외 종목은 25년 5월 해외주식 히어로멤버십<br>등급 선정 시 포함되지 않습니다.</span>
+                        </dd>
+                    </dl>
+                    <div class="input_wrap">
+                        <input type="checkbox" name="" id="chk">
+                        <label for="chk">위 변경 사항을 확인하였습니다.</label>
+                    </div>
+                    <div class="btn_box"><button type="button" class="btn_ok">확인</button></div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="popup dialog dialog_agree_complete none">
-        <div class="dim"></div>
-        <div class="popup_container">
-            <div class="pop_body">
-                <p class="notitle">해외주식 히어로멤버십 거래금액 집계<br>기준 변경사항을 확인하였습니다.</p>
-                <div class="btn_box w100">
-                    <button type="button" class="btn_ok" onClick="popup.close('dialog_agree_complete');">확인</button>
+        <div class="popup dialog dialog_agree_check none">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_body">
+                    <p class="notitle">좌측 하단 변경사항 체크박스 체크 후<br>확인버튼을 클릭해주세요.</p>
+                    <div class="btn_box w100">
+                        <button type="button" class="btn_ok" onClick="popup.close('dialog_agree_check');">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup dialog dialog_agree_complete none">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_body">
+                    <p class="notitle">해외주식 히어로멤버십 거래금액 집계<br>기준 변경사항을 확인하였습니다.</p>
+                    <div class="btn_box w100">
+                        <button type="button" class="btn_ok" onClick="popup.close('dialog_agree_complete');">확인</button>
+                    </div>
                 </div>
             </div>
         </div>
