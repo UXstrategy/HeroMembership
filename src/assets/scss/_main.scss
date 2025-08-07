@@ -1057,10 +1057,10 @@ body.dark {
                 flex-direction: column;
             }
             p {
-                color: #fff;
+                color: #fff !important;
                 font-weight: bold;
-                font-size: 24rem;
-                line-height: 34rem;
+                font-size: 24rem !important;
+                line-height: 34rem !important;
                 &:last-child {
                     font-size: 26rem;
                 }
@@ -1073,7 +1073,7 @@ body.dark {
                 }
             }
             .btn_close {
-                margin-top: 40rem;
+                margin-top: 4rem;
                 button {
                     display: block;
                     width: 30rem;
