@@ -2413,7 +2413,6 @@ body.dark {
                 .date {
                     font-size: 13rem;
                     color: #fff;
-                    font-weight: 700;
                     &:before {
                         padding: 0 2rem;
                         content: '·';
@@ -2477,6 +2476,7 @@ body.dark {
                         span {
                             font-size: 12rem;
                             color: #dbbd7a;
+                            font-weight: 700;
                         }
                     }
                 }
@@ -2515,6 +2515,7 @@ body.dark {
                         span {
                             font-size: 12rem;
                             color: #ef9be1;
+                            font-weight: 700;
                         }
                     }
                 } 
@@ -2556,9 +2557,57 @@ body.dark {
                     }
                     .desc {
                         margin-top: -22rem;
+                        position: relative;
                         font-size: 13rem;
                         line-height: 16rem;
                         opacity: 1;
+                        .btn_card_tooltip {
+                            display: inline-block;
+                            margin-top: 1rem;
+                            width: 12rem;
+                            height: 12rem;
+                            @include bgImg('../../images/hc/ico_detail_tooltip.png', '../../images/hc/ico_detail_tooltip.png');
+                            vertical-align: top;
+                        }
+                        .detail_tooltip_area {
+                            display: none;
+                            padding: 16rem;
+                            position: absolute;
+                            top: 50rem;
+                            left: 14rem;
+                            width: 250%;
+                            text-align: left;
+                            border: 1px solid #333;
+                            border-radius: 8rem;
+                            background: #121212;
+                            box-sizing: border-box;
+                            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+                            z-index: 10;
+                            .tooltip_title {
+                                font-size: 15rem;
+                                color: #ccc;
+                                font-weight: 600;
+                                line-height: 20rem;
+                                letter-spacing: -.38rem;
+                            }
+                            .tooltip_txt {
+                                padding-top: 8rem;
+                                font-size: 14rem;
+                                color: #999;
+                                font-weight: 400;
+                                line-height: 18rem;
+                                letter-spacing: -.35rem;
+                            }
+                            .btn_tooltip_close {
+                                position: absolute;
+                                top: 19rem;
+                                right: 14rem;
+                                width: 11rem;
+                                height: 10rem;
+                                background: url(../../images/hc/ico_tooltip_close_gray.png);
+                                background-size: 11rem auto;
+                            }
+                        }
                     }
                 }
                 &.type_btn {
@@ -2618,43 +2667,42 @@ body.dark {
                     height: 40rem;
                     @include bgImg('../../images/hc/ico_star_off.png', '../../images/hc/ico_star_off.png');
                     &.star1 {
-                        top: 33rem;
-                        left: 180rem;
+                        top: 32rem;
+                        left: 110rem;
+                        transform: rotate(-30deg);
                     }
                     &.star2 {
-                        top: 51rem;
-                        left: 222rem;
-                        transform: rotate(45deg);
+                        top: 33rem;
+                        left: 187rem;
+                        transform: rotate(19deg);
                     }
                     &.star3 {
-                        top: 88rem;
-                        left: 243rem;
-                        transform: rotate(110deg);
+                        top: 75rem;
+                        left: 238rem;
+                        transform: rotate(60deg);
                     }
                     &.star4 {
-                        top: 140rem;
-                        left: 232rem;
-                        transform: rotate(70deg);
+                        top: 157rem;
+                        left: 216rem;
                     }
                     &.star5 {
-                        top: 188rem;
-                        left: 46rem;
-                        transform: rotate(-45deg);
+                        top: 180rem;
+                        left: 56rem;
+                        transform: rotate(-30deg);
                     }
                     &.star6 {
-                        top: 222rem;
-                        left: 22rem;
-                        transform: rotate(75deg);
+                        top: 247rem;
+                        left: 20rem;
+                        transform: rotate(52deg);
                     }
                     &.star7 {
-                        top: 275rem;
-                        left: 28rem;
-                        transform: rotate(20deg);
+                        top: 307rem;
+                        left: 65rem;
+                        transform: rotate(-23deg);
                     }
                     &.star8 {
-                        top: 306rem;
-                        left: 62rem;
-                        transform: rotate(-30deg);
+                        top: 312rem;
+                        left: 145rem;
                     }
                 }
                 &.type_flower {
@@ -2675,11 +2723,11 @@ body.dark {
                     }
                     &.flower1 {
                         top: 150rem;
-                        left: 170rem;
+                        left: 114rem;
                     }
                     &.flower2 {
                         top: 288rem;
-                        left: 92rem;
+                        left: 195rem;
                     }
                 }
             }
@@ -4825,7 +4873,7 @@ body.dark {
 
     &.get_benefit {
         .contents {
-            padding: 32rem 20rem 20rem;
+            padding: 32rem 20rem 40rem;
         }
         .this_month {
             font-size: 20rem;
