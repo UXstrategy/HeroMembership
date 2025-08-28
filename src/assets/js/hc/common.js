@@ -167,7 +167,7 @@ const popup = (function(){
       el.removeClass("active");
       setTimeout(function(){
           el.addClass('none');
-          if ($('.popup.active').length <= 1) {
+          if ($('.popup.active').length < 1) {
               $("body").removeClass('non_scroll');
           }
       }, 500);

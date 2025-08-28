@@ -10,33 +10,38 @@
     <link rel="stylesheet" href="../assets/css/hc/swiper-bundle.min.css">
 </head>
 <body>
-    <div class="wrap tally">
-        <header>
-            <h1>영국 USD종목 거래 오픈!<br>해외주식 히어로멤버십<br>선정 기준 안내</h1>
-            <div class="close"><button type="button">닫기</button></div>
-        </header>
-        <div class="contents">
-            <p>키움증권을 이용해 주시는 고객 여러분께<br>진심으로 감사드립니다.<br>영국 USD종목 거래가 오픈 되어, 영국주식 거래 약정도<br>히어로멤버십 거래금액 집계 기준으로 확대됩니다.</p>
-            <div class="txt_list">
-                <ul>
-                    <li>영국 ETP (ETF/ETC/ETN) 종목 및 일반 종목 체결금액 히어로멤버십 등급 산정을 위한 거래금액에 포함</li>
-                    <li>영국주식 무료 수수료 적용 체결금액도 히어로멤버십 산정금액에 포함 (~8/31 까지 한시 적용)</li>
-                    <li>적용월 : 25년 6월 체결금액부터 적용</li>
-                </ul>
-                <p class="desc">※ 본 서비스에 제시하는 등급 산정 기준은 고객 공지 후<br>변경될 수 있습니다.</p>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_tally')">팝업열기</button>
+        <div class="popup tally popup_tally active">
+            <div class="con">
+                <header>
+                    <h1>영국 USD종목 거래 오픈!<br>해외주식 히어로멤버십<br>선정 기준 안내</h1>
+                    <div class="close"><button type="button" onClick="popup.close('popup_tally')">닫기</button></div>
+                </header>
+                <div class="contents">
+                    <p>키움증권을 이용해 주시는 고객 여러분께<br>진심으로 감사드립니다.<br>영국 USD종목 거래가 오픈 되어, 영국주식 거래 약정도<br>히어로멤버십 거래금액 집계 기준으로 확대됩니다.</p>
+                    <div class="txt_list">
+                        <ul>
+                            <li>영국 ETP (ETF/ETC/ETN) 종목 및 일반 종목 체결금액 히어로멤버십 등급 산정을 위한 거래금액에 포함</li>
+                            <li>영국주식 무료 수수료 적용 체결금액도 히어로멤버십 산정금액에 포함 (~12/31 까지 한시 적용)</li>
+                            <li>적용월 : 25년 6월 체결금액부터 적용</li>
+                        </ul>
+                        <p class="desc">※ 본 서비스에 제시하는 등급 산정 기준은 고객 공지 후<br>변경될 수 있습니다.</p>
+                    </div>
+                    <p class="thanks">감사합니다.</p>
+                    <div class="btn_box"><button type="button" class="btn_ok">확인</button></div>
+                </div>
             </div>
-            <p class="thanks">감사합니다.</p>
-            <div class="btn_box"><button type="button" class="btn_ok">확인</button></div>
         </div>
-    </div>
 
-    <div class="popup dialog dialog_agree_check none">
-        <div class="dim"></div>
-        <div class="popup_container">
-            <div class="pop_body">
-                <p class="notitle">좌측 하단 변경사항 체크박스 체크 후<br>확인버튼을 클릭해주세요.</p>
-                <div class="btn_box w100">
-                    <button type="button" class="btn_ok">확인</button>
+        <div class="popup dialog dialog_agree_check none">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_body">
+                    <p class="notitle">좌측 하단 변경사항 체크박스 체크 후<br>확인버튼을 클릭해주세요.</p>
+                    <div class="btn_box w100">
+                        <button type="button" class="btn_ok">확인</button>
+                    </div>
                 </div>
             </div>
         </div>
