@@ -1864,7 +1864,7 @@ body.dark {
                                     }
                                     .bagde {
                                         display: inline-block;
-                                        padding: 2rem 9rem 3rem 8rem;
+                                        padding: 3rem 9rem 2rem 8rem;
                                         font-size: 11rem;
                                         font-weight: 500;
                                         letter-spacing: -0.28rem;
@@ -1909,7 +1909,7 @@ body.dark {
                                     @include bgImg('../../images/hc/ico_detail_more.png', '../../images/hc/ico_detail_more_dm.png');
                                     background-size: 12rem 12rem;
                                     background-repeat: no-repeat;
-                                    background-position: right 50%;
+                                    background-position: right 2rem;
                                     z-index: 2;
                                 }
                             }
@@ -2067,7 +2067,7 @@ body.dark {
                                 @include bgImg('../../images/hc/ico_select_refresh.png', '../../images/hc/ico_select_refresh_dm.png');
                                 background-size: 12rem 12rem;
                                 background-repeat:no-repeat;
-                                background-position: 0 50%;
+                                background-position: 0 2rem;
                             }
                         }
                     }
@@ -2089,7 +2089,7 @@ body.dark {
                             }
                             .prd_class {
                                 display: inline-block;
-                                padding: 2rem 8rem 3rem 8rem;
+                                padding: 3rem 8rem 2rem 8rem;
                                 font-size: 11rem;
                                 font-weight: 500;
                                 letter-spacing: -0.28rem;
@@ -2985,9 +2985,7 @@ body.dark {
                 } 
             }
             .btm_btns {
-                position: sticky;
-                bottom: 0;
-                padding: 20rem;
+                padding: 0 20rem 20rem;
                 background: #121212;
                 z-index: 10;
                 button {
