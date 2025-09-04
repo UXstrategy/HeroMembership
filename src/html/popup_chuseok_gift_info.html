@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/hc/default.css">
+    <link rel="stylesheet" href="../assets/css/hc/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_chuseok_gift_info');">팝업열기</button>
+
+        <div class="popup bottomsheet popup_chuseok_gift_info active">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>다가오는 추석,<br>고마운 마음을 담아 준비했어요!</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('popup_chuseok_gift_info');">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <p class="img_chuseok_visual"></p>
+                    <dl class="gift_info">
+                        <dt>히어로 멤버십 고객에게만<br>제공되는 특별한 추석 선물</dt>
+                        <dd>
+                            <p class="txt">최근 3개월간 최대 등급이 SS등급 이상인 경우</p>
+                        </dd>
+                    </dl>
+                    <div class="btn_box"><button type="button" class="btn_ok">선물 받으러 가기</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+    
+    <script src="../assets/js/hc/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/hc/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/hc/common.js"></script>
+</body>
+</html>

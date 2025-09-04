@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/hc/default.css">
+    <link rel="stylesheet" href="../assets/css/hc/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_address_search')">팝업열기</button>
+        
+        <div class="popup popup_address_search active">
+            <div class="con">
+                <header class="pop_header">
+                    <button type="button" class="sub-close popup_header_close">팝업 닫기</button>
+                </header>
+                <div class="pop_body">
+                    <div class="pop_content">
+                        <div class="addr_srch_tab">
+                            <ul>
+                                <li class="on"><button type="button">도로명주소</button></li>
+                                <li><button type="button">지번주소</button></li>
+                            </ul>
+                        </div>
+                        <div class="srch_form">
+                            <p class="input_box"><input type="text" placeholder="예) 의사당대로 96 또는 TP타워"></p>
+                            <button class="btn_srch" type="button">검색</button>
+                        </div>
+                        <div class="srch_data_none">
+                            <p class="t1">검색 결과가 존재하지 않습니다.</p>
+                            <p class="t2">주소 형식을 확인해 주세요.<br>예) xx로 1번길 1-1 / oo로 2 / 건물명</p>
+                        </div>
+
+                        <!-- 검색 결과 리스트
+                        <div class="srch_after_area" style="display: none;">
+                            <div class="srch_after_text">
+                                <p>해당하는 주소를 선택해주세요.</p>
+                            </div>
+                            <div class="addr_scroll_area">
+                                <ul>
+                                    <li>
+                                        <p class="addr_num">04031</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 5-0~9-1</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">03995</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 6-0~8-0</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">03992</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 12-0~34-0</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">04001</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 25-0~31-0</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">04000</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 35-0~47-0</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">03991</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 38-1~46-1</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">03989</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 48-0~52-6</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">03999</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 51</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">03986</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 52-0~64-1</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">03999</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 55-0~69-7</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">03967</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 73-0~81-0 두줄 넘어갔을 때 텍스트</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">04001</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 25-0~31-0</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">04000</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 35-0~47-0</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">03991</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 38-1~46-1</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">03989</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 48-0~52-6</p>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">03999</p>
+                                        <p class="addr_info">서울특별시 마포구 월드컵북로 51</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div><!-- //popup_chuseok_gift_list -->
+
+    </div><!-- //wrap -->
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+
+    <!-- Script -->
+    <script src="../assets/js/hc/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/hc/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/hc/common.js"></script>
+    <script>
+        $('.addr_srch_tab').find('button').on('click', function(){
+            $('.addr_srch_tab').find('li').removeClass('on');
+            $(this).parent().addClass('on');
+        });
+    </script>
+</body>
+
+</html>

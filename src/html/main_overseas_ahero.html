@@ -40,7 +40,7 @@
                     </p>
                     <div class="card">
                         <p class="level">이번달 등급</p>
-                        <p class="tit">A<span>a Hero</span></p>
+                        <p class="tit">A<span>A Hero</span></p>
                         <div class="benefit_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                     </div>
                 </li>
@@ -67,7 +67,7 @@
                             <div class="benefit_btn my_btn"><button type="button" onclick="popup.open('popup_benefit');">등급별 혜택 안내</button></div>
                         </div>
                         <div class="card back purple">
-                            <p class="name">히어로 멤버쉽 전용 신용카드 <span>프리미엄 B카드</span></p>
+                            <p class="name">히어로멤버 전용 신용카드 <span>Super HERO카드</span></p>
                             <div class="apply_btn"><button type="button">혜택 상세 보고 신청하러가기</button></div>
                         </div>
                     </div>
@@ -150,14 +150,13 @@
         <ol class="benefit_list">
             <li class="premium">
                 <!-- 카드 발급 전 -->
-                <div class="card_issuance card_issuance_before" >
+                <div class="card_issuance card_issuance_before">
                     <p class="benefit">혜택 1</p>
                     <p class="text">히어로멤버를 위한</p>
                     <p class="tit">키움만의 프리미엄<br><span>신용카드가 출시됐어요!</span></p>
                     <dl class="pre_benefit a">
                         <dt class="card_iss_title">
-                            <p class="title_a"><img src="../assets/images/hc/tit_premium_a.png" alt="히어로 신한카드 아무나 가질 수 없는 특별함 키움 VVIP는 달라요."></p>
-                            <p class="title_b"><img src="../assets/images/hc/tit_premium_b.png" alt="히어로 신한카드 키움 VIP 히어로라면, 놓칠 수 없는 빛나는 특권"></p>
+                            <p class="title">히어로 신한카드</p>
                         </dt>
                         <dd>
                             <div class="premium_card swiper-container">
@@ -174,7 +173,7 @@
                                 <div class="swiper-pagination"></div>
                             </div>
                             <div class="box a">
-                                <p class="tit">70만원 연회비?<br>연회비는 저희가 낼게요</p>
+                                <p class="tit">70만원 연회비?<br>연회비는 저희가 드릴게요</p>
                                 <ul class="detail">
                                     <li>
                                         <span class="num num1"></span>카드 바우처 상품권 40만원 (연1회) <span class="btn_detail_tooltip"></span>
@@ -195,7 +194,7 @@
                                 <div class="btn_wrapper"><button type="button">최대 70만원 혜택의 카드 자세히보기</button></div>
                             </div>
                             <div class="box b" style="display:none;">
-                                <p class="tit">최대 50만원의<br>고품격의 히어로급 혜택!</p>
+                                <p class="tit">30만원 연회비?<br>연회비는 저희가 드릴게요</p>
                                 <ul class="detail">
                                     <li>
                                         <span class="num num1"></span>카드 바우처 상품권 20만원 (연1회) <span class="btn_detail_tooltip"></span>
@@ -421,17 +420,17 @@
             }
         }
 
-        //헤택1 카드 발급전 tooltip
+        //혜택1 카드 발급전 tooltip
         $('.btn_detail_tooltip').on('click', function(){
             $(this).parent().find('.detail_tooltip_area').show();
         });
 
-        //헤택1 Super 카드 발급후 리워드 지급조건 tooltip
+        //혜택1 Super 카드 발급후 리워드 지급조건 tooltip
         $('.btn_reward_tooltip').on('click', function(){
             $(this).parent().find('.detail_tooltip_area').show();
         });
 
-        //헤택1 Super 카드 발급후 S카드 발급 tooltip
+        //혜택1 Super 카드 발급후 S카드 발급 tooltip
         $('.btn_card_tooltip').on('click', function(){
             $(this).parent().find('.detail_tooltip_area').show();
         });

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/hc/default.css">
+    <link rel="stylesheet" href="../assets/css/hc/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_address_search')">팝업열기</button>
+        
+        <div class="popup popup_address_search active">
+            <div class="con">
+                <header class="pop_header">
+                    <button type="button" class="srch_back">이전</button>
+                    <button type="button" class="sub-close popup_header_close">팝업 닫기</button>
+                </header>
+                <div class="pop_body">
+                    <div class="pop_content">
+                        <p class="home_addr">자택주소</p>
+                        <div class="addr_detail_area">
+                            <p class="road_name_addr">[07321] 서울특별시 영등포구 의사당대로 96 (TP타워)</p>
+                            <div class="input_box">
+                                <input type="text" placeholder="상세주소를 입력해주세요">
+                                <button type="button" class="btn_del">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- //popup_chuseok_gift_list -->
+
+    </div><!-- //wrap -->
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+
+    <!-- Script -->
+    <script src="../assets/js/hc/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/hc/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/hc/common.js"></script>
+    <script>
+        const addrDetailArea = $('.addr_detail_area');
+        const inputBox = addrDetailArea.find('.input_box');
+        inputBox.find('input').on('keyup', function(){
+            if ( $(this).val() != '' ) {
+                inputBox.find('.btn_del').fadeIn('fast');
+            }
+        });
+        inputBox.find('.btn_del').on('click', function(){
+            inputBox.find('input').val('');
+            $(this).hide();
+        });
+
+    </script>
+</body>
+
+</html>

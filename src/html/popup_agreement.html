@@ -25,12 +25,6 @@
                     <dl class="agree_wrap">
                         <dt>히어로멤버십 혜택 지급을 위해<br>개인정보 수집·이용 동의 및 유의사항을<br>확인해주세요.</dt>
                         <dd>
-                            <div class="chk_all">
-                                <div class="input_wrap chk_box custom_chk">
-                                    <input type="checkbox" id="chk_all">
-                                    <label for="chk_all"><span>전체동의</span></label>
-                                </div>
-                            </div>
                             <ul class="agree_list">
                                 <li class="chk_box custom_chk icon_arrow">
                                     <input type="checkbox" id="chk_1">
@@ -43,7 +37,7 @@
                             </ul>
                         </dd>
                     </dl>
-                    <div class="btn_wrap"><button type="button" class="button">확인</button></div>
+                    <div class="btn_wrap"><button type="button" class="button btn_chkAll">전체 동의</button></div>
                 </div>
             </div>
         </div>
@@ -187,11 +181,14 @@
     <script src="../assets/js/hc/lib/swiper-bundle.min.js"></script>
     <script src="../assets/js/hc/common.js"></script>
     <script>
-        $('#chk_all').on('click', function(){
-            if($('#chk_all').is(':checked')){
-                $('#chk_all').prop('checked', false);
+        $('.btn_chkAll').on('click', function(){
+            if($('#chk_1').is(':checked') == false) {
                 popup.open('popup_agree');
-            } 
+            } else if ( $('#chk_2').is(':checked') == false){
+                popup.open('popup_membership_note');
+            }
+            $('.popup_agree .con').scrollTop(0);
+            $('.popup_membership_note .con').scrollTop(0);
         });
 
         $('#chk_1').on('click', function(){

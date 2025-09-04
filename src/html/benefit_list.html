@@ -32,6 +32,9 @@
                     <div>
                         <p class="cate">유튜브 프리미엄 1개월 이용권</p>
                     </div>
+                    <div>
+                        <p class="cate">추석 선물</p>
+                    </div>
                 </dd>
             </dl>
 
@@ -165,7 +168,7 @@
                 <div class="card_issuance card_issuance_before">
                     <div class="dim">
                         <strong>고객님은<br><span class="a">Legendary HERO카드</span>가<br>발급 가능해요</strong>
-                        <span>발급받으면 헤택이 열려요!</span>
+                        <span>발급받으면 혜택이 열려요!</span>
                         <button type="button" class="border">혜택 상세보고 신청하러 가기</button>
                         <button type="button" class="check">더 이상 보지 않기</button>
                     </div>
@@ -254,7 +257,7 @@
             }
         });
 
-        //헤택1 Super 카드 발급후 S카드 발급 tooltip
+        //혜택1 Super 카드 발급후 S카드 발급 tooltip
         $('.btn_card_tooltip').on('click', function(){
             $(this).parent().find('.detail_tooltip_area').show();
         });
@@ -293,6 +296,7 @@
             $('.chart').append('<li style="height:' + height + '%;"><div><span class="month">' + monthName + '</span><span class="price">' + wonValue + '</span></div></li>');
         };
         $('.chart li').last().addClass('recently');
+        $('.chart li').last().addClass('gift');
     </script>
 </body>
 </html>

@@ -366,7 +366,7 @@ body.dark {
             }
         }
         .pop_body {
-            height: 506rem;
+            height: 514rem;
             padding: 0 20rem 20rem;
             box-sizing: border-box;
             .tab_wrapper {
@@ -441,11 +441,11 @@ body.dark {
                     }
                 }
                 .benefit {
-                    padding: 32rem 20rem 30rem 20rem;
+                    padding: 48rem 20rem 30rem 20rem;
                     border: 1rem solid rgba(#eee, .2);
                     border-radius: 16rem;
                     dt {
-                        padding-bottom: 35rem;
+                        padding: 0 0 40rem 12rem;
                         color: #eee;
                         font-size: 16rem;
                         font-weight: 600;
@@ -536,7 +536,7 @@ body.dark {
                     align-items: flex-end;
                     gap: 2rem;
                     height: 116rem;
-                    margin-bottom: 16rem;
+                    margin-bottom: 12rem;
                     li {
                         position: relative;
                         display: flex;
@@ -566,7 +566,7 @@ body.dark {
                             &:before {
                                 content: '이번달\00000a나의 등급';
                                 width: 60rem;
-                                top: -48rem;
+                                top: -50rem;
                                 padding: 6rem 0 4rem;
                                 @include color(color, tt6);
                                 font-size: 12rem;
@@ -613,31 +613,31 @@ body.dark {
                             }
                         }
                         &.a {
-                            height: 68rem;
+                            height: 64rem;
                             &.active {
                                 @include color(background-color, level2);
                             }
                         }
                         &.s {
-                            height: 80rem;
+                            height: 76rem;
                             &.active {
                                 @include color(background-color, level3);
                             }
                         }
                         &.ss {
-                            height: 92rem;
+                            height: 88rem;
                             &.active {
                                 @include color(background-color, level4);
                             }
                         }
                         &.sss {
-                            height: 104rem;
+                            height: 100rem;
                             &.active {
                                 @include color(background-color, level5);
                             }
                         }
                         &.l {
-                            height: 116rem;
+                            height: 112rem;
                             &.active {
                                 @include color(background-color, level6);
                             }
@@ -650,37 +650,32 @@ body.dark {
                         display: block;
                     }
                     .box {
+                        display: flex;
                         padding: 20rem;
                         border-radius: 16rem;
+                        justify-content: space-between;
+                        align-items: center;
                         dt {
-                            padding: 10rem 0 23rem 76rem;
-                            margin-bottom: 20rem;
                             @include color(color, tt10);
                             font-size: 13rem;
-                            background-repeat: no-repeat;
-                            background-position: 0 0;
-                            background-size: 68rem 68rem;
-                            border-bottom: 1rem solid;
+                            line-height: 18rem;
                             strong {
                                 display: block;
-                                padding-bottom: 4rem;
+                                padding-bottom: 2rem;
                                 @include color(color, tt2);
-                                font-size: 18rem;
+                                font-size: 16rem;
                                 font-weight: bold;
+                                line-height: 23rem;
+                                letter-spacing: -0.32rem;
                             }
                         }
                         dd {
                             li {
-                                display: flex;
-                                justify-content: space-between;
-                                font-size: 14rem;
+                                font-size: 13rem;
                                 @include color(color, tt3);
-                                span {
-                                    @include color(color, tt10);
-                                }
-                                & + li {
-                                    margin-top: 6rem;
-                                }
+                                text-align: right;
+                                line-height: 18rem;
+                                letter-spacing: -0.26rem;
                             }
                         }
                     }
@@ -694,85 +689,101 @@ body.dark {
                         li {
                             position: relative;
                             width: 50%;
-                            padding: 56rem 0 14rem;
+                            padding: 52rem 0 10rem;
                             @include color(color, tt3);
                             font-size: 13rem;
                             text-align: center;
+                            line-height: 18rem;
+                            letter-spacing: -0.26rem;
                             background-size: 62rem 40rem;
-                            background-position: center top 10rem;
+                            background-position: 50% 10rem;
                             background-repeat: no-repeat;
-                            &:last-child {
-                                background-image: url('../../images/hc/img_reward_youtube_popup.png');
-                                &::before {
-                                    content: '';
-                                    display: block;
-                                    position: absolute;
-                                    width: 1rem;
-                                    height: 40rem;
-                                    top: 50%; 
-                                    transform: translateY(-50%);
-                                    left: 0;
-                                    @include color(background-color, bg17);
-                                }
+                            &::before {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                width: 1rem;
+                                height: 58rem;
+                                top: 50%; 
+                                transform: translateY(-50%);
+                                left: 0;
+                                @include color(background-color, bg17);
                             }
                             &:first-child {
                                 background-image: url('../../images/hc/img_reward_money_con.png');
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                            &:nth-child(2) {
+                                background-image: url('../../images/hc/img_reward_youtube_popup.png');
+                            }
+                            &:nth-child(3) {
+                                background-image: url('../../images/hc/img_reward_chuseok.png');
                             }
                         }
                     }
                     &.a {
                         .box {
                             @include color(background-color, bg10);
-                            dt {
-                                @include color(border-color, ln5);
-                                background-image: url('../../images/hc/ic_level_a_m.png');
-                            }
                         }
                         .more {
                             li {
+                                padding: 62rem 0 18rem;
                                 width: 100%;
-                                &::before {
-                                    display: none;
-                                }
+                                background-position: 50% 19rem;
                             }
                         }
                     }
                     &.s {
                         .box {
                             @include color(background-color, bg11);
-                            dt {
-                                @include color(border-color, ln6);
-                                background-image: url('../../images/hc/ic_level_s_m.png');
+                        }
+                        .more {
+                            li {
+                                padding: 62rem 0 18rem;
+                                background-position: 50% 19rem;
                             }
                         }
                     }
                     &.ss {
                         .box {
                             @include color(background-color, bg12);
-                            dt {
-                                @include color(border-color, ln7);
-                                background-image: url('../../images/hc/ic_level_ss_m.png');
-                            }
                         }
                     }
                     &.sss {
                         .box {
                             @include color(background-color, bg13);
-                            dt {
-                                @include color(border-color, ln8);
-                                background-image: url('../../images/hc/ic_level_sss_m.png');
-                            }
                         }
                     }
                     &.l {
                         .box {
                             @include color(background-color, bg14);
-                            dt {
-                                @include color(border-color, ln9);
-                                background-image: url('../../images/hc/ic_level_l_m.png');
-                            }
                         }
                     }
+                } 
+            }
+            .btn_call {
+                padding-top: 12rem;
+                button {
+                    width: 100%;
+                    height: 45rem;
+                    font-size: 13rem;
+                    @include color(color, tt3);
+                    font-weight: 500;
+                    letter-spacing: -0.33rem;
+                    border: 1rem solid;
+                    @include color(border-color, ln2);
+                    border-radius: 12rem;
+                    box-sizing: border-box;
+                    &:disabled {
+                        @include color(color, tt29);
+                        @include color(border-color, ln12);
+                        @include color(background-color, bg20);
+                    }
+                }
+                &.off {
+                    display: none !important;
                 }
             }
         }
@@ -887,7 +898,8 @@ body.dark {
         }
     }
 
-    &.popup_account {
+    &.popup_account,
+    &.popup_delivery_msg {
         .pop_body {
             padding: 0 20rem 20rem;
             p {
@@ -947,6 +959,24 @@ body.dark {
                                 background: url('../../images/hc/ic_checked_b.png') no-repeat center right 16rem / 24rem 24rem;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    &.popup_delivery_msg {
+        .pop_body {
+            .chk_list {
+                margin-top: 0;
+                height: auto;
+                overflow: hidden;
+                li {
+                    margin-top: 12rem;
+                    label {
+                        font-size: 16rem;
+                        @include color(color, tt3);
+                        letter-spacing: -0.32rem;
                     }
                 }
             }
@@ -1123,7 +1153,7 @@ body.dark {
                             }
                         }
                         .agree_list {
-                            padding: 24rem 20rem 22rem;
+                            padding: 20rem;
                             .custom_chk {
                                 position: relative;
                                 padding: 0 15rem 0 21rem;
@@ -1199,7 +1229,7 @@ body.dark {
                         border: 0;
                         border-radius: 16rem;
                         text-align: center;
-                        font-weight: 600;
+                        font-weight: 500;
                         font-size: 18rem;
                         @include color(color, tt11);
                         &:disabled {
@@ -1665,6 +1695,968 @@ body.dark {
             }
         }
     }
+
+    &.popup_chuseok_gift_info {
+        .popup_container {
+            .pop_header {
+                position: relative;
+                height: 111rem;
+                align-items: normal;
+                h1 {
+                    padding-top: 32rem;
+                    @include color(color, tt24);
+                    line-height: 1.25;
+                    letter-spacing: -0.44rem;
+                }
+                .header_close {
+                    position: absolute;
+                    top: 34rem;
+                    right: 20rem;
+                }
+            }
+            .pop_body {
+                .img_chuseok_visual {
+                    position: relative;
+                    height: 185rem;
+                    @include bgImg('../../images/hc/img_chuseok_visual.png', '../../images/hc/img_chuseok_visual_dm.png');
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                    background-size: auto 185rem;
+                }
+                .gift_info {
+                    padding: 20rem 0 10rem;
+                    dt {
+                        font-size: 20rem;
+                        @include color(color, tt23);
+                        font-weight: 700;
+                        text-align: center;
+                        line-height: 1.3;
+                        letter-spacing: -0.4rem;
+                    }
+                    .txt {
+                        padding-top: 8rem;
+                        font-size: 14rem;
+                        @include color(color, tt5);
+                        text-align: center;
+                        line-height: 19rem;
+                    }
+                }
+                .btn_box {
+                    padding: 20rem;
+                    button {
+                        font-weight: 500;
+                        letter-spacing: -0.45rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.popup_chuseok_gift_list {
+        transform: translateY(105%);
+        transition: transform 0.5s ease;
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        overflow: scroll;
+        @include color(background-color, bg7);
+        &.active {
+            transform: translateY(0);
+        }
+        .con {
+            height: calc(100% - 76rem);
+            overflow-y: auto;
+            header {
+                position: relative;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                height: auto;
+                padding: 50rem 20rem 0;
+                @include color(background-color, bg7);
+                box-sizing: border-box;
+                h1 {
+                    font-size: 22rem;
+                    line-height: 30rem;
+                    letter-spacing: -0.55rem;
+                    .user_name {
+                        font-size: inherit;
+                        font-weight: inherit;
+                    }
+                }
+                .popup_header_close {
+                    display: block;
+                    position: absolute;
+                    top: 13rem;
+                    right: 20rem;
+                    font-size: 0;
+                    text-indent: -9999em;
+                    @include bgImg('../../images/hc/ic_close.png', '../../images/hc/ic_close_dm.png', 24rem, 24rem);
+                }
+            }
+            .pop_body {
+                padding: 12rem 20rem 40rem;
+                .noti {
+                    font-size: 13rem;
+                    @include color(color, tt10);
+                    font-weight: 500;
+                    line-height: 18rem;
+                    letter-spacing: -0.52rem;
+                }
+                .gift_select_box {
+                    padding-top: 20rem;
+                    overflow: hidden;
+                    ul {
+                        font-size: 0;
+                        .gift_list {
+                            display: inline-block;
+                            margin-top: 10rem;
+                            position: relative;
+                            width: calc(50% - 5rem);
+                            min-height: 243rem;
+                            border: 1px solid;
+                            @include color(border-color, ln3);
+                            border-radius: 16rem;
+                            box-sizing: border-box;
+                            vertical-align: top;
+                            &:nth-child(2n) {
+                                margin-left: 10rem;
+                            }
+                            &.on {
+                                @include color(border-color, ln13);
+                                -webkit-transition: .3s ease-in-out;
+                                transition: .3s ease-in-out;
+                            }
+                            .box {
+                                label {
+                                    display: block;
+                                    padding: 16rem 16rem 0;
+                                    .input_radio {
+                                        margin: 0;
+                                        position: absolute;
+                                        top: 12rem;
+                                        right: 12rem;
+                                        width: 24rem;
+                                        height: 24rem;
+                                        appearance: none;
+                                        clip: auto;
+                                        border: 0;
+                                        &:before {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 24rem;
+                                            height: 24rem;
+                                            cursor: pointer;
+                                            content: "";
+                                            opacity: 0;
+                                            -webkit-transition: .3s ease-in-out;
+                                            transition: .3s ease-in-out;
+                                        }
+                                        &:checked:before {
+                                            @include bgImg('../../images/hc/ic_checked_b.png', '../../images/hc/ic_checked_b.png', 24rem, 24rem);
+                                            opacity: 1;
+                                        }
+                                    }
+                                    .bagde {
+                                        display: inline-block;
+                                        padding: 2rem 9rem 3rem 8rem;
+                                        font-size: 11rem;
+                                        font-weight: 500;
+                                        letter-spacing: -0.28rem;
+                                        line-height: 15rem;
+                                        border-radius: 16rem;
+                                        &.ss {
+                                            @include color(color, tt25);
+                                            @include color(background-color, bg12);
+                                        }
+                                        &.sss {
+                                            @include color(color, tt26);
+                                            @include color(background-color, bg32);
+                                        }
+                                        &.l {
+                                            @include color(color, tt27);
+                                            @include color(background-color, bg14);
+                                        }
+                                    }
+                                    .gift_thumb {
+                                        padding-top: 8rem;
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                    .gift_name {
+                                        padding: 8rem 0 46rem;
+                                        font-size: 14rem;
+                                        @include color(color, tt2);
+                                        font-weight: 500;
+                                        line-height: 18rem;
+                                        letter-spacing: -0.28rem;
+                                    }
+                                }
+                                .btn_gift_detail {
+                                    position: absolute;
+                                    left: 16rem;
+                                    bottom: 20rem;
+                                    padding-right: 14rem;
+                                    font-size: 13rem;
+                                    @include color(color, tt17);
+                                    line-height: 18rem;
+                                    @include bgImg('../../images/hc/ico_detail_more.png', '../../images/hc/ico_detail_more_dm.png');
+                                    background-size: 12rem 12rem;
+                                    background-repeat: no-repeat;
+                                    background-position: right 50%;
+                                    z-index: 2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn_box {
+            padding: 0 20rem 20rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            @include color(background-color, bg7);
+            button {
+                width: 100%;
+                height: 56rem;
+                font-size: 18rem;
+                @include color(color, tt11);
+                font-weight: 500;
+                text-align: center;
+                letter-spacing: -0.45rem;
+                border: 0;
+                border-radius: 16rem;
+                @include color(background-color, bg15);
+                &:disabled {
+                    @include color(background-color, bg28);
+                    @include color(color, tt19);
+                }
+            }
+        }
+    }
+
+    &.popup_gift_detail {
+        .popup_container {
+            .pop_header {
+                position: relative;
+                height: 111rem;
+                align-items: normal;
+                h1 {
+                    padding-top: 32rem;
+                    line-height: 1.25;
+                    letter-spacing: -0.44rem;
+                }
+                .header_close {
+                    position: absolute;
+                    top: 34rem;
+                    right: 20rem;
+                }
+            }
+            .pop_body {
+                .gift_detail_box {
+                    padding: 0 20rem;
+                    .gift_thumb {
+                        padding: 0 8rem;
+                        text-align: center;
+                        img {
+                            height: 140rem;
+                            vertical-align: top;
+                        }
+                    }
+                    .gift_detail_info {
+                        padding: 20rem 0 10rem;
+                        font-size: 14rem;
+                        @include color(color, tt10);
+                        line-height: 20rem;
+                        letter-spacing: -0.28rem;
+                    }
+                }
+                .btn_box {
+                    padding: 20rem;
+                    button {
+                        font-weight: 500;
+                        letter-spacing: -0.45rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.popup_chuseok_gift_delivery {
+        transform: translateY(105%);
+        transition: transform 0.5s ease;
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        overflow: scroll;
+        @include color(background-color, bg7);
+        &.active {
+            transform: translateY(0);
+        }
+        .con {
+            height: calc(100% - 76rem);
+            overflow-y: auto;
+            header {
+                position: relative;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                height: auto;
+                padding: 50rem 20rem 0;
+                @include color(background-color, bg7);
+                box-sizing: border-box;
+                h1 {
+                    font-size: 22rem;
+                    line-height: 31rem;
+                    letter-spacing: -0.5rem;
+                    .user_name {
+                        font-size: inherit;
+                        font-weight: inherit;
+                    }
+                }
+                .popup_header_close {
+                    display: block;
+                    position: absolute;
+                    top: 13rem;
+                    right: 20rem;
+                    font-size: 0;
+                    text-indent: -9999em;
+                    @include bgImg('../../images/hc/ic_close.png', '../../images/hc/ic_close_dm.png', 24rem, 24rem);
+                }
+            }
+            .pop_body {
+                padding: 0 0 48rem;
+                .delivery_section {
+                    padding: 40rem 20rem 0;
+                    &:nth-child(3),
+                    &.news_letter_area {
+                        margin-top: 40rem;
+                        border-top: 8rem solid;
+                        @include color(border-color, ln17);
+                    }
+                    .title_area {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        h3 {
+                            font-size: 16rem;
+                            @include color(color, tt3);
+                            font-weight: 500;
+                            line-height: 23rem;
+                            letter-spacing: -0.4rem;
+                        }
+                        .again_select {
+                            button {
+                                padding-left: 16rem;
+                                font-size: 13rem;
+                                @include color(color, tt3);
+                                line-height: 18rem;
+                                @include bgImg('../../images/hc/ico_select_refresh.png', '../../images/hc/ico_select_refresh_dm.png');
+                                background-size: 12rem 12rem;
+                                background-repeat:no-repeat;
+                                background-position: 0 50%;
+                            }
+                        }
+                    }
+                    .info_area {
+                        padding-top: 12rem;
+                        .prd_box {
+                            display: flex;
+                            padding: 18rem 16rem 18rem 20rem;
+                            border: 1rem solid;
+                            @include color(border-color, ln3);
+                            border-radius: 16rem;
+                            gap: 19rem;
+                            justify-content: space-between;
+                            align-items: center;
+                            .prd_thumb {
+                                img {
+                                    width: 87rem;
+                                }
+                            }
+                            .prd_class {
+                                display: inline-block;
+                                padding: 2rem 8rem 3rem 8rem;
+                                font-size: 11rem;
+                                font-weight: 500;
+                                letter-spacing: -0.28rem;
+                                line-height: 15rem;
+                                border-radius: 10rem;
+                                &.ss {
+                                    @include color(color, tt25);
+                                    @include color(background-color, bg12);
+                                }
+                                &.sss {
+                                    @include color(color, tt26);
+                                    @include color(background-color, bg32);
+                                }
+                                &.l {
+                                    @include color(color, tt27);
+                                    @include color(background-color, bg14);
+                                }
+                            }
+                            .prd_name {
+                                padding-top: 6rem;
+                                font-size: 14rem;
+                                @include color(color, tt2);
+                                font-weight: 500;
+                                letter-spacing: -0.28rem;
+                                line-height: 19rem;
+                            }
+                        }
+                        &.option_radio {
+                            ul {
+                                font-size: 0;
+                                border-radius: 12rem;
+                                @include color(background-color, bg25);
+                                li {
+                                    display: inline-block;
+                                    width: 50%;
+                                    box-sizing: border-box;
+                                    vertical-align: top;
+                                    label {
+                                        display: block;
+                                        width: 100%;
+                                        height: 46rem;
+                                        font-size: 13rem;
+                                        @include color(color, tt17);
+                                        text-align: center;
+                                        line-height: 46rem;
+                                        box-sizing: border-box;
+                                        input {
+                                            position: absolute;
+                                            left: -9999em;
+                                        }
+                                        &.on {
+                                            @include color(color, tt3);
+                                            font-weight: 700;
+                                            line-height: 44rem;
+                                            border: 1rem solid;
+                                            @include color(border-color, bg19);
+                                            border-radius: 12rem;
+                                            @include color(background-color, bg7);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.addr_search {
+                            padding-top: 8rem;
+                            .address_num {
+                                font-size: 0;
+                                p {
+                                    display: inline-block;
+                                    margin-top: 16rem;
+                                    width: calc(100% - 84rem);
+                                    height: 42rem;
+                                    font-size: 20rem;
+                                    @include color(color, tt3);
+                                    font-weight: 700;
+                                    line-height: 42rem;
+                                    border-bottom: 1rem solid;
+                                    @include color(border-color, ln12);
+                                    box-sizing: border-box;
+                                    vertical-align: top;
+                                    &.search_before {
+                                        @include color(color, tt28);
+                                        font-weight: 400;
+                                    }
+                                    &.w100 {
+                                        width: 100%;
+                                    }
+                                    &:first-child {
+                                        margin-top: 0;
+                                    }
+                                    &:first-child + button {
+                                        margin-top: 0;
+                                    }
+                                }
+                                button {
+                                    margin: 16rem 0 0 12rem;
+                                    width: 72rem;
+                                    font-size: 13rem;
+                                    @include color(color, tt3);
+                                    font-weight: 500;
+                                    line-height: 40rem;
+                                    border: 1rem solid;
+                                    @include color(border-color, ln2);
+                                    border-radius: 8rem;
+                                    box-sizing: border-box;
+                                    vertical-align: top;
+                                }
+                            }
+                        }
+                        &.pt8 {
+                            padding-top: 8rem;
+                        }
+                        .text_box {
+                            input {
+                                padding: 0;
+                                width: 100%;
+                                height: 42rem;
+                                font-size: 20rem;
+                                @include color(color, tt3);
+                                font-weight: 700;
+                                line-height: 42rem;
+                                border: 0;
+                                border-bottom: 1rem solid;
+                                @include color(border-color, ln12);
+                                background: transparent;
+                            }
+                        }
+                        .msg_box {
+                            .select_msg {
+                                width: 100%;
+                                height: 42rem;
+                                font-size: 20rem;
+                                @include color(color, tt3);
+                                font-weight: 700;
+                                line-height: 42rem;
+                                border: 0;
+                                border-bottom: 1rem solid;
+                                @include color(border-color, ln12);
+                                box-sizing: border-box;
+                                @include bgImg('../../images/hc/ico_select_arrow.png', '../../images/hc/ico_select_arrow.png');
+                                background-position: 97% 50%;
+                                background-repeat: no-repeat;
+                                background-size: 24rem auto;
+                            }
+                            .user_msg {
+                                display: none;
+                                padding-top: 16rem;
+                                input {
+                                    padding: 0;
+                                    width: 100%;
+                                    height: 42rem;
+                                    font-size: 20rem;
+                                    @include color(color, tt3);
+                                    font-weight: 700;
+                                    line-height: 42rem;
+                                    border: 0;
+                                    border-bottom: 1rem solid;
+                                    background: transparent;
+                                    @include color(border-color, ln12);
+                                    &::placeholder {
+                                        @include color(color, tt28);
+                                    }
+                                }
+                            }
+                        }
+                        &.porch_radio {
+                            .text_box {
+                                display: none;
+                                padding-top: 16rem;
+                                input {
+                                    padding: 0;
+                                    width: 100%;
+                                    height: 42rem;
+                                    font-size: 20rem;
+                                    font-weight: 700;
+                                    line-height: 42rem;
+                                    border: 0;
+                                    border-bottom: 1rem solid;
+                                    @include color(border-color, ln12);
+                                    &::placeholder {
+                                        font-weight: 400;
+                                        @include color(color, tt28);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.news_letter_area {
+                        .letter_info {
+                            padding-top: 12rem;
+                            font-size: 13rem;
+                            @include color(color, tt10);
+                            line-height: 18rem;
+                        }
+                        .letter_agree_radio {
+                            padding-top: 12rem;
+                            ul {
+                                font-size: 0;
+                                li {
+                                    display: inline-block;
+                                    width: calc(50% - 4rem);
+                                    box-sizing: border-box;
+                                    vertical-align: top;
+                                    &:nth-child(2) {
+                                        margin-left: 8rem;
+                                    }
+                                    label {
+                                        display: block;
+                                        width: 100%;
+                                        height: 56rem;
+                                        font-size: 15rem;
+                                        @include color(color, tt10);
+                                        text-align: center;
+                                        line-height: 54rem;
+                                        letter-spacing: -0.3rem;
+                                        border: 1rem solid;
+                                        @include color(border-color, ln3);
+                                        border-radius: 16rem;
+                                        box-sizing: border-box;
+                                        input {
+                                            position: absolute;
+                                            left: -9999em;
+                                        }
+                                        &.on {
+                                            @include color(color, tt2);
+                                            font-weight: 700;
+                                            @include color(border-color, bg35);
+                                            @include color(background-color, bg35);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .event_notice {
+                    margin-top: 40rem;
+                    padding: 24rem 21rem 40rem 19rem;
+                    border-top: 8rem solid;
+                    @include color(border-color, ln17);
+                    h4 {
+                        font-size: 16rem;
+                        @include color(color, tt3);
+                        font-weight: 500;
+                        line-height: 21rem;
+                    }
+                    ul {
+                        padding-top: 6rem;
+                        li {
+                            padding: 10rem 0 0 11rem;
+                            position: relative;
+                            font-size: 13rem;
+                            @include color(color, tt10);
+                            line-height: 18rem;
+                            &:before {
+                                position: absolute;
+                                top: 17rem;
+                                left: 0;
+                                width: 3rem;
+                                height: 3rem;
+                                border-radius: 50%;
+                                @include color(background-color, bg34);
+                                content: '';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn_box {
+            padding: 0 20rem 20rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            @include color(background-color, bg7);
+            button {
+                width: 100%;
+                height: 56rem;
+                font-size: 18rem;
+                @include color(color, tt11);
+                font-weight: 500;
+                text-align: center;
+                letter-spacing: -0.4rem;
+                border: 0;
+                border-radius: 16rem;
+                @include color(background-color, bg15);
+                &:disabled {
+                    @include color(background-color, bg28);
+                    @include color(color, tt19);
+                }
+            }
+        }
+    }
+
+    &.popup_address_search {
+        transform: translateY(105%);
+        transition: transform 0.5s ease;
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        @include color(background-color, bg7);
+        &.active {
+            transform: translateY(0);
+        }
+        .con {
+            header {
+                position: relative;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                height: auto;
+                padding: 50rem 20rem 0;
+                @include color(background-color, bg7);
+                box-sizing: border-box;
+                h1 {
+                    font-size: 22rem;
+                    line-height: 31rem;
+                    letter-spacing: -0.5rem;
+                    .user_name {
+                        font-size: inherit;
+                        font-weight: inherit;
+                    }
+                }
+                .popup_header_close {
+                    display: block;
+                    position: absolute;
+                    top: 13rem;
+                    right: 20rem;
+                    font-size: 0;
+                    text-indent: -9999em;
+                    @include bgImg('../../images/hc/ic_close.png', '../../images/hc/ic_close_dm.png', 24rem, 24rem);
+                }
+                .srch_back {
+                    display: block;
+                    position: absolute;
+                    top: 13rem;
+                    left: 20rem;
+                    font-size: 0;
+                    text-indent: -9999em;
+                    @include bgImg('../../images/hc/ico_srch_back.png', '../../images/hc/ico_srch_back_dm.png', 24rem, 24rem);
+                }
+            }
+            .pop_body {
+                padding: 0 20rem;
+                .addr_srch_tab {
+                    padding: 4rem;
+                    border-radius: 24rem;
+                    @include color(background-color, bg25);
+                    ul {
+                        display: flex;
+                        justify-content: space-between;
+                        li {
+                            width: 50%;
+                            button {
+                                width: 100%;
+                                height: 40rem;
+                                font-size: 15rem;
+                                @include color(color, tt17);
+                                font-weight: 500;
+                                line-height: 40rem;
+                            }
+                            &.on {
+                                button {
+                                    @include color(color, tt3);
+                                    border-radius: 20rem;
+                                    @include color(background-color, bg24);
+                                }
+                            }
+                        }
+                    }
+                }
+                .srch_form {
+                    margin-top: 20rem;
+                    position: relative;
+                    .input_box {
+                        padding-right: 40rem;
+                        border-bottom: 1rem solid;
+                        @include color(border-color, ln2);
+                        input {
+                            padding: 0;
+                            width: 100%;
+                            height: 45rem;
+                            font-size: 15rem;
+                            @include color(color, tt3);
+                            font-weight: 500;
+                            border: 0;
+                            background: transparent;
+                            &::placeholder {
+                                @include color(color, tt30);
+                            }
+                        }
+                    }
+                    .btn_srch {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 40rem;
+                        height: 45rem;
+                        text-indent: -9999em;
+                        @include bgImg('../../images/hc/ico_srch_btn.png', '../../images/hc/ico_srch_btn_dm.png');
+                        background-position: 8rem 9rem;
+                        background-repeat: no-repeat;
+                        background-size: 24rem 24rem;
+                    }
+                }
+                .srch_info {
+                    padding-top: 16rem;
+                    p {
+                        padding-left: 16rem;
+                        position: relative;
+                        font-size: 13rem;
+                        @include color(color, tt17);
+                        line-height: 18rem;
+                        letter-spacing: -0.26rem;
+                        &:before {
+                            position: absolute;
+                            top: 3rem;
+                            left: 0;
+                            width: 12rem;
+                            height: 12rem;
+                            @include bgImg('../../images/hc/ic_notice.png', '../../images/hc/ic_notice_dm.png');
+                            background-position: 0 0;
+                            background-repeat: no-repeat;
+                            background-size: 12rem 12rem;
+                            content: '';
+                        }
+                    }
+                }
+                .srch_after_text {
+                    padding-top: 14rem;
+                    p {
+                        font-size: 13rem;
+                        @include color(color, tt17);
+                        line-height: 18rem;
+                        letter-spacing: -0.26rem;
+                    }
+                }
+                .addr_scroll_area {
+                    margin-top: 19rem;
+                    position: relative;
+                    height: calc(100vh - 255rem);
+                    overflow-y: auto;
+                    touch-action: auto;
+                    ul {
+                        li {
+                            display: flex;
+                            margin-top: 16rem;
+                            padding: 4rem 0;
+                            gap: 10rem;
+                            .addr_num {
+                                min-width: 44rem;
+                                font-size: 14rem;
+                                @include color(color, tt3);
+                                line-height: 19rem;
+                                letter-spacing: -0.28rem;
+                            }
+                            .addr_info {
+                                font-size: 14rem;
+                                @include color(color, tt3);
+                                line-height: 19rem;
+                                letter-spacing: -0.28rem;
+                            }
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                    /*
+                    &:after {
+                        position: fixed;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 70rem;
+                        background: linear-gradient(rgba(255,255,255, 0.5), #ffffff);
+                        filter: blur(5px);
+                        content: '';
+                    }
+                    &.end:after {
+                        display: none;
+                    }
+                    */
+                }
+                .srch_data_none {
+                    padding: 160rem 0 0;
+                    .t1 {
+                        padding-top: 96rem;
+                        font-size: 15rem;
+                        @include color(color, tt3);
+                        font-weight: 500;
+                        text-align: center;
+                        line-height: 22rem;
+                        @include bgImg('../../images/hc/img_srch_none.png', '../../images/hc/img_srch_none_dm.png');
+                        background-position: 50% 0;
+                        background-repeat: no-repeat;
+                        background-size: 80rem 80rem;
+                    }
+                    .t2 {
+                        padding-top: 8rem;
+                        font-size: 13rem;
+                        @include color(color, tt10);
+                        text-align: center;
+                        line-height: 18rem;
+                    }
+                }
+                .home_addr {
+                    padding-top: 16rem;
+                    font-size: 22rem;
+                    @include color(color, tt3);
+                    font-weight: 700;
+                    line-height: 31rem;
+                    letter-spacing: -0.55rem;
+                }
+                .addr_detail_area {
+                    padding-top: 38rem;
+                    .road_name_addr {
+                        font-size: 15rem;
+                        @include color(color, tt3);
+                        line-height: 22rem;
+                    }
+                    .input_box {
+                        margin-top: 8rem;
+                        padding-right: 24rem;
+                        position: relative;
+                        height: 42rem;
+                        border-bottom: 1rem solid;
+                        @include color(border-color, ln12);
+                        box-sizing: border-box;
+                        input {
+                            padding: 0;
+                            width: 100%;
+                            height: 41rem;
+                            font-size: 22rem;
+                            @include color(color, tt3);
+                            font-weight: 700;
+                            border: 0;
+                            background: transparent;
+                            &::placeholder {
+                                @include color(color, tt28);
+                                font-weight: 400;
+                            }
+                        }
+                        .btn_del {
+                            display: none;
+                            position: absolute;
+                            top: 9rem;
+                            right: 0;
+                            width: 24rem;
+                            height: 24rem;
+                            text-indent: -9999em;
+                            @include bgImg('../../images/hc/ico_addr_del.png', '../../images/hc/ico_addr_del_dm.png');
+                            background-position: 0 0;
+                            background-repeat: no-repeat;
+                            background-size: 24rem 24rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     /* black background 팝업 공통 */
     &.popup_legendary_issuance,
     &.popup_super_issuance,
@@ -1731,6 +2723,9 @@ body.dark {
     }
     &.popup_legendary_issuance {
         .popup_container {
+            .pop_header {
+                height: 147rem;
+            }
             .pop_body {
                 .graph_img {
                     img {
@@ -1944,8 +2939,6 @@ body.dark {
             }
             .pop_body {
                 padding: 24rem 20rem 0;
-                height: 310rem;
-                overflow-y: auto;
                 .stamp_date {
                     font-size: 13rem;
                     color: #999;
@@ -1954,7 +2947,6 @@ body.dark {
                     letter-spacing: -0.33rem;
                 }
                 .stamp_box {
-                    margin-top: 12rem;
                     .stamp_top {
                         margin: 0 20rem 20rem;
                         padding: 3rem 0 10rem;
@@ -3099,13 +4091,23 @@ body.dark {
             @include bgImg('../../images/hc/bg_super_sleep.png', '../../images/hc/bg_super_sleep_dark.png');
         }
         &.super.ready {
-            @include bgImg('../../images/hc/bg_super_ready.png', '../../images/hc/bg_super_ready_dark.png');
+            min-height: 166rem;
+            @include bgImg('../../images/hc/bg_money_ready.png', '../../images/hc/bg_money_ready.png');
+            background-size: 138rem 70rem !important;
+            .btn {
+                padding-top: 12rem;
+            }
         }
         &.legendary.sleep {
             @include bgImg('../../images/hc/bg_legendary_sleep.png', '../../images/hc/bg_legendary_sleep_dark.png');
         }
         &.legendary.ready {
-            @include bgImg('../../images/hc/bg_legendary_ready.png', '../../images/hc/bg_legendary_ready_dark.png');
+            min-height: 166rem;
+            @include bgImg('../../images/hc/bg_money_ready.png', '../../images/hc/bg_money_ready.png');
+            background-size: 138rem 70rem !important;
+            .btn {
+                padding-top: 12rem;
+            }
         }
         &.open {
             margin: 21rem 20rem 0;
@@ -3329,6 +4331,12 @@ body.dark {
             &:last-child {
                 margin-bottom: 0;
             }
+            &.chuseok_gift {
+                position: relative;
+                padding-bottom: 265rem;
+                @include bgImg('../../images/hc/img_benefit_gift.png', '../../images/hc/img_benefit_gift_dm.png');
+                background-position: center bottom 69rem;
+            }
             &.spcial {
                 position: relative;
                 padding-bottom: 265rem;
@@ -3369,8 +4377,8 @@ body.dark {
             &.premium {
                 padding-bottom: 0;
                 .premium_card {
-                    width: 109rem;
-                    height: 184rem;
+                    width: 110rem;
+                    height: 221rem;
                     margin: 0 auto;
                     .swiper-wrapper {
                         transform-style: preserve-3d;
@@ -3386,8 +4394,8 @@ body.dark {
                         flex-direction: column;
                         div {
                             position: relative;
-                            width: 90rem;
-                            height: 143rem;
+                            width: 110rem;
+                            height: 174rem;
                             overflow: hidden;
                             &:before {
                                 content: "";
@@ -3408,7 +4416,7 @@ body.dark {
                         }
                         .annual_fee {
                             display: none;
-                            margin-top: 16rem;
+                            margin-top: 22rem;
                             width: 107rem;
                             height: 23rem;
                             font-size: 12rem;
@@ -3436,15 +4444,15 @@ body.dark {
                             }
                         }
                         &.swiper-slide-next {
-                            margin-top: -15rem;
+                            margin-top: -10rem;
                             img {
-                                width: 75rem;
+                                width: 90rem;
                             }
                         }
                         &.swiper-slide-prev {
-                            margin-top: -15rem;
+                            margin-top: -10rem;
                             img {
-                                width: 75rem;
+                                width: 90rem;
                             }
                         }
                         @keyframes light-move {
@@ -3603,7 +4611,7 @@ body.dark {
                 font-size: 16rem;
                 line-height: 23rem;
                 font-weight: 600;
-                @include color(color, tt16);
+                @include color(color, tt10);
             }
             .more {
                 margin-top: 24rem;
@@ -3618,11 +4626,11 @@ body.dark {
                 }
             }
             .txt {
-                margin: 12rem 0 0 9rem;
+                margin: 10rem 0 0 9rem;
                 position: relative;
                 font-size: 13rem;
                 letter-spacing: -.4rem;
-                @include color(color, tt16);
+                @include color(color, tt10);
                 line-height: 18rem;
                 text-indent: -9rem;
                 .btn_reward_tooltip {
@@ -3689,7 +4697,7 @@ body.dark {
                     @include color(background-color, bg16);
                     font-size: 14rem;
                     line-height: 45rem;
-                    font-weight: 600;
+                    font-weight: 500;
                 }
             }
             .pre_benefit {
@@ -3729,14 +4737,13 @@ body.dark {
                     }
                 }
                 .card_iss_title {
-                    margin-bottom: 42rem;
+                    margin-bottom: 28rem;
                     p {
-                        display: none;
-                        img {
-                            display: block;
-                            width: 232rem;
-                            margin: 0 auto;
-                        }
+                        font-size: 16rem;
+                        color: #fff;
+                        font-weight: 500;
+                        text-align: center;
+                        line-height: 21rem;
                     }
                 }
                 .box {
@@ -4355,12 +5362,21 @@ body.dark {
                 box-sizing: border-box;
             }
             .rewards {
-                margin-top: 11rem;
+                margin-top: 10rem;
                 padding-left: 19rem;
                 @include color(color, tt3);
                 font-size: 13rem;
                 line-height: 18rem;
                 background: url('../../images/hc/ic_coin.png') no-repeat left top;
+                background-size: 16rem 16rem;
+            }
+            .chuseok {
+                margin-top: 10rem;
+                padding-left: 19rem;
+                @include color(color, tt3);
+                font-size: 13rem;
+                line-height: 18rem;
+                background: url('../../images/hc/ic_main_chuseok.png') no-repeat left top;
                 background-size: 16rem 16rem;
             }
             .price {
@@ -4387,6 +5403,20 @@ body.dark {
                 @include bgImg('../../images/hc/ic_youtube.png', '../../images/hc/ic_youtube_dm.png');
                 background-size: 80rem 18rem;
                 background-position: 0 0;
+            }
+            &.chuseok_gift {
+                &.ready {
+                    @include bgImg('../../images/hc/img_chuseok_gift_ready.png', '../../images/hc/img_chuseok_gift_ready_dm.png');
+                }
+                &.complete {
+                    @include bgImg('../../images/hc/img_chuseok_gift_complete.png', '../../images/hc/img_chuseok_gift_complete_dm.png');
+                }
+                .tag {
+                    padding: 0 5rem;
+                }
+                .noti {
+                    letter-spacing: -0.3rem;
+                }
             }
         }
     }   
@@ -4995,8 +6025,8 @@ body.dark {
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
-                height: 80rem;
-                padding-top: 36rem;
+                height: 105rem;
+                padding-top: 46rem;
                 gap: 34rem;
                 border-bottom: 1rem solid;
                 @include color(border-color, ln4);
@@ -5009,6 +6039,21 @@ body.dark {
                         @include color(background-color, bg3);
                         span {
                             @include color(color, tt3);
+                            font-weight: 500;
+                        }
+                    }
+                    &.gift {
+                        &:before {
+                            position: absolute;
+                            top: -25rem;
+                            left: -1rem;
+                            width: 22rem;
+                            height: 22rem;
+                            @include bgImg('../../images/hc/ico_present.png', '../../images/hc/ico_present.png');
+                            background-position: 0 0;
+                            background-repeat: no-repeat;
+                            background-size: 22rem 22rem;
+                            content: '';
                         }
                     }
                     div {
@@ -5017,10 +6062,10 @@ body.dark {
                         bottom: -38rem;
                         left: 50%;
                         transform: translateX(-50%);
-                        width: calc(100% + 23rem);
+                        width: calc(100% + 40rem);
                         span {
                             display: block;
-                            font-size: 12rem;
+                            font-size: 13rem;
                             line-height: 16rem;
                             text-align: center;
                             letter-spacing: -.33rem;
@@ -5835,6 +6880,10 @@ body.dark {
                                         opacity: 0;
                                         animation: bubbleIn 0.3s ease 0.3s normal both;
                                         z-index: -1;
+                                        &.none {
+                                            opacity: 0 !important;
+                                            visibility: hidden !important;
+                                        }
                                         .bubble {
                                             display: inline-block;
                                             padding: 9rem 9rem 8rem 7rem;

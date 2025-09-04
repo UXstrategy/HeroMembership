@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/hc/default.css">
+    <link rel="stylesheet" href="../assets/css/hc/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_chuseok_gift_list')">팝업열기</button>
+
+        <!-- L등급 추석 선물 -->
+        <div class="popup popup_chuseok_gift_list gift_list_l active">
+            <div class="con">
+                <header class="pop_header">
+                    <h1><span class="user_name">$키움$</span>님을 위해<br>준비한 추석선물이에요.</h1>
+                    <button type="button" class="sub-close popup_header_close">팝업 닫기</button>
+                </header>
+                <div class="pop_body">
+                    <div class="pop_content">
+                        <p class="noti">배송받을 선물을 1개 선택해주세요.</p>
+                        <div class="gift_select_box">
+                            <ul>
+                                <li class="gift_list">
+                                    <div class="box">
+                                        <label>
+                                            <input type="radio" id="gift_l1" name="gift_select" class="input_radio">
+                                            <p class="bagde l">L등급 전용</p>
+                                            <p class="gift_thumb"><img src="../assets/images/hc/img_gift_thumb_l1.png" alt=""></p>
+                                            <p class="gift_name">[숙성한우++] No.9 프레스티지 오마카세 맞춤 2단 2.4kg</p>
+                                        </label>
+                                        <button type="button" class="btn_gift_detail" onclick="popup.open('gift_detail1')">자세히 보기</button>
+                                    </div>
+                                </li>
+                                <li class="gift_list">
+                                    <div class="box">
+                                        <label>
+                                            <input type="radio" id="gift_l2" name="gift_select" class="input_radio">
+                                            <p class="bagde l">L등급 전용</p>
+                                            <p class="gift_thumb"><img src="../assets/images/hc/img_gift_thumb_l2.png" alt=""></p>
+                                            <p class="gift_name">조니워커 블루 750ml + 트래블 글렌캐런 세트</p>
+                                        </label>
+                                        <button type="button" class="btn_gift_detail" onclick="popup.open('gift_detail2')">자세히 보기</button>
+                                    </div>
+                                </li>
+                                <li class="gift_list">
+                                    <div class="box">
+                                        <label>
+                                            <input type="radio" id="gift_l3" name="gift_select" class="input_radio">
+                                            <p class="bagde l">L등급 전용</p>
+                                            <p class="gift_thumb"><img src="../assets/images/hc/img_gift_thumb_l3.png" alt=""></p>
+                                            <p class="gift_name">다이슨 슈퍼소닉<br>헤어 드라이기</p>
+                                        </label>
+                                        <button type="button" class="btn_gift_detail" onclick="popup.open('gift_detail3')">자세히 보기</button>
+                                    </div>
+                                </li>
+                                <li class="gift_list">
+                                    <div class="box">
+                                        <label>
+                                            <input type="radio" id="gift_l4" name="gift_select" class="input_radio">
+                                            <p class="bagde l">L등급 전용</p>
+                                            <p class="gift_thumb"><img src="../assets/images/hc/img_gift_thumb_l4.png" alt=""></p>
+                                            <p class="gift_name">미닉스 더플렌더 PRO 음식물 처리기</p>
+                                        </label>
+                                        <button type="button" class="btn_gift_detail" onclick="popup.open('gift_detail4')">자세히 보기</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_box">
+                    <button type="button" class="button btn_address" disabled="disabled">배송지 입력 하기</button>
+                </div>
+            </div>
+        </div><!-- //popup_chuseok_gift_list -->
+
+        <div class="popup bottomsheet popup_gift_detail gift_l gift_detail1 none">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>[애명작] 숙성한우++ No.9 프레<br>스티지 오마카세 맞춤 2단 (2.4kg)</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('gift_detail1');">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <div class="gift_detail_box">
+                        <p class="gift_thumb"><img src="../assets/images/hc/img_gift_thumb_l1.png" alt=""></p>
+                        <p class="gift_detail_info">
+                            육질 최고 등급인 1++No.9 등급 한우로 육향과 풍미가 가장 좋은 부위로 엄선해 Wet Aging 심화 숙성으로 맛을 끌어올렸습니다. 오마카세 전용 세트로, 꽃등심(400g), 채끝(400g), 안심(400g), 차돌박이(400g), 보섭살(400g), 삼각살(400g), 통후추그라인더로 구성되어 있습니다.
+                        </p>
+                    </div>
+                    <div class="btn_box">
+                        <button type="button" class="button btn_ok" data-gift-num="gift_l1">해당 선물 선택하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup bottomsheet popup_gift_detail gift_l gift_detail2 none">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>조니워커 블루 750ml +<br>트래블 글렌캐런 세트</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('gift_detail2');">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <div class="gift_detail_box">
+                        <p class="gift_thumb"><img src="../assets/images/hc/img_gift_thumb_l2.png" alt=""></p>
+                        <p class="gift_detail_info">
+                            뛰어난 깊이감으로 위스키 원액 저장고에서 엄선하여 만든 조니워커 블루 750ml와 위스키의 향을 가장 잘 표현해주며 풍부한 맛과 느낌을 느낄 수 있게 해주는 글렌캐런 글래스 2p(트래블 세트) 입니다.
+                        </p>
+                    </div>
+                    <div class="btn_box">
+                        <button type="button" class="button btn_ok" data-gift-num="gift_l2">해당 선물 선택하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup bottomsheet popup_gift_detail gift_l gift_detail3 none">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>[다이슨] 슈퍼소닉<br>헤어드라이어 (니켈/코퍼)</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('gift_detail3');">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <div class="gift_detail_box">
+                        <p class="gift_thumb"><img src="../assets/images/hc/img_gift_thumb_l3.png" alt=""></p>
+                        <p class="gift_detail_info">
+                            나만의 헤어스타일링을 위한 4가지 노즐로 구성되어<br>있으며, 지능형 열 제어 시스템과 강력한 다이슨 디지털<br>모터 V9가 탑재되어 모발 손상을 최소화하고 빠른 건조가 가능합니다.
+                        </p>
+                    </div>
+                    <div class="btn_box">
+                        <button type="button" class="button btn_ok" data-gift-num="gift_l3">해당 선물 선택하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup bottomsheet popup_gift_detail gift_l gift_detail4 none">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>[미닉스] 더플렌더 PRO<br>음식물 처리기</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('gift_detail4');">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <div class="gift_detail_box">
+                        <p class="gift_thumb"><img src="../assets/images/hc/img_gift_thumb_l4.png" alt=""></p>
+                        <p class="gift_detail_info">
+                            한뼘 사이즈로 좁은 주방 어디서든 사용할 수 있습니다.<br>3중 복합 탈취 필터로 냄새를 최소화했으며, 소음도 최적화한 음식물 처리기입니다.
+                        </p>
+                    </div>
+                    <div class="btn_box">
+                        <button type="button" class="button btn_ok" data-gift-num="gift_l4">해당 선물 선택하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- //wrap -->
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+
+    <!-- Script -->
+    <script src="../assets/js/hc/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/hc/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/hc/common.js"></script>
+    <script>
+        const giftList = $('.gift_list');
+        const giftLabel = giftList.find('label');
+
+        giftLabel.find('input[type="radio"]').on('change', function(){
+            $(this).parents('.gift_list').siblings().removeClass('on');
+            $(this).parents('.gift_list').addClass('on');
+            $('.btn_address').removeAttr('disabled');
+        });
+
+        $('.popup_gift_detail').find('button').on('click', function(){
+            let checkVal = $(this).data('gift-num');
+            $('#'+checkVal).parent().trigger('click');
+            popup.close('popup_gift_detail');
+        });
+    </script>
+</body>
+
+</html>

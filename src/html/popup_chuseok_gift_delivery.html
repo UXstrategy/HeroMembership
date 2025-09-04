@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영웅클럽</title>
+    <link rel="stylesheet" href="../assets/css/hc/default.css">
+    <link rel="stylesheet" href="../assets/css/hc/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <button type="button" class="popup_open" onclick="popup.open('popup_chuseok_gift_delivery')">팝업열기</button>
+        
+        <div class="popup popup_chuseok_gift_delivery active">
+            <div class="con">
+                <header class="pop_header">
+                    <h1>배송 정보를 입력해주세요.</h1>
+                    <button type="button" class="sub-close popup_header_close">팝업 닫기</button>
+                </header>
+                <div class="pop_body">
+                    <div class="pop_content">
+                        <div class="delivery_section">
+                            <div class="title_area">
+                                <h3>선택한 선물</h3>
+                                <p class="again_select"><button type="button">다시 선택</button></p>
+                            </div>
+                            <div class="info_area">
+                                <div class="prd_box">
+                                    <p class="prd_thumb"><img src="../assets/images/hc/img_gift_thumb_l1.png" alt=""></p>
+                                    <div class="prd_info">
+                                        <p class="prd_class l">L등급 전용</p>
+                                        <p class="prd_name">[숙성한우++] No.9 프레스티지 오마카세 맞춤 2단 2.4kg</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery_section">
+                            <div class="title_area">
+                                <h3>키움증권 표기 옵션</h3>
+                            </div>
+                            <div class="info_area option_radio">
+                                <ul>
+                                    <li><label class="on"><input type="radio" name="option_notation" checked> 키움증권 표기</label></li>
+                                    <li><label><input type="radio" name="option_notation"> 표기 삭제</label></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="delivery_section">
+                            <div class="title_area">
+                                <h3>배송받을 주소</h3>
+                            </div>
+                            <div class="info_area addr_search">
+                                <!-- 주소검색 전 -->
+                                <div class="address_num">
+                                    <p class="search_before">배송지를 입력해주세요</p>
+                                    <button type="button">주소검색</button>
+                                </div>
+                                <!-- 주소검색 후 -->
+                                <div class="address_num">
+                                    <p class="w100">(12345) 서울특별시 영등포구 의사당</p>
+                                    <p class="w100">대로 96 (TP타워, 여의도동), 7층 플랫</p>
+                                    <p class="search_after">폼전략팀</p>
+                                    <button type="button">주소검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery_section">
+                            <div class="title_area">
+                                <h3>수령인</h3>
+                            </div>
+                            <div class="info_area pt8">
+                                <p class="text_box"><input type="text"></p>
+                            </div>
+                        </div>
+                        <div class="delivery_section">
+                            <div class="title_area">
+                                <h3>휴대폰번호</h3>
+                            </div>
+                            <div class="info_area pt8">
+                                <p class="text_box"><input type="tel"></p>
+                            </div>
+                        </div>
+                        <div class="delivery_section">
+                            <div class="title_area">
+                                <h3>배송메모</h3>
+                            </div>
+                            <div class="info_area pt8">
+                                <div class="msg_box">
+                                    <p class="select_msg" onClick="popup.open('popup_delivery_msg')">부재 시 문 앞에 놓아주세요</p>
+                                    <p class="user_msg"><input type="text" placeholder="배송메모를 입력해주세요"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery_section">
+                            <div class="title_area">
+                                <h3>출입방법</h3>
+                            </div>
+                            <div class="info_area option_radio porch_radio">
+                                <ul>
+                                    <li><label><input type="radio" id="porch_pwd_radio" name="option_pwd"> 공동현관 비밀번호</label></li>
+                                    <li><label><input type="radio" name="option_pwd"> 자유 출입 가능</label></li>
+                                </ul>
+                                <p class="text_box"><input type="text" id="porch_pwd_input" placeholder="공동현관 비밀번호를 입력해주세요"></p>
+                            </div>
+                        </div>
+                        <div class="delivery_section news_letter_area">
+                            <div class="title_area">
+                                <h3>감사장 및 소식지 동봉 여부</h3>
+                            </div>
+                            <p class="letter_info">감사장과 신규서비스 안내 소식지를 선물박스에 넣어 드리고자 합니다. 함께 보내 드려도 될까요?</p>
+                            <div class="letter_agree_radio option_radio">
+                                <ul>
+                                    <li><label><input type="radio" name="letter_agree"> 받아볼게요</label></li>
+                                    <li><label><input type="radio" name="letter_agree"> 안 받을게요</label></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="event_notice">
+                            <h4>이벤트 유의사항</h4>
+                            <ul>
+                                <li>본 이벤트는 대상자에 한해 개인(신용)정보 선택 동의서에 따라 선택/서비스 안내 등에 동의하신 고객에 한해 참여됩니다.(신청필수)</li>
+                                <li>히어로멤버십 추석선물 신청은 9월 12일에 오픈한 이후 16일 24:00까지 가능하며, 이 기간 동안 신청 내역 수정이 가능합니다.</li>
+                                <li>9월 16일 24:00 이후 신청 내역 수정/취소가 어렵습니다.</li>
+                                <li>추석선물은 9월 22일~26일 내에 신청 주소로 배송됩니다.</li>
+                                <li>선물은 국내주소지(택배수령가능지역)만 가능하며, 해외 배송 및 택배수령 불가지역으로 신청할 수 없습니다.</li>
+                                <li>필히 영S#을 통해 신청해주시기 바랍니다. 게시판을 통한 신청 글 기재 시에는 고객님의 신청사항이 누락될 수 있습니다.</li>
+                                <li>고객님께 제공되는 혜택 중 5만원 초과 상품에 대한 제세공과금 22%는 당사에서 납부합니다.</li>
+                                <li>기타소득금액은 당사가 대납한 제세공과금(22%)가 합산되어 계산되며, 연 300만원 이상인 경우 종합소득세에 포함되어 과표기준이 달라질 수니다.</li>
+                                <li>당사에서 기타소득 신고 납부 후에는 당사의 귀책사유가 아닌 경우 정정 및 취소가 불가합니다.</li>
+                                <li>본 이벤트의 일정 및 내용은 당사 사정에 따라 변경되거나 중단될 수 있습니다.(단 기신청 고객은 경품 지급)</li>
+                                <li>본 이벤트와 관련한 문의 사항은 키움 고객센터<br>(1544-9000), 나이트데스크(1544-8400)에서 안내받으실 수 있습니다.</li>
+                                <li>원활한 경품지급 및 금융사기 예방을 위하여 고객정보는 반드시 최신정보로 관리하시기 바랍니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_box">
+                    <!-- 입력 완료 시 disabled 삭제 -->
+                    <button type="button" class="button btn_ok" disabled>신청완료 하기</button>
+                </div>
+            </div>
+        </div><!-- //popup_chuseok_gift_list -->
+
+        <div class="popup bottomsheet popup_delivery_msg none">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="pop_header">
+                    <h1>배송메모 선택</h1>
+                    <div class="header_close"><button type="button" onclick="popup.close('popup_delivery_msg');">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <ul class="chk_list">
+                        <li>
+                            <input type="radio" name="deliver_msg" id="chk1">
+                            <label for="chk1">직접 입력할게요</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="deliver_msg" id="chk2">
+                            <label for="chk2">부재 시 문 앞에 놓아주세요</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="deliver_msg" id="chk3">
+                            <label for="chk3">부재 시 연락 부탁드려요</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="deliver_msg" id="chk4">
+                            <label for="chk4">배송 전 미리 연락주세요</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- //wrap -->
+
+    <!-- 컬러 테스트를 위한 임시사용 -->
+    <ul class="thema_infor pageIn">
+        <li>Light</li>
+        <li>Dark</li>
+    </ul>
+    <!-- // 컬러 테스트를 위한 임시사용 -->
+
+    <!-- Script -->
+    <script src="../assets/js/hc/lib/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/hc/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/hc/common.js"></script>
+    <script>
+        $('.option_radio').find('input').on('change', function(){
+            $(this).parents('li').siblings().find('label').removeClass('on');
+            $(this).parent().addClass('on');
+        });
+        $('.porch_radio').find('input').on('change', function(){
+            if ( $('#porch_pwd_radio').prop('checked') == true ) {
+                $('.porch_radio').find('.text_box').show();
+            } else {
+                $('.porch_radio').find('.text_box').hide();
+            }
+        });
+
+        $('.popup_delivery_msg').find('input').on('change', function(){
+            $('.msg_box').find('.select_msg').text($(this).next().text());
+            if ( $(this).attr('id') != 'chk1' ) {
+                $('.msg_box').find('.user_msg').hide();
+            } else {
+                $('.msg_box').find('.user_msg').show();
+            }
+            popup.close('popup_delivery_msg');
+        });
+    </script>
+</body>
+
+</html>
