@@ -2233,7 +2233,7 @@ body.dark {
                                     position: relative;
                                     top: -16rem;
                                     padding-top: 8rem;
-                                    background: repeating-linear-gradient(transparent 0rem, transparent 57rem, #ddd 57rem, #ddd 58rem);
+                                    background: repeating-linear-gradient(transparent, transparent 57rem, #ddd 57rem, #ddd 58rem);
                                     line-height: 58rem;
                                     font-weight: 700;
                                     font-size: 20rem;
@@ -6759,6 +6759,21 @@ body.dark {
         &.popup_get_reward {
             .popup_container {
                 background-color: transparent;
+            }
+        }
+        &.popup_chuseok_gift_delivery {
+            .con {
+                .pop_body{
+                    .delivery_section {
+                        .info_area.addr_search {
+                            .address_num {
+                                .address {
+                                    background: repeating-linear-gradient(transparent, transparent 57rem, #333 57rem, #333 58rem);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
