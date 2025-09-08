@@ -2203,6 +2203,7 @@ body.dark {
                         &.addr_search {
                             padding-top: 8rem;
                             .address_num {
+                                position: relative;
                                 font-size: 0;
                                 p {
                                     display: inline-block;
@@ -2221,9 +2222,6 @@ body.dark {
                                         @include color(color, tt28);
                                         font-weight: 400;
                                     }
-                                    &.w100 {
-                                        width: 100%;
-                                    }
                                     &:first-child {
                                         margin-top: 0;
                                     }
@@ -2231,7 +2229,37 @@ body.dark {
                                         margin-top: 0;
                                     }
                                 }
+                                .address {
+                                    position: relative;
+                                    top: -16rem;
+                                    padding-top: 8rem;
+                                    background: repeating-linear-gradient(transparent 0rem, transparent 57rem, #ddd 57rem, #ddd 58rem);
+                                    line-height: 58rem;
+                                    font-weight: 700;
+                                    font-size: 20rem;
+                                    @include color(color, tt3);
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        bottom: 8rem;
+                                        right: 0;
+                                        width: 84rem;
+                                        border-bottom: 1rem solid;
+                                        @include color(border-color, bg7);
+                                    }
+                                    .last {
+                                        padding-right: 84rem;
+                                        font-weight: 700;
+                                        font-size: 20rem;
+                                    }
+                                    & + button {
+                                        bottom: 24rem;
+                                    }
+                                }
                                 button {
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
                                     margin: 16rem 0 0 12rem;
                                     width: 72rem;
                                     font-size: 13rem;
@@ -2244,6 +2272,14 @@ body.dark {
                                     box-sizing: border-box;
                                     vertical-align: top;
                                 }
+                                &.after {
+                                    & + .title_area {
+                                        padding-top: 16rem;
+                                    }
+                                }
+                            }
+                            .title_area {
+                                padding-top: 40rem;
                             }
                         }
                         &.pt8 {

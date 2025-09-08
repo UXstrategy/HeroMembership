@@ -59,20 +59,16 @@
                                     <button type="button">주소검색</button>
                                 </div>
                                 <!-- 주소검색 후 -->
-                                <div class="address_num">
-                                    <p class="w100">(12345) 서울특별시 영등포구 의사당</p>
-                                    <p class="w100">대로 96 (TP타워, 여의도동), 7층 플랫</p>
-                                    <p class="search_after">폼전략팀</p>
+                                <div class="address_num after">
+                                    <div class="address">(12345) 서울특별시 영등포구 의사당대로 96 (TP타워, 여의도동), 7층 플랫폼전략팀</div>
                                     <button type="button">주소검색</button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="delivery_section">
-                            <div class="title_area">
-                                <h3>수령인</h3>
-                            </div>
-                            <div class="info_area pt8">
-                                <p class="text_box"><input type="text"></p>
+                                <div class="title_area">
+                                    <h3>수령인</h3>
+                                </div>
+                                <div class="info_area pt8">
+                                    <p class="text_box"><input type="text"></p>
+                                </div>
                             </div>
                         </div>
                         <div class="delivery_section">
@@ -192,6 +188,10 @@
             $(this).parents('li').siblings().find('label').removeClass('on');
             $(this).parent().addClass('on');
         });
+
+        const words = $(".address").text().trim().split(" ");
+        $(".address").html(words.map((word, i) => i == words.length - 1 ? `<span class='last'>${word}</span>` : word).join(" "));
+
         $('.porch_radio').find('input').on('change', function(){
             if ( $('#porch_pwd_radio').prop('checked') == true ) {
                 $('.porch_radio').find('.text_box').show();
