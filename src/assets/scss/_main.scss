@@ -2241,10 +2241,10 @@ body.dark {
                                     &::after {
                                         content: "";
                                         position: absolute;
-                                        bottom: 8rem;
+                                        bottom: 6rem;
                                         right: 0;
                                         width: 84rem;
-                                        border-bottom: 1rem solid;
+                                        border-bottom: 4rem solid;
                                         @include color(border-color, bg7);
                                     }
                                     .last {
