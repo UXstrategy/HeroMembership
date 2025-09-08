@@ -77,7 +77,14 @@
                                     <ul class="more">
                                         <li>리워드<br>10만원</li>
                                         <li>유튜브 프리미엄<br>1개월</li>
-                                        <li>설날/추석<br>명절 혜택</li>
+                                        <li>
+                                            설날/추석<br>명절혜택<span class="btn_gift_tooltip"></span>
+                                            <div class="detail_tooltip_area">
+                                                <p class="tooltip_title">설날/추석 명절혜택 제공 기준</p>
+                                                <p class="tooltip_txt">명절혜택 신청월 기준 해당 등급 유지 시 증정</p>
+                                                <p class="btn_tooltip_close"></p>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="tab_content sss">
@@ -92,7 +99,14 @@
                                     <ul class="more">
                                         <li>리워드<br>20만원</li>
                                         <li>유튜브 프리미엄<br>1개월</li>
-                                        <li>설날/추석<br>명절 혜택</li>
+                                        <li>
+                                            설날/추석<br>명절혜택<span class="btn_gift_tooltip"></span>
+                                            <div class="detail_tooltip_area">
+                                                <p class="tooltip_title">설날/추석 명절혜택 제공 기준</p>
+                                                <p class="tooltip_txt">명절혜택 신청월 기준 해당 등급 유지 시 증정</p>
+                                                <p class="btn_tooltip_close"></p>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="tab_content l">
@@ -107,7 +121,14 @@
                                     <ul class="more">
                                         <li>리워드<br>50만원</li>
                                         <li>유튜브 프리미엄<br>1개월</li>
-                                        <li>설날/추석<br>명절 혜택</li>
+                                        <li>
+                                            설날/추석<br>명절혜택<span class="btn_gift_tooltip"></span>
+                                            <div class="detail_tooltip_area">
+                                                <p class="tooltip_title">설날/추석 명절혜택 제공 기준</p>
+                                                <p class="tooltip_txt">명절혜택 신청월 기준 해당 등급 유지 시 증정</p>
+                                                <p class="btn_tooltip_close"></p>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -214,6 +235,15 @@
                 },
             },
         }); 
+
+        //설날/추석 명절혜택 tooltip open
+        $('.btn_gift_tooltip').on('click', function(){
+            $(this).parent().find('.detail_tooltip_area').show();
+        });
+        //설날/추석 명절혜택 tooltip close
+        $('.btn_tooltip_close').on('click', function(){
+            $(this).parent().hide();
+        });
     </script>
     </script>
 </body>

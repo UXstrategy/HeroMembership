@@ -721,6 +721,53 @@ body.dark {
                             &:nth-child(3) {
                                 background-image: url('../../images/hc/img_reward_chuseok.png');
                             }
+                            .btn_gift_tooltip {
+                                display: inline-block;
+                                margin: 3rem 0 0 3rem;
+                                width: 14rem;
+                                height: 14rem;
+                                @include bgImg('../../images/hc/ico_tooltip_14x14.png', '../../images/hc/ico_tooltip_14x14_dm.png');
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                vertical-align: top;
+                            }
+                            .detail_tooltip_area {
+                                display: none;
+                                margin: 0 -1rem;
+                                padding: 20rem 16rem 16rem;
+                                position: absolute;
+                                top: -16rem;
+                                right: 0;
+                                width: 302%;
+                                text-align: left;
+                                border: 1px solid;
+                                @include color(border-color, ln12);
+                                border-radius: 8rem;
+                                @include color(background-color, bg7);
+                                box-sizing: border-box;
+                                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+                                z-index: 10;
+                                .tooltip_title {
+                                    font-size: 14rem;
+                                    @include color(color, tt3);
+                                    line-height: 19rem;
+                                }
+                                .tooltip_txt {
+                                    padding-top: 8rem;
+                                    font-size: 13rem;
+                                    @include color(color, tt17);
+                                    line-height: 16rem;
+                                }
+                                .btn_tooltip_close {
+                                    position: absolute;
+                                    top: 20rem;
+                                    right: 16rem;
+                                    width: 10rem;
+                                    height: 10rem;
+                                    @include bgImg('../../images/hc/ico_tooltip_close_10x10.png', '../../images/hc/ico_tooltip_close_10x10_dm.png');
+                                    background-size: 10rem auto;
+                                }
+                            }
                         }
                     }
                     &.a {
@@ -2535,7 +2582,7 @@ body.dark {
                 .addr_scroll_area {
                     margin-top: 19rem;
                     position: relative;
-                    height: calc(100vh - 255rem);
+                    height: calc(100vh - 297rem);
                     overflow-y: auto;
                     touch-action: auto;
                     ul {
@@ -2579,6 +2626,26 @@ body.dark {
                     }
                     */
                 }
+                .addr_list_more {
+                    padding-top: 24rem;
+                    text-align: center;
+                    button {
+                        display: block;
+                        width: 100%;
+                        font-size: 13rem;
+                        @include color(color, tt4);
+                        text-align: center;
+                        line-height: 18rem;
+                        span {
+                            display: inline-block;
+                            padding-right: 18rem;
+                            @include bgImg('../../images/hc/ic_arrow_down.png', '../../images/hc/ic_arrow_down_dm.png');
+                            background-position: 100% 50%;
+                            background-repeat: no-repeat;
+                            background-size: 12rem 12rem;
+                        }
+                    }
+                }
                 .srch_data_none {
                     padding: 160rem 0 0;
                     .t1 {
@@ -2618,38 +2685,107 @@ body.dark {
                     }
                     .input_box {
                         margin-top: 8rem;
-                        padding-right: 24rem;
+                        padding-right: 84rem;
                         position: relative;
-                        height: 42rem;
-                        border-bottom: 1rem solid;
-                        @include color(border-color, ln12);
-                        box-sizing: border-box;
-                        input {
-                            padding: 0;
-                            width: 100%;
-                            height: 41rem;
-                            font-size: 22rem;
-                            @include color(color, tt3);
-                            font-weight: 700;
-                            border: 0;
-                            background: transparent;
-                            &::placeholder {
-                                @include color(color, tt28);
-                                font-weight: 400;
+                        .box {
+                            position: relative;
+                            height: 42rem;
+                            border-bottom: 1rem solid;
+                            @include color(border-color, ln12);
+                            box-sizing: border-box;
+                            input {
+                                padding: 0;
+                                width: 100%;
+                                height: 41rem;
+                                font-size: 22rem;
+                                @include color(color, tt3);
+                                font-weight: 700;
+                                border: 0;
+                                background: transparent;
+                                &::placeholder {
+                                    @include color(color, tt28);
+                                    font-weight: 400;
+                                }
+                            }
+                            .btn_del {
+                                display: none;
+                                position: absolute;
+                                top: 9rem;
+                                right: 0;
+                                width: 24rem;
+                                height: 24rem;
+                                text-indent: -9999em;
+                                @include bgImg('../../images/hc/ico_addr_del.png', '../../images/hc/ico_addr_del_dm.png');
+                                background-position: 0 0;
+                                background-repeat: no-repeat;
+                                background-size: 24rem 24rem;
                             }
                         }
-                        .btn_del {
-                            display: none;
+                        .btn_ok {
                             position: absolute;
-                            top: 9rem;
+                            top: 0;
                             right: 0;
-                            width: 24rem;
-                            height: 24rem;
-                            text-indent: -9999em;
-                            @include bgImg('../../images/hc/ico_addr_del.png', '../../images/hc/ico_addr_del_dm.png');
-                            background-position: 0 0;
-                            background-repeat: no-repeat;
-                            background-size: 24rem 24rem;
+                            width: 72rem;
+                            font-size: 12rem;
+                            @include color(color, tt3);
+                            font-weight: 500;
+                            line-height: 40rem;
+                            border: 1rem solid;
+                            @include color(border-color, ln2);
+                            border-radius: 8rem;
+                            box-sizing: border-box;
+                            vertical-align: top;
+                        }
+                    }
+                }
+                .result_addr_list {
+                    padding-top: 33rem;
+                    dl {
+                        dt {
+                            font-size: 14rem;
+                            @include color(color, tt2);
+                            line-height: 19rem;
+                            letter-spacing: -0.35rem;
+                        }
+                        dd {
+                            padding-top: 6rem;
+                            font-size: 12rem;
+                            @include color(color, tt5);
+                            line-height: 17rem;
+                            letter-spacing: -0.3rem;
+                            span {
+                                display: inline-block;
+                                margin-right: 2rem;
+                                width: 28rem;
+                                height: 16rem;
+                                font-size: 0;
+                                @include bgImg('../../images/hc/ico_addr_result.png', '../../images/hc/ico_addr_result_dm.png');
+                                background-position: 0 0;
+                                background-repeat: no-repeat;
+                                background-size: 28rem 16rem;
+                                vertical-align: top;
+                            }
+                        }
+                    }
+                }
+                .result_btn_area {
+                    padding-top: 26rem;
+                    font-size: 0;
+                    button {
+                        width: calc(50% - 4rem);
+                        height: 45rem;
+                        font-size: 13rem;
+                        font-weight: 500;
+                        letter-spacing: -0.33rem;
+                        border-radius: 12rem;
+                        &.btn_reserach {
+                            @include color(color, tt4);
+                            @include color(background-color, bg20);
+                        }
+                        &.btn_complete {
+                            margin-left: 8rem;
+                            @include color(color, tt8);
+                            @include color(background-color, bg35);
                         }
                     }
                 }
