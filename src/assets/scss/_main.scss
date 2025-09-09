@@ -2669,7 +2669,7 @@ body.dark {
                         display: block;
                         width: 100%;
                         font-size: 13rem;
-                        @include color(color, tt10);
+                        @include color(color, tt4);
                         text-align: center;
                         line-height: 18rem;
                         span {
@@ -2779,7 +2779,7 @@ body.dark {
                     dl {
                         dt {
                             font-size: 14rem;
-                            @include color(color, tt3);
+                            @include color(color, tt2);
                             line-height: 19rem;
                             letter-spacing: -0.35rem;
                         }
@@ -2815,13 +2815,13 @@ body.dark {
                         letter-spacing: -0.33rem;
                         border-radius: 12rem;
                         &.btn_reserach {
-                            @include color(color, tt10);
+                            @include color(color, tt4);
                             @include color(background-color, bg20);
                         }
                         &.btn_complete {
                             margin-left: 8rem;
                             @include color(color, tt8);
-                            @include color(background-color, bg16);
+                            @include color(background-color, bg35);
                         }
                     }
                 }
