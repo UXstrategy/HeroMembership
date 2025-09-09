@@ -8,76 +8,21 @@
     <title>영웅클럽</title>
     <link rel="stylesheet" href="../assets/css/hc/default.css">
     <link rel="stylesheet" href="../assets/css/hc/swiper-bundle.min.css">
-    <style>
-        /*
-          .progress-ring {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: conic-gradient(
-        #00f 0%,
-        #0ff 30%,
-        lightgray 30%,
-        lightgray 100%
-      );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .inner-circle {
-      width: 96px;
-      height: 96px;
-      background-color: white;
-      border-radius: 50%;
-    }
-      */
-       .progress-ring {
-      width: 150px;
-      height: 150px;
-    }
-    svg {
-      transform: rotate(-90deg);
-    }
-    .bg,
-    .progress {
-      fill: none;
-      stroke-width: 12;
-    }
-    .bg {
-      stroke: #e0e0e0;
-    }
-    .progress {
-      stroke: url(#grad);
-      stroke-linecap: round;
-      stroke-dasharray: 339.292;
-      stroke-dashoffset: 339.292;
-      transition: stroke-dashoffset 1s ease-out;
-    }
-    .center-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-    .wrapper {
-      position: relative;
-      width: 150px;
-      height: 150px;
-    }
-    </style>
 </head>
 <body>
-    <div class="wrap main">
+    <div class="wrap main domestic_main">
         <header>
             <h1>영웅클럽</h1>
             <div class="close"><button type="button">닫기</button></div>
         </header>
+        <div class="main_visual">
+            <div class="sun"></div>
+            <div class="visual_bottom">
+                <p class="user_dday">$키움$님과 키움이 함께한 기간은<br><span class="day_info"><span class="bold">D+<span class="day_num">1004</span>일</span> 됐어요</span></p>
+            </div>
+        </div>
         <div class="contents">
-            <p class="period">영웅님과 키움이 함께한 기간은 1년 1개월차 입니다.</p>
-            <div class="main_visual"></div>
+            <p class="period glow-text">영웅님과 키움이 함께한 기간은 1년 1개월차 입니다.</p>
 
             <dl class="main_benefit">
                 <dt onclick="popup.open('popup_monnth1');">이번달 지급 혜택내역을 확인해보세요</dt>
